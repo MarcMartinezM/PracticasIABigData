@@ -16,9 +16,9 @@ Nombre: Gato; estructura: vertebrado; clase: Mamífero; edad_media: 11
 Nombre: Cotorra; estructura: vertebrado; clase: Ave; edad_media: 16
 Nombre: Estrella de mar; estructura: invertebrado
 
-	db.Animales.insertMany([{'nombre':'Perro','estructura':'vertebrado','clase':'mamifero','edad_media':'12'},
-	{'nombre':'Gato','estructura':'vertebrado','clase':'mamifero','edad_media':'11'},
-	{'nombre':'Cotorra','estructura':'vertebrado','clase':'ave','edad_media':'16'},
+	db.Animales.insertMany([{'nombre':'Perro','estructura':'vertebrado','clase':'mamifero','edad_media':12},
+	{'nombre':'Gato','estructura':'vertebrado','clase':'mamifero','edad_media':11},
+	{'nombre':'Cotorra','estructura':'vertebrado','clase':'ave','edad_media':16},
 	{'nombre':'Estrella de mar','estructura':'invertebrado','clase':null,'edad_media':null}])
 
 4.	¿Cuántos animales tenemos en la colección? Cuéntalos
@@ -47,4 +47,4 @@ Nombre: Estrella de mar; estructura: invertebrado
 
 10.	Borrar los animales que no tengan edad media informada.
 
-	
+	db.Animales.remove({Edad_media:{$exists:false}})
