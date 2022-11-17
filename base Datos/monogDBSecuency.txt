@@ -1,0 +1,50 @@
+Se quieren gestionar los datos de un veterinario de modo que se te pide que resuelvas las siguientes consultas: 
+
+1.	Crear una base de datos llamada “Veterinario”.
+
+	use Veterinario
+
+
+2.	Esta base de datos tendrá una colección llamada “Animales”.
+
+	db.createCollection(“Animales”)
+
+3.	Insertar la siguiente información en “Animales”.
+
+Nombre: Perro; estructura: vertebrado; clase: Mamífero; edad_media: 12
+Nombre: Gato; estructura: vertebrado; clase: Mamífero; edad_media: 11
+Nombre: Cotorra; estructura: vertebrado; clase: Ave; edad_media: 16
+Nombre: Estrella de mar; estructura: invertebrado
+
+	db.Animales.insertMany([{'nombre':'Perro','estructura':'vertebrado','clase':'mamifero','edad_media':'12'},
+	{'nombre':'Gato','estructura':'vertebrado','clase':'mamifero','edad_media':'11'},
+	{'nombre':'Cotorra','estructura':'vertebrado','clase':'ave','edad_media':'16'},
+	{'nombre':'Estrella de mar','estructura':'invertebrado','clase':null,'edad_media':null}])
+
+4.	¿Cuántos animales tenemos en la colección? Cuéntalos
+	
+	db.Animales.count()
+
+5.	Muestra los datos de la colección de animales que sean “Mamífero”.
+
+	db.Animales.find({'clase':{$eq:'mamifero'}})
+
+6.	Cambiar el nombre de “Estrella de mar” por su nombre científico “Asteroidea”.
+
+	db.Animales.update({'nombre':'Estrella de mar'},{$set:{'nombre':'Asteroidea'}})
+
+7.	Incrementa la edad media del Perro en 2 años.
+
+	db.Animales.update({'nombre':'Perro'},{$inc:{'edad_media':2}})
+
+8.	Muestra el nombre sin mostrar el “_id” de los invertebrados o Mamíferos
+
+	db.Animales.find({$or:[{'estructura':'invertebrado'},{'clase':'mamifero'}],'_id':0})
+
+9.	Muestra todos los datos de los animales cuya edad media esté entre los 10 y 15 años de vida.
+
+	db.Animales.find({$or:[{'edad_media':{$it:10}},{'edad_media':{$gt:15}}]})
+
+10.	Borrar los animales que no tengan edad media informada.
+
+	
