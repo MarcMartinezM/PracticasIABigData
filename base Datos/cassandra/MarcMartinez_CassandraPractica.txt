@@ -1,0 +1,53 @@
+Crea una red de 3 contenedores de cassandra:
+
+docker network create cassandra-network
+docker network list
+	docker run --network cassandra-network --name cassandra01 -d cassandra:latest
+	docker run --network cassandra-network --name cassandra02 -e CASSANDRA_SEEDS=172.18.0.2 -d cassandra:latest
+	docker run --network cassandra-network --name cassandra03 -e CASSANDRA_SEEDS=172.18.0.2,172.18.0.3 -d cassandra:latest
+	docker exec -it cassandra01 cqlsh
+
+Crea la siguiente base de datos en Cassandra:
+
+	Create keyspace sensorDataModeling with replication={'class': 'SimpleStrategy', 'replication_factor': 2};
+	create table network (name text,bucket text,description text,region text, num_sensors int, PRIMARY KEY(name,bucket)) WITH CLUSTERING ORDER BY (bucket ASC);
+	create table sensor_by_network (network text, sensor text, latitude decimal, lingitude decimal,characteristics MAP<TEXT,TEXT>, PRIMARY KEY(network,sensor)) WITH CLUSTERING ORDER BY (sensor ASC);
+	create table temperatures_by_sensor (sensor text, date DATE, timestamp TIMESTAMP, value FLOAT, PRIMARY KEY((sensor,timestamp),date))WITH CLUSTERING ORDER BY (date DESC);
+
+Inserta 5 filas de datos para las 3 tablas:
+
+	insert INTO network(name,bucket,description,region,num_sensors) VALUES('networkOne','bucket1','description networkOne','ESP',500);
+	insert INTO network(name,bucket,description,region,num_sensors) VALUES('networkTwo','bucket2','description networkTwo','FRA',400);
+	insert INTO network(name,bucket,description,region,num_sensors) VALUES('networkTree','bucket3','description networkTree','POR',300);
+	insert INTO network(name,bucket,description,region,num_sensors) VALUES('networkFour','bucket4','description networkFour','ITL',200);
+	insert INTO network(name,bucket,description,region,num_sensors) VALUES('networkFive','bucket5','description networkFive','GER',100);
+
+	insert INTO sensor_by_network(network,sensor,latitude,lingitude,characteristics) VALUES('networkOne','sensor1',4.23,5.5,{'chara1':'sensorChar1','chara2':'sensorChar2'});
+	insert INTO sensor_by_network(network,sensor,latitude,lingitude,characteristics) VALUES('networkTwo','sensor2',5.5,6.6,{'chara1':'sensor2Char1','chara2':'sensor2Char2'});
+	insert INTO sensor_by_network(network,sensor,latitude,lingitude,characteristics) VALUES('networkTree','sensor3',3.5,3.6,{'chara1':'sensor3Char1','chara2':'sensor3Char2'});
+	insert INTO sensor_by_network(network,sensor,latitude,lingitude,characteristics) VALUES('networkFour','sensor4',3.5,3.6,{'chara1':'sensor4Char1','chara2':'sensor4Char2'});
+	insert INTO sensor_by_network(network,sensor,latitude,lingitude,characteristics) VALUES('networkFive','sensor5',7.77,6.66,{'chara1':'sensor5Char1','chara2':'sensor5Char2'});
+
+	insert INTO temperatures_by_sensor(sensor,date,timestamp,value) VALUES('sensor1','2022-11-21','2022-11-22',50.5);
+	insert INTO temperatures_by_sensor(sensor,date,timestamp,value) VALUES('sensor1','2022-11-22','2022-11-23',25.5);
+	insert INTO temperatures_by_sensor(sensor,date,timestamp,value) VALUES('sensor1','2022-11-24','2022-11-25',20.5);
+	insert INTO temperatures_by_sensor(sensor,date,timestamp,value) VALUES('sensor1','2022-11-26','2022-11-27',-4.0);
+	insert INTO temperatures_by_sensor(sensor,date,timestamp,value) VALUES('sensor1','2022-11-28','2022-11-29',00.0);
+
+
+Haz las siguientes consultas:
+(Q1) Busca la información de todas las redes ordenadas ASC
+
+	 select * from network where name = 'networkOne' group by name order by bucket;
+
+(Q2) Muestra el promedio de la temperatura por día ordenador por sensor* DESC
+
+	select avg(value) from temperatures_by_sensor where sensor = 'sensor1' group by sensor, timestamp ALLOW FILTERING;
+	
+(Q3) Muestras los sensores de UNA de las redes
+
+	select num_sensors from network where name = 'networkFive';	
+
+(Q4) Muestra las temperaturas de UN LISTADO de sensores para 3 días consecutivos
+
+	select * from temperatures_by_sensor where timestamp >='2022-11-22' and timestamp<='2022-11-25' ALLOW FILTERING;
