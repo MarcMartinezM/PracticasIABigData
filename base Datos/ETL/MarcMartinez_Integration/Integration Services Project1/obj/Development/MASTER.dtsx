@@ -11,9 +11,588 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionGUID="{84EA4A27-8DA1-4D93-A784-3FDC78CFD5B3}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{ACE4C823-ECD7-4C8A-8228-5F7B5359C46E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[paises]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{FC0B71AD-B175-44AD-81C4-5E33BE43A5E9}"
+      DTS:ObjectName="paises">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Marc Martinez\Downloads\PAISES.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NAME"
+              DTS:DTSID="{BA7A5ACE-4EED-4DCD-B12C-A74D3CC8AB93}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="2CODE"
+              DTS:DTSID="{E21E3434-DC43-4E8E-B745-F08EC238D004}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="3CODE"
+              DTS:DTSID="{209AD0C5-AB8B-45A3-B492-9C8C585ED126}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NUMERIC"
+              DTS:DTSID="{5DCD7394-1A80-4E4D-B987-FF84790811C8}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FD55E904-B7AA-4972-9CCC-1FA4A48F3D64}"
+      DTS:ObjectName="PH01-03\IABDSQLSERVER.IABD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=PH01-03\IABDSQLSERVER;Initial Catalog=IABD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{FD55E904-B7AA-4972-9CCC-1FA4A48F3D64}PH01-03\IABDSQLSERVER.IABD;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
-  <DTS:Executables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\MASTER_PAISES"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{741F6F44-4EC4-4BAD-8BAF-40FE9C8E92C0}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="MASTER_PAISES"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\MASTER_PAISES\Columna derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\MASTER_PAISES\Columna derivada.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\MASTER_PAISES\Columna derivada.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\MASTER_PAISES\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\MASTER_PAISES\Columna derivada.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\MASTER_PAISES\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\MASTER_PAISES\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\MASTER_PAISES\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\MASTER_PAISES\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\MASTER_PAISES\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\MASTER_PAISES\PAISES"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de archivo plano"
+              localeId="3082"
+              name="PAISES"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si las columnas de longitud cero se tratan como NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\MASTER_PAISES\PAISES.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[paises]"
+                  connectionManagerRefId="Package.ConnectionManagers[paises]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano]"
+                  name="Salida de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].Columns[NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].ExternalColumns[NAME]"
+                      length="50"
+                      lineageId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].Columns[NAME]"
+                      name="NAME"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].Columns[2CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].ExternalColumns[2CODE]"
+                      length="50"
+                      lineageId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].Columns[2CODE]"
+                      name="2CODE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].Columns[3CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].ExternalColumns[3CODE]"
+                      length="50"
+                      lineageId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].Columns[3CODE]"
+                      name="3CODE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].Columns[NUMERIC]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].ExternalColumns[NUMERIC]"
+                      lineageId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].Columns[NUMERIC]"
+                      name="NUMERIC"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].ExternalColumns[NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NAME" />
+                    <externalMetadataColumn
+                      refId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].ExternalColumns[2CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="2CODE" />
+                    <externalMetadataColumn
+                      refId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].ExternalColumns[3CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="3CODE" />
+                    <externalMetadataColumn
+                      refId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].ExternalColumns[NUMERIC]"
+                      dataType="numeric"
+                      name="NUMERIC"
+                      precision="18" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\MASTER_PAISES\PAISES.Outputs[Salida de error de origen de archivo plano]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\MASTER_PAISES\PAISES.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Columna de salida de error de origen de archivo plano"
+                      lineageId="Package\MASTER_PAISES\PAISES.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      name="Columna de salida de error de origen de archivo plano" />
+                    <outputColumn
+                      refId="Package\MASTER_PAISES\PAISES.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\MASTER_PAISES\PAISES.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\MASTER_PAISES\PAISES.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\MASTER_PAISES\PAISES.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\MASTER_PAISES\STA_COUNTRIES"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="STA_COUNTRIES"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[STA_COUNTRIES]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\MASTER_PAISES\STA_COUNTRIES.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\MASTER_PAISES\STA_COUNTRIES.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\MASTER_PAISES\STA_COUNTRIES.Inputs[Entrada de destino de OLE DB].Columns[NUMERIC]"
+                      cachedDataType="numeric"
+                      cachedName="NUMERIC"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\MASTER_PAISES\STA_COUNTRIES.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_Countrie]"
+                      lineageId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].Columns[NUMERIC]" />
+                    <inputColumn
+                      refId="Package\MASTER_PAISES\STA_COUNTRIES.Inputs[Entrada de destino de OLE DB].Columns[3CODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="3CODE"
+                      externalMetadataColumnId="Package\MASTER_PAISES\STA_COUNTRIES.Inputs[Entrada de destino de OLE DB].ExternalColumns[ThreeCODE_Countrie]"
+                      lineageId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].Columns[3CODE]" />
+                    <inputColumn
+                      refId="Package\MASTER_PAISES\STA_COUNTRIES.Inputs[Entrada de destino de OLE DB].Columns[2CODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="2CODE"
+                      externalMetadataColumnId="Package\MASTER_PAISES\STA_COUNTRIES.Inputs[Entrada de destino de OLE DB].ExternalColumns[TwoCODE_Countrie]"
+                      lineageId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].Columns[2CODE]" />
+                    <inputColumn
+                      refId="Package\MASTER_PAISES\STA_COUNTRIES.Inputs[Entrada de destino de OLE DB].Columns[NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NAME"
+                      externalMetadataColumnId="Package\MASTER_PAISES\STA_COUNTRIES.Inputs[Entrada de destino de OLE DB].ExternalColumns[name_Countrie]"
+                      lineageId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano].Columns[NAME]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\MASTER_PAISES\STA_COUNTRIES.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_Countrie]"
+                      dataType="i4"
+                      name="ID_Countrie" />
+                    <externalMetadataColumn
+                      refId="Package\MASTER_PAISES\STA_COUNTRIES.Inputs[Entrada de destino de OLE DB].ExternalColumns[name_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="name_Countrie" />
+                    <externalMetadataColumn
+                      refId="Package\MASTER_PAISES\STA_COUNTRIES.Inputs[Entrada de destino de OLE DB].ExternalColumns[TwoCODE_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="TwoCODE_Countrie" />
+                    <externalMetadataColumn
+                      refId="Package\MASTER_PAISES\STA_COUNTRIES.Inputs[Entrada de destino de OLE DB].ExternalColumns[ThreeCODE_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="ThreeCODE_Countrie" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\MASTER_PAISES\STA_COUNTRIES.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\MASTER_PAISES\STA_COUNTRIES.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\MASTER_PAISES\STA_COUNTRIES.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\MASTER_PAISES\STA_COUNTRIES.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\MASTER_PAISES\STA_COUNTRIES.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\MASTER_PAISES\STA_COUNTRIES.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\MASTER_PAISES.Paths[Salida de columna derivada]"
+              endId="Package\MASTER_PAISES\STA_COUNTRIES.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de columna derivada"
+              startId="Package\MASTER_PAISES\Columna derivada.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\MASTER_PAISES.Paths[Salida de origen de archivo plano]"
+              endId="Package\MASTER_PAISES\Columna derivada.Inputs[Entrada de columna derivada]"
+              name="Salida de origen de archivo plano"
+              startId="Package\MASTER_PAISES\PAISES.Outputs[Salida de origen de archivo plano]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\MASTER_PAISES"
+          TopLeft="147.499991940956,136.933332381116" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\MASTER_PAISES">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="116,41.6"
+          Id="Package\MASTER_PAISES\PAISES"
+          TopLeft="75.8333291899828,135.199999059836" />
+        <NodeLayout
+          Size="165.6,41.6"
+          Id="Package\MASTER_PAISES\STA_COUNTRIES"
+          TopLeft="429.999976505837,133.466665738556" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\MASTER_PAISES\Columna derivada"
+          TopLeft="239.166653599177,127.399999114076" />
+        <EdgeLayout
+          Id="Package\MASTER_PAISES.Paths[Salida de origen de archivo plano]"
+          TopLeft="191.833329189983,152.099999086956">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="47.3333244091939,0"
+              Start="0,0"
+              End="39.8333244091939,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="39.8333244091939,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\MASTER_PAISES.Paths[Salida de columna derivada]"
+          TopLeft="401.566653599177,151.233332426316">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="28.43332290666,0"
+              Start="0,0"
+              End="20.93332290666,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="20.93332290666,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\MASTER_PAISES\STA_COUNTRIES">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
