@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="56"
-  DTS:VersionGUID="{4994C9DE-A62B-4345-BE53-4EF338C8142D}">
+  DTS:VersionBuild="63"
+  DTS:VersionGUID="{6E9754F8-8BDA-4A64-988A-DD9F3A90152D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3197,6 +3197,24 @@ where [refTable].[Name_Customer_Type] = ?</property>
                   exclusionGroup="1"
                   name="Salida de entradas coincidentes de búsqueda"
                   synchronousInputId="Package\STG_CUSTOMERS_TYPE\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_CUSTOMERS_TYPE\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[LK_Name_Customer_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copiar columna"
+                      length="50"
+                      lineageId="Package\STG_CUSTOMERS_TYPE\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[LK_Name_Customer_Type]"
+                      name="LK_Name_Customer_Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">Name_Customer_Type</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -6822,6 +6840,1633 @@ WHERE  ID_product_line= ?;
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\STG_SALES_REP"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{9EF2225A-AB0B-49A5-8EEC-BB855F1D6FCA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="STG_SALES_REP"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\STG_SALES_REP\0 NO IDENTIFICADO"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="0 NO IDENTIFICADO"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select 0 as ID_sales_rep, 'No identificado' as name_sales_rep;</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].Columns[ID_sales_rep]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_sales_rep]"
+                      lineageId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].Columns[ID_sales_rep]"
+                      name="ID_sales_rep"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].Columns[name_sales_rep]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].ExternalColumns[name_sales_rep]"
+                      length="15"
+                      lineageId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].Columns[name_sales_rep]"
+                      name="name_sales_rep"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_sales_rep]"
+                      dataType="i4"
+                      name="ID_sales_rep" />
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].ExternalColumns[name_sales_rep]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="name_sales_rep" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB].Columns[ID_sales_rep]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB].Columns[ID_sales_rep]"
+                      name="ID_sales_rep" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB].Columns[name_sales_rep]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB].Columns[name_sales_rep]"
+                      name="name_sales_rep" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_SALES_REP\Búsqueda"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="Búsqueda"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[STG_SALES_REP]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[STG_SALES_REP]) [refTable]
+where [refTable].[ID_sales_rep] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID_sales_rep" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="name_sales_rep" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="birthday_sales_rep" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="salary" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_team_manager" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_store" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="currency" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[ID_sales_rep]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_SALES_REP\Búsqueda.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\STG_SALES_REP\Búsqueda.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\Búsqueda.Inputs[Entrada de búsqueda].Columns[ID_sales_rep]"
+                      cachedDataType="i4"
+                      cachedName="ID_sales_rep"
+                      lineageId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_sales_rep]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">ID_sales_rep</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_SALES_REP\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
+                  exclusionGroup="1"
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\STG_SALES_REP\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[LK_ID_sales_rep]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar columna"
+                      lineageId="Package\STG_SALES_REP\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[LK_ID_sales_rep]"
+                      name="LK_ID_sales_rep"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">ID_sales_rep</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STG_SALES_REP\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en 'Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes'."
+                  exclusionGroup="1"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\STG_SALES_REP\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STG_SALES_REP\Búsqueda.Outputs[Salida de error de búsqueda]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\STG_SALES_REP\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_SALES_REP\Columna derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\STG_SALES_REP\Columna derivada.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\Columna derivada.Inputs[Entrada de columna derivada].Columns[ID_team_manager]"
+                      cachedDataType="i4"
+                      cachedName="ID_team_manager"
+                      lineageId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_team_manager]" />
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\Columna derivada.Inputs[Entrada de columna derivada].Columns[ID_store]"
+                      cachedDataType="i4"
+                      cachedName="ID_store"
+                      lineageId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_store]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\STG_SALES_REP\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de columna derivada].Columns[derived_currency]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de columna derivada].Columns[derived_currency]"
+                      name="derived_currency"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">(DT_STR,3,1252)"EUR"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,3,1252)"EUR"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de columna derivada].Columns[Derived_TEAM_MANAGER]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de columna derivada].Columns[Derived_TEAM_MANAGER]"
+                      name="Derived_TEAM_MANAGER"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[ISNULL](#{Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_team_manager]}) ? 0 : #{Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_team_manager]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(ID_team_manager) ? 0 : ID_team_manager</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de columna derivada].Columns[derived_id_store]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de columna derivada].Columns[derived_id_store]"
+                      name="derived_id_store"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[ISNULL](#{Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_store]}) ? 0 : #{Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_store]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(ID_store) ? 0 : ID_store</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\STG_SALES_REP\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_SALES_REP\Comando de OLE DB"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="Comando de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Ejecuta una instrucción SQL para cada fila de un flujo de datos. Por ejemplo, se usa para llamar al procedimiento almacenado de configuración de nuevo empleado para cada fila de la tabla de nuevos empleados. Nota: la ejecución de una instrucción SQL para cada fila de un flujo de datos de gran tamaño puede tardar mucho tiempo."
+              name="Comando de OLE DB"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE STG_SALES_REP
+SET name_sales_rep= ?,
+birthday_sales_rep = ?,
+salary = ?,
+ID_team_manager = ?,
+ID_store = ?,
+currency = ?
+WHERE  ID_sales_rep = ?;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_SALES_REP\Comando de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]"
+                  errorOrTruncationOperation="Ejecución de comando"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de comando de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[ID_sales_rep]"
+                      cachedDataType="i4"
+                      cachedName="ID_sales_rep"
+                      externalMetadataColumnId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_6]"
+                      lineageId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_sales_rep]" />
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[name_sales_rep]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="name_sales_rep"
+                      externalMetadataColumnId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
+                      lineageId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[name_sales_rep]" />
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[birthday_sales_rep]"
+                      cachedDataType="dbDate"
+                      cachedName="birthday_sales_rep"
+                      externalMetadataColumnId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
+                      lineageId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[birthday_sales_rep]" />
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[salary]"
+                      cachedDataType="i4"
+                      cachedName="salary"
+                      externalMetadataColumnId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
+                      lineageId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[salary]" />
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[derived_currency]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="derived_currency"
+                      externalMetadataColumnId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_5]"
+                      lineageId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de columna derivada].Columns[derived_currency]" />
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Derived_TEAM_MANAGER]"
+                      cachedDataType="i4"
+                      cachedName="Derived_TEAM_MANAGER"
+                      externalMetadataColumnId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_3]"
+                      lineageId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de columna derivada].Columns[Derived_TEAM_MANAGER]" />
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[derived_id_store]"
+                      cachedDataType="i4"
+                      cachedName="derived_id_store"
+                      externalMetadataColumnId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_4]"
+                      lineageId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de columna derivada].Columns[derived_id_store]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
+                      dataType="dbDate"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_3]"
+                      dataType="i4"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_4]"
+                      dataType="i4"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_5]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_6]"
+                      dataType="i4"
+                      name="Param_6">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_SALES_REP\Comando de OLE DB.Outputs[Salida de comando de OLE DB]"
+                  exclusionGroup="1"
+                  name="Salida de comando de OLE DB"
+                  synchronousInputId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STG_SALES_REP\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de comando de OLE DB"
+                  synchronousInputId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_SALES_REP\Destino de OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Destino de OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[STG_SALES_REP]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_SALES_REP\Destino de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ID_sales_rep]"
+                      cachedDataType="i4"
+                      cachedName="ID_sales_rep"
+                      externalMetadataColumnId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_sales_rep]"
+                      lineageId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_sales_rep]" />
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[name_sales_rep]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="name_sales_rep"
+                      externalMetadataColumnId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[name_sales_rep]"
+                      lineageId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[name_sales_rep]" />
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[birthday_sales_rep]"
+                      cachedDataType="dbDate"
+                      cachedName="birthday_sales_rep"
+                      externalMetadataColumnId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[birthday_sales_rep]"
+                      lineageId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[birthday_sales_rep]" />
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[salary]"
+                      cachedDataType="i4"
+                      cachedName="salary"
+                      externalMetadataColumnId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[salary]"
+                      lineageId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[salary]" />
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[derived_currency]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="derived_currency"
+                      externalMetadataColumnId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[currency]"
+                      lineageId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de columna derivada].Columns[derived_currency]" />
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Derived_TEAM_MANAGER]"
+                      cachedDataType="i4"
+                      cachedName="Derived_TEAM_MANAGER"
+                      externalMetadataColumnId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_team_manager]"
+                      lineageId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de columna derivada].Columns[Derived_TEAM_MANAGER]" />
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[derived_id_store]"
+                      cachedDataType="i4"
+                      cachedName="derived_id_store"
+                      externalMetadataColumnId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_store]"
+                      lineageId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de columna derivada].Columns[derived_id_store]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_sales_rep]"
+                      dataType="i4"
+                      name="ID_sales_rep" />
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[name_sales_rep]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="name_sales_rep" />
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[birthday_sales_rep]"
+                      dataType="dbDate"
+                      name="birthday_sales_rep" />
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[salary]"
+                      dataType="i4"
+                      name="salary" />
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_team_manager]"
+                      dataType="i4"
+                      name="ID_team_manager" />
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_store]"
+                      dataType="i4"
+                      name="ID_store" />
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[currency]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="currency" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_SALES_REP\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_SALES_REP\STA_SALES_REP"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="STA_SALES_REP"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[STA_SALES_REP]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_SALES_REP\STA_SALES_REP.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[ID_sales_rep]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_sales_rep]"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[ID_sales_rep]"
+                      name="ID_sales_rep"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[name_sales_rep]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].ExternalColumns[name_sales_rep]"
+                      length="50"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[name_sales_rep]"
+                      name="name_sales_rep"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[birthday_sales_rep]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].ExternalColumns[birthday_sales_rep]"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[birthday_sales_rep]"
+                      name="birthday_sales_rep"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[salary]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].ExternalColumns[salary]"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[salary]"
+                      name="salary"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[ID_team_manager]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_team_manager]"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[ID_team_manager]"
+                      name="ID_team_manager"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[ID_store]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_store]"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[ID_store]"
+                      name="ID_store"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_sales_rep]"
+                      dataType="i4"
+                      name="ID_sales_rep" />
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].ExternalColumns[name_sales_rep]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="name_sales_rep" />
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].ExternalColumns[birthday_sales_rep]"
+                      dataType="dbDate"
+                      name="birthday_sales_rep" />
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].ExternalColumns[salary]"
+                      dataType="i4"
+                      name="salary" />
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_team_manager]"
+                      dataType="i4"
+                      name="ID_team_manager" />
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_store]"
+                      dataType="i4"
+                      name="ID_store" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de error de origen de OLE DB].Columns[ID_sales_rep]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de error de origen de OLE DB].Columns[ID_sales_rep]"
+                      name="ID_sales_rep" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de error de origen de OLE DB].Columns[name_sales_rep]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de error de origen de OLE DB].Columns[name_sales_rep]"
+                      name="name_sales_rep" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de error de origen de OLE DB].Columns[birthday_sales_rep]"
+                      dataType="dbDate"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de error de origen de OLE DB].Columns[birthday_sales_rep]"
+                      name="birthday_sales_rep" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de error de origen de OLE DB].Columns[salary]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de error de origen de OLE DB].Columns[salary]"
+                      name="salary" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de error de origen de OLE DB].Columns[ID_team_manager]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de error de origen de OLE DB].Columns[ID_team_manager]"
+                      name="ID_team_manager" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de error de origen de OLE DB].Columns[ID_store]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de error de origen de OLE DB].Columns[ID_store]"
+                      name="ID_store" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_SALES_REP\STA_TEAM_MANAGER"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="STA_TEAM_MANAGER"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[STA_team_manager]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].Columns[Team_Manager_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].ExternalColumns[Team_Manager_ID]"
+                      lineageId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].Columns[Team_Manager_ID]"
+                      name="Team_Manager_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].Columns[Team_Manager]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].ExternalColumns[Team_Manager]"
+                      length="50"
+                      lineageId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].Columns[Team_Manager]"
+                      name="Team_Manager"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].Columns[Birthday]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].ExternalColumns[Birthday]"
+                      lineageId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].Columns[Birthday]"
+                      name="Birthday"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].Columns[Salary]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].ExternalColumns[Salary]"
+                      lineageId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].Columns[Salary]"
+                      name="Salary"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].ExternalColumns[Team_Manager_ID]"
+                      dataType="i4"
+                      name="Team_Manager_ID" />
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].ExternalColumns[Team_Manager]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Team_Manager" />
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].ExternalColumns[Birthday]"
+                      dataType="dbDate"
+                      name="Birthday" />
+                    <externalMetadataColumn
+                      refId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].ExternalColumns[Salary]"
+                      dataType="i4"
+                      name="Salary" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de error de origen de OLE DB].Columns[Team_Manager_ID]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de error de origen de OLE DB].Columns[Team_Manager_ID]"
+                      name="Team_Manager_ID" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de error de origen de OLE DB].Columns[Team_Manager]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de error de origen de OLE DB].Columns[Team_Manager]"
+                      name="Team_Manager" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de error de origen de OLE DB].Columns[Birthday]"
+                      dataType="dbDate"
+                      lineageId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de error de origen de OLE DB].Columns[Birthday]"
+                      name="Birthday" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de error de origen de OLE DB].Columns[Salary]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de error de origen de OLE DB].Columns[Salary]"
+                      name="Salary" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_SALES_REP\union tabla"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Unión de todo;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Combina las filas de varios flujos de datos sin ordenarlos. Por ejemplo, devuelve filas a un flujo de datos después de corregir los errores. Si el orden es importante, se recomienda usar la transformación Mezclar."
+              name="union tabla"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\STG_SALES_REP\union tabla.Inputs[Entrada de Unión de todo 1]"
+                  name="Entrada de Unión de todo 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union tabla.Inputs[Entrada de Unión de todo 1].Columns[ID_sales_rep]"
+                      cachedDataType="i4"
+                      cachedName="ID_sales_rep"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[ID_sales_rep]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[ID_sales_rep]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union tabla.Inputs[Entrada de Unión de todo 1].Columns[name_sales_rep]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="name_sales_rep"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[name_sales_rep]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[name_sales_rep]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union tabla.Inputs[Entrada de Unión de todo 1].Columns[birthday_sales_rep]"
+                      cachedDataType="dbDate"
+                      cachedName="birthday_sales_rep"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[birthday_sales_rep]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[birthday_sales_rep]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union tabla.Inputs[Entrada de Unión de todo 1].Columns[salary]"
+                      cachedDataType="i4"
+                      cachedName="salary"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[salary]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[salary]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union tabla.Inputs[Entrada de Unión de todo 1].Columns[ID_team_manager]"
+                      cachedDataType="i4"
+                      cachedName="ID_team_manager"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[ID_team_manager]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[ID_team_manager]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union tabla.Inputs[Entrada de Unión de todo 1].Columns[ID_store]"
+                      cachedDataType="i4"
+                      cachedName="ID_store"
+                      lineageId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB].Columns[ID_store]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[ID_store]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\STG_SALES_REP\union tabla.Inputs[Entrada de Unión de todo 2]"
+                  hasSideEffects="true"
+                  name="Entrada de Unión de todo 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union tabla.Inputs[Entrada de Unión de todo 2].Columns[Team_Manager_ID]"
+                      cachedDataType="i4"
+                      cachedName="Team_Manager_ID"
+                      lineageId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].Columns[Team_Manager_ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[ID_sales_rep]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union tabla.Inputs[Entrada de Unión de todo 2].Columns[Team_Manager]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Team_Manager"
+                      lineageId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].Columns[Team_Manager]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[name_sales_rep]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union tabla.Inputs[Entrada de Unión de todo 2].Columns[Birthday]"
+                      cachedDataType="dbDate"
+                      cachedName="Birthday"
+                      lineageId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].Columns[Birthday]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[birthday_sales_rep]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union tabla.Inputs[Entrada de Unión de todo 2].Columns[Salary]"
+                      cachedDataType="i4"
+                      cachedName="Salary"
+                      lineageId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB].Columns[Salary]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[salary]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\STG_SALES_REP\union tabla.Inputs[Entrada de Unión de todo 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Entrada de Unión de todo 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1]"
+                  name="Salida de Unión de todo 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[ID_sales_rep]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[ID_sales_rep]"
+                      name="ID_sales_rep" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[name_sales_rep]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[name_sales_rep]"
+                      name="name_sales_rep" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[birthday_sales_rep]"
+                      dataType="dbDate"
+                      lineageId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[birthday_sales_rep]"
+                      name="birthday_sales_rep" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[salary]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[salary]"
+                      name="salary" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[ID_team_manager]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[ID_team_manager]"
+                      name="ID_team_manager" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[ID_store]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[ID_store]"
+                      name="ID_store" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_SALES_REP\union vlaor 0"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Unión de todo;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Combina las filas de varios flujos de datos sin ordenarlos. Por ejemplo, devuelve filas a un flujo de datos después de corregir los errores. Si el orden es importante, se recomienda usar la transformación Mezclar."
+              name="union vlaor 0"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\STG_SALES_REP\union vlaor 0.Inputs[Entrada de Unión de todo 1]"
+                  name="Entrada de Unión de todo 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union vlaor 0.Inputs[Entrada de Unión de todo 1].Columns[ID_sales_rep]"
+                      cachedDataType="i4"
+                      cachedName="ID_sales_rep"
+                      lineageId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[ID_sales_rep]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_sales_rep]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union vlaor 0.Inputs[Entrada de Unión de todo 1].Columns[name_sales_rep]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="name_sales_rep"
+                      lineageId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[name_sales_rep]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[name_sales_rep]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union vlaor 0.Inputs[Entrada de Unión de todo 1].Columns[birthday_sales_rep]"
+                      cachedDataType="dbDate"
+                      cachedName="birthday_sales_rep"
+                      lineageId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[birthday_sales_rep]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[birthday_sales_rep]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union vlaor 0.Inputs[Entrada de Unión de todo 1].Columns[salary]"
+                      cachedDataType="i4"
+                      cachedName="salary"
+                      lineageId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[salary]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[salary]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union vlaor 0.Inputs[Entrada de Unión de todo 1].Columns[ID_team_manager]"
+                      cachedDataType="i4"
+                      cachedName="ID_team_manager"
+                      lineageId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[ID_team_manager]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_team_manager]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union vlaor 0.Inputs[Entrada de Unión de todo 1].Columns[ID_store]"
+                      cachedDataType="i4"
+                      cachedName="ID_store"
+                      lineageId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1].Columns[ID_store]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_store]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\STG_SALES_REP\union vlaor 0.Inputs[Entrada de Unión de todo 2]"
+                  hasSideEffects="true"
+                  name="Entrada de Unión de todo 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union vlaor 0.Inputs[Entrada de Unión de todo 2].Columns[ID_sales_rep]"
+                      cachedDataType="i4"
+                      cachedName="ID_sales_rep"
+                      lineageId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].Columns[ID_sales_rep]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_sales_rep]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_SALES_REP\union vlaor 0.Inputs[Entrada de Unión de todo 2].Columns[name_sales_rep]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="name_sales_rep"
+                      lineageId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].Columns[name_sales_rep]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[name_sales_rep]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\STG_SALES_REP\union vlaor 0.Inputs[Entrada de Unión de todo 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Entrada de Unión de todo 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1]"
+                  name="Salida de Unión de todo 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_sales_rep]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_sales_rep]"
+                      name="ID_sales_rep" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[name_sales_rep]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[name_sales_rep]"
+                      name="name_sales_rep" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[birthday_sales_rep]"
+                      dataType="dbDate"
+                      lineageId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[birthday_sales_rep]"
+                      name="birthday_sales_rep" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[salary]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[salary]"
+                      name="salary" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_team_manager]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_team_manager]"
+                      name="ID_team_manager" />
+                    <outputColumn
+                      refId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_store]"
+                      dataType="i4"
+                      lineageId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1].Columns[ID_store]"
+                      name="ID_store" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\STG_SALES_REP.Paths[Salida de columna derivada]"
+              endId="Package\STG_SALES_REP\Búsqueda.Inputs[Entrada de búsqueda]"
+              name="Salida de columna derivada"
+              startId="Package\STG_SALES_REP\Columna derivada.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\STG_SALES_REP.Paths[Salida de entradas coincidentes de búsqueda]"
+              endId="Package\STG_SALES_REP\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\STG_SALES_REP\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\STG_SALES_REP.Paths[Salida de entradas no coincidentes de búsqueda]"
+              endId="Package\STG_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de entradas no coincidentes de búsqueda"
+              startId="Package\STG_SALES_REP\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]" />
+            <path
+              refId="Package\STG_SALES_REP.Paths[Salida de origen de OLE DB]"
+              endId="Package\STG_SALES_REP\union tabla.Inputs[Entrada de Unión de todo 1]"
+              name="Salida de origen de OLE DB"
+              startId="Package\STG_SALES_REP\STA_SALES_REP.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_SALES_REP.Paths[Salida de origen de OLE DB1]"
+              endId="Package\STG_SALES_REP\union tabla.Inputs[Entrada de Unión de todo 2]"
+              name="Salida de origen de OLE DB"
+              startId="Package\STG_SALES_REP\STA_TEAM_MANAGER.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_SALES_REP.Paths[Salida de origen de OLE DB2]"
+              endId="Package\STG_SALES_REP\union vlaor 0.Inputs[Entrada de Unión de todo 2]"
+              name="Salida de origen de OLE DB"
+              startId="Package\STG_SALES_REP\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_SALES_REP.Paths[Salida de Unión de todo 1]"
+              endId="Package\STG_SALES_REP\union vlaor 0.Inputs[Entrada de Unión de todo 1]"
+              name="Salida de Unión de todo 1"
+              startId="Package\STG_SALES_REP\union tabla.Outputs[Salida de Unión de todo 1]" />
+            <path
+              refId="Package\STG_SALES_REP.Paths[Salida de Unión de todo 11]"
+              endId="Package\STG_SALES_REP\Columna derivada.Inputs[Entrada de columna derivada]"
+              name="Salida de Unión de todo 1"
+              startId="Package\STG_SALES_REP\union vlaor 0.Outputs[Salida de Unión de todo 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\STG_STORE"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarea Flujo de datos"
@@ -7750,6 +9395,14 @@ WHERE ID_store = ?;
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 5"
       DTS:To="Package\STG_CUSTOMERS" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{74D3E5D6-E01C-4DBF-B4DA-81EF8EAC21BA}"
+      DTS:From="Package\STG_CUSTOMERS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\STG_SALES_REP" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -7766,11 +9419,11 @@ WHERE ID_store = ?;
         <NodeLayout
           Size="172,41.6"
           Id="Package\STG_CUSTOMERS"
-          TopLeft="667.49996352941,81.4666661001581" />
+          TopLeft="673.333296544024,124.799999132157" />
         <NodeLayout
           Size="204.8,41.6"
           Id="Package\STG_CUSTOMERS_TYPE"
-          TopLeft="452.499975276491,80.5999994395177" />
+          TopLeft="447.499975549679,123.933332471516" />
         <NodeLayout
           Size="196.8,41.6"
           Id="Package\STG_PRODUCT_CLASS"
@@ -7782,11 +9435,11 @@ WHERE ID_store = ?;
         <NodeLayout
           Size="185.6,41.6"
           Id="Package\STG_PRODUCT_LINE"
-          TopLeft="22.4999987706541,85.7999994033576" />
+          TopLeft="17.499999043842,123.933332471517" />
         <NodeLayout
           Size="195.2,41.6"
           Id="Package\STG_PRODUCTS_FULL"
-          TopLeft="244.999986613791,85.7999994033572" />
+          TopLeft="234.166653872365,135.199999059836" />
         <NodeLayout
           Size="141.6,41.6"
           Id="Package\STG_STORE"
@@ -7841,26 +9494,26 @@ WHERE ID_store = ?;
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-443.933309383857,27.7333328511981"
+              EndConnector="-448.933309110669,65.866665919357"
               Start="0,0"
-              End="-443.933309383857,20.2333328511981">
+              End="-448.933309110669,58.366665919357">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9.86666642559905" />
+                    End="0,28.9333329596785" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9.86666642559905"
-                    Point2="0,13.866666425599"
-                    Point3="-4,13.866666425599" />
+                    Point1="0,28.9333329596785"
+                    Point2="0,32.9333329596785"
+                    Point3="-4,32.9333329596785" />
                   <mssgle:LineSegment
-                    End="-439.933309383857,13.866666425599" />
+                    End="-444.933309110669,32.9333329596785" />
                   <mssgle:CubicBezierSegment
-                    Point1="-439.933309383857,13.866666425599"
-                    Point2="-443.933309383857,13.866666425599"
-                    Point3="-443.933309383857,17.866666425599" />
+                    Point1="-444.933309110669,32.9333329596785"
+                    Point2="-448.933309110669,32.9333329596785"
+                    Point3="-448.933309110669,36.9333329596785" />
                   <mssgle:LineSegment
-                    End="-443.933309383857,20.2333328511981" />
+                    End="-448.933309110669,58.366665919357" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7871,18 +9524,30 @@ WHERE ID_store = ?;
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="208.099998770654,106.599999403357">
+          TopLeft="203.099999043842,144.733332471517">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="36.8999878431369,0"
+              EndConnector="31.0666548285229,11.2666665883193"
               Start="0,0"
-              End="29.3999878431369,0">
+              End="23.5666548285229,11.2666665883193">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="29.3999878431369,0" />
+                    End="11.5333274142614,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.5333274142614,0"
+                    Point2="15.5333274142614,0"
+                    Point3="15.5333274142614,4" />
+                  <mssgle:LineSegment
+                    End="15.5333274142614,7.26666658831925" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.5333274142614,7.26666658831925"
+                    Point2="15.5333274142614,11.2666665883193"
+                    Point3="19.5333274142614,11.2666665883193" />
+                  <mssgle:LineSegment
+                    End="23.5666548285229,11.2666665883193" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7893,13 +9558,13 @@ WHERE ID_store = ?;
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="342.599986613791,127.399999403357">
+          TopLeft="331.766653872365,176.799999059836">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="212.2999886627,-5.1999999638395"
+              EndConnector="218.133321677314,-11.2666665883193"
               Start="0,0"
-              End="212.2999886627,2.3000000361605">
+              End="218.133321677314,-3.76666658831931">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -7910,13 +9575,13 @@ WHERE ID_store = ?;
                     Point2="0,22.5"
                     Point3="4,22.5" />
                   <mssgle:LineSegment
-                    End="208.2999886627,22.5" />
+                    End="214.133321677314,22.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="208.2999886627,22.5"
-                    Point2="212.2999886627,22.5"
-                    Point3="212.2999886627,18.5" />
+                    Point1="214.133321677314,22.5"
+                    Point2="218.133321677314,22.5"
+                    Point3="218.133321677314,18.5" />
                   <mssgle:LineSegment
-                    End="212.2999886627,2.3000000361605" />
+                    End="218.133321677314,-3.76666658831931" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7927,13 +9592,13 @@ WHERE ID_store = ?;
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="554.899975276491,80.5999994395177">
+          TopLeft="582.699975549679,123.933332471516">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="198.599988252919,0.866666660640391"
+              EndConnector="176.633320994345,0.866666660640419"
               Start="0,0"
-              End="198.599988252919,-6.63333333935961">
+              End="176.633320994345,-6.63333333935958">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -7944,13 +9609,51 @@ WHERE ID_store = ?;
                     Point2="0,-22.5"
                     Point3="4,-22.5" />
                   <mssgle:LineSegment
-                    End="194.599988252919,-22.5" />
+                    End="172.633320994345,-22.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="194.599988252919,-22.5"
-                    Point2="198.599988252919,-22.5"
-                    Point3="198.599988252919,-18.5" />
+                    Point1="172.633320994345,-22.5"
+                    Point2="176.633320994345,-22.5"
+                    Point3="176.633320994345,-18.5" />
                   <mssgle:LineSegment
-                    End="198.599988252919,-6.63333333935961" />
+                    End="176.633320994345,-6.63333333935958" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="166.4,41.6"
+          Id="Package\STG_SALES_REP"
+          TopLeft="593.333300915031,282.533331368632" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="759.333296544024,166.399999132157">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-82.7999956289931,116.133332236475"
+              Start="0,0"
+              End="-82.7999956289931,108.633332236475">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.0666661182375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,54.0666661182375"
+                    Point2="0,58.0666661182375"
+                    Point3="-4,58.0666661182375" />
+                  <mssgle:LineSegment
+                    End="-78.7999956289931,58.0666661182375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-78.7999956289931,58.0666661182375"
+                    Point2="-82.7999956289931,58.0666661182375"
+                    Point3="-82.7999956289931,62.0666661182375" />
+                  <mssgle:LineSegment
+                    End="-82.7999956289931,108.633332236475" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7972,17 +9675,33 @@ WHERE ID_store = ?;
           Id="Package\STG_CUSTOMERS\Comando de OLE DB"
           TopLeft="160.66666619314,373.333327804671" />
         <NodeLayout
+          Size="124.8,41.6"
+          Id="Package\STG_CUSTOMERS\Ordenar 2"
+          TopLeft="240.533320584563,205.399998571674" />
+        <NodeLayout
           Size="164.8,41.6"
           Id="Package\STG_CUSTOMERS\STG_CUSTOMER"
           TopLeft="632.833324466316,366.733327882356" />
         <NodeLayout
-          Size="125.6,41.6"
-          Id="Package\STG_CUSTOMERS\Búsqueda"
-          TopLeft="477.66665848924,292.66666237447" />
-        <NodeLayout
           Size="171.2,41.6"
           Id="Package\STG_CUSTOMERS\STA_CUSTOMERS"
           TopLeft="30.1666801580119,30.3999989064533" />
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\STG_CUSTOMERS\Combinación de mezcla"
+          TopLeft="406.666644447381,165.533332182235" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\STG_CUSTOMERS\Columna derivada"
+          TopLeft="253.333319491811,36.9333331043191" />
+        <NodeLayout
+          Size="124.8,41.6"
+          Id="Package\STG_CUSTOMERS\Ordenar 1"
+          TopLeft="631.666632153924,147.333332308796" />
+        <NodeLayout
+          Size="124.8,41.6"
+          Id="Package\STG_CUSTOMERS\Ordenar 3"
+          TopLeft="40.8333311022985,207.999998553594" />
         <NodeLayout
           Size="197.6,41.6"
           Id="Package\STG_CUSTOMERS\STG_CUSTOMER_TYPE"
@@ -7992,165 +9711,39 @@ WHERE ID_store = ?;
           Id="Package\STG_CUSTOMERS\Ordenar"
           TopLeft="237.499987023573,123.933332471516" />
         <NodeLayout
-          Size="124.8,41.6"
-          Id="Package\STG_CUSTOMERS\Ordenar 1"
-          TopLeft="631.666632153924,147.333332308796" />
-        <EdgeLayout
-          Id="Package\STG_CUSTOMERS.Paths[Salida de origen de OLE DB]"
-          TopLeft="543.799975686273,70.1999998011192">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="150.26665646765,77.1333325076766"
-              Start="0,0"
-              End="150.26665646765,69.6333325076766">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.5666662538383" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.5666662538383"
-                    Point2="0,38.5666662538383"
-                    Point3="4,38.5666662538383" />
-                  <mssgle:LineSegment
-                    End="146.26665646765,38.5666662538383" />
-                  <mssgle:CubicBezierSegment
-                    Point1="146.26665646765,38.5666662538383"
-                    Point2="150.26665646765,38.5666662538383"
-                    Point3="150.26665646765,42.5666662538383" />
-                  <mssgle:LineSegment
-                    End="150.26665646765,69.6333325076766" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="189.6,41.6"
-          Id="Package\STG_CUSTOMERS\Combinación de mezcla"
-          TopLeft="406.666644447381,165.533332182235" />
-        <EdgeLayout
-          Id="Package\STG_CUSTOMERS.Paths[Salida de ordenación]"
-          TopLeft="354.299987023573,144.733332471516">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="52.3666574238079,35.9999997107187"
-              Start="0,0"
-              End="44.8666574238079,35.9999997107187">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="26.2562909559779,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="26.2562909559779,0"
-                    Point2="30.2562909559779,0"
-                    Point3="30.2562909559779,4" />
-                  <mssgle:LineSegment
-                    End="30.2562909559779,31.9999997107187" />
-                  <mssgle:CubicBezierSegment
-                    Point1="30.2562909559779,31.9999997107187"
-                    Point2="30.2562909559779,35.9999997107187"
-                    Point3="34.2562909559779,35.9999997107187" />
-                  <mssgle:LineSegment
-                    End="44.8666574238079,35.9999997107187" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_CUSTOMERS.Paths[Salida de ordenación1]"
-          TopLeft="631.666632153924,168.133332308796">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-35.3999877065429,18.1999998734395"
-              Start="0,0"
-              End="-27.8999877065429,18.1999998734395">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-13.6999938532715,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-13.6999938532715,0"
-                    Point2="-17.6999938532715,0"
-                    Point3="-17.6999938532715,4" />
-                  <mssgle:LineSegment
-                    End="-17.6999938532715,14.1999998734395" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-17.6999938532715,14.1999998734395"
-                    Point2="-17.6999938532715,18.1999998734395"
-                    Point3="-21.6999938532715,18.1999998734395" />
-                  <mssgle:LineSegment
-                    End="-27.8999877065429,18.1999998734395" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="197.6,41.6"
-          Id="Package\STG_CUSTOMERS\Combinación de mezcla 1"
-          TopLeft="106.666660838657,285.999998011192" />
-        <NodeLayout
-          Size="124.8,41.6"
-          Id="Package\STG_CUSTOMERS\Ordenar 2"
-          TopLeft="240.533320584563,205.399998571674" />
-        <EdgeLayout
-          Id="Package\STG_CUSTOMERS.Paths[Salida de combinación de mezcla]"
-          TopLeft="406.666644447381,191.933332182235">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-41.3333238628181,34.2666663894389"
-              Start="0,0"
-              End="-33.8333238628181,34.2666663894389">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-13.4518478531899,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-13.4518478531899,0"
-                    Point2="-17.4518478531899,0"
-                    Point3="-17.4518478531899,4" />
-                  <mssgle:LineSegment
-                    End="-17.4518478531899,30.2666663894389" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-17.4518478531899,30.2666663894389"
-                    Point2="-17.4518478531899,34.2666663894389"
-                    Point3="-21.4518478531899,34.2666663894389" />
-                  <mssgle:LineSegment
-                    End="-33.8333238628181,34.2666663894389" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="164.8,41.6"
           Id="Package\STG_CUSTOMERS\Origen de OLE DB"
           TopLeft="30.8333316486744,141.266665684316" />
         <NodeLayout
-          Size="124.8,41.6"
-          Id="Package\STG_CUSTOMERS\Ordenar 3"
-          TopLeft="40.8333311022985,207.999998553594" />
+          Size="125.6,41.6"
+          Id="Package\STG_CUSTOMERS\Búsqueda"
+          TopLeft="477.66665848924,292.66666237447" />
+        <NodeLayout
+          Size="197.6,41.6"
+          Id="Package\STG_CUSTOMERS\Combinación de mezcla 1"
+          TopLeft="106.666660838657,285.999998011192" />
+        <EdgeLayout
+          Id="Package\STG_CUSTOMERS.Paths[Salida de origen de OLE DB2]"
+          TopLeft="201.366680158012,54.4666660053862">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51.966639333799,0"
+              Start="0,0"
+              End="44.466639333799,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="44.466639333799,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_CUSTOMERS.Paths[Salida de origen de OLE DB1]"
           TopLeft="113.233331648674,182.866665684316">
@@ -8186,31 +9779,31 @@ WHERE ID_store = ?;
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_CUSTOMERS.Paths[Salida de ordenación2]"
-          TopLeft="103.233331102298,249.599998553594">
+          Id="Package\STG_CUSTOMERS.Paths[Salida de origen de OLE DB]"
+          TopLeft="543.799975686273,70.1999998011192">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="70.6333297363589,36.3999994575977"
+              EndConnector="150.26665646765,77.1333325076766"
               Start="0,0"
-              End="70.6333297363589,28.8999994575977">
+              End="150.26665646765,69.6333325076766">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.6645779904256" />
+                    End="0,34.5666662538383" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.6645779904256"
-                    Point2="0,21.6645779904256"
-                    Point3="4,21.6645779904256" />
+                    Point1="0,34.5666662538383"
+                    Point2="0,38.5666662538383"
+                    Point3="4,38.5666662538383" />
                   <mssgle:LineSegment
-                    End="66.6333297363589,21.6645779904256" />
+                    End="146.26665646765,38.5666662538383" />
                   <mssgle:CubicBezierSegment
-                    Point1="66.6333297363589,21.6645779904256"
-                    Point2="70.6333297363589,21.6645779904256"
-                    Point3="70.6333297363589,25.6645779904256" />
+                    Point1="146.26665646765,38.5666662538383"
+                    Point2="150.26665646765,38.5666662538383"
+                    Point3="150.26665646765,42.5666662538383" />
                   <mssgle:LineSegment
-                    End="70.6333297363589,28.8999994575977" />
+                    End="150.26665646765,69.6333325076766" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8254,45 +9847,31 @@ WHERE ID_store = ?;
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_CUSTOMERS.Paths[Salida de combinación de mezcla1]"
-          TopLeft="304.266660838657,310.133330192831">
+          Id="Package\STG_CUSTOMERS.Paths[Salida de ordenación2]"
+          TopLeft="103.233331102298,249.599998553594">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="173.399997650583,0"
+              EndConnector="70.6333297363589,36.3999994575977"
               Start="0,0"
-              End="165.899997650583,0">
+              End="70.6333297363589,28.8999994575977">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="165.899997650583,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\STG_CUSTOMERS\Columna derivada"
-          TopLeft="253.333319491811,36.9333331043191" />
-        <EdgeLayout
-          Id="Package\STG_CUSTOMERS.Paths[Salida de origen de OLE DB2]"
-          TopLeft="201.366680158012,54.4666660053862">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="51.966639333799,0"
-              Start="0,0"
-              End="44.466639333799,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
+                    End="0,17.6645779904256" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.6645779904256"
+                    Point2="0,21.6645779904256"
+                    Point3="4,21.6645779904256" />
                   <mssgle:LineSegment
-                    End="44.466639333799,0" />
+                    End="66.6333297363589,21.6645779904256" />
+                  <mssgle:CubicBezierSegment
+                    Point1="66.6333297363589,21.6645779904256"
+                    Point2="70.6333297363589,21.6645779904256"
+                    Point3="70.6333297363589,25.6645779904256" />
+                  <mssgle:LineSegment
+                    End="70.6333297363589,28.8999994575977" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8302,31 +9881,65 @@ WHERE ID_store = ?;
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_CUSTOMERS.Paths[Salida de columna derivada]"
-          TopLeft="334.533319491811,78.5333331043191">
+          Id="Package\STG_CUSTOMERS.Paths[Salida de ordenación1]"
+          TopLeft="631.666632153924,168.133332308796">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-38.6333324682381,45.3999993671974"
+              EndConnector="-35.3999877065429,18.1999998734395"
               Start="0,0"
-              End="-38.6333324682381,37.8999993671974">
+              End="-27.8999877065429,18.1999998734395">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.6999996835987" />
+                    End="-13.6999938532715,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,18.6999996835987"
-                    Point2="0,22.6999996835987"
-                    Point3="-4,22.6999996835987" />
+                    Point1="-13.6999938532715,0"
+                    Point2="-17.6999938532715,0"
+                    Point3="-17.6999938532715,4" />
                   <mssgle:LineSegment
-                    End="-34.6333324682381,22.6999996835987" />
+                    End="-17.6999938532715,14.1999998734395" />
                   <mssgle:CubicBezierSegment
-                    Point1="-34.6333324682381,22.6999996835987"
-                    Point2="-38.6333324682381,22.6999996835987"
-                    Point3="-38.6333324682381,26.6999996835987" />
+                    Point1="-17.6999938532715,14.1999998734395"
+                    Point2="-17.6999938532715,18.1999998734395"
+                    Point3="-21.6999938532715,18.1999998734395" />
                   <mssgle:LineSegment
-                    End="-38.6333324682381,37.8999993671974" />
+                    End="-27.8999877065429,18.1999998734395" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_CUSTOMERS.Paths[Salida de ordenación]"
+          TopLeft="354.299987023573,144.733332471516">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52.3666574238079,35.9999997107187"
+              Start="0,0"
+              End="44.8666574238079,35.9999997107187">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="26.2562909559779,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26.2562909559779,0"
+                    Point2="30.2562909559779,0"
+                    Point3="30.2562909559779,4" />
+                  <mssgle:LineSegment
+                    End="30.2562909559779,31.9999997107187" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.2562909559779,31.9999997107187"
+                    Point2="30.2562909559779,35.9999997107187"
+                    Point3="34.2562909559779,35.9999997107187" />
+                  <mssgle:LineSegment
+                    End="44.8666574238079,35.9999997107187" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8407,29 +10020,109 @@ WHERE ID_store = ?;
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_CUSTOMERS.Paths[Salida de combinación de mezcla1]"
+          TopLeft="304.266660838657,310.133330192831">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="173.399997650583,0"
+              Start="0,0"
+              End="165.899997650583,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="165.899997650583,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_CUSTOMERS.Paths[Salida de combinación de mezcla]"
+          TopLeft="406.666644447381,191.933332182235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-41.3333238628181,34.2666663894389"
+              Start="0,0"
+              End="-33.8333238628181,34.2666663894389">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-13.4518478531899,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.4518478531899,0"
+                    Point2="-17.4518478531899,0"
+                    Point3="-17.4518478531899,4" />
+                  <mssgle:LineSegment
+                    End="-17.4518478531899,30.2666663894389" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17.4518478531899,30.2666663894389"
+                    Point2="-17.4518478531899,34.2666663894389"
+                    Point3="-21.4518478531899,34.2666663894389" />
+                  <mssgle:LineSegment
+                    End="-33.8333238628181,34.2666663894389" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_CUSTOMERS.Paths[Salida de columna derivada]"
+          TopLeft="334.533319491811,78.5333331043191">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-38.6333324682381,45.3999993671974"
+              Start="0,0"
+              End="-38.6333324682381,37.8999993671974">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.6999996835987" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.6999996835987"
+                    Point2="0,22.6999996835987"
+                    Point3="-4,22.6999996835987" />
+                  <mssgle:LineSegment
+                    End="-34.6333324682381,22.6999996835987" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-34.6333324682381,22.6999996835987"
+                    Point2="-38.6333324682381,22.6999996835987"
+                    Point3="-38.6333324682381,26.6999996835987" />
+                  <mssgle:LineSegment
+                    End="-38.6333324682381,37.8999993671974" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\STG_CUSTOMERS\Búsqueda">
+    design-time-name="Package\STG_CUSTOMERS\STG_CUSTOMER">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[STG_CUSTOMERS]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -8447,7 +10140,7 @@ WHERE ID_store = ?;
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\STG_CUSTOMERS\STG_CUSTOMER">
+    design-time-name="Package\STG_CUSTOMERS\STG_CUSTOMER_TYPE">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8459,6 +10152,42 @@ WHERE ID_store = ?;
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_CUSTOMERS\Origen de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_CUSTOMERS\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[STG_CUSTOMERS]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\STG_CUSTOMERS_TYPE">
     <LayoutInfo>
@@ -8467,7 +10196,7 @@ WHERE ID_store = ?;
         <NodeLayout
           Size="168.8,41.6"
           Id="Package\STG_CUSTOMERS_TYPE\Destino de OLE DB"
-          TopLeft="650.999990299344,403.999993979931" />
+          TopLeft="446.999993339181,411.999993860722" />
         <NodeLayout
           Size="171.2,41.6"
           Id="Package\STG_CUSTOMERS_TYPE\STA_CUSTOMERS"
@@ -8479,33 +10208,21 @@ WHERE ID_store = ?;
         <NodeLayout
           Size="123.2,41.6"
           Id="Package\STG_CUSTOMERS_TYPE\Agregado"
-          TopLeft="529.999992102385,186.999997213483" />
+          TopLeft="468.999993011356,182.999997273088" />
         <EdgeLayout
           Id="Package\STG_CUSTOMERS_TYPE.Paths[Salida de origen de OLE DB]"
-          TopLeft="529.599993383885,101.59999910593">
+          TopLeft="530.099993197621,101.59999910593">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="61.9999987185001,85.3999981075525"
+              EndConnector="0,81.3999981671573"
               Start="0,0"
-              End="61.9999987185001,77.8999981075525">
+              End="0,73.8999981671573">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.6999990537763" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,38.6999990537763"
-                    Point2="0,42.6999990537763"
-                    Point3="4,42.6999990537763" />
-                  <mssgle:LineSegment
-                    End="57.9999987185001,42.6999990537763" />
-                  <mssgle:CubicBezierSegment
-                    Point1="57.9999987185001,42.6999990537763"
-                    Point2="61.9999987185001,42.6999990537763"
-                    Point3="61.9999987185001,46.6999990537763" />
-                  <mssgle:LineSegment
-                    End="61.9999987185001,77.8999981075525" />
+                    End="0,73.8999981671573" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8516,66 +10233,42 @@ WHERE ID_store = ?;
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_CUSTOMERS_TYPE.Paths[Salida de entradas no coincidentes de búsqueda]"
-          TopLeft="533.799992981553,323.599995797873">
+          TopLeft="532.599993160367,323.599995797873">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="201.599997317791,80.3999981820583"
+              EndConnector="0,88.3999980628486"
               Start="0,0"
-              End="201.599997317791,72.8999981820583">
+              End="0,80.8999980628486">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.1999990910292" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,36.1999990910292"
-                    Point2="0,40.1999990910292"
-                    Point3="4,40.1999990910292" />
-                  <mssgle:LineSegment
-                    End="197.599997317791,40.1999990910292" />
-                  <mssgle:CubicBezierSegment
-                    Point1="197.599997317791,40.1999990910292"
-                    Point2="201.599997317791,40.1999990910292"
-                    Point3="201.599997317791,44.1999990910292" />
-                  <mssgle:LineSegment
-                    End="201.599997317791,72.8999981820583" />
+                    End="0,80.8999980628486" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-6.08902477860444,45.1999990910292,213.778046875,12.1953125"
+              BoundingBox="-106.8890234375,34.3523427814243,213.778046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_CUSTOMERS_TYPE.Paths[Salida de agregado 1]"
-          TopLeft="591.599992102385,228.599997213483">
+          TopLeft="532.199992996455,224.599997273088">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-57.7999991208316,53.3999985843897"
+              EndConnector="0,57.3999985247854"
               Start="0,0"
-              End="-57.7999991208316,45.8999985843897">
+              End="0,49.8999985247854">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.6999992921949" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.6999992921949"
-                    Point2="0,26.6999992921949"
-                    Point3="-4,26.6999992921949" />
-                  <mssgle:LineSegment
-                    End="-53.7999991208316,26.6999992921949" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-53.7999991208316,26.6999992921949"
-                    Point2="-57.7999991208316,26.6999992921949"
-                    Point3="-57.7999991208316,30.6999992921949" />
-                  <mssgle:LineSegment
-                    End="-57.7999991208316,45.8999985843897" />
+                    End="0,49.8999985247854" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8619,7 +10312,7 @@ WHERE ID_store = ?;
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -8629,7 +10322,7 @@ WHERE ID_store = ?;
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8688,9 +10381,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8869,9 +10560,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9050,9 +10739,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9123,7 +10810,7 @@ WHERE ID_store = ?;
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-191.119021880329,71.6999986961484,199.638046875,12.1953125"
+              BoundingBox="-191.119021880328,71.6999986961484,199.638046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -9478,9 +11165,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9586,9 +11271,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9643,8 +11326,316 @@ WHERE ID_store = ?;
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\STG_SALES_REP">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\STG_SALES_REP\STA_SALES_REP"
+          TopLeft="309.99999538064,50.9999992400408" />
+        <NodeLayout
+          Size="125.6,41.6"
+          Id="Package\STG_SALES_REP\Búsqueda"
+          TopLeft="592.999991163612,350.999994769692" />
+        <NodeLayout
+          Size="191.2,41.6"
+          Id="Package\STG_SALES_REP\STA_TEAM_MANAGER"
+          TopLeft="663.999990105629,49.9999992549419" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\STG_SALES_REP\union tabla"
+          TopLeft="601.999991029501,161.999997586012" />
+        <EdgeLayout
+          Id="Package\STG_SALES_REP.Paths[Salida de origen de OLE DB]"
+          TopLeft="392.39999538064,92.5999992400408">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="254.133328982194,69.3999983459712"
+              Start="0,0"
+              End="254.133328982194,61.8999983459712">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.1321941416366" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.1321941416366"
+                    Point2="0,41.1321941416366"
+                    Point3="4,41.1321941416366" />
+                  <mssgle:LineSegment
+                    End="250.133328982194,41.1321941416366" />
+                  <mssgle:CubicBezierSegment
+                    Point1="250.133328982194,41.1321941416366"
+                    Point2="254.133328982194,41.1321941416366"
+                    Point3="254.133328982194,45.1321941416366" />
+                  <mssgle:LineSegment
+                    End="254.133328982194,61.8999983459712" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_SALES_REP.Paths[Salida de origen de OLE DB1]"
+          TopLeft="759.599990105629,91.5999992549419">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-72.5333324094615,70.39999833107"
+              Start="0,0"
+              End="-72.5333324094615,62.89999833107">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.7248770596342" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.7248770596342"
+                    Point2="0,41.7248770596342"
+                    Point3="-4,41.7248770596342" />
+                  <mssgle:LineSegment
+                    End="-68.5333324094615,41.7248770596342" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-68.5333324094615,41.7248770596342"
+                    Point2="-72.5333324094615,41.7248770596342"
+                    Point3="-72.5333324094615,45.7248770596342" />
+                  <mssgle:LineSegment
+                    End="-72.5333324094615,62.89999833107" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="168.8,41.6"
+          Id="Package\STG_SALES_REP\Destino de OLE DB"
+          TopLeft="820.999987766147,417.999993771315" />
+        <EdgeLayout
+          Id="Package\STG_SALES_REP.Paths[Salida de entradas no coincidentes de búsqueda]"
+          TopLeft="675.399991163612,392.599994769692">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="229.999996602535,25.3999990016223"
+              Start="0,0"
+              End="229.999996602535,17.8999990016223">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,6.35169770632153" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,6.35169770632153"
+                    Point2="0,10.3516977063215"
+                    Point3="4,10.3516977063215" />
+                  <mssgle:LineSegment
+                    End="225.999996602535,10.3516977063215" />
+                  <mssgle:CubicBezierSegment
+                    Point1="225.999996602535,10.3516977063215"
+                    Point2="229.999996602535,10.3516977063215"
+                    Point3="229.999996602535,14.3516977063215" />
+                  <mssgle:LineSegment
+                    End="229.999996602535,17.8999990016223" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="8.11097486376751,15.3516977063215,213.778046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\STG_SALES_REP\Comando de OLE DB"
+          TopLeft="299.999995529652,419.799994292855" />
+        <EdgeLayout
+          Id="Package\STG_SALES_REP.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="636.199991163612,392.599994769692">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-246.99999563396,27.1999995231628"
+              Start="0,0"
+              End="-246.99999563396,19.6999995231628">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.08528282453427" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.08528282453427"
+                    Point2="0,11.0852828245343"
+                    Point3="-4,11.0852828245343" />
+                  <mssgle:LineSegment
+                    End="-242.99999563396,11.0852828245343" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-242.99999563396,11.0852828245343"
+                    Point2="-246.99999563396,11.0852828245343"
+                    Point3="-246.99999563396,15.0852828245343" />
+                  <mssgle:LineSegment
+                    End="-246.99999563396,19.6999995231628" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-223.31902125448,16.0852828245343,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\STG_SALES_REP\Columna derivada"
+          TopLeft="573.999991446733,257.999996870756" />
+        <EdgeLayout
+          Id="Package\STG_SALES_REP.Paths[Salida de columna derivada]"
+          TopLeft="655.499991305172,299.599996870756">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.3999978989361"
+              Start="0,0"
+              End="0,43.8999978989361">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.8999978989361" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\STG_SALES_REP\0 NO IDENTIFICADO"
+          TopLeft="100.999998494983,143.599998480082" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\STG_SALES_REP\union vlaor 0"
+          TopLeft="385.999994248152,193.599997735024" />
+        <EdgeLayout
+          Id="Package\STG_SALES_REP.Paths[Salida de Unión de todo 1]"
+          TopLeft="601.999991029501,182.799997586012">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-78.3999967813494,31.6000001490116"
+              Start="0,0"
+              End="-70.8999967813494,31.6000001490116">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-35.1999983906747,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-35.1999983906747,0"
+                    Point2="-39.1999983906747,0"
+                    Point3="-39.1999983906747,4" />
+                  <mssgle:LineSegment
+                    End="-39.1999983906747,27.6000001490116" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-39.1999983906747,27.6000001490116"
+                    Point2="-39.1999983906747,31.6000001490116"
+                    Point3="-43.1999983906747,31.6000001490116" />
+                  <mssgle:LineSegment
+                    End="-70.8999967813494,31.6000001490116" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_SALES_REP.Paths[Salida de origen de OLE DB2]"
+          TopLeft="279.399998494983,164.399998480082">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="106.599995753169,49.9999992549419"
+              Start="0,0"
+              End="99.0999957531689,49.9999992549419">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="49.2999978765845,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="49.2999978765845,0"
+                    Point2="53.2999978765845,0"
+                    Point3="53.2999978765845,4" />
+                  <mssgle:LineSegment
+                    End="53.2999978765845,45.9999992549419" />
+                  <mssgle:CubicBezierSegment
+                    Point1="53.2999978765845,45.9999992549419"
+                    Point2="53.2999978765845,49.9999992549419"
+                    Point3="57.2999978765845,49.9999992549419" />
+                  <mssgle:LineSegment
+                    End="99.0999957531689,49.9999992549419" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_SALES_REP.Paths[Salida de Unión de todo 11]"
+          TopLeft="454.799994248152,235.199997735024">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="200.399997198582,22.7999991357327"
+              Start="0,0"
+              End="200.399997198582,15.2999991357327">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.39999956786635" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.39999956786635"
+                    Point2="0,11.3999995678663"
+                    Point3="4,11.3999995678663" />
+                  <mssgle:LineSegment
+                    End="196.399997198582,11.3999995678663" />
+                  <mssgle:CubicBezierSegment
+                    Point1="196.399997198582,11.3999995678663"
+                    Point2="200.399997198582,11.3999995678663"
+                    Point3="200.399997198582,15.3999995678663" />
+                  <mssgle:LineSegment
+                    End="200.399997198582,15.2999991357327" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\STG_CUSTOMERS\STG_CUSTOMER_TYPE">
+    design-time-name="Package\STG_SALES_REP\STA_SALES_REP">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9657,7 +11648,30 @@ WHERE ID_store = ?;
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\STG_CUSTOMERS\Origen de OLE DB">
+    design-time-name="Package\STG_SALES_REP\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[STG_SALES_REP]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_SALES_REP\STA_TEAM_MANAGER">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9666,6 +11680,27 @@ WHERE ID_store = ?;
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_SALES_REP\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_SALES_REP\0 NO IDENTIFICADO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

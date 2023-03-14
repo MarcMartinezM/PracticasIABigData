@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{ACE4C823-ECD7-4C8A-8228-5F7B5359C46E}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{25FAEAAE-D4FA-4AFB-8779-F8D982FACB6F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -523,10 +523,6 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="116,41.6"
-          Id="Package\MASTER_PAISES\PAISES"
-          TopLeft="75.8333291899828,135.199999059836" />
-        <NodeLayout
           Size="165.6,41.6"
           Id="Package\MASTER_PAISES\STA_COUNTRIES"
           TopLeft="429.999976505837,133.466665738556" />
@@ -534,6 +530,10 @@
           Size="162.4,41.6"
           Id="Package\MASTER_PAISES\Columna derivada"
           TopLeft="239.166653599177,127.399999114076" />
+        <NodeLayout
+          Size="116,41.6"
+          Id="Package\MASTER_PAISES\PAISES"
+          TopLeft="75.8333291899828,135.199999059836" />
         <EdgeLayout
           Id="Package\MASTER_PAISES.Paths[Salida de origen de archivo plano]"
           TopLeft="191.833329189983,152.099999086956">
