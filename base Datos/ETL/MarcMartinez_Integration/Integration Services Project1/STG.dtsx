@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="65"
-  DTS:VersionGUID="{D6786571-8EE9-4C18-BEC1-12BF7F369AFA}">
+  DTS:VersionBuild="68"
+  DTS:VersionGUID="{D8FF9352-290A-4BA1-A01B-FD6FB300AB81}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -121,6 +121,7 @@
       DTS:refId="Package\STG_CUSTOMERS"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarea Flujo de datos"
+      DTS:Disabled="True"
       DTS:DTSID="{79E8F478-8114-4E18-8CC8-32567851593D}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -131,6 +132,136 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="0 NO IDENTIFICADO"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select 0 as ID_customer, 'No identificado' as Name_company;</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].Columns[ID_customer]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_customer]"
+                      lineageId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].Columns[ID_customer]"
+                      name="ID_customer"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].Columns[Name_company]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].ExternalColumns[Name_company]"
+                      length="15"
+                      lineageId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].Columns[Name_company]"
+                      name="Name_company"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_customer]"
+                      dataType="i4"
+                      name="ID_customer" />
+                    <externalMetadataColumn
+                      refId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].ExternalColumns[Name_company]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="Name_company" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB].Columns[ID_customer]"
+                      dataType="i4"
+                      lineageId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB].Columns[ID_customer]"
+                      name="ID_customer" />
+                    <outputColumn
+                      refId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB].Columns[Name_company]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB].Columns[Name_company]"
+                      name="Name_company" />
+                    <outputColumn
+                      refId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\STG_CUSTOMERS\Búsqueda"
               componentClassID="Microsoft.Lookup"
@@ -281,6 +412,108 @@ where [refTable].[ID_customer] = ?</property>
                       refId="Package\STG_CUSTOMERS\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\STG_CUSTOMERS\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_CUSTOMERS\Columna derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\STG_CUSTOMERS\Columna derivada.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_CUSTOMERS\Columna derivada.Inputs[Entrada de columna derivada].Columns[ID_Customer_Type]"
+                      cachedDataType="i4"
+                      cachedName="ID_Customer_Type"
+                      lineageId="Package\STG_CUSTOMERS\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[ID_Customer_Type]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_CUSTOMERS\Columna derivada.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\STG_CUSTOMERS\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_CUSTOMERS\Columna derivada.Outputs[Salida de columna derivada].Columns[derived_customer_type]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\STG_CUSTOMERS\Columna derivada.Outputs[Salida de columna derivada].Columns[derived_customer_type]"
+                      name="derived_customer_type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[ISNULL](#{Package\STG_CUSTOMERS\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[ID_Customer_Type]}) ? 0 : #{Package\STG_CUSTOMERS\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[ID_Customer_Type]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(ID_Customer_Type) ? 0 : ID_Customer_Type</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_CUSTOMERS\Columna derivada.Outputs[Salida de columna derivada].Columns[derived_codeTree]"
+                      dataType="empty"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\STG_CUSTOMERS\Columna derivada.Outputs[Salida de columna derivada].Columns[derived_codeTree]"
+                      name="derived_codeTree"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression"></property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression"></property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STG_CUSTOMERS\Columna derivada.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\STG_CUSTOMERS\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_CUSTOMERS\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_CUSTOMERS\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_CUSTOMERS\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_CUSTOMERS\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -560,7 +793,7 @@ WHERE  ID_customer = ?;</property>
                   dataType="System.Int32"
                   description="Especifica el tipo de combinación que se debe realizar."
                   name="JoinType"
-                  typeConverter="JoinType">2</property>
+                  typeConverter="JoinType">1</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica el número de columnas de la clave de ordenación."
@@ -829,7 +1062,7 @@ WHERE  ID_customer = ?;</property>
                   dataType="System.Int32"
                   description="Especifica el tipo de combinación que se debe realizar."
                   name="JoinType"
-                  typeConverter="JoinType">2</property>
+                  typeConverter="JoinType">1</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica el número de columnas de la clave de ordenación."
@@ -844,29 +1077,6 @@ WHERE  ID_customer = ?;</property>
                   name="MaxBuffersPerInput">5</property>
               </properties>
               <inputs>
-                <input
-                  refId="Package\STG_CUSTOMERS\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla]"
-                  hasSideEffects="true"
-                  name="Entrada izquierda de combinación de mezcla">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\STG_CUSTOMERS\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla].Columns[name_Countrie]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="name_Countrie"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\STG_CUSTOMERS\Ordenar 3.Outputs[Salida de ordenación].Columns[name_Countrie]" />
-                    <inputColumn
-                      refId="Package\STG_CUSTOMERS\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla].Columns[ThreeCODE_Countrie]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="3"
-                      cachedName="ThreeCODE_Countrie"
-                      lineageId="Package\STG_CUSTOMERS\Ordenar 3.Outputs[Salida de ordenación].Columns[ThreeCODE_Countrie]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
                 <input
                   refId="Package\STG_CUSTOMERS\Combinación de mezcla 1.Inputs[Entrada derecha de combinación de mezcla]"
                   hasSideEffects="true"
@@ -935,6 +1145,29 @@ WHERE  ID_customer = ?;</property>
                       cachedLength="3"
                       cachedName="Derived_currency"
                       lineageId="Package\STG_CUSTOMERS\Ordenar 2.Outputs[Salida de ordenación].Columns[Derived_currency]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\STG_CUSTOMERS\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla]"
+                  hasSideEffects="true"
+                  name="Entrada izquierda de combinación de mezcla">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_CUSTOMERS\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla].Columns[name_Countrie]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="name_Countrie"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\STG_CUSTOMERS\Ordenar 3.Outputs[Salida de ordenación].Columns[name_Countrie]" />
+                    <inputColumn
+                      refId="Package\STG_CUSTOMERS\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla].Columns[ThreeCODE_Countrie]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="ThreeCODE_Countrie"
+                      lineageId="Package\STG_CUSTOMERS\Ordenar 3.Outputs[Salida de ordenación].Columns[ThreeCODE_Countrie]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -2912,6 +3145,85 @@ WHERE  ID_customer = ?;</property>
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\STG_CUSTOMERS\Unión de todo"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Unión de todo;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Combina las filas de varios flujos de datos sin ordenarlos. Por ejemplo, devuelve filas a un flujo de datos después de corregir los errores. Si el orden es importante, se recomienda usar la transformación Mezclar."
+              name="Unión de todo"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\STG_CUSTOMERS\Unión de todo.Inputs[Entrada de Unión de todo 1]"
+                  name="Entrada de Unión de todo 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_CUSTOMERS\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[ID_customer]"
+                      cachedDataType="i4"
+                      cachedName="ID_customer"
+                      lineageId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].Columns[ID_customer]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_CUSTOMERS\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[ID_customer]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_CUSTOMERS\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[Name_company]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="Name_company"
+                      lineageId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB].Columns[Name_company]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_CUSTOMERS\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Name_company]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\STG_CUSTOMERS\Unión de todo.Inputs[Entrada de Unión de todo 2]"
+                  hasSideEffects="true"
+                  name="Entrada de Unión de todo 2">
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\STG_CUSTOMERS\Unión de todo.Inputs[Entrada de Unión de todo 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Entrada de Unión de todo 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_CUSTOMERS\Unión de todo.Outputs[Salida de Unión de todo 1]"
+                  name="Salida de Unión de todo 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_CUSTOMERS\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[ID_customer]"
+                      dataType="i4"
+                      lineageId="Package\STG_CUSTOMERS\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[ID_customer]"
+                      name="ID_customer" />
+                    <outputColumn
+                      refId="Package\STG_CUSTOMERS\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Name_company]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\STG_CUSTOMERS\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Name_company]"
+                      name="Name_company" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
@@ -2920,13 +3232,18 @@ WHERE  ID_customer = ?;</property>
               name="Salida de columna derivada"
               startId="Package\STG_CUSTOMERS\currency.Outputs[Salida de columna derivada]" />
             <path
+              refId="Package\STG_CUSTOMERS.Paths[Salida de columna derivada1]"
+              endId="Package\STG_CUSTOMERS\Unión de todo.Inputs[Entrada de Unión de todo 2]"
+              name="Salida de columna derivada"
+              startId="Package\STG_CUSTOMERS\Columna derivada.Outputs[Salida de columna derivada]" />
+            <path
               refId="Package\STG_CUSTOMERS.Paths[Salida de combinación de mezcla]"
               endId="Package\STG_CUSTOMERS\Ordenar 2.Inputs[Entrada de ordenación]"
               name="Salida de combinación de mezcla"
               startId="Package\STG_CUSTOMERS\Combinación de mezcla.Outputs[Salida de combinación de mezcla]" />
             <path
               refId="Package\STG_CUSTOMERS.Paths[Salida de combinación de mezcla1]"
-              endId="Package\STG_CUSTOMERS\Búsqueda.Inputs[Entrada de búsqueda]"
+              endId="Package\STG_CUSTOMERS\Columna derivada.Inputs[Entrada de columna derivada]"
               name="Salida de combinación de mezcla"
               startId="Package\STG_CUSTOMERS\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla]" />
             <path
@@ -2974,6 +3291,11 @@ WHERE  ID_customer = ?;</property>
               endId="Package\STG_CUSTOMERS\currency.Inputs[Entrada de columna derivada]"
               name="Salida de origen de OLE DB"
               startId="Package\STG_CUSTOMERS\STA_CUSTOMERS.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_CUSTOMERS.Paths[Salida de origen de OLE DB3]"
+              endId="Package\STG_CUSTOMERS\Unión de todo.Inputs[Entrada de Unión de todo 1]"
+              name="Salida de origen de OLE DB"
+              startId="Package\STG_CUSTOMERS\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -8481,6 +8803,136 @@ WHERE  ID_sales_rep = ?;</property>
           version="1">
           <components>
             <component
+              refId="Package\STG_STORE\0 no asignado"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="0 no asignado"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select 0 as ID_store, 'No identificado' as name_store;</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_STORE\0 no asignado.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\STG_STORE\0 no asignado.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_STORE\0 no asignado.Outputs[Salida de origen de OLE DB].Columns[ID_store]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_STORE\0 no asignado.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_store]"
+                      lineageId="Package\STG_STORE\0 no asignado.Outputs[Salida de origen de OLE DB].Columns[ID_store]"
+                      name="ID_store"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_STORE\0 no asignado.Outputs[Salida de origen de OLE DB].Columns[name_store]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_STORE\0 no asignado.Outputs[Salida de origen de OLE DB].ExternalColumns[name_store]"
+                      length="15"
+                      lineageId="Package\STG_STORE\0 no asignado.Outputs[Salida de origen de OLE DB].Columns[name_store]"
+                      name="name_store"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG_STORE\0 no asignado.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_store]"
+                      dataType="i4"
+                      name="ID_store" />
+                    <externalMetadataColumn
+                      refId="Package\STG_STORE\0 no asignado.Outputs[Salida de origen de OLE DB].ExternalColumns[name_store]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="name_store" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\STG_STORE\0 no asignado.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_STORE\0 no asignado.Outputs[Salida de error de origen de OLE DB].Columns[ID_store]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\0 no asignado.Outputs[Salida de error de origen de OLE DB].Columns[ID_store]"
+                      name="ID_store" />
+                    <outputColumn
+                      refId="Package\STG_STORE\0 no asignado.Outputs[Salida de error de origen de OLE DB].Columns[name_store]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\STG_STORE\0 no asignado.Outputs[Salida de error de origen de OLE DB].Columns[name_store]"
+                      name="name_store" />
+                    <outputColumn
+                      refId="Package\STG_STORE\0 no asignado.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\0 no asignado.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_STORE\0 no asignado.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\0 no asignado.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\STG_STORE\Búsqueda"
               componentClassID="Microsoft.Lookup"
               contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
@@ -8564,7 +9016,7 @@ where [refTable].[ID_store] = ?</property>
                       refId="Package\STG_STORE\Búsqueda.Inputs[Entrada de búsqueda].Columns[Store_ID]"
                       cachedDataType="i4"
                       cachedName="Store_ID"
-                      lineageId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[Store_ID]">
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Store_ID]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -8718,6 +9170,172 @@ where [refTable].[ID_store] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\STG_STORE\Columna derivada 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\STG_STORE\Columna derivada 1.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_STORE\Columna derivada 1.Inputs[Entrada de columna derivada].Columns[TwoCODE_Countrie]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="TwoCODE_Countrie"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[TwoCODE_Countrie]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_STORE\Columna derivada 1.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\STG_STORE\Columna derivada 1.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_STORE\Columna derivada 1.Outputs[Salida de columna derivada].Columns[dervied_code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      length="2"
+                      lineageId="Package\STG_STORE\Columna derivada 1.Outputs[Salida de columna derivada].Columns[dervied_code]"
+                      name="dervied_code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[ISNULL](#{Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[TwoCODE_Countrie]}) ? (DT_STR,2,1252)"00" : (DT_STR,2,1252)#{Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[TwoCODE_Countrie]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(TwoCODE_Countrie) ? (DT_STR,2,1252)"00" : (DT_STR,2,1252)TwoCODE_Countrie</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STG_STORE\Columna derivada 1.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\STG_STORE\Columna derivada 1.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_STORE\Columna derivada 1.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\Columna derivada 1.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_STORE\Columna derivada 1.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\Columna derivada 1.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_STORE\Columna derivada 2"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada 2"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\STG_STORE\Columna derivada 2.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_STORE\Columna derivada 2.Inputs[Entrada de columna derivada].Columns[dervied_code]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="dervied_code"
+                      lineageId="Package\STG_STORE\Columna derivada 1.Outputs[Salida de columna derivada].Columns[dervied_code]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_STORE\Columna derivada 2.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\STG_STORE\Columna derivada 2.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_STORE\Columna derivada 2.Outputs[Salida de columna derivada].Columns[DERIVAD_STRING_CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      length="2"
+                      lineageId="Package\STG_STORE\Columna derivada 2.Outputs[Salida de columna derivada].Columns[DERIVAD_STRING_CODE]"
+                      name="DERIVAD_STRING_CODE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">(DT_STR,2,1252)#{Package\STG_STORE\Columna derivada 1.Outputs[Salida de columna derivada].Columns[dervied_code]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,2,1252)dervied_code</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STG_STORE\Columna derivada 2.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\STG_STORE\Columna derivada 2.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_STORE\Columna derivada 2.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\Columna derivada 2.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_STORE\Columna derivada 2.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\Columna derivada 2.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\STG_STORE\Comando de OLE DB"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="Comando de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
@@ -8771,7 +9389,7 @@ WHERE ID_store = ?;
                       cachedLength="50"
                       cachedName="Store_Name"
                       externalMetadataColumnId="Package\STG_STORE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
-                      lineageId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[Store_Name]" />
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Store_Name]" />
                     <inputColumn
                       refId="Package\STG_STORE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[City]"
                       cachedCodepage="1252"
@@ -8779,7 +9397,7 @@ WHERE ID_store = ?;
                       cachedLength="50"
                       cachedName="City"
                       externalMetadataColumnId="Package\STG_STORE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
-                      lineageId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[City]" />
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[City]" />
                     <inputColumn
                       refId="Package\STG_STORE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Country_ISO]"
                       cachedCodepage="1252"
@@ -8787,7 +9405,7 @@ WHERE ID_store = ?;
                       cachedLength="3"
                       cachedName="Country_ISO"
                       externalMetadataColumnId="Package\STG_STORE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
-                      lineageId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[Country_ISO]" />
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Country_ISO]" />
                     <inputColumn
                       refId="Package\STG_STORE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Country]"
                       cachedCodepage="1252"
@@ -8795,19 +9413,19 @@ WHERE ID_store = ?;
                       cachedLength="15"
                       cachedName="Country"
                       externalMetadataColumnId="Package\STG_STORE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_3]"
-                      lineageId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[Country]" />
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Country]" />
                     <inputColumn
                       refId="Package\STG_STORE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Store_ID]"
                       cachedDataType="i4"
                       cachedName="Store_ID"
                       externalMetadataColumnId="Package\STG_STORE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_5]"
-                      lineageId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[Store_ID]" />
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Store_ID]" />
                     <inputColumn
                       refId="Package\STG_STORE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Derived_sq_feet]"
                       cachedDataType="i4"
                       cachedName="Derived_sq_feet"
                       externalMetadataColumnId="Package\STG_STORE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_4]"
-                      lineageId="Package\STG_STORE\Columna derivada.Outputs[Salida de columna derivada].Columns[Derived_sq_feet]" />
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Derived_sq_feet]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -8915,6 +9533,893 @@ WHERE ID_store = ?;
                       lineageId="Package\STG_STORE\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_STORE\Combinación de mezcla"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Combinación de mezcla;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Combina dos flujos de datos ordenados en uno solo mediante la combinación FULL, LEFT o INNER. Se recomienda esta transformación cuando se pueden ordenar los flujos de datos en sus orígenes."
+              name="Combinación de mezcla"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de combinación que se debe realizar."
+                  name="JoinType"
+                  typeConverter="JoinType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número de columnas de la clave de ordenación."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores NULL se tratan como valores iguales."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indica la cantidad máxima solicitada de búferes por entrada antes del bloqueo."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\STG_STORE\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
+                  hasSideEffects="true"
+                  name="Entrada derecha de combinación de mezcla">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[Country_ISO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="Country_ISO"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[Country_ISO]" />
+                    <inputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[Store_ID]"
+                      cachedDataType="i4"
+                      cachedName="Store_ID"
+                      lineageId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[Store_ID]" />
+                    <inputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[Store_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Store_Name"
+                      lineageId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[Store_Name]" />
+                    <inputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[City]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="City"
+                      lineageId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[City]" />
+                    <inputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="Country"
+                      lineageId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[sq_feet]"
+                      cachedDataType="i4"
+                      cachedName="sq_feet"
+                      lineageId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[sq_feet]" />
+                    <inputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[Derived_sq_feet]"
+                      cachedDataType="i4"
+                      cachedName="Derived_sq_feet"
+                      lineageId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[Derived_sq_feet]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\STG_STORE\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
+                  hasSideEffects="true"
+                  name="Entrada izquierda de combinación de mezcla">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[TwoCODE_Countrie]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="TwoCODE_Countrie"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\STG_STORE\Ordenar.Outputs[Salida de ordenación].Columns[TwoCODE_Countrie]" />
+                    <inputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[ID_Countrie]"
+                      cachedDataType="i4"
+                      cachedName="ID_Countrie"
+                      lineageId="Package\STG_STORE\Ordenar.Outputs[Salida de ordenación].Columns[ID_Countrie]" />
+                    <inputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[name_Countrie]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="name_Countrie"
+                      lineageId="Package\STG_STORE\Ordenar.Outputs[Salida de ordenación].Columns[name_Countrie]" />
+                    <inputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[ThreeCODE_Countrie]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="ThreeCODE_Countrie"
+                      lineageId="Package\STG_STORE\Ordenar.Outputs[Salida de ordenación].Columns[ThreeCODE_Countrie]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla]"
+                  isSorted="true"
+                  name="Salida de combinación de mezcla">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Store_ID]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Store_ID]"
+                      name="Store_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STG_STORE\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[Store_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Store_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Store_Name]"
+                      name="Store_Name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STG_STORE\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[Store_Name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[City]"
+                      name="City">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STG_STORE\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[City]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Country_ISO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Country_ISO]"
+                      name="Country_ISO"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STG_STORE\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[Country_ISO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Country]"
+                      name="Country">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STG_STORE\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[Country]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[sq_feet]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[sq_feet]"
+                      name="sq_feet">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STG_STORE\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[sq_feet]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Derived_sq_feet]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Derived_sq_feet]"
+                      name="Derived_sq_feet">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STG_STORE\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[Derived_sq_feet]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_Countrie]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_Countrie]"
+                      name="ID_Countrie">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STG_STORE\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[ID_Countrie]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[name_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[name_Countrie]"
+                      name="name_Countrie">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STG_STORE\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[name_Countrie]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[TwoCODE_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[TwoCODE_Countrie]"
+                      name="TwoCODE_Countrie">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STG_STORE\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[TwoCODE_Countrie]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ThreeCODE_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ThreeCODE_Countrie]"
+                      name="ThreeCODE_Countrie">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STG_STORE\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[ThreeCODE_Countrie]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_STORE\MASTER_CUSTOMER"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="MASTER_CUSTOMER"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[STA_COUNTRIES]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_STORE\MASTER_CUSTOMER.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.IABD]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].Columns[ID_Countrie]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_Countrie]"
+                      lineageId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].Columns[ID_Countrie]"
+                      name="ID_Countrie"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].Columns[name_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].ExternalColumns[name_Countrie]"
+                      length="50"
+                      lineageId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].Columns[name_Countrie]"
+                      name="name_Countrie"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].Columns[TwoCODE_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].ExternalColumns[TwoCODE_Countrie]"
+                      length="2"
+                      lineageId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].Columns[TwoCODE_Countrie]"
+                      name="TwoCODE_Countrie"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].Columns[ThreeCODE_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].ExternalColumns[ThreeCODE_Countrie]"
+                      length="3"
+                      lineageId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].Columns[ThreeCODE_Countrie]"
+                      name="ThreeCODE_Countrie"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_Countrie]"
+                      dataType="i4"
+                      name="ID_Countrie" />
+                    <externalMetadataColumn
+                      refId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].ExternalColumns[name_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="name_Countrie" />
+                    <externalMetadataColumn
+                      refId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].ExternalColumns[TwoCODE_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="TwoCODE_Countrie" />
+                    <externalMetadataColumn
+                      refId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].ExternalColumns[ThreeCODE_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="ThreeCODE_Countrie" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de error de origen de OLE DB].Columns[ID_Countrie]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de error de origen de OLE DB].Columns[ID_Countrie]"
+                      name="ID_Countrie" />
+                    <outputColumn
+                      refId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de error de origen de OLE DB].Columns[name_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de error de origen de OLE DB].Columns[name_Countrie]"
+                      name="name_Countrie" />
+                    <outputColumn
+                      refId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de error de origen de OLE DB].Columns[TwoCODE_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de error de origen de OLE DB].Columns[TwoCODE_Countrie]"
+                      name="TwoCODE_Countrie" />
+                    <outputColumn
+                      refId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de error de origen de OLE DB].Columns[ThreeCODE_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de error de origen de OLE DB].Columns[ThreeCODE_Countrie]"
+                      name="ThreeCODE_Countrie" />
+                    <outputColumn
+                      refId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_STORE\Ordenar"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordenar;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Ordena los datos de entrada de manera ascendente o descendente cuando no es posible ordenarlos en su origen. Por ejemplo, se ordenan los datos de ventas por 'id. de cliente' antes de que se escriban en un archivo plano y se entreguen a otro departamento. Nota: no se recomienda realizar esta transformación para grandes flujos de datos."
+              name="Ordenar"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si la transformación Ordenar quita filas con valores de ordenación duplicados."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número máximo de subprocesos que se deben usar para la ordenación."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\STG_STORE\Ordenar.Inputs[Entrada de ordenación]"
+                  name="Entrada de ordenación">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_STORE\Ordenar.Inputs[Entrada de ordenación].Columns[ID_Countrie]"
+                      cachedDataType="i4"
+                      cachedName="ID_Countrie"
+                      lineageId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].Columns[ID_Countrie]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Ordenar.Inputs[Entrada de ordenación].Columns[name_Countrie]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="name_Countrie"
+                      lineageId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].Columns[name_Countrie]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Ordenar.Inputs[Entrada de ordenación].Columns[TwoCODE_Countrie]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="TwoCODE_Countrie"
+                      lineageId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].Columns[TwoCODE_Countrie]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Ordenar.Inputs[Entrada de ordenación].Columns[ThreeCODE_Countrie]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="ThreeCODE_Countrie"
+                      lineageId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].Columns[ThreeCODE_Countrie]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_STORE\Ordenar.Outputs[Salida de ordenación]"
+                  isSorted="true"
+                  name="Salida de ordenación">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_STORE\Ordenar.Outputs[Salida de ordenación].Columns[ID_Countrie]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\Ordenar.Outputs[Salida de ordenación].Columns[ID_Countrie]"
+                      name="ID_Countrie">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].Columns[ID_Countrie]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Ordenar.Outputs[Salida de ordenación].Columns[name_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_STORE\Ordenar.Outputs[Salida de ordenación].Columns[name_Countrie]"
+                      name="name_Countrie">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].Columns[name_Countrie]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Ordenar.Outputs[Salida de ordenación].Columns[TwoCODE_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\STG_STORE\Ordenar.Outputs[Salida de ordenación].Columns[TwoCODE_Countrie]"
+                      name="TwoCODE_Countrie"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].Columns[TwoCODE_Countrie]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Ordenar.Outputs[Salida de ordenación].Columns[ThreeCODE_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\STG_STORE\Ordenar.Outputs[Salida de ordenación].Columns[ThreeCODE_Countrie]"
+                      name="ThreeCODE_Countrie">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB].Columns[ThreeCODE_Countrie]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_STORE\Ordenar 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordenar;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Ordena los datos de entrada de manera ascendente o descendente cuando no es posible ordenarlos en su origen. Por ejemplo, se ordenan los datos de ventas por 'id. de cliente' antes de que se escriban en un archivo plano y se entreguen a otro departamento. Nota: no se recomienda realizar esta transformación para grandes flujos de datos."
+              name="Ordenar 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si la transformación Ordenar quita filas con valores de ordenación duplicados."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número máximo de subprocesos que se deben usar para la ordenación."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\STG_STORE\Ordenar 1.Inputs[Entrada de ordenación]"
+                  name="Entrada de ordenación">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_STORE\Ordenar 1.Inputs[Entrada de ordenación].Columns[Store_ID]"
+                      cachedDataType="i4"
+                      cachedName="Store_ID"
+                      lineageId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[Store_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Ordenar 1.Inputs[Entrada de ordenación].Columns[Store_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Store_Name"
+                      lineageId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[Store_Name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Ordenar 1.Inputs[Entrada de ordenación].Columns[City]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="City"
+                      lineageId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[City]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Ordenar 1.Inputs[Entrada de ordenación].Columns[Country_ISO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="Country_ISO"
+                      lineageId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[Country_ISO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Ordenar 1.Inputs[Entrada de ordenación].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="Country"
+                      lineageId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[Country]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Ordenar 1.Inputs[Entrada de ordenación].Columns[sq_feet]"
+                      cachedDataType="i4"
+                      cachedName="sq_feet"
+                      lineageId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[sq_feet]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Ordenar 1.Inputs[Entrada de ordenación].Columns[Derived_sq_feet]"
+                      cachedDataType="i4"
+                      cachedName="Derived_sq_feet"
+                      lineageId="Package\STG_STORE\Columna derivada.Outputs[Salida de columna derivada].Columns[Derived_sq_feet]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación]"
+                  isSorted="true"
+                  name="Salida de ordenación">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[Store_ID]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[Store_ID]"
+                      name="Store_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[Store_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[Store_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[Store_Name]"
+                      name="Store_Name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[Store_Name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[City]"
+                      name="City">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[City]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[Country_ISO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[Country_ISO]"
+                      name="Country_ISO"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[Country_ISO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[Country]"
+                      name="Country">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[Country]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[sq_feet]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[sq_feet]"
+                      name="sq_feet">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[sq_feet]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[Derived_sq_feet]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación].Columns[Derived_sq_feet]"
+                      name="Derived_sq_feet">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STG_STORE\Columna derivada.Outputs[Salida de columna derivada].Columns[Derived_sq_feet]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -9217,7 +10722,7 @@ WHERE ID_store = ?;
                       cachedDataType="i4"
                       cachedName="Store_ID"
                       externalMetadataColumnId="Package\STG_STORE\STG_STORE.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_store]"
-                      lineageId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[Store_ID]" />
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Store_ID]" />
                     <inputColumn
                       refId="Package\STG_STORE\STG_STORE.Inputs[Entrada de destino de OLE DB].Columns[Store_Name]"
                       cachedCodepage="1252"
@@ -9225,7 +10730,7 @@ WHERE ID_store = ?;
                       cachedLength="50"
                       cachedName="Store_Name"
                       externalMetadataColumnId="Package\STG_STORE\STG_STORE.Inputs[Entrada de destino de OLE DB].ExternalColumns[name_store]"
-                      lineageId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[Store_Name]" />
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Store_Name]" />
                     <inputColumn
                       refId="Package\STG_STORE\STG_STORE.Inputs[Entrada de destino de OLE DB].Columns[City]"
                       cachedCodepage="1252"
@@ -9233,15 +10738,7 @@ WHERE ID_store = ?;
                       cachedLength="50"
                       cachedName="City"
                       externalMetadataColumnId="Package\STG_STORE\STG_STORE.Inputs[Entrada de destino de OLE DB].ExternalColumns[city_store]"
-                      lineageId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[City]" />
-                    <inputColumn
-                      refId="Package\STG_STORE\STG_STORE.Inputs[Entrada de destino de OLE DB].Columns[Country_ISO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="3"
-                      cachedName="Country_ISO"
-                      externalMetadataColumnId="Package\STG_STORE\STG_STORE.Inputs[Entrada de destino de OLE DB].ExternalColumns[ISO_country]"
-                      lineageId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[Country_ISO]" />
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[City]" />
                     <inputColumn
                       refId="Package\STG_STORE\STG_STORE.Inputs[Entrada de destino de OLE DB].Columns[Country]"
                       cachedCodepage="1252"
@@ -9249,13 +10746,21 @@ WHERE ID_store = ?;
                       cachedLength="15"
                       cachedName="Country"
                       externalMetadataColumnId="Package\STG_STORE\STG_STORE.Inputs[Entrada de destino de OLE DB].ExternalColumns[country_store]"
-                      lineageId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB].Columns[Country]" />
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Country]" />
                     <inputColumn
                       refId="Package\STG_STORE\STG_STORE.Inputs[Entrada de destino de OLE DB].Columns[Derived_sq_feet]"
                       cachedDataType="i4"
                       cachedName="Derived_sq_feet"
                       externalMetadataColumnId="Package\STG_STORE\STG_STORE.Inputs[Entrada de destino de OLE DB].ExternalColumns[sq_feet_store]"
-                      lineageId="Package\STG_STORE\Columna derivada.Outputs[Salida de columna derivada].Columns[Derived_sq_feet]" />
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Derived_sq_feet]" />
+                    <inputColumn
+                      refId="Package\STG_STORE\STG_STORE.Inputs[Entrada de destino de OLE DB].Columns[DERIVAD_STRING_CODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="DERIVAD_STRING_CODE"
+                      externalMetadataColumnId="Package\STG_STORE\STG_STORE.Inputs[Entrada de destino de OLE DB].ExternalColumns[ISO_country]"
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[DERIVAD_STRING_CODE]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -9319,13 +10824,366 @@ WHERE ID_store = ?;
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\STG_STORE\Unión de todo"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Unión de todo;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Combina las filas de varios flujos de datos sin ordenarlos. Por ejemplo, devuelve filas a un flujo de datos después de corregir los errores. Si el orden es importante, se recomienda usar la transformación Mezclar."
+              name="Unión de todo"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 1]"
+                  name="Entrada de Unión de todo 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[Store_ID]"
+                      cachedDataType="i4"
+                      cachedName="Store_ID"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Store_ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Store_ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[Store_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Store_Name"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Store_Name]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Store_Name]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[City]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="City"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[City]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[City]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[Country_ISO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="Country_ISO"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Country_ISO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Country_ISO]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="Country"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Country]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Country]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[sq_feet]"
+                      cachedDataType="i4"
+                      cachedName="sq_feet"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[sq_feet]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[sq_feet]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[Derived_sq_feet]"
+                      cachedDataType="i4"
+                      cachedName="Derived_sq_feet"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Derived_sq_feet]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Derived_sq_feet]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[ID_Countrie]"
+                      cachedDataType="i4"
+                      cachedName="ID_Countrie"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ID_Countrie]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[ID_Countrie]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[name_Countrie]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="name_Countrie"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[name_Countrie]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[name_Countrie]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[TwoCODE_Countrie]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="TwoCODE_Countrie"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[TwoCODE_Countrie]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[TwoCODE_Countrie]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[ThreeCODE_Countrie]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="ThreeCODE_Countrie"
+                      lineageId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ThreeCODE_Countrie]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[ThreeCODE_Countrie]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[dervied_code]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="dervied_code"
+                      lineageId="Package\STG_STORE\Columna derivada 1.Outputs[Salida de columna derivada].Columns[dervied_code]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[dervied_code]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[DERIVAD_STRING_CODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="DERIVAD_STRING_CODE"
+                      lineageId="Package\STG_STORE\Columna derivada 2.Outputs[Salida de columna derivada].Columns[DERIVAD_STRING_CODE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[DERIVAD_STRING_CODE]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 2]"
+                  hasSideEffects="true"
+                  name="Entrada de Unión de todo 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 2].Columns[ID_store]"
+                      cachedDataType="i4"
+                      cachedName="ID_store"
+                      lineageId="Package\STG_STORE\0 no asignado.Outputs[Salida de origen de OLE DB].Columns[ID_store]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Store_ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 2].Columns[name_store]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="name_store"
+                      lineageId="Package\STG_STORE\0 no asignado.Outputs[Salida de origen de OLE DB].Columns[name_store]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Store_Name]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Entrada de Unión de todo 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1]"
+                  name="Salida de Unión de todo 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Store_ID]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Store_ID]"
+                      name="Store_ID" />
+                    <outputColumn
+                      refId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Store_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Store_Name]"
+                      name="Store_Name" />
+                    <outputColumn
+                      refId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Country_ISO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Country_ISO]"
+                      name="Country_ISO" />
+                    <outputColumn
+                      refId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Country]"
+                      name="Country" />
+                    <outputColumn
+                      refId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[sq_feet]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[sq_feet]"
+                      name="sq_feet" />
+                    <outputColumn
+                      refId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Derived_sq_feet]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Derived_sq_feet]"
+                      name="Derived_sq_feet" />
+                    <outputColumn
+                      refId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[ID_Countrie]"
+                      dataType="i4"
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[ID_Countrie]"
+                      name="ID_Countrie" />
+                    <outputColumn
+                      refId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[name_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[name_Countrie]"
+                      name="name_Countrie" />
+                    <outputColumn
+                      refId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[TwoCODE_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[TwoCODE_Countrie]"
+                      name="TwoCODE_Countrie" />
+                    <outputColumn
+                      refId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[ThreeCODE_Countrie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[ThreeCODE_Countrie]"
+                      name="ThreeCODE_Countrie" />
+                    <outputColumn
+                      refId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[dervied_code]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[dervied_code]"
+                      name="dervied_code" />
+                    <outputColumn
+                      refId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[DERIVAD_STRING_CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[DERIVAD_STRING_CODE]"
+                      name="DERIVAD_STRING_CODE" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
               refId="Package\STG_STORE.Paths[Salida de columna derivada]"
-              endId="Package\STG_STORE\Búsqueda.Inputs[Entrada de búsqueda]"
+              endId="Package\STG_STORE\Ordenar 1.Inputs[Entrada de ordenación]"
               name="Salida de columna derivada"
               startId="Package\STG_STORE\Columna derivada.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\STG_STORE.Paths[Salida de columna derivada1]"
+              endId="Package\STG_STORE\Columna derivada 2.Inputs[Entrada de columna derivada]"
+              name="Salida de columna derivada"
+              startId="Package\STG_STORE\Columna derivada 1.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\STG_STORE.Paths[Salida de columna derivada2]"
+              endId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 1]"
+              name="Salida de columna derivada"
+              startId="Package\STG_STORE\Columna derivada 2.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\STG_STORE.Paths[Salida de combinación de mezcla]"
+              endId="Package\STG_STORE\Columna derivada 1.Inputs[Entrada de columna derivada]"
+              name="Salida de combinación de mezcla"
+              startId="Package\STG_STORE\Combinación de mezcla.Outputs[Salida de combinación de mezcla]" />
             <path
               refId="Package\STG_STORE.Paths[Salida de entradas coincidentes de búsqueda]"
               endId="Package\STG_STORE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]"
@@ -9337,10 +11195,35 @@ WHERE ID_store = ?;
               name="Salida de entradas no coincidentes de búsqueda"
               startId="Package\STG_STORE\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]" />
             <path
+              refId="Package\STG_STORE.Paths[Salida de ordenación]"
+              endId="Package\STG_STORE\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STG_STORE\Ordenar.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STG_STORE.Paths[Salida de ordenación1]"
+              endId="Package\STG_STORE\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STG_STORE\Ordenar 1.Outputs[Salida de ordenación]" />
+            <path
               refId="Package\STG_STORE.Paths[Salida de origen de OLE DB]"
               endId="Package\STG_STORE\Columna derivada.Inputs[Entrada de columna derivada]"
               name="Salida de origen de OLE DB"
               startId="Package\STG_STORE\STA_STORE.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_STORE.Paths[Salida de origen de OLE DB1]"
+              endId="Package\STG_STORE\Ordenar.Inputs[Entrada de ordenación]"
+              name="Salida de origen de OLE DB"
+              startId="Package\STG_STORE\MASTER_CUSTOMER.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_STORE.Paths[Salida de origen de OLE DB2]"
+              endId="Package\STG_STORE\Unión de todo.Inputs[Entrada de Unión de todo 2]"
+              name="Salida de origen de OLE DB"
+              startId="Package\STG_STORE\0 no asignado.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_STORE.Paths[Salida de Unión de todo 1]"
+              endId="Package\STG_STORE\Búsqueda.Inputs[Entrada de búsqueda]"
+              name="Salida de Unión de todo 1"
+              startId="Package\STG_STORE\Unión de todo.Outputs[Salida de Unión de todo 1]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -9671,29 +11554,29 @@ WHERE ID_store = ?;
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="178.4,41.6"
-          Id="Package\STG_CUSTOMERS\Comando de OLE DB"
-          TopLeft="177.66666593982,424.333327044712" />
-        <NodeLayout
-          Size="124.8,41.6"
-          Id="Package\STG_CUSTOMERS\Ordenar 2"
-          TopLeft="427.533317798046,177.399998988906" />
+          Size="118.4,41.6"
+          Id="Package\STG_CUSTOMERS\currency"
+          TopLeft="494.333315900631,13.9333334470458" />
         <NodeLayout
           Size="164.8,41.6"
           Id="Package\STG_CUSTOMERS\STG_CUSTOMER"
-          TopLeft="612.833324764339,423.73332703299" />
+          TopLeft="792.83332208213,463.733326436944" />
         <NodeLayout
           Size="171.2,41.6"
           Id="Package\STG_CUSTOMERS\STA_CUSTOMERS"
           TopLeft="248.166676909559,24.3999989958603" />
         <NodeLayout
-          Size="189.6,41.6"
-          Id="Package\STG_CUSTOMERS\Combinación de mezcla"
-          TopLeft="621.666641243631,163.533332212037" />
+          Size="197.6,41.6"
+          Id="Package\STG_CUSTOMERS\Combinación de mezcla 1"
+          TopLeft="247.666658737593,255.999998458227" />
         <NodeLayout
-          Size="118.4,41.6"
-          Id="Package\STG_CUSTOMERS\currency"
-          TopLeft="494.333315900631,13.9333334470458" />
+          Size="178.4,41.6"
+          Id="Package\STG_CUSTOMERS\Comando de OLE DB"
+          TopLeft="177.66666593982,466.333326418863" />
+        <NodeLayout
+          Size="197.6,41.6"
+          Id="Package\STG_CUSTOMERS\STG_CUSTOMER_TYPE"
+          TopLeft="867.999969383082,18.5999999501308" />
         <NodeLayout
           Size="124.8,41.6"
           Id="Package\STG_CUSTOMERS\Ordenar 1"
@@ -9703,9 +11586,13 @@ WHERE ID_store = ?;
           Id="Package\STG_CUSTOMERS\Ordenar 3"
           TopLeft="181.833329001235,184.999998896321" />
         <NodeLayout
-          Size="197.6,41.6"
-          Id="Package\STG_CUSTOMERS\STG_CUSTOMER_TYPE"
-          TopLeft="867.999969383082,18.5999999501308" />
+          Size="124.8,41.6"
+          Id="Package\STG_CUSTOMERS\Ordenar 2"
+          TopLeft="427.533317798046,177.399998988906" />
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\STG_CUSTOMERS\Combinación de mezcla"
+          TopLeft="621.666641243631,163.533332212037" />
         <NodeLayout
           Size="116.8,41.6"
           Id="Package\STG_CUSTOMERS\Ordenar"
@@ -9717,11 +11604,7 @@ WHERE ID_store = ?;
         <NodeLayout
           Size="125.6,41.6"
           Id="Package\STG_CUSTOMERS\Búsqueda"
-          TopLeft="437.666659085286,338.666661689017" />
-        <NodeLayout
-          Size="197.6,41.6"
-          Id="Package\STG_CUSTOMERS\Combinación de mezcla 1"
-          TopLeft="247.666658737593,255.999998458227" />
+          TopLeft="537.66665759517,380.666661063168" />
         <EdgeLayout
           Id="Package\STG_CUSTOMERS.Paths[Salida de origen de OLE DB2]"
           TopLeft="419.366676909559,45.1999989958603">
@@ -9944,49 +11827,49 @@ WHERE ID_store = ?;
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_CUSTOMERS.Paths[Salida de entradas no coincidentes de búsqueda]"
-          TopLeft="520.066659085286,380.266661689017">
+          TopLeft="620.06665759517,422.266661063168">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="175.166665679053,43.4666653439731"
+              EndConnector="255.16666448696,41.4666653737754"
               Start="0,0"
-              End="175.166665679053,35.9666653439731">
+              End="255.16666448696,33.9666653737754">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.7147164420721" />
+                    End="0,12.8996221145952" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.7147164420721"
-                    Point2="0,17.7147164420721"
-                    Point3="4,17.7147164420721" />
+                    Point1="0,12.8996221145952"
+                    Point2="0,16.8996221145952"
+                    Point3="4,16.8996221145952" />
                   <mssgle:LineSegment
-                    End="171.166665679053,17.7147164420721" />
+                    End="251.16666448696,16.8996221145952" />
                   <mssgle:CubicBezierSegment
-                    Point1="171.166665679053,17.7147164420721"
-                    Point2="175.166665679053,17.7147164420721"
-                    Point3="175.166665679053,21.7147164420721" />
+                    Point1="251.16666448696,16.8996221145952"
+                    Point2="255.16666448696,16.8996221145952"
+                    Point3="255.16666448696,20.8996221145952" />
                   <mssgle:LineSegment
-                    End="175.166665679053,35.9666653439731" />
+                    End="255.16666448696,33.9666653737754" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-19.3056905979736,22.7147164420721,213.778046875,12.1953125"
+              BoundingBox="12.00632052473,21.8996221145952,231.1540234375,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_CUSTOMERS.Paths[Salida de entradas coincidentes de búsqueda]"
-          TopLeft="480.866659085286,380.266661689017">
+          TopLeft="580.86665759517,422.266661063168">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-213.999993145466,44.0666653556951"
+              EndConnector="-313.99999165535,44.066665355695"
               Start="0,0"
-              End="-213.999993145466,36.5666653556951">
+              End="-313.99999165535,36.566665355695">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -9997,55 +11880,21 @@ WHERE ID_store = ?;
                     Point2="0,17.9592447487361"
                     Point3="-4,17.9592447487361" />
                   <mssgle:LineSegment
-                    End="-209.999993145466,17.9592447487361" />
+                    End="-309.99999165535,17.9592447487361" />
                   <mssgle:CubicBezierSegment
-                    Point1="-209.999993145466,17.9592447487361"
-                    Point2="-213.999993145466,17.9592447487361"
-                    Point3="-213.999993145466,21.9592447487361" />
+                    Point1="-309.99999165535,17.9592447487361"
+                    Point2="-313.99999165535,17.9592447487361"
+                    Point3="-313.99999165535,21.9592447487361" />
                   <mssgle:LineSegment
-                    End="-213.999993145466,36.5666653556951" />
+                    End="-313.99999165535,36.566665355695" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-206.819020010233,22.9592447487361,199.638046875,12.1953125"
+              BoundingBox="-265.507007546425,22.9592447487361,217.0140234375,16"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_CUSTOMERS.Paths[Salida de combinación de mezcla1]"
-          TopLeft="346.466658737593,297.599998458227">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="154.000000347693,41.0666632307897"
-              Start="0,0"
-              End="154.000000347693,33.5666632307897">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5333316153949" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.5333316153949"
-                    Point2="0,20.5333316153949"
-                    Point3="4,20.5333316153949" />
-                  <mssgle:LineSegment
-                    End="150.000000347693,20.5333316153949" />
-                  <mssgle:CubicBezierSegment
-                    Point1="150.000000347693,20.5333316153949"
-                    Point2="154.000000347693,20.5333316153949"
-                    Point3="154.000000347693,24.5333316153949" />
-                  <mssgle:LineSegment
-                    End="154.000000347693,33.5666632307897" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10108,6 +11957,120 @@ WHERE ID_store = ?;
                     Point3="57.3666664290761,16.1999998400606" />
                   <mssgle:LineSegment
                     End="57.3666664290761,16.8999996801213" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\STG_CUSTOMERS\0 NO IDENTIFICADO"
+          TopLeft="814.833319966165,238.933331321345" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\STG_CUSTOMERS\Columna derivada"
+          TopLeft="320.999995216727,347.599995738268" />
+        <EdgeLayout
+          Id="Package\STG_CUSTOMERS.Paths[Salida de combinación de mezcla1]"
+          TopLeft="346.466658737593,297.599998458227">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="55.7333364791343,49.999997280041"
+              Start="0,0"
+              End="55.7333364791343,42.499997280041">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.9999986400205" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.9999986400205"
+                    Point2="0,24.9999986400205"
+                    Point3="4,24.9999986400205" />
+                  <mssgle:LineSegment
+                    End="51.7333364791343,24.9999986400205" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51.7333364791343,24.9999986400205"
+                    Point2="55.7333364791343,24.9999986400205"
+                    Point3="55.7333364791343,28.9999986400205" />
+                  <mssgle:LineSegment
+                    End="55.7333364791343,42.499997280041" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="143.2,41.6"
+          Id="Package\STG_CUSTOMERS\Unión de todo"
+          TopLeft="608.999990925193,304.599995663762" />
+        <EdgeLayout
+          Id="Package\STG_CUSTOMERS.Paths[Salida de origen de OLE DB3]"
+          TopLeft="904.033319966165,280.533331321345">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-223.433329040972,24.0666643424168"
+              Start="0,0"
+              End="-223.433329040972,16.5666643424168">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.0333321712084" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.0333321712084"
+                    Point2="0,12.0333321712084"
+                    Point3="-4,12.0333321712084" />
+                  <mssgle:LineSegment
+                    End="-219.433329040972,12.0333321712084" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-219.433329040972,12.0333321712084"
+                    Point2="-223.433329040972,12.0333321712084"
+                    Point3="-223.433329040972,16.0333321712084" />
+                  <mssgle:LineSegment
+                    End="-223.433329040972,16.5666643424168" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_CUSTOMERS.Paths[Salida de columna derivada1]"
+          TopLeft="483.399995216727,368.399995738268">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="125.599995708466,-43.0000000745059"
+              Start="0,0"
+              End="118.099995708466,-43.0000000745059">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="58.7999978542328,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="58.7999978542328,0"
+                    Point2="62.7999978542328,0"
+                    Point3="62.7999978542328,-4" />
+                  <mssgle:LineSegment
+                    End="62.7999978542328,-39.0000000745059" />
+                  <mssgle:CubicBezierSegment
+                    Point1="62.7999978542328,-39.0000000745059"
+                    Point2="62.7999978542328,-43.0000000745059"
+                    Point3="66.7999978542328,-43.0000000745059" />
+                  <mssgle:LineSegment
+                    End="118.099995708466,-43.0000000745059" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10200,14 +12163,6 @@ WHERE ID_store = ?;
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="168.8,41.6"
-          Id="Package\STG_CUSTOMERS_TYPE\Destino de OLE DB"
-          TopLeft="446.999993339181,411.999993860722" />
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\STG_CUSTOMERS_TYPE\STA_CUSTOMERS"
-          TopLeft="443.999993383885,59.9999991059303" />
-        <NodeLayout
           Size="125.6,41.6"
           Id="Package\STG_CUSTOMERS_TYPE\Búsqueda"
           TopLeft="470.999992981553,281.999995797873" />
@@ -10215,6 +12170,14 @@ WHERE ID_store = ?;
           Size="123.2,41.6"
           Id="Package\STG_CUSTOMERS_TYPE\Agregado"
           TopLeft="468.999993011356,182.999997273088" />
+        <NodeLayout
+          Size="168.8,41.6"
+          Id="Package\STG_CUSTOMERS_TYPE\Destino de OLE DB"
+          TopLeft="446.999993339181,411.999993860722" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\STG_CUSTOMERS_TYPE\STA_CUSTOMERS"
+          TopLeft="443.999993383885,59.9999991059303" />
         <EdgeLayout
           Id="Package\STG_CUSTOMERS_TYPE.Paths[Salida de origen de OLE DB]"
           TopLeft="530.099993197621,101.59999910593">
@@ -10234,7 +12197,9 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10280,7 +12245,9 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10387,7 +12354,9 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10536,6 +12505,42 @@ WHERE ID_store = ?;
           Id="Package\STG_PRODUCT_FAMILY\Destino de OLE DB"
           TopLeft="705.99998947978,331.999995052814" />
         <EdgeLayout
+          Id="Package\STG_PRODUCT_FAMILY.Paths[Salida de origen de OLE DB]"
+          TopLeft="723.399990448356,73.5999995231628">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-148.59999807775,123.399997541308"
+              Start="0,0"
+              End="-148.59999807775,115.899997541308">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.6999987706541" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,57.6999987706541"
+                    Point2="0,61.6999987706541"
+                    Point3="-4,61.6999987706541" />
+                  <mssgle:LineSegment
+                    End="-144.59999807775,61.6999987706541" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-144.59999807775,61.6999987706541"
+                    Point2="-148.59999807775,61.6999987706541"
+                    Point3="-148.59999807775,65.6999987706541" />
+                  <mssgle:LineSegment
+                    End="-148.59999807775,115.899997541308" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\STG_PRODUCT_FAMILY.Paths[Salida de entradas no coincidentes de búsqueda]"
           TopLeft="574.799992370606,238.599997064471">
           <EdgeLayout.Curve>
@@ -10605,40 +12610,6 @@ WHERE ID_store = ?;
             <mssgm:EdgeLabel
               BoundingBox="-198.819021619559,51.2158481153005,199.638046875,12.1953125"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_PRODUCT_FAMILY.Paths[Salida de origen de OLE DB]"
-          TopLeft="723.399990448356,73.5999995231628">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-148.59999807775,123.399997541308"
-              Start="0,0"
-              End="-148.59999807775,115.899997541308">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,57.6999987706541" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,57.6999987706541"
-                    Point2="0,61.6999987706541"
-                    Point3="-4,61.6999987706541" />
-                  <mssgle:LineSegment
-                    End="-144.59999807775,61.6999987706541" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-144.59999807775,61.6999987706541"
-                    Point2="-148.59999807775,61.6999987706541"
-                    Point3="-148.59999807775,65.6999987706541" />
-                  <mssgle:LineSegment
-                    End="-148.59999807775,115.899997541308" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10745,7 +12716,9 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11497,41 +13470,53 @@ WHERE ID_store = ?;
     design-time-name="Package\STG_STORE">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="140,41.6"
           Id="Package\STG_STORE\STA_STORE"
-          TopLeft="528.333304466474,14.7333332308796" />
+          TopLeft="615.333303170073,27.7333330371645" />
         <NodeLayout
           Size="141.6,41.6"
           Id="Package\STG_STORE\STG_STORE"
-          TopLeft="642.166631880735,340.566663375033" />
+          TopLeft="707.166630912159,422.566662153138" />
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\STG_STORE\Columna derivada"
-          TopLeft="516.666652543678,111.599998357693" />
+          TopLeft="363.666654823556,80.599998819629" />
         <NodeLayout
           Size="178.4,41.6"
           Id="Package\STG_STORE\Comando de OLE DB"
-          TopLeft="163.333324409194,344.599996642074" />
+          TopLeft="228.333323440618,426.599995420179" />
         <NodeLayout
           Size="125.6,41.6"
           Id="Package\STG_STORE\Búsqueda"
-          TopLeft="384.166645676726,252.733330614236" />
+          TopLeft="524.166643590563,336.733329362538" />
         <EdgeLayout
           Id="Package\STG_STORE.Paths[Salida de origen de OLE DB]"
-          TopLeft="598.099978505076,56.3333332308796">
+          TopLeft="615.333303170073,48.5333330371645">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,55.2666651268134"
+              EndConnector="-89.2666483465175,52.8666657824645"
               Start="0,0"
-              End="0,47.7666651268134">
+              End="-81.7666483465175,52.8666657824645">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47.7666651268134" />
+                    End="-40.6333241732588,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-40.6333241732588,0"
+                    Point2="-44.6333241732588,0"
+                    Point3="-44.6333241732588,4" />
+                  <mssgle:LineSegment
+                    End="-44.6333241732588,48.8666657824645" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-44.6333241732588,48.8666657824645"
+                    Point2="-44.6333241732588,52.8666657824645"
+                    Point3="-48.6333241732588,52.8666657824645" />
+                  <mssgle:LineSegment
+                    End="-81.7666483465175,52.8666657824645" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11542,102 +13527,394 @@ WHERE ID_store = ?;
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_STORE.Paths[Salida de entradas no coincidentes de búsqueda]"
-          TopLeft="466.566645676726,294.333330614236">
+          TopLeft="606.566643590563,378.333329362538">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="246.399986204009,46.233332760798"
+              EndConnector="171.399987321596,44.2333327905993"
               Start="0,0"
-              End="246.399986204009,38.733332760798">
+              End="171.399987321596,36.7333327905993">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.8422639176082" />
+                    End="0,14.027169590131" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,14.8422639176082"
-                    Point2="0,18.8422639176082"
-                    Point3="4,18.8422639176082" />
+                    Point1="0,14.027169590131"
+                    Point2="0,18.027169590131"
+                    Point3="4,18.027169590131" />
                   <mssgle:LineSegment
-                    End="242.399986204009,18.8422639176082" />
+                    End="167.399987321596,18.027169590131" />
                   <mssgle:CubicBezierSegment
-                    Point1="242.399986204009,18.8422639176082"
-                    Point2="246.399986204009,18.8422639176082"
-                    Point3="246.399986204009,22.8422639176082" />
+                    Point1="167.399987321596,18.027169590131"
+                    Point2="171.399987321596,18.027169590131"
+                    Point3="171.399987321596,22.027169590131" />
                   <mssgle:LineSegment
-                    End="246.399986204009,38.733332760798" />
+                    End="171.399987321596,36.7333327905993" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="16.3109696645045,23.8422639176082,213.778046875,12.1953125"
+              BoundingBox="-21.189029776702,23.027169590131,213.778046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_STORE.Paths[Salida de entradas coincidentes de búsqueda]"
-          TopLeft="427.366645676726,294.333330614236">
+          TopLeft="567.366643590563,378.333329362538">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-174.833321267532,50.266666027838"
+              EndConnector="-249.833320149945,48.2666660576403"
               Start="0,0"
-              End="-174.833321267532,42.766666027838">
+              End="-249.833320149945,40.7666660576403">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.4860374754962" />
+                    End="0,15.6709431480194" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.4860374754962"
-                    Point2="0,20.4860374754962"
-                    Point3="-4,20.4860374754962" />
+                    Point1="0,15.6709431480194"
+                    Point2="0,19.6709431480194"
+                    Point3="-4,19.6709431480194" />
                   <mssgle:LineSegment
-                    End="-170.833321267532,20.4860374754962" />
+                    End="-245.833320149945,19.6709431480194" />
                   <mssgle:CubicBezierSegment
-                    Point1="-170.833321267532,20.4860374754962"
-                    Point2="-174.833321267532,20.4860374754962"
-                    Point3="-174.833321267532,24.4860374754962" />
+                    Point1="-245.833320149945,19.6709431480194"
+                    Point2="-249.833320149945,19.6709431480194"
+                    Point3="-249.833320149945,23.6709431480194" />
                   <mssgle:LineSegment
-                    End="-174.833321267532,42.766666027838" />
+                    End="-249.833320149945,40.7666660576403" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-187.235684071266,25.4860374754962,199.638046875,12.1953125"
+              BoundingBox="-224.735683512472,24.6709431480194,199.638046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="187.2,41.6"
+          Id="Package\STG_STORE\MASTER_CUSTOMER"
+          TopLeft="10.9999998360871,26.9999995976686" />
+        <NodeLayout
+          Size="116.8,41.6"
+          Id="Package\STG_STORE\Ordenar"
+          TopLeft="59.9999991059302,125.999998122454" />
         <EdgeLayout
-          Id="Package\STG_STORE.Paths[Salida de columna derivada]"
-          TopLeft="597.866652543678,153.199998357693">
+          Id="Package\STG_STORE.Paths[Salida de origen de OLE DB1]"
+          TopLeft="104.599999836087,68.5999995976686">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-150.900006866951,99.533332256543"
+              EndConnector="13.7999992698431,57.3999985247851"
               Start="0,0"
-              End="-150.900006866951,92.033332256543">
+              End="13.7999992698431,49.8999985247851">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.7666661282715" />
+                    End="0,24.6999992623925" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,45.7666661282715"
-                    Point2="0,49.7666661282715"
-                    Point3="-4,49.7666661282715" />
+                    Point1="0,24.6999992623925"
+                    Point2="0,28.6999992623925"
+                    Point3="4,28.6999992623925" />
                   <mssgle:LineSegment
-                    End="-146.900006866951,49.7666661282715" />
+                    End="9.79999926984314,28.6999992623925" />
                   <mssgle:CubicBezierSegment
-                    Point1="-146.900006866951,49.7666661282715"
-                    Point2="-150.900006866951,49.7666661282715"
-                    Point3="-150.900006866951,53.7666661282715" />
+                    Point1="9.79999926984314,28.6999992623925"
+                    Point2="13.7999992698431,28.6999992623925"
+                    Point3="13.7999992698431,32.6999992623925" />
                   <mssgle:LineSegment
-                    End="-150.900006866951,92.033332256543" />
+                    End="13.7999992698431,49.8999985247851" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="124.8,41.6"
+          Id="Package\STG_STORE\Ordenar 1"
+          TopLeft="375.999994397163,163.99999755621" />
+        <EdgeLayout
+          Id="Package\STG_STORE.Paths[Salida de columna derivada]"
+          TopLeft="441.633324610359,122.199998819629">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.7999987365806"
+              Start="0,0"
+              End="0,34.2999987365806">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.2999987365806" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\STG_STORE\Combinación de mezcla"
+          TopLeft="177.999997347593,236.999996468425" />
+        <EdgeLayout
+          Id="Package\STG_STORE.Paths[Salida de ordenación]"
+          TopLeft="118.39999910593,167.599998122454">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="124.133331574996,69.3999983459711"
+              Start="0,0"
+              End="124.133331574996,61.8999983459711">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.2915471330422" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.2915471330422"
+                    Point2="0,41.2915471330422"
+                    Point3="4,41.2915471330422" />
+                  <mssgle:LineSegment
+                    End="120.133331574996,41.2915471330422" />
+                  <mssgle:CubicBezierSegment
+                    Point1="120.133331574996,41.2915471330422"
+                    Point2="124.133331574996,41.2915471330422"
+                    Point3="124.133331574996,45.2915471330422" />
+                  <mssgle:LineSegment
+                    End="124.133331574996,61.8999983459711" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_STORE.Paths[Salida de ordenación1]"
+          TopLeft="438.399994397163,205.59999755621">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-135.333330382903,31.3999989122152"
+              Start="0,0"
+              End="-135.333330382903,23.8999989122152">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.6823424490251" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.6823424490251"
+                    Point2="0,18.6823424490251"
+                    Point3="-4,18.6823424490251" />
+                  <mssgle:LineSegment
+                    End="-131.333330382903,18.6823424490251" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-131.333330382903,18.6823424490251"
+                    Point2="-135.333330382903,18.6823424490251"
+                    Point3="-135.333330382903,22.6823424490251" />
+                  <mssgle:LineSegment
+                    End="-135.333330382903,23.8999989122152" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\STG_STORE\Columna derivada 1"
+          TopLeft="510.999992385506,218.399997019768" />
+        <EdgeLayout
+          Id="Package\STG_STORE.Paths[Salida de combinación de mezcla]"
+          TopLeft="367.599997347593,257.799996468425">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="143.399995037913,-18.599999448657"
+              Start="0,0"
+              End="135.899995037913,-18.599999448657">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="67.6999975189564,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="67.6999975189564,0"
+                    Point2="71.6999975189564,0"
+                    Point3="71.6999975189564,-4" />
+                  <mssgle:LineSegment
+                    End="71.6999975189564,-14.599999448657" />
+                  <mssgle:CubicBezierSegment
+                    Point1="71.6999975189564,-14.599999448657"
+                    Point2="71.6999975189564,-18.599999448657"
+                    Point3="75.6999975189564,-18.599999448657" />
+                  <mssgle:LineSegment
+                    End="135.899995037913,-18.599999448657" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="143.2,41.6"
+          Id="Package\STG_STORE\0 no asignado"
+          TopLeft="942.999985948205,192.399997407198" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\STG_STORE\Columna derivada 2"
+          TopLeft="747.999988853931,125.399998405576" />
+        <EdgeLayout
+          Id="Package\STG_STORE.Paths[Salida de columna derivada1]"
+          TopLeft="596.599992385506,218.399997019768">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="209.799996468425,-51.399998614192"
+              Start="0,0"
+              End="209.799996468425,-43.899998614192">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-26.5544436206586" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-26.5544436206586"
+                    Point2="0,-30.5544436206586"
+                    Point3="4,-30.5544436206586" />
+                  <mssgle:LineSegment
+                    End="205.799996468425,-30.5544436206586" />
+                  <mssgle:CubicBezierSegment
+                    Point1="205.799996468425,-30.5544436206586"
+                    Point2="209.799996468425,-30.5544436206586"
+                    Point3="209.799996468425,-34.5544436206586" />
+                  <mssgle:LineSegment
+                    End="209.799996468425,-43.899998614192" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="143.2,41.6"
+          Id="Package\STG_STORE\Unión de todo"
+          TopLeft="775.999988436699,267.399996289611" />
+        <EdgeLayout
+          Id="Package\STG_STORE.Paths[Salida de columna derivada2]"
+          TopLeft="860.799988853931,166.999998405576">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-13.2000004172323,100.399997884035"
+              Start="0,0"
+              End="-13.2000004172323,92.8999978840351">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.7177769196365" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.7177769196365"
+                    Point2="0,40.7177769196365"
+                    Point3="-4,40.7177769196365" />
+                  <mssgle:LineSegment
+                    End="-9.20000041723233,40.7177769196365" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9.20000041723233,40.7177769196365"
+                    Point2="-13.2000004172323,40.7177769196365"
+                    Point3="-13.2000004172323,44.7177769196365" />
+                  <mssgle:LineSegment
+                    End="-13.2000004172323,92.8999978840351" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_STORE.Paths[Salida de origen de OLE DB2]"
+          TopLeft="1014.59998594821,233.999997407198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-144.466664178173,33.3999988824129"
+              Start="0,0"
+              End="-144.466664178173,25.8999988824129">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.8185628727687" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.8185628727687"
+                    Point2="0,19.8185628727687"
+                    Point3="-4,19.8185628727687" />
+                  <mssgle:LineSegment
+                    End="-140.466664178173,19.8185628727687" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-140.466664178173,19.8185628727687"
+                    Point2="-144.466664178173,19.8185628727687"
+                    Point3="-144.466664178173,23.8185628727687" />
+                  <mssgle:LineSegment
+                    End="-144.466664178173,25.8999988824129" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_STORE.Paths[Salida de Unión de todo 1]"
+          TopLeft="847.599988436699,308.999996289611">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-260.633344846136,27.7333330729275"
+              Start="0,0"
+              End="-260.633344846136,20.2333330729275">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.86666653646375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.86666653646375"
+                    Point2="0,13.8666665364638"
+                    Point3="-4,13.8666665364638" />
+                  <mssgle:LineSegment
+                    End="-256.633344846136,13.8666665364638" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-256.633344846136,13.8666665364638"
+                    Point2="-260.633344846136,13.8666665364638"
+                    Point3="-260.633344846136,17.8666665364638" />
+                  <mssgle:LineSegment
+                    End="-260.633344846136,20.2333330729275" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11695,6 +13972,35 @@ WHERE ID_store = ?;
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_STORE\MASTER_CUSTOMER">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_CUSTOMERS\0 NO IDENTIFICADO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_STORE\0 no asignado">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
