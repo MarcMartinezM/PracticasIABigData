@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="51"
-  DTS:VersionGUID="{95AEE09D-2C86-423B-8F0C-1F875469E331}">
+  DTS:VersionBuild="55"
+  DTS:VersionGUID="{B737BEAB-2C3B-44B0-BE91-F9B8724E76E8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1133,7 +1133,7 @@
                       name="Product_Id" />
                     <externalMetadataColumn
                       refId="Package\STA_ALL_SALES\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Quantity]"
-                      dataType="bool"
+                      dataType="i4"
                       name="Quantity" />
                     <externalMetadataColumn
                       refId="Package\STA_ALL_SALES\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Discount]"
@@ -5001,7 +5001,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="122.399997168779,-22,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
