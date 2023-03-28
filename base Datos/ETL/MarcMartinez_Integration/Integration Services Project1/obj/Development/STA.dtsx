@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="55"
-  DTS:VersionGUID="{B737BEAB-2C3B-44B0-BE91-F9B8724E76E8}">
+  DTS:VersionBuild="59"
+  DTS:VersionGUID="{2322E97C-E457-4E2E-92A5-301F84C40C75}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -718,7 +718,19 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables />
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9BB50A7B-A43B-4E18-BA55-8B976A42A906}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="GETDATE()"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="insert_data">
+      <DTS:VariableValue
+        DTS:DataType="7">3/27/2023 6:59:48 PM</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\DELETE"
@@ -1945,6 +1957,28 @@
                           name="FriendlyExpression">(DT_DECIMAL,2)REPLACE(REPLACE([ Sales Price ],RIGHT([ Sales Price ],4),""),".",",")</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_PRODUCTS_FULL\Columna derivada.Outputs[Salida de columna derivada].Columns[insert_data]"
+                      dataType="date"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\STA_PRODUCTS_FULL\Columna derivada.Outputs[Salida de columna derivada].Columns[insert_data]"
+                      name="insert_data"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">@[User::insert_data]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::insert_data]</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -2533,6 +2567,79 @@
           version="1">
           <components>
             <component
+              refId="Package\STA_PRODUCT_CLASS\Columna derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\STA_PRODUCT_CLASS\Columna derivada.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STA_PRODUCT_CLASS\Columna derivada.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\STA_PRODUCT_CLASS\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_PRODUCT_CLASS\Columna derivada.Outputs[Salida de columna derivada].Columns[insert_date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\STA_PRODUCT_CLASS\Columna derivada.Outputs[Salida de columna derivada].Columns[insert_date]"
+                      name="insert_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">@[User::insert_data]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::insert_data]</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STA_PRODUCT_CLASS\Columna derivada.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\STA_PRODUCT_CLASS\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_PRODUCT_CLASS\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STA_PRODUCT_CLASS\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STA_PRODUCT_CLASS\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STA_PRODUCT_CLASS\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\STA_PRODUCT_CLASS\Destino de OLE DB"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
@@ -2787,8 +2894,13 @@
           </components>
           <paths>
             <path
-              refId="Package\STA_PRODUCT_CLASS.Paths[Salida de origen de archivo plano]"
+              refId="Package\STA_PRODUCT_CLASS.Paths[Salida de columna derivada]"
               endId="Package\STA_PRODUCT_CLASS\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de columna derivada"
+              startId="Package\STA_PRODUCT_CLASS\Columna derivada.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\STA_PRODUCT_CLASS.Paths[Salida de origen de archivo plano]"
+              endId="Package\STA_PRODUCT_CLASS\Columna derivada.Inputs[Entrada de columna derivada]"
               name="Salida de origen de archivo plano"
               startId="Package\STA_PRODUCT_CLASS\Origen de archivo plano.Outputs[Salida de origen de archivo plano]" />
           </paths>
@@ -2809,6 +2921,79 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\STA_PRODUCT_FAMILY\Columna derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\STA_PRODUCT_FAMILY\Columna derivada.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STA_PRODUCT_FAMILY\Columna derivada.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\STA_PRODUCT_FAMILY\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_PRODUCT_FAMILY\Columna derivada.Outputs[Salida de columna derivada].Columns[insert_data]"
+                      dataType="date"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\STA_PRODUCT_FAMILY\Columna derivada.Outputs[Salida de columna derivada].Columns[insert_data]"
+                      name="insert_data"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">@[User::insert_data]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::insert_data]</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STA_PRODUCT_FAMILY\Columna derivada.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\STA_PRODUCT_FAMILY\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_PRODUCT_FAMILY\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STA_PRODUCT_FAMILY\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STA_PRODUCT_FAMILY\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STA_PRODUCT_FAMILY\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\STA_PRODUCT_FAMILY\Destino de OLE DB"
               componentClassID="Microsoft.OLEDBDestination"
@@ -3059,8 +3244,13 @@
           </components>
           <paths>
             <path
-              refId="Package\STA_PRODUCT_FAMILY.Paths[Salida de origen de archivo plano]"
+              refId="Package\STA_PRODUCT_FAMILY.Paths[Salida de columna derivada]"
               endId="Package\STA_PRODUCT_FAMILY\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de columna derivada"
+              startId="Package\STA_PRODUCT_FAMILY\Columna derivada.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\STA_PRODUCT_FAMILY.Paths[Salida de origen de archivo plano]"
+              endId="Package\STA_PRODUCT_FAMILY\Columna derivada.Inputs[Entrada de columna derivada]"
               name="Salida de origen de archivo plano"
               startId="Package\STA_PRODUCT_FAMILY\product_family.Outputs[Salida de origen de archivo plano]" />
           </paths>
@@ -3081,6 +3271,79 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\STA_PRODUCT_LINE\Columna derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\STA_PRODUCT_LINE\Columna derivada.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STA_PRODUCT_LINE\Columna derivada.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\STA_PRODUCT_LINE\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_PRODUCT_LINE\Columna derivada.Outputs[Salida de columna derivada].Columns[insert_date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\STA_PRODUCT_LINE\Columna derivada.Outputs[Salida de columna derivada].Columns[insert_date]"
+                      name="insert_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">@[User::insert_data]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::insert_data]</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STA_PRODUCT_LINE\Columna derivada.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\STA_PRODUCT_LINE\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_PRODUCT_LINE\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STA_PRODUCT_LINE\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STA_PRODUCT_LINE\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STA_PRODUCT_LINE\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\STA_PRODUCT_LINE\Destino de OLE DB"
               componentClassID="Microsoft.OLEDBDestination"
@@ -3331,8 +3594,13 @@
           </components>
           <paths>
             <path
-              refId="Package\STA_PRODUCT_LINE.Paths[Salida de origen de archivo plano]"
+              refId="Package\STA_PRODUCT_LINE.Paths[Salida de columna derivada]"
               endId="Package\STA_PRODUCT_LINE\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de columna derivada"
+              startId="Package\STA_PRODUCT_LINE\Columna derivada.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\STA_PRODUCT_LINE.Paths[Salida de origen de archivo plano]"
+              endId="Package\STA_PRODUCT_LINE\Columna derivada.Inputs[Entrada de columna derivada]"
               name="Salida de origen de archivo plano"
               startId="Package\STA_PRODUCT_LINE\product_line.Outputs[Salida de origen de archivo plano]" />
           </paths>
@@ -3353,6 +3621,79 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\STA_SALES_REP\Columna derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\STA_SALES_REP\Columna derivada.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STA_SALES_REP\Columna derivada.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\STA_SALES_REP\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_SALES_REP\Columna derivada.Outputs[Salida de columna derivada].Columns[insert_data]"
+                      dataType="date"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\STA_SALES_REP\Columna derivada.Outputs[Salida de columna derivada].Columns[insert_data]"
+                      name="insert_data"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">@[User::insert_data]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::insert_data]</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STA_SALES_REP\Columna derivada.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\STA_SALES_REP\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_SALES_REP\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STA_SALES_REP\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STA_SALES_REP\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STA_SALES_REP\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\STA_SALES_REP\Destino de OLE DB"
               componentClassID="Microsoft.OLEDBDestination"
@@ -3745,8 +4086,13 @@
           </components>
           <paths>
             <path
-              refId="Package\STA_SALES_REP.Paths[Salida de origen de archivo plano]"
+              refId="Package\STA_SALES_REP.Paths[Salida de columna derivada]"
               endId="Package\STA_SALES_REP\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de columna derivada"
+              startId="Package\STA_SALES_REP\Columna derivada.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\STA_SALES_REP.Paths[Salida de origen de archivo plano]"
+              endId="Package\STA_SALES_REP\Columna derivada.Inputs[Entrada de columna derivada]"
               name="Salida de origen de archivo plano"
               startId="Package\STA_SALES_REP\SALES_REP.Outputs[Salida de origen de archivo plano]" />
           </paths>
@@ -3767,6 +4113,79 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\STA_STORE\Columna derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\STA_STORE\Columna derivada.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STA_STORE\Columna derivada.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\STA_STORE\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_STORE\Columna derivada.Outputs[Salida de columna derivada].Columns[nsert_data]"
+                      dataType="date"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\STA_STORE\Columna derivada.Outputs[Salida de columna derivada].Columns[nsert_data]"
+                      name="nsert_data"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">@[User::insert_data]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::insert_data]</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STA_STORE\Columna derivada.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\STA_STORE\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_STORE\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STA_STORE\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STA_STORE\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STA_STORE\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\STA_STORE\Destino de OLE DB"
               componentClassID="Microsoft.OLEDBDestination"
@@ -4184,8 +4603,13 @@
           </components>
           <paths>
             <path
-              refId="Package\STA_STORE.Paths[Salida de origen de archivo plano]"
+              refId="Package\STA_STORE.Paths[Salida de columna derivada]"
               endId="Package\STA_STORE\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de columna derivada"
+              startId="Package\STA_STORE\Columna derivada.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\STA_STORE.Paths[Salida de origen de archivo plano]"
+              endId="Package\STA_STORE\Columna derivada.Inputs[Entrada de columna derivada]"
               name="Salida de origen de archivo plano"
               startId="Package\STA_STORE\STORES.Outputs[Salida de origen de archivo plano]" />
           </paths>
@@ -5130,49 +5554,85 @@
     design-time-name="Package\STA_PRODUCT_CLASS">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="188.8,41.6"
           Id="Package\STA_PRODUCT_CLASS\Origen de archivo plano"
-          TopLeft="253.999996215105,201.999996989965" />
+          TopLeft="150.999997749925,172.999997422099" />
         <NodeLayout
           Size="168.8,41.6"
           Id="Package\STA_PRODUCT_CLASS\Destino de OLE DB"
           TopLeft="618.999990776181,228.999996587634" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\STA_PRODUCT_CLASS\Columna derivada"
+          TopLeft="455.999993205071,154.99999769032" />
         <EdgeLayout
           Id="Package\STA_PRODUCT_CLASS.Paths[Salida de origen de archivo plano]"
-          TopLeft="442.799996215105,222.799996989965">
+          TopLeft="339.799997749925,193.799997422099">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="176.199994561076,26.9999995976686"
+              EndConnector="116.199995455146,-17.9999997317786"
               Start="0,0"
-              End="168.699994561076,26.9999995976686">
+              End="108.699995455146,-17.9999997317786">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="84.0999972805381,0" />
+                    End="54.099997727573,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="84.0999972805381,0"
-                    Point2="88.0999972805381,0"
-                    Point3="88.0999972805381,4" />
+                    Point1="54.099997727573,0"
+                    Point2="58.099997727573,0"
+                    Point3="58.099997727573,-4" />
                   <mssgle:LineSegment
-                    End="88.0999972805381,22.9999995976686" />
+                    End="58.099997727573,-13.9999997317786" />
                   <mssgle:CubicBezierSegment
-                    Point1="88.0999972805381,22.9999995976686"
-                    Point2="88.0999972805381,26.9999995976686"
-                    Point3="92.0999972805381,26.9999995976686" />
+                    Point1="58.099997727573,-13.9999997317786"
+                    Point2="58.099997727573,-17.9999997317786"
+                    Point3="62.099997727573,-17.9999997317786" />
                   <mssgle:LineSegment
-                    End="168.699994561076,26.9999995976686" />
+                    End="108.699995455146,-17.9999997317786" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_PRODUCT_CLASS.Paths[Salida de columna derivada]"
+          TopLeft="537.199993205071,196.59999769032">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="166.19999757111,32.399998897314"
+              Start="0,0"
+              End="166.19999757111,24.899998897314">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.199999448657" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.199999448657"
+                    Point2="0,16.199999448657"
+                    Point3="4,16.199999448657" />
+                  <mssgle:LineSegment
+                    End="162.19999757111,16.199999448657" />
+                  <mssgle:CubicBezierSegment
+                    Point1="162.19999757111,16.199999448657"
+                    Point2="166.19999757111,16.199999448657"
+                    Point3="166.19999757111,20.199999448657" />
+                  <mssgle:LineSegment
+                    End="166.19999757111,24.899998897314" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5195,7 +5655,7 @@
     design-time-name="Package\STA_PRODUCT_FAMILY">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="146.4,41.6"
           Id="Package\STA_PRODUCT_FAMILY\product_family"
@@ -5204,40 +5664,64 @@
           Size="168.8,41.6"
           Id="Package\STA_PRODUCT_FAMILY\Destino de OLE DB"
           TopLeft="643.999990403652,321.999995201826" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\STA_PRODUCT_FAMILY\Columna derivada"
+          TopLeft="407.999993920326,284.999995753169" />
         <EdgeLayout
           Id="Package\STA_PRODUCT_FAMILY.Paths[Salida de origen de archivo plano]"
-          TopLeft="281.399997988343,311.799995663762">
+          TopLeft="281.399997988343,308.799995708466">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="362.599992415309,30.9999995380641"
+              EndConnector="126.599995931983,0"
               Start="0,0"
-              End="355.099992415309,30.9999995380641">
+              End="119.099995931983,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="177.299996207655,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="177.299996207655,0"
-                    Point2="181.299996207655,0"
-                    Point3="181.299996207655,4" />
-                  <mssgle:LineSegment
-                    End="181.299996207655,26.9999995380641" />
-                  <mssgle:CubicBezierSegment
-                    Point1="181.299996207655,26.9999995380641"
-                    Point2="181.299996207655,30.9999995380641"
-                    Point3="185.299996207655,30.9999995380641" />
-                  <mssgle:LineSegment
-                    End="355.099992415309,30.9999995380641" />
+                    End="119.099995931983,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_PRODUCT_FAMILY.Paths[Salida de columna derivada]"
+          TopLeft="570.399993920326,305.799995753169">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="73.5999964833256,36.9999994486569"
+              Start="0,0"
+              End="66.0999964833256,36.9999994486569">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="32.7999982416628,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.7999982416628,0"
+                    Point2="36.7999982416628,0"
+                    Point3="36.7999982416628,4" />
+                  <mssgle:LineSegment
+                    End="36.7999982416628,32.9999994486569" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.7999982416628,32.9999994486569"
+                    Point2="36.7999982416628,36.9999994486569"
+                    Point3="40.7999982416628,36.9999994486569" />
+                  <mssgle:LineSegment
+                    End="66.0999964833256,36.9999994486569" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5260,7 +5744,7 @@
     design-time-name="Package\STA_PRODUCT_LINE">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="135.2,41.6"
           Id="Package\STA_PRODUCT_LINE\product_line"
@@ -5269,40 +5753,76 @@
           Size="168.8,41.6"
           Id="Package\STA_PRODUCT_LINE\Destino de OLE DB"
           TopLeft="520.999992236495,275.999995887279" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\STA_PRODUCT_LINE\Columna derivada"
+          TopLeft="395.99999409914,155.999997675419" />
         <EdgeLayout
           Id="Package\STA_PRODUCT_LINE.Paths[Salida de origen de archivo plano]"
-          TopLeft="340.199996945262,277.799996170402">
+          TopLeft="272.599996945262,256.999996170402">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="180.799995291233,18.9999997168779"
+              EndConnector="204.599997153878,-59.3999984949832"
               Start="0,0"
-              End="173.299995291233,18.9999997168779">
+              End="204.599997153878,-51.8999984949832">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="86.3999976456166,0" />
+                    End="0,-25.6999992474916" />
                   <mssgle:CubicBezierSegment
-                    Point1="86.3999976456166,0"
-                    Point2="90.3999976456166,0"
-                    Point3="90.3999976456166,4" />
+                    Point1="0,-25.6999992474916"
+                    Point2="0,-29.6999992474916"
+                    Point3="4,-29.6999992474916" />
                   <mssgle:LineSegment
-                    End="90.3999976456166,14.9999997168779" />
+                    End="200.599997153878,-29.6999992474916" />
                   <mssgle:CubicBezierSegment
-                    Point1="90.3999976456166,14.9999997168779"
-                    Point2="90.3999976456166,18.9999997168779"
-                    Point3="94.3999976456166,18.9999997168779" />
+                    Point1="200.599997153878,-29.6999992474916"
+                    Point2="204.599997153878,-29.6999992474916"
+                    Point3="204.599997153878,-33.6999992474916" />
                   <mssgle:LineSegment
-                    End="173.299995291233,18.9999997168779" />
+                    End="204.599997153878,-51.8999984949832" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_PRODUCT_LINE.Paths[Salida de columna derivada]"
+          TopLeft="502.933327432474,197.599997675419">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="102.466664804021,78.3999982118601"
+              Start="0,0"
+              End="102.466664804021,70.8999982118601">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.8189261035452" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.8189261035452"
+                    Point2="0,31.8189261035452"
+                    Point3="4,31.8189261035452" />
+                  <mssgle:LineSegment
+                    End="98.4666648040215,31.8189261035452" />
+                  <mssgle:CubicBezierSegment
+                    Point1="98.4666648040215,31.8189261035452"
+                    Point2="102.466664804021,31.8189261035452"
+                    Point3="102.466664804021,35.8189261035452" />
+                  <mssgle:LineSegment
+                    End="102.466664804021,70.8999982118601" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5325,7 +5845,7 @@
     design-time-name="Package\STA_PRODUCTS_FULL">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="132,41.6"
           Id="Package\STA_PRODUCTS_FULL\product_full"
@@ -5369,9 +5889,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5405,9 +5923,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5430,7 +5946,7 @@
     design-time-name="Package\STA_SALES_REP">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="139.2,41.6"
           Id="Package\STA_SALES_REP\SALES_REP"
@@ -5438,29 +5954,77 @@
         <NodeLayout
           Size="168.8,41.6"
           Id="Package\STA_SALES_REP\Destino de OLE DB"
-          TopLeft="524.333325785068,176.399997350772" />
+          TopLeft="644.333323996929,236.399996456702" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\STA_SALES_REP\Columna derivada"
+          TopLeft="402.999993994832,216.999996766448" />
         <EdgeLayout
           Id="Package\STA_SALES_REP.Paths[Salida de origen de archivo plano]"
-          TopLeft="344.199996945262,194.499997401337">
+          TopLeft="344.199996945262,191.799997451901">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="180.133328839806,0"
+              EndConnector="58.7999970495702,45.9999993145471"
               Start="0,0"
-              End="172.633328839806,0">
+              End="51.2999970495702,45.9999993145471">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="172.633328839806,0" />
+                    End="25.3999985247851,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.3999985247851,0"
+                    Point2="29.3999985247851,0"
+                    Point3="29.3999985247851,4" />
+                  <mssgle:LineSegment
+                    End="29.3999985247851,41.9999993145471" />
+                  <mssgle:CubicBezierSegment
+                    Point1="29.3999985247851,41.9999993145471"
+                    Point2="29.3999985247851,45.9999993145471"
+                    Point3="33.3999985247851,45.9999993145471" />
+                  <mssgle:LineSegment
+                    End="51.2999970495702,45.9999993145471" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_SALES_REP.Paths[Salida de columna derivada]"
+          TopLeft="565.399993994832,237.799996766448">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="78.9333300020965,19.3999996902542"
+              Start="0,0"
+              End="71.4333300020965,19.3999996902542">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="35.4666650010482,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="35.4666650010482,0"
+                    Point2="39.4666650010482,0"
+                    Point3="39.4666650010482,4" />
+                  <mssgle:LineSegment
+                    End="39.4666650010482,15.3999996902542" />
+                  <mssgle:CubicBezierSegment
+                    Point1="39.4666650010482,15.3999996902542"
+                    Point2="39.4666650010482,19.3999996902542"
+                    Point3="43.4666650010482,19.3999996902542" />
+                  <mssgle:LineSegment
+                    End="71.4333300020965,19.3999996902542" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5483,37 +6047,85 @@
     design-time-name="Package\STA_STORE">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="120.8,41.6"
           Id="Package\STA_STORE\STORES"
-          TopLeft="46.6666641169126,134.333332399196" />
+          TopLeft="243.666661181384,95.3333329803413" />
         <NodeLayout
           Size="168.8,41.6"
           Id="Package\STA_STORE\Destino de OLE DB"
-          TopLeft="317.499982652566,136.066665720476" />
+          TopLeft="612.499978256723,238.066664200558" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\STA_STORE\Columna derivada"
+          TopLeft="489.999992698431,139.999997913837" />
         <EdgeLayout
           Id="Package\STA_STORE.Paths[Salida de origen de archivo plano]"
-          TopLeft="167.466664116913,155.999999059836">
+          TopLeft="364.466661181384,116.133332980341">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="150.033318535653,0"
+              EndConnector="125.533331517047,44.6666649334962"
               Start="0,0"
-              End="142.533318535653,0">
+              End="118.033331517047,44.6666649334962">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="142.533318535653,0" />
+                    End="58.7666657585235,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="58.7666657585235,0"
+                    Point2="62.7666657585235,0"
+                    Point3="62.7666657585235,4" />
+                  <mssgle:LineSegment
+                    End="62.7666657585235,40.6666649334962" />
+                  <mssgle:CubicBezierSegment
+                    Point1="62.7666657585235,40.6666649334962"
+                    Point2="62.7666657585235,44.6666649334962"
+                    Point3="66.7666657585235,44.6666649334962" />
+                  <mssgle:LineSegment
+                    End="118.033331517047,44.6666649334962" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_STORE.Paths[Salida de columna derivada]"
+          TopLeft="571.199992698431,181.599997913837">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="125.699985558292,56.4666662867201"
+              Start="0,0"
+              End="125.699985558292,48.9666662867201">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.2333331433601" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.2333331433601"
+                    Point2="0,28.2333331433601"
+                    Point3="4,28.2333331433601" />
+                  <mssgle:LineSegment
+                    End="121.699985558292,28.2333331433601" />
+                  <mssgle:CubicBezierSegment
+                    Point1="121.699985558292,28.2333331433601"
+                    Point2="125.699985558292,28.2333331433601"
+                    Point3="125.699985558292,32.2333331433601" />
+                  <mssgle:LineSegment
+                    End="125.699985558292,48.9666662867201" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="92"
-  DTS:VersionGUID="{AEDD9E6D-DF88-4D03-AD6B-4FF927908503}">
+  DTS:VersionBuild="95"
+  DTS:VersionGUID="{8AB89861-5C58-4F91-A24A-16E5800EB633}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -662,7 +662,7 @@ WHERE  Date_sales= ?;</property>
                       lineageId="Package\STG_ALL_SALES\Combinación de mezcla 2.Outputs[Salida de combinación de mezcla].Columns[derived_string_discount]" />
                     <inputColumn
                       refId="Package\STG_ALL_SALES\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Quantity]"
-                      cachedDataType="bool"
+                      cachedDataType="i4"
                       cachedName="Quantity"
                       externalMetadataColumnId="Package\STG_ALL_SALES\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_4]"
                       lineageId="Package\STG_ALL_SALES\Combinación de mezcla 2.Outputs[Salida de combinación de mezcla].Columns[Quantity]" />
@@ -1019,7 +1019,7 @@ WHERE  Date_sales= ?;</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\STG_ALL_SALES\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Quantity]"
-                      dataType="bool"
+                      dataType="i4"
                       lineageId="Package\STG_ALL_SALES\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Quantity]"
                       name="Quantity">
                       <properties>
@@ -1265,7 +1265,7 @@ WHERE  Date_sales= ?;</property>
                       lineageId="Package\STG_ALL_SALES\Ordenar 2.Outputs[Salida de ordenación].Columns[Product_Id]" />
                     <inputColumn
                       refId="Package\STG_ALL_SALES\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla].Columns[Quantity]"
-                      cachedDataType="bool"
+                      cachedDataType="i4"
                       cachedName="Quantity"
                       lineageId="Package\STG_ALL_SALES\Ordenar 2.Outputs[Salida de ordenación].Columns[Quantity]" />
                     <inputColumn
@@ -1468,7 +1468,7 @@ WHERE  Date_sales= ?;</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\STG_ALL_SALES\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[Quantity]"
-                      dataType="bool"
+                      dataType="i4"
                       lineageId="Package\STG_ALL_SALES\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[Quantity]"
                       name="Quantity">
                       <properties>
@@ -1809,7 +1809,7 @@ WHERE  Date_sales= ?;</property>
                       lineageId="Package\STG_ALL_SALES\Ordenar 4.Outputs[Salida de ordenación].Columns[Sales_Rep_ID]" />
                     <inputColumn
                       refId="Package\STG_ALL_SALES\Combinación de mezcla 2.Inputs[Entrada izquierda de combinación de mezcla].Columns[Quantity]"
-                      cachedDataType="bool"
+                      cachedDataType="i4"
                       cachedName="Quantity"
                       lineageId="Package\STG_ALL_SALES\Ordenar 4.Outputs[Salida de ordenación].Columns[Quantity]" />
                     <inputColumn
@@ -2111,7 +2111,7 @@ WHERE  Date_sales= ?;</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\STG_ALL_SALES\Combinación de mezcla 2.Outputs[Salida de combinación de mezcla].Columns[Quantity]"
-                      dataType="bool"
+                      dataType="i4"
                       lineageId="Package\STG_ALL_SALES\Combinación de mezcla 2.Outputs[Salida de combinación de mezcla].Columns[Quantity]"
                       name="Quantity">
                       <properties>
@@ -2715,7 +2715,7 @@ WHERE  Date_sales= ?;</property>
                       lineageId="Package\STG_ALL_SALES\Columna derivada 2.Outputs[Salida de columna derivada].Columns[derived_id_product]" />
                     <inputColumn
                       refId="Package\STG_ALL_SALES\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Quantity]"
-                      cachedDataType="bool"
+                      cachedDataType="i4"
                       cachedName="Quantity"
                       externalMetadataColumnId="Package\STG_ALL_SALES\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Quantity]"
                       lineageId="Package\STG_ALL_SALES\Combinación de mezcla 2.Outputs[Salida de combinación de mezcla].Columns[Quantity]" />
@@ -3522,7 +3522,7 @@ WHERE  Date_sales= ?;</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\STG_ALL_SALES\Ordenar 2.Inputs[Entrada de ordenación].Columns[Quantity]"
-                      cachedDataType="bool"
+                      cachedDataType="i4"
                       cachedName="Quantity"
                       lineageId="Package\STG_ALL_SALES\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[Quantity]">
                       <properties>
@@ -3820,7 +3820,7 @@ WHERE  Date_sales= ?;</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\STG_ALL_SALES\Ordenar 2.Outputs[Salida de ordenación].Columns[Quantity]"
-                      dataType="bool"
+                      dataType="i4"
                       lineageId="Package\STG_ALL_SALES\Ordenar 2.Outputs[Salida de ordenación].Columns[Quantity]"
                       name="Quantity">
                       <properties>
@@ -4362,7 +4362,7 @@ WHERE  Date_sales= ?;</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\STG_ALL_SALES\Ordenar 4.Inputs[Entrada de ordenación].Columns[Quantity]"
-                      cachedDataType="bool"
+                      cachedDataType="i4"
                       cachedName="Quantity"
                       lineageId="Package\STG_ALL_SALES\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[Quantity]">
                       <properties>
@@ -4776,7 +4776,7 @@ WHERE  Date_sales= ?;</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\STG_ALL_SALES\Ordenar 4.Outputs[Salida de ordenación].Columns[Quantity]"
-                      dataType="bool"
+                      dataType="i4"
                       lineageId="Package\STG_ALL_SALES\Ordenar 4.Outputs[Salida de ordenación].Columns[Quantity]"
                       name="Quantity">
                       <properties>
@@ -6776,9 +6776,9 @@ WHERE  Date_sales= ?;</property>
               startId="Package\STG_ALL_SALES\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]" />
             <path
               refId="Package\STG_ALL_SALES.Paths[Salida de ordenación5]"
-              endId="Package\STG_ALL_SALES\Combinación de mezcla 2.Inputs[Entrada derecha de combinación de mezcla]"
+              endId="Package\STG_ALL_SALES\Combinación de mezcla 1.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
-              startId="Package\STG_ALL_SALES\Ordenar 5.Outputs[Salida de ordenación]" />
+              startId="Package\STG_ALL_SALES\Ordenar 3.Outputs[Salida de ordenación]" />
             <path
               refId="Package\STG_ALL_SALES.Paths[Salida de ordenación4]"
               endId="Package\STG_ALL_SALES\Combinación de mezcla 2.Inputs[Entrada izquierda de combinación de mezcla]"
@@ -6786,14 +6786,14 @@ WHERE  Date_sales= ?;</property>
               startId="Package\STG_ALL_SALES\Ordenar 4.Outputs[Salida de ordenación]" />
             <path
               refId="Package\STG_ALL_SALES.Paths[Salida de ordenación3]"
-              endId="Package\STG_ALL_SALES\Combinación de mezcla 1.Inputs[Entrada derecha de combinación de mezcla]"
+              endId="Package\STG_ALL_SALES\Combinación de mezcla 2.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
-              startId="Package\STG_ALL_SALES\Ordenar 3.Outputs[Salida de ordenación]" />
+              startId="Package\STG_ALL_SALES\Ordenar 5.Outputs[Salida de ordenación]" />
             <path
               refId="Package\STG_ALL_SALES.Paths[Salida de ordenación]"
-              endId="Package\STG_ALL_SALES\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
+              endId="Package\STG_ALL_SALES\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla]"
               name="Salida de ordenación"
-              startId="Package\STG_ALL_SALES\Ordenar.Outputs[Salida de ordenación]" />
+              startId="Package\STG_ALL_SALES\Ordenar 2.Outputs[Salida de ordenación]" />
             <path
               refId="Package\STG_ALL_SALES.Paths[Salida de ordenación1]"
               endId="Package\STG_ALL_SALES\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
@@ -6801,24 +6801,24 @@ WHERE  Date_sales= ?;</property>
               startId="Package\STG_ALL_SALES\Ordenar 1.Outputs[Salida de ordenación]" />
             <path
               refId="Package\STG_ALL_SALES.Paths[Salida de ordenación2]"
-              endId="Package\STG_ALL_SALES\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla]"
+              endId="Package\STG_ALL_SALES\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
               name="Salida de ordenación"
-              startId="Package\STG_ALL_SALES\Ordenar 2.Outputs[Salida de ordenación]" />
+              startId="Package\STG_ALL_SALES\Ordenar.Outputs[Salida de ordenación]" />
             <path
               refId="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB2]"
-              endId="Package\STG_ALL_SALES\Ordenar 5.Inputs[Entrada de ordenación]"
-              name="Salida de origen de OLE DB"
-              startId="Package\STG_ALL_SALES\STG_PRODUCT_FULL.Outputs[Salida de origen de OLE DB]" />
-            <path
-              refId="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB]"
               endId="Package\STG_ALL_SALES\Columna derivada.Inputs[Entrada de columna derivada]"
               name="Salida de origen de OLE DB"
               startId="Package\STG_ALL_SALES\STG_ALL_SALES.Outputs[Salida de origen de OLE DB]" />
             <path
-              refId="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB1]"
+              refId="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB]"
               endId="Package\STG_ALL_SALES\Ordenar 3.Inputs[Entrada de ordenación]"
               name="Salida de origen de OLE DB"
               startId="Package\STG_ALL_SALES\STG_SALES_REP.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB1]"
+              endId="Package\STG_ALL_SALES\Ordenar 5.Inputs[Entrada de ordenación]"
+              name="Salida de origen de OLE DB"
+              startId="Package\STG_ALL_SALES\STG_PRODUCT_FULL.Outputs[Salida de origen de OLE DB]" />
             <path
               refId="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB3]"
               endId="Package\STG_ALL_SALES\Ordenar 1.Inputs[Entrada de ordenación]"
@@ -17200,59 +17200,59 @@ WHERE  ID_product = ?;</property>
               startId="Package\STG_PRODUCTS_FULL\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]" />
             <path
               refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación5]"
-              endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STG_PRODUCTS_FULL\Ordenar 2.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación4]"
-              endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STG_PRODUCTS_FULL\Ordenar.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación3]"
               endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\STG_PRODUCTS_FULL\Ordenar 1.Outputs[Salida de ordenación]" />
             <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación1]"
-              endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla 2.Inputs[Entrada derecha de combinación de mezcla]"
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación4]"
+              endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla]"
               name="Salida de ordenación"
-              startId="Package\STG_PRODUCTS_FULL\Ordenar 4.Outputs[Salida de ordenación]" />
+              startId="Package\STG_PRODUCTS_FULL\Ordenar 2.Outputs[Salida de ordenación]" />
             <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación]"
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación3]"
+              endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STG_PRODUCTS_FULL\Ordenar.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación1]"
               endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla 2.Inputs[Entrada izquierda de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\STG_PRODUCTS_FULL\Ordenar 5.Outputs[Salida de ordenación]" />
             <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación2]"
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación]"
               endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla 1.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\STG_PRODUCTS_FULL\Ordenar 3.Outputs[Salida de ordenación]" />
             <path
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación2]"
+              endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla 2.Inputs[Entrada derecha de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STG_PRODUCTS_FULL\Ordenar 4.Outputs[Salida de ordenación]" />
+            <path
               refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB4]"
-              endId="Package\STG_PRODUCTS_FULL\Unión de todo.Inputs[Entrada de Unión de todo 2]"
-              name="Salida de origen de OLE DB"
-              startId="Package\STG_PRODUCTS_FULL\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB]" />
-            <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB]"
-              endId="Package\STG_PRODUCTS_FULL\Columna derivada 1.Inputs[Entrada de columna derivada]"
-              name="Salida de origen de OLE DB"
-              startId="Package\STG_PRODUCTS_FULL\STA_PRODUCT_FULL.Outputs[Salida de origen de OLE DB]" />
-            <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB1]"
-              endId="Package\STG_PRODUCTS_FULL\Ordenar 1.Inputs[Entrada de ordenación]"
-              name="Salida de origen de OLE DB"
-              startId="Package\STG_PRODUCTS_FULL\STG_PRODUCT_FAMILY.Outputs[Salida de origen de OLE DB]" />
-            <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB2]"
               endId="Package\STG_PRODUCTS_FULL\Ordenar 4.Inputs[Entrada de ordenación]"
               name="Salida de origen de OLE DB"
               startId="Package\STG_PRODUCTS_FULL\STG_PRODUCT_LINE.Outputs[Salida de origen de OLE DB]" />
             <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB3]"
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB]"
               endId="Package\STG_PRODUCTS_FULL\Ordenar 3.Inputs[Entrada de ordenación]"
               name="Salida de origen de OLE DB"
               startId="Package\STG_PRODUCTS_FULL\STG_PRODUCT_CLASS.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB1]"
+              endId="Package\STG_PRODUCTS_FULL\Unión de todo.Inputs[Entrada de Unión de todo 2]"
+              name="Salida de origen de OLE DB"
+              startId="Package\STG_PRODUCTS_FULL\0 NO IDENTIFICADO.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB2]"
+              endId="Package\STG_PRODUCTS_FULL\Columna derivada 1.Inputs[Entrada de columna derivada]"
+              name="Salida de origen de OLE DB"
+              startId="Package\STG_PRODUCTS_FULL\STA_PRODUCT_FULL.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB3]"
+              endId="Package\STG_PRODUCTS_FULL\Ordenar 1.Inputs[Entrada de ordenación]"
+              name="Salida de origen de OLE DB"
+              startId="Package\STG_PRODUCTS_FULL\STG_PRODUCT_FAMILY.Outputs[Salida de origen de OLE DB]" />
             <path
               refId="Package\STG_PRODUCTS_FULL.Paths[Salida de Unión de todo 1]"
               endId="Package\STG_PRODUCTS_FULL\Búsqueda.Inputs[Entrada de búsqueda]"
@@ -24007,7 +24007,7 @@ WHERE ID_store = ?;
         <NodeLayout
           Size="200,41.6"
           Id="Package\STG_PRODUCT_FAMILY"
-          TopLeft="213.333321677314,13.8666665702396" />
+          TopLeft="211.66665510171,12.1333332489597" />
         <NodeLayout
           Size="185.6,41.6"
           Id="Package\STG_PRODUCT_LINE"
@@ -24026,18 +24026,18 @@ WHERE ID_store = ?;
           TopLeft="23.3333320584563,12.1333332489597" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="164.933332058456,33.7999999095996">
+          TopLeft="164.933332058456,32.9333332489597">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="48.3999896188577,0"
+              EndConnector="46.7333230432536,0"
               Start="0,0"
-              End="40.8999896188577,0">
+              End="39.2333230432536,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="40.8999896188577,0" />
+                    End="39.2333230432536,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -24048,18 +24048,18 @@ WHERE ID_store = ?;
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="413.333321677314,35.9666665611995">
+          TopLeft="411.66665510171,35.0999999005596">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="47.499986477197,0"
+              EndConnector="49.1666530528011,0"
               Start="0,0"
-              End="39.999986477197,0">
+              End="41.6666530528011,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="39.999986477197,0" />
+                    End="41.6666530528011,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -24345,7 +24345,51 @@ WHERE ID_store = ?;
           Id="Package\STG_ALL_SALES\Columna derivada 1"
           TopLeft="441.999993413687,207.999996960163" />
         <EdgeLayout
+          Id="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB]"
+          TopLeft="853.799988362193,417.79999652803">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.3999984651804"
+              Start="0,0"
+              End="0,53.8999984651804">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.8999984651804" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB2]"
+          TopLeft="524.899993391335,56.5999997764826">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,67.3999983757734"
+              Start="0,0"
+              End="0,59.8999983757734">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.8999983757734" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB1]"
           TopLeft="843.999988824129,649.999996811152">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24379,155 +24423,7 @@ WHERE ID_store = ?;
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB1]"
-          TopLeft="853.799988362193,417.79999652803">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,61.3999984651804"
-              Start="0,0"
-              End="0,53.8999984651804">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,53.8999984651804" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB]"
-          TopLeft="524.899993391335,56.5999997764826">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,67.3999983757734"
-              Start="0,0"
-              End="0,59.8999983757734">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,59.8999983757734" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,21.9499991878867,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación5]"
-          TopLeft="820.999987766147,728.199995335936">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-163.399994620681,38.7999968111513"
-              Start="0,0"
-              End="-155.899994620681,38.7999968111513">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-77.6999973103405,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-77.6999973103405,0"
-                    Point2="-81.6999973103405,0"
-                    Point3="-81.6999973103405,4" />
-                  <mssgle:LineSegment
-                    End="-81.6999973103405,34.7999968111513" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-81.6999973103405,34.7999968111513"
-                    Point2="-81.6999973103405,38.7999968111513"
-                    Point3="-85.6999973103405,38.7999968111513" />
-                  <mssgle:LineSegment
-                    End="-155.899994620681,38.7999968111513" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación4]"
-          TopLeft="572.399992400408,696.999996110797">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-13.5999992549418,49.1999960362908"
-              Start="0,0"
-              End="-13.5999992549418,41.6999960362908">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.5999980181454" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.5999980181454"
-                    Point2="0,24.5999980181454"
-                    Point3="-4,24.5999980181454" />
-                  <mssgle:LineSegment
-                    End="-9.59999925494185,24.5999980181454" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-9.59999925494185,24.5999980181454"
-                    Point2="-13.5999992549418,24.5999980181454"
-                    Point3="-13.5999992549418,28.5999980181454" />
-                  <mssgle:LineSegment
-                    End="-13.5999992549418,41.6999960362908" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación3]"
-          TopLeft="856.399988168478,520.79999499321">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-264.999995037914,46.3999986886977"
-              Start="0,0"
-              End="-264.999995037914,38.8999986886977">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.6163847617068" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.6163847617068"
-                    Point2="0,27.6163847617068"
-                    Point3="-4,27.6163847617068" />
-                  <mssgle:LineSegment
-                    End="-260.999995037914,27.6163847617068" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-260.999995037914,27.6163847617068"
-                    Point2="-264.999995037914,27.6163847617068"
-                    Point3="-264.999995037914,31.6163847617068" />
-                  <mssgle:LineSegment
-                    End="-264.999995037914,38.8999986886977" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación2]"
+          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación]"
           TopLeft="558.099992884695,501.799995276332">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24583,7 +24479,7 @@ WHERE ID_store = ?;
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación]"
+          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación2]"
           TopLeft="517.399993160367,322.599995872378">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24608,6 +24504,108 @@ WHERE ID_store = ?;
                     Point3="28.400000119209,29.699999307096" />
                   <mssgle:LineSegment
                     End="28.400000119209,43.899998614192" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación5]"
+          TopLeft="856.399988168478,520.79999499321">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-264.999995037914,46.3999986886977"
+              Start="0,0"
+              End="-264.999995037914,38.8999986886977">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.6163847617068" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.6163847617068"
+                    Point2="0,27.6163847617068"
+                    Point3="-4,27.6163847617068" />
+                  <mssgle:LineSegment
+                    End="-260.999995037914,27.6163847617068" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-260.999995037914,27.6163847617068"
+                    Point2="-264.999995037914,27.6163847617068"
+                    Point3="-264.999995037914,31.6163847617068" />
+                  <mssgle:LineSegment
+                    End="-264.999995037914,38.8999986886977" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación4]"
+          TopLeft="572.399992400408,696.999996110797">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-13.5999992549418,49.1999960362908"
+              Start="0,0"
+              End="-13.5999992549418,41.6999960362908">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5999980181454" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5999980181454"
+                    Point2="0,24.5999980181454"
+                    Point3="-4,24.5999980181454" />
+                  <mssgle:LineSegment
+                    End="-9.59999925494185,24.5999980181454" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9.59999925494185,24.5999980181454"
+                    Point2="-13.5999992549418,24.5999980181454"
+                    Point3="-13.5999992549418,28.5999980181454" />
+                  <mssgle:LineSegment
+                    End="-13.5999992549418,41.6999960362908" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación3]"
+          TopLeft="820.999987766147,728.199995335936">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-163.399994620681,38.7999968111513"
+              Start="0,0"
+              End="-155.899994620681,38.7999968111513">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-77.6999973103405,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-77.6999973103405,0"
+                    Point2="-81.6999973103405,0"
+                    Point3="-81.6999973103405,4" />
+                  <mssgle:LineSegment
+                    End="-81.6999973103405,34.7999968111513" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-81.6999973103405,34.7999968111513"
+                    Point2="-81.6999973103405,38.7999968111513"
+                    Point3="-85.6999973103405,38.7999968111513" />
+                  <mssgle:LineSegment
+                    End="-155.899994620681,38.7999968111513" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25085,9 +25083,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25121,9 +25117,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25157,9 +25151,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25193,9 +25185,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25229,9 +25219,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25265,9 +25253,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25301,9 +25287,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25337,9 +25321,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25373,9 +25355,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25409,9 +25389,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25505,9 +25483,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25529,9 +25505,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25565,9 +25539,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25601,9 +25573,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -25732,9 +25702,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25780,9 +25748,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -25925,9 +25891,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25949,9 +25913,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25985,9 +25947,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -26021,9 +25981,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -26170,9 +26128,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -26206,9 +26162,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -26230,9 +26184,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -26730,43 +26682,7 @@ WHERE ID_store = ?;
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB4]"
-          TopLeft="751.686075589987,1055.14443759129">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-185.330545835515,33.9666694718935"
-              Start="0,0"
-              End="-185.330545835515,26.4666694718935">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.1548082943721" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.1548082943721"
-                    Point2="0,20.1548082943721"
-                    Point3="-4,20.1548082943721" />
-                  <mssgle:LineSegment
-                    End="-181.330545835515,20.1548082943721" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-181.330545835515,20.1548082943721"
-                    Point2="-185.330545835515,20.1548082943721"
-                    Point3="-185.330545835515,24.1548082943721" />
-                  <mssgle:LineSegment
-                    End="-185.330545835515,26.4666694718935" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB3]"
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB]"
           TopLeft="852.083315586464,480.15000014777">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26796,7 +26712,7 @@ WHERE ID_store = ?;
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB2]"
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB4]"
           TopLeft="899.966624671057,656.616664563699">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26832,7 +26748,7 @@ WHERE ID_store = ?;
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB1]"
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB3]"
           TopLeft="928.041641372153,342.600001627207">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26868,7 +26784,7 @@ WHERE ID_store = ?;
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB]"
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB2]"
           TopLeft="463.058314458323,87.6833332791097">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26904,19 +26820,31 @@ WHERE ID_store = ?;
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación5]"
-          TopLeft="544.454165363332,518.783332578259">
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB1]"
+          TopLeft="751.686075589987,1055.14443759129">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39.316665452305"
+              EndConnector="-185.330545835515,33.9666694718935"
               Start="0,0"
-              End="0,31.816665452305">
+              End="-185.330545835515,26.4666694718935">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.816665452305" />
+                    End="0,16.1548082943721" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.1548082943721"
+                    Point2="0,20.1548082943721"
+                    Point3="-4,20.1548082943721" />
+                  <mssgle:LineSegment
+                    End="-181.330545835515,20.1548082943721" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-181.330545835515,20.1548082943721"
+                    Point2="-185.330545835515,20.1548082943721"
+                    Point3="-185.330545835515,24.1548082943721" />
+                  <mssgle:LineSegment
+                    End="-185.330545835515,26.4666694718935" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -26928,79 +26856,7 @@ WHERE ID_store = ?;
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación4]"
-          TopLeft="493.149987809609,374.183334240235">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="14.9416704219665,29.066665682528"
-              Start="0,0"
-              End="14.9416704219665,21.566665682528">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10.533332841264" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.533332841264"
-                    Point2="0,14.533332841264"
-                    Point3="4,14.533332841264" />
-                  <mssgle:LineSegment
-                    End="10.9416704219665,14.533332841264" />
-                  <mssgle:CubicBezierSegment
-                    Point1="10.9416704219665,14.533332841264"
-                    Point2="14.9416704219665,14.533332841264"
-                    Point3="14.9416704219665,18.533332841264" />
-                  <mssgle:LineSegment
-                    End="14.9416704219665,21.566665682528" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación3]"
-          TopLeft="654.249984042099,400.633333871928">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-51.3583258105236,23.4166660508348"
-              Start="0,0"
-              End="-43.8583258105236,23.4166660508348">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-21.6791629052618,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-21.6791629052618,0"
-                    Point2="-25.6791629052618,0"
-                    Point3="-25.6791629052618,4" />
-                  <mssgle:LineSegment
-                    End="-25.6791629052618,19.4166660508348" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-25.6791629052618,19.4166660508348"
-                    Point2="-25.6791629052618,23.4166660508348"
-                    Point3="-29.6791629052618,23.4166660508348" />
-                  <mssgle:LineSegment
-                    End="-43.8583258105236,23.4166660508348" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación2]"
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación]"
           TopLeft="741.249990692982,539.31666564006">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27037,6 +26893,30 @@ WHERE ID_store = ?;
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación1]"
+          TopLeft="542.370816249256,670.683330489613">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.8166681091814"
+              Start="0,0"
+              End="0,30.3166681091814">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.3166681091814" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación2]"
           TopLeft="670.04163478584,702.216663490815">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27072,19 +26952,91 @@ WHERE ID_store = ?;
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación]"
-          TopLeft="542.370816249256,670.683330489613">
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación5]"
+          TopLeft="654.249984042099,400.633333871928">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37.8166681091814"
+              EndConnector="-51.3583258105236,23.4166660508348"
               Start="0,0"
-              End="0,30.3166681091814">
+              End="-43.8583258105236,23.4166660508348">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.3166681091814" />
+                    End="-21.6791629052618,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21.6791629052618,0"
+                    Point2="-25.6791629052618,0"
+                    Point3="-25.6791629052618,4" />
+                  <mssgle:LineSegment
+                    End="-25.6791629052618,19.4166660508348" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-25.6791629052618,19.4166660508348"
+                    Point2="-25.6791629052618,23.4166660508348"
+                    Point3="-29.6791629052618,23.4166660508348" />
+                  <mssgle:LineSegment
+                    End="-43.8583258105236,23.4166660508348" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación3]"
+          TopLeft="493.149987809609,374.183334240235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14.9416704219665,29.066665682528"
+              Start="0,0"
+              End="14.9416704219665,21.566665682528">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.533332841264" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.533332841264"
+                    Point2="0,14.533332841264"
+                    Point3="4,14.533332841264" />
+                  <mssgle:LineSegment
+                    End="10.9416704219665,14.533332841264" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.9416704219665,14.533332841264"
+                    Point2="14.9416704219665,14.533332841264"
+                    Point3="14.9416704219665,18.533332841264" />
+                  <mssgle:LineSegment
+                    End="14.9416704219665,21.566665682528" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación4]"
+          TopLeft="544.454165363332,518.783332578259">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.316665452305"
+              Start="0,0"
+              End="0,31.816665452305">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.816665452305" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -27918,9 +27870,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -27954,9 +27904,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -27978,9 +27926,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28014,9 +27960,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28050,9 +27994,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28086,9 +28028,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28194,9 +28134,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28230,9 +28168,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28254,9 +28190,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28290,9 +28224,7 @@ WHERE ID_store = ?;
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
