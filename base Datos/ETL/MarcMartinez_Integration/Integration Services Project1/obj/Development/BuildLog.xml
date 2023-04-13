@@ -2,28 +2,48 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>Integration Services Project1</Name>
-    <LastWriteTime>2023-03-28T18:40:00.9327118Z</LastWriteTime>
+    <LastWriteTime>2023-04-13T17:17:37.2113438Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>STA.dtsx</Name>
+      <Name>DWHOld.dtsx</Name>
+      <LastWriteTime>2023-03-29T17:01:31.6155064Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>MASTEROld.dtsx</Name>
+      <LastWriteTime>2023-03-14T17:19:02.5795021Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>STAOld.dtsx</Name>
       <LastWriteTime>2023-03-27T16:35:29.9058572Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
+      <Name>STGOld.dtsx</Name>
+      <LastWriteTime>2023-03-29T17:00:52.6782714Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>STA.dtsx</Name>
+      <LastWriteTime>2023-04-11T19:00:53.4302972Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
       <Name>STG.dtsx</Name>
-      <LastWriteTime>2023-03-28T17:39:31.2876899Z</LastWriteTime>
+      <LastWriteTime>2023-04-13T17:16:09.0915656Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>MASTERDATA.dtsx</Name>
+      <LastWriteTime>2023-04-13T16:57:52.7785523Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DWH.dtsx</Name>
-      <LastWriteTime>2023-03-29T16:38:19.6368706Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>MASTER.dtsx</Name>
-      <LastWriteTime>2023-03-14T17:19:02.5795021Z</LastWriteTime>
+      <LastWriteTime>2023-04-13T17:22:46.3587272Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
