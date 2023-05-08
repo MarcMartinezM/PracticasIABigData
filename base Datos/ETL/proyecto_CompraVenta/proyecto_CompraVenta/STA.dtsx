@@ -1,0 +1,3145 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/6/2023 8:35:21 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-9CCRN90"
+  DTS:CreatorName="DESKTOP-9CCRN90\Marc"
+  DTS:DTSID="{5947B50D-6DDF-4DB7-9C20-B3CD9382FE77}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5131.0"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{7FFF85A5-0B3D-4D65-8979-1D77AFB8DF97}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[COMPRAVENTA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{06D92A97-9CF9-4AC8-B4AC-07E668AB6412}"
+      DTS:ObjectName="COMPRAVENTA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-9CCRN90;Initial Catalog=COMPRAVENTA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{06D92A97-9CF9-4AC8-B4AC-07E668AB6412}DESKTOP-9CCRN90.COMPRAVENTA;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[comp_ven_preu_2022]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{54D4BE64-7C94-4ACE-B5FB-3068A9D7A8C3}"
+      DTS:ObjectName="comp_ven_preu_2022">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Marc\Downloads\2022_comp_vend_preu_trim.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Any&quot;"
+              DTS:DTSID="{7B2DBD7A-BC62-422F-B688-923909E83BB4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Trimestre&quot;"
+              DTS:DTSID="{D84B3F54-1C6B-4362-A47F-1EF8A150B520}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Codi_Districte&quot;"
+              DTS:DTSID="{29D74F57-B9C5-44BF-8140-B85BAE00254D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Nom_Districte&quot;"
+              DTS:DTSID="{20850C47-391E-473C-98B1-4336F868E8B0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Codi_Barri&quot;"
+              DTS:DTSID="{24F28F17-6A3B-4667-9238-5C4A2E6C1E57}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Nom_Barri&quot;"
+              DTS:DTSID="{DC761D0C-C5B0-4402-A468-EEA449ED93A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Preu_mitja_habitatge&quot;"
+              DTS:DTSID="{C96A2257-1717-4622-92D4-D794FFD6EC82}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Valor&quot;"
+              DTS:DTSID="{ED5885DF-3B4C-41F6-8021-57F93A7D8840}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[comp_ven_sup_2022]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C8191BF4-2235-4CEF-B5E0-58F460E37720}"
+      DTS:ObjectName="comp_ven_sup_2022">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Marc\Downloads\2022_comp_vend_sup_trim.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Any&quot;"
+              DTS:DTSID="{4BA6FB56-B1CE-426F-900D-F78CACC02968}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Trimestre&quot;"
+              DTS:DTSID="{7975AFDA-F5B6-4F95-96C9-B455E2AA9660}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Codi_Districte&quot;"
+              DTS:DTSID="{C89557C4-AE92-467D-B250-79EA11C8AB5A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Nom_Districte&quot;"
+              DTS:DTSID="{D79C1704-BD15-4DE8-B3DD-782FFFDBB1D7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Codi_Barri&quot;"
+              DTS:DTSID="{55D694C1-5F8A-4084-8004-65F30C389A35}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Nom_Barri&quot;"
+              DTS:DTSID="{FB8C01F3-B6D8-41B0-B4C7-29C7DCC337EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="superficie"
+              DTS:DTSID="{FF5EACEB-961D-4EAB-97F1-470A0D5B5275}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Nombre&quot;"
+              DTS:DTSID="{24906B89-E894-49F1-BA57-7297B056152A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A823D1DA-2D15-4E75-B421-EF83FD170343}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="GETDATE()"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="insert_date">
+      <DTS:VariableValue
+        DTS:DataType="7">5/8/2023 10:49:15 AM</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DELETE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{45C856EA-26F4-4AB2-95D2-FB38237F4283}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DELETE"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{06D92A97-9CF9-4AC8-B4AC-07E668AB6412}"
+          SQLTask:SqlStatementSource="delete from STA_COMPRAVENTA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\STA_COMPRAVENTA"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{409A3185-214B-41E0-90C0-D6DA9C7A926C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="STA_COMPRAVENTA"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\STA_COMPRAVENTA\add ID_VIVIENDA"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="add ID_VIVIENDA"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Inputs[Entrada de columna derivada].Columns[&quot;Any&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Any&quot;"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Any&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Inputs[Entrada de columna derivada].Columns[&quot;Trimestre&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Trimestre&quot;"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Trimestre&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Inputs[Entrada de columna derivada].Columns[&quot;Codi_Districte&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Codi_Districte&quot;"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Codi_Districte&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Inputs[Entrada de columna derivada].Columns[&quot;Codi_Barri&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Codi_Barri&quot;"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="4"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Codi_Barri&quot;]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Outputs[Salida de columna derivada].Columns[ID_VIVIENDA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      length="11"
+                      lineageId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Outputs[Salida de columna derivada].Columns[ID_VIVIENDA]"
+                      name="ID_VIVIENDA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">(DT_STR,4,1252)#{Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns["Any"]} + (DT_STR,1,1252)#{Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns["Trimestre"]} + (DT_STR,3,1252)#{Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns["Codi_Districte"]} + (DT_STR,3,1252)#{Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns["Codi_Barri"]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,4,1252)["Any"] + (DT_STR,1,1252)["Trimestre"] + (DT_STR,3,1252)["Codi_Districte"] + (DT_STR,3,1252)["Codi_Barri"]</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STA_COMPRAVENTA\Búsqueda"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="Búsqueda"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [STA_VIVIENDA]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [STA_VIVIENDA]) [refTable]
+where [refTable].[ID_VIVIENDA] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID_VIVIENDA" dataType="DT_STR" length="11" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Any" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Trimestre" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Codi_Districte" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Nom_Districte" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Codi_Barri" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Nom_Barri" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Preu_mitja_habitatge" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Valor" dataType="DT_NUMERIC" length="0" precision="28" scale="0" codePage="0"/&gt;&lt;referenceColumn name="superficie" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Nombre" dataType="DT_NUMERIC" length="0" precision="28" scale="0" codePage="0"/&gt;&lt;referenceColumn name="INSERT_DATE" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Outputs[Salida de columna derivada].Columns[string_id]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STA_COMPRAVENTA\Búsqueda.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\STA_COMPRAVENTA\Búsqueda.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Búsqueda.Inputs[Entrada de búsqueda].Columns[string_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="string_id"
+                      lineageId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Outputs[Salida de columna derivada].Columns[string_id]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">ID_VIVIENDA</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STA_COMPRAVENTA\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
+                  exclusionGroup="1"
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\STA_COMPRAVENTA\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[LK_ID_VIVIENDA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copiar columna"
+                      length="11"
+                      lineageId="Package\STA_COMPRAVENTA\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[LK_ID_VIVIENDA]"
+                      name="LK_ID_VIVIENDA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">ID_VIVIENDA</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STA_COMPRAVENTA\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en 'Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes'."
+                  exclusionGroup="1"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\STA_COMPRAVENTA\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STA_COMPRAVENTA\Búsqueda.Outputs[Salida de error de búsqueda]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\STA_COMPRAVENTA\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STA_COMPRAVENTA\Columna derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\STA_COMPRAVENTA\Columna derivada.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Columna derivada.Inputs[Entrada de columna derivada].Columns[&quot;Trimestre&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Trimestre&quot;"
+                      cachedPrecision="18"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Trimestre&quot;]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">#{Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Trimestre"]} == 3</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">["Trimestre"] == 3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Columna derivada.Inputs[Entrada de columna derivada].Columns[&quot;Preu_mitja_habitatge&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Preu_mitja_habitatge&quot;"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Preu_mitja_habitatge&quot;]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">#{Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Preu_mitja_habitatge"]} == "Total. Euros/m2 construït"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">["Preu_mitja_habitatge"] == "Total. Euros/m2 construït"</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STA_COMPRAVENTA\Columna derivada.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\STA_COMPRAVENTA\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STA_COMPRAVENTA\Columna derivada.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\STA_COMPRAVENTA\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STA_COMPRAVENTA\Columna derivada 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\STA_COMPRAVENTA\Columna derivada 1.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Columna derivada 1.Inputs[Entrada de columna derivada].Columns[&quot;Trimestre&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Trimestre&quot;"
+                      cachedPrecision="18"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Trimestre&quot;]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">#{Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Trimestre"]} == 3</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">["Trimestre"] == 3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Columna derivada 1.Inputs[Entrada de columna derivada].Columns[superficie]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="superficie"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[superficie]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">#{Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[superficie]} == "Total"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">superficie == "Total"</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STA_COMPRAVENTA\Columna derivada 1.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\STA_COMPRAVENTA\Columna derivada 1.Inputs[Entrada de columna derivada]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STA_COMPRAVENTA\Columna derivada 1.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\STA_COMPRAVENTA\Columna derivada 1.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Columna derivada 1.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\Columna derivada 1.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Columna derivada 1.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\Columna derivada 1.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STA_COMPRAVENTA\Comando de OLE DB"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="Comando de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Ejecuta una instrucción SQL para cada fila de un flujo de datos. Por ejemplo, se usa para llamar al procedimiento almacenado de configuración de nuevo empleado para cada fila de la tabla de nuevos empleados. Nota: la ejecución de una instrucción SQL para cada fila de un flujo de datos de gran tamaño puede tardar mucho tiempo."
+              name="Comando de OLE DB"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STA_COMPRAVENTA\Comando de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\STA_COMPRAVENTA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]"
+                  errorOrTruncationOperation="Ejecución de comando"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de comando de OLE DB">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STA_COMPRAVENTA\Comando de OLE DB.Outputs[Salida de comando de OLE DB]"
+                  exclusionGroup="1"
+                  name="Salida de comando de OLE DB"
+                  synchronousInputId="Package\STA_COMPRAVENTA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STA_COMPRAVENTA\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de comando de OLE DB"
+                  synchronousInputId="Package\STA_COMPRAVENTA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STA_COMPRAVENTA\Combinación de mezcla"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Combinación de mezcla;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Combina dos flujos de datos ordenados en uno solo mediante la combinación FULL, LEFT o INNER. Se recomienda esta transformación cuando se pueden ordenar los flujos de datos en sus orígenes."
+              name="Combinación de mezcla"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de combinación que se debe realizar."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número de columnas de la clave de ordenación."
+                  name="NumKeyColumns">4</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores NULL se tratan como valores iguales."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indica la cantidad máxima solicitada de búferes por entrada antes del bloqueo."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
+                  hasSideEffects="true"
+                  name="Entrada izquierda de combinación de mezcla">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[&quot;Any&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Any&quot;"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Any&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[&quot;Trimestre&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Trimestre&quot;"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Trimestre&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[&quot;Codi_Districte&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Codi_Districte&quot;"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Codi_Districte&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[&quot;Codi_Barri&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Codi_Barri&quot;"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="4"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Codi_Barri&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[&quot;Nom_Districte&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Nom_Districte&quot;"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Nom_Districte&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[&quot;Nom_Barri&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Nom_Barri&quot;"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Nom_Barri&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[&quot;Preu_mitja_habitatge&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Preu_mitja_habitatge&quot;"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Preu_mitja_habitatge&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[&quot;Valor&quot;]"
+                      cachedDataType="decimal"
+                      cachedName="&quot;Valor&quot;"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Valor&quot;]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
+                  hasSideEffects="true"
+                  name="Entrada derecha de combinación de mezcla">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[&quot;Any&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Any&quot;"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Any&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[&quot;Trimestre&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Trimestre&quot;"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Trimestre&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[&quot;Codi_Districte&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Codi_Districte&quot;"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Codi_Districte&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[&quot;Codi_Barri&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Codi_Barri&quot;"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="4"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Codi_Barri&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[superficie]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="superficie"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[superficie]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[&quot;Nombre&quot;]"
+                      cachedDataType="decimal"
+                      cachedName="&quot;Nombre&quot;"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Nombre&quot;]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla]"
+                  isSorted="true"
+                  name="Salida de combinación de mezcla">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Any&quot;]"
+                      dataType="numeric"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Any&quot;]"
+                      name="&quot;Any&quot;"
+                      precision="18"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns["Any"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Trimestre&quot;]"
+                      dataType="numeric"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Trimestre&quot;]"
+                      name="&quot;Trimestre&quot;"
+                      precision="18"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns["Trimestre"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Codi_Districte&quot;]"
+                      dataType="numeric"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Codi_Districte&quot;]"
+                      name="&quot;Codi_Districte&quot;"
+                      precision="18"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns["Codi_Districte"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Nom_Districte&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Nom_Districte&quot;]"
+                      name="&quot;Nom_Districte&quot;">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns["Nom_Districte"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Codi_Barri&quot;]"
+                      dataType="numeric"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Codi_Barri&quot;]"
+                      name="&quot;Codi_Barri&quot;"
+                      precision="18"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns["Codi_Barri"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Nom_Barri&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Nom_Barri&quot;]"
+                      name="&quot;Nom_Barri&quot;">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns["Nom_Barri"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Preu_mitja_habitatge&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Preu_mitja_habitatge&quot;]"
+                      name="&quot;Preu_mitja_habitatge&quot;">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns["Preu_mitja_habitatge"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Valor&quot;]"
+                      dataType="decimal"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Valor&quot;]"
+                      name="&quot;Valor&quot;">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns["Valor"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[superficie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[superficie]"
+                      name="superficie">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[superficie]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Nombre&quot;]"
+                      dataType="decimal"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Nombre&quot;]"
+                      name="&quot;Nombre&quot;">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns["Nombre"]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de archivo plano"
+              localeId="3082"
+              name="COMPRAVENTA PREU TRIMESTRE 2022"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si las columnas de longitud cero se tratan como NULL."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[comp_ven_preu_2022]"
+                  connectionManagerRefId="Package.ConnectionManagers[comp_ven_preu_2022]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano]"
+                  name="Salida de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Any&quot;]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Any&quot;]"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Any&quot;]"
+                      name="&quot;Any&quot;"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Trimestre&quot;]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Trimestre&quot;]"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Trimestre&quot;]"
+                      name="&quot;Trimestre&quot;"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Codi_Districte&quot;]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Codi_Districte&quot;]"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Codi_Districte&quot;]"
+                      name="&quot;Codi_Districte&quot;"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Nom_Districte&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Nom_Districte&quot;]"
+                      length="50"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Nom_Districte&quot;]"
+                      name="&quot;Nom_Districte&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Codi_Barri&quot;]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Codi_Barri&quot;]"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Codi_Barri&quot;]"
+                      name="&quot;Codi_Barri&quot;"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Nom_Barri&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Nom_Barri&quot;]"
+                      length="50"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Nom_Barri&quot;]"
+                      name="&quot;Nom_Barri&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Preu_mitja_habitatge&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Preu_mitja_habitatge&quot;]"
+                      length="50"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Preu_mitja_habitatge&quot;]"
+                      name="&quot;Preu_mitja_habitatge&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Valor&quot;]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Valor&quot;]"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Valor&quot;]"
+                      name="&quot;Valor&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Any&quot;]"
+                      dataType="numeric"
+                      name="&quot;Any&quot;"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Trimestre&quot;]"
+                      dataType="numeric"
+                      name="&quot;Trimestre&quot;"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Codi_Districte&quot;]"
+                      dataType="numeric"
+                      name="&quot;Codi_Districte&quot;"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Nom_Districte&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Nom_Districte&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Codi_Barri&quot;]"
+                      dataType="numeric"
+                      name="&quot;Codi_Barri&quot;"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Nom_Barri&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Nom_Barri&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Preu_mitja_habitatge&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Preu_mitja_habitatge&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Valor&quot;]"
+                      dataType="decimal"
+                      name="&quot;Valor&quot;" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de error de origen de archivo plano]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Columna de salida de error de origen de archivo plano"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      name="Columna de salida de error de origen de archivo plano" />
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de archivo plano"
+              localeId="3082"
+              name="COMPRAVENTA SUPERFI TRIMENTRE 2022"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si las columnas de longitud cero se tratan como NULL."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[comp_ven_sup_2022]"
+                  connectionManagerRefId="Package.ConnectionManagers[comp_ven_sup_2022]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano]"
+                  name="Salida de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Any&quot;]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Any&quot;]"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Any&quot;]"
+                      name="&quot;Any&quot;"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Trimestre&quot;]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Trimestre&quot;]"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Trimestre&quot;]"
+                      name="&quot;Trimestre&quot;"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Codi_Districte&quot;]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Codi_Districte&quot;]"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Codi_Districte&quot;]"
+                      name="&quot;Codi_Districte&quot;"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Nom_Districte&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Nom_Districte&quot;]"
+                      length="50"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Nom_Districte&quot;]"
+                      name="&quot;Nom_Districte&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Codi_Barri&quot;]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Codi_Barri&quot;]"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Codi_Barri&quot;]"
+                      name="&quot;Codi_Barri&quot;"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Nom_Barri&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Nom_Barri&quot;]"
+                      length="50"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Nom_Barri&quot;]"
+                      name="&quot;Nom_Barri&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[superficie]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[superficie]"
+                      length="50"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[superficie]"
+                      name="superficie"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Nombre&quot;]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Nombre&quot;]"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Nombre&quot;]"
+                      name="&quot;Nombre&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Any&quot;]"
+                      dataType="numeric"
+                      name="&quot;Any&quot;"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Trimestre&quot;]"
+                      dataType="numeric"
+                      name="&quot;Trimestre&quot;"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Codi_Districte&quot;]"
+                      dataType="numeric"
+                      name="&quot;Codi_Districte&quot;"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Nom_Districte&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Nom_Districte&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Codi_Barri&quot;]"
+                      dataType="numeric"
+                      name="&quot;Codi_Barri&quot;"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Nom_Barri&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;Nom_Barri&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[superficie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="superficie" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].ExternalColumns[&quot;Nombre&quot;]"
+                      dataType="decimal"
+                      name="&quot;Nombre&quot;" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de error de origen de archivo plano]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Columna de salida de error de origen de archivo plano"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      name="Columna de salida de error de origen de archivo plano" />
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STA_COMPRAVENTA\Destino de OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Destino de OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[STA_VIVIENDA]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[superficie]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="superficie"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[superficie]"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[superficie]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[INSERT_DATE]"
+                      cachedDataType="date"
+                      cachedName="INSERT_DATE"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[INSERT_DATE]"
+                      lineageId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Outputs[Salida de columna derivada].Columns[INSERT_DATE]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[string_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="string_id"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_VIVIENDA]"
+                      lineageId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Outputs[Salida de columna derivada].Columns[string_id]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[&quot;Any&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Any&quot;"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Any]"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Any&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[&quot;Trimestre&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Trimestre&quot;"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Trimestre]"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Trimestre&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[&quot;Codi_Districte&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Codi_Districte&quot;"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Codi_Districte]"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Codi_Districte&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[&quot;Nom_Districte&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Nom_Districte&quot;"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Districte]"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Nom_Districte&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[&quot;Codi_Barri&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Codi_Barri&quot;"
+                      cachedPrecision="18"
+                      cachedSortKeyPosition="4"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Codi_Barri]"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Codi_Barri&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[&quot;Nom_Barri&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Nom_Barri&quot;"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Barri]"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Nom_Barri&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[&quot;Preu_mitja_habitatge&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Preu_mitja_habitatge&quot;"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Preu_mitja_habitatge]"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Preu_mitja_habitatge&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[&quot;Valor&quot;]"
+                      cachedDataType="decimal"
+                      cachedName="&quot;Valor&quot;"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Valor]"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Valor&quot;]" />
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[&quot;Nombre&quot;]"
+                      cachedDataType="decimal"
+                      cachedName="&quot;Nombre&quot;"
+                      externalMetadataColumnId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nombre]"
+                      lineageId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[&quot;Nombre&quot;]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_VIVIENDA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      name="ID_VIVIENDA" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Any]"
+                      dataType="numeric"
+                      name="Any"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Trimestre]"
+                      dataType="numeric"
+                      name="Trimestre"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Codi_Districte]"
+                      dataType="numeric"
+                      name="Codi_Districte"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Districte]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Nom_Districte" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Codi_Barri]"
+                      dataType="numeric"
+                      name="Codi_Barri"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Barri]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Nom_Barri" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Preu_mitja_habitatge]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Preu_mitja_habitatge" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Valor]"
+                      dataType="numeric"
+                      name="Valor"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[superficie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="superficie" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nombre]"
+                      dataType="numeric"
+                      name="Nombre"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[INSERT_DATE]"
+                      dataType="dbTimeStamp"
+                      name="INSERT_DATE" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STA_COMPRAVENTA\Ordenar"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordenar;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Ordena los datos de entrada de manera ascendente o descendente cuando no es posible ordenarlos en su origen. Por ejemplo, se ordenan los datos de ventas por 'id. de cliente' antes de que se escriban en un archivo plano y se entreguen a otro departamento. Nota: no se recomienda realizar esta transformación para grandes flujos de datos."
+              name="Ordenar"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si la transformación Ordenar quita filas con valores de ordenación duplicados."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número máximo de subprocesos que se deben usar para la ordenación."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\STA_COMPRAVENTA\Ordenar.Inputs[Entrada de ordenación]"
+                  name="Entrada de ordenación">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar.Inputs[Entrada de ordenación].Columns[&quot;Any&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Any&quot;"
+                      cachedPrecision="18"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Any&quot;]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar.Inputs[Entrada de ordenación].Columns[&quot;Trimestre&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Trimestre&quot;"
+                      cachedPrecision="18"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Trimestre&quot;]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar.Inputs[Entrada de ordenación].Columns[&quot;Codi_Districte&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Codi_Districte&quot;"
+                      cachedPrecision="18"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Codi_Districte&quot;]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar.Inputs[Entrada de ordenación].Columns[&quot;Nom_Districte&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Nom_Districte&quot;"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Nom_Districte&quot;]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar.Inputs[Entrada de ordenación].Columns[&quot;Codi_Barri&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Codi_Barri&quot;"
+                      cachedPrecision="18"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Codi_Barri&quot;]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar.Inputs[Entrada de ordenación].Columns[&quot;Nom_Barri&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Nom_Barri&quot;"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Nom_Barri&quot;]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar.Inputs[Entrada de ordenación].Columns[&quot;Preu_mitja_habitatge&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Preu_mitja_habitatge&quot;"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Preu_mitja_habitatge&quot;]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar.Inputs[Entrada de ordenación].Columns[&quot;Valor&quot;]"
+                      cachedDataType="decimal"
+                      cachedName="&quot;Valor&quot;"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Valor&quot;]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación]"
+                  isSorted="true"
+                  name="Salida de ordenación">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Any&quot;]"
+                      dataType="numeric"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Any&quot;]"
+                      name="&quot;Any&quot;"
+                      precision="18"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Any"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Trimestre&quot;]"
+                      dataType="numeric"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Trimestre&quot;]"
+                      name="&quot;Trimestre&quot;"
+                      precision="18"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Trimestre"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Codi_Districte&quot;]"
+                      dataType="numeric"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Codi_Districte&quot;]"
+                      name="&quot;Codi_Districte&quot;"
+                      precision="18"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Codi_Districte"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Nom_Districte&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Nom_Districte&quot;]"
+                      name="&quot;Nom_Districte&quot;">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Nom_Districte"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Codi_Barri&quot;]"
+                      dataType="numeric"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Codi_Barri&quot;]"
+                      name="&quot;Codi_Barri&quot;"
+                      precision="18"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Codi_Barri"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Nom_Barri&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Nom_Barri&quot;]"
+                      name="&quot;Nom_Barri&quot;">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Nom_Barri"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Preu_mitja_habitatge&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Preu_mitja_habitatge&quot;]"
+                      name="&quot;Preu_mitja_habitatge&quot;">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Preu_mitja_habitatge"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Valor&quot;]"
+                      dataType="decimal"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación].Columns[&quot;Valor&quot;]"
+                      name="&quot;Valor&quot;">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Valor"]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STA_COMPRAVENTA\Ordenar 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordenar;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Ordena los datos de entrada de manera ascendente o descendente cuando no es posible ordenarlos en su origen. Por ejemplo, se ordenan los datos de ventas por 'id. de cliente' antes de que se escriban en un archivo plano y se entreguen a otro departamento. Nota: no se recomienda realizar esta transformación para grandes flujos de datos."
+              name="Ordenar 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si la transformación Ordenar quita filas con valores de ordenación duplicados."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número máximo de subprocesos que se deben usar para la ordenación."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\STA_COMPRAVENTA\Ordenar 1.Inputs[Entrada de ordenación]"
+                  name="Entrada de ordenación">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar 1.Inputs[Entrada de ordenación].Columns[&quot;Any&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Any&quot;"
+                      cachedPrecision="18"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Any&quot;]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar 1.Inputs[Entrada de ordenación].Columns[&quot;Trimestre&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Trimestre&quot;"
+                      cachedPrecision="18"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Trimestre&quot;]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar 1.Inputs[Entrada de ordenación].Columns[&quot;Codi_Districte&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Codi_Districte&quot;"
+                      cachedPrecision="18"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Codi_Districte&quot;]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar 1.Inputs[Entrada de ordenación].Columns[&quot;Nom_Districte&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Nom_Districte&quot;"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Nom_Districte&quot;]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar 1.Inputs[Entrada de ordenación].Columns[&quot;Codi_Barri&quot;]"
+                      cachedDataType="numeric"
+                      cachedName="&quot;Codi_Barri&quot;"
+                      cachedPrecision="18"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Codi_Barri&quot;]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar 1.Inputs[Entrada de ordenación].Columns[&quot;Nom_Barri&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;Nom_Barri&quot;"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Nom_Barri&quot;]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar 1.Inputs[Entrada de ordenación].Columns[superficie]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="superficie"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[superficie]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar 1.Inputs[Entrada de ordenación].Columns[&quot;Nombre&quot;]"
+                      cachedDataType="decimal"
+                      cachedName="&quot;Nombre&quot;"
+                      lineageId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[&quot;Nombre&quot;]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación]"
+                  isSorted="true"
+                  name="Salida de ordenación">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Any&quot;]"
+                      dataType="numeric"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Any&quot;]"
+                      name="&quot;Any&quot;"
+                      precision="18"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Any"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Trimestre&quot;]"
+                      dataType="numeric"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Trimestre&quot;]"
+                      name="&quot;Trimestre&quot;"
+                      precision="18"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Trimestre"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Codi_Districte&quot;]"
+                      dataType="numeric"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Codi_Districte&quot;]"
+                      name="&quot;Codi_Districte&quot;"
+                      precision="18"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Codi_Districte"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Nom_Districte&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Nom_Districte&quot;]"
+                      name="&quot;Nom_Districte&quot;">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Nom_Districte"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Codi_Barri&quot;]"
+                      dataType="numeric"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Codi_Barri&quot;]"
+                      name="&quot;Codi_Barri&quot;"
+                      precision="18"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Codi_Barri"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Nom_Barri&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Nom_Barri&quot;]"
+                      name="&quot;Nom_Barri&quot;">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Nom_Barri"]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[superficie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[superficie]"
+                      name="superficie">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns[superficie]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Nombre&quot;]"
+                      dataType="decimal"
+                      lineageId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación].Columns[&quot;Nombre&quot;]"
+                      name="&quot;Nombre&quot;">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano].Columns["Nombre"]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="STRING ID and INSERT_DATE"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Inputs[Entrada de columna derivada].Columns[ID_VIVIENDA]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="ID_VIVIENDA"
+                      lineageId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Outputs[Salida de columna derivada].Columns[ID_VIVIENDA]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Outputs[Salida de columna derivada].Columns[INSERT_DATE]"
+                      dataType="date"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Outputs[Salida de columna derivada].Columns[INSERT_DATE]"
+                      name="INSERT_DATE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">@[User::insert_date]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::insert_date]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Outputs[Salida de columna derivada].Columns[string_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      length="11"
+                      lineageId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Outputs[Salida de columna derivada].Columns[string_id]"
+                      name="string_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">(DT_STR,11,1252)#{Package\STA_COMPRAVENTA\add ID_VIVIENDA.Outputs[Salida de columna derivada].Columns[ID_VIVIENDA]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,11,1252)ID_VIVIENDA</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada]"
+              endId="Package\STA_COMPRAVENTA\Ordenar.Inputs[Entrada de ordenación]"
+              name="Salida de columna derivada"
+              startId="Package\STA_COMPRAVENTA\Columna derivada.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada1]"
+              endId="Package\STA_COMPRAVENTA\Ordenar 1.Inputs[Entrada de ordenación]"
+              name="Salida de columna derivada"
+              startId="Package\STA_COMPRAVENTA\Columna derivada 1.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada2]"
+              endId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Inputs[Entrada de columna derivada]"
+              name="Salida de columna derivada"
+              startId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada3]"
+              endId="Package\STA_COMPRAVENTA\Búsqueda.Inputs[Entrada de búsqueda]"
+              name="Salida de columna derivada"
+              startId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de combinación de mezcla]"
+              endId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Inputs[Entrada de columna derivada]"
+              name="Salida de combinación de mezcla"
+              startId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla]" />
+            <path
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de entradas coincidentes de búsqueda]"
+              endId="Package\STA_COMPRAVENTA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\STA_COMPRAVENTA\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de entradas no coincidentes de búsqueda]"
+              endId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de entradas no coincidentes de búsqueda"
+              startId="Package\STA_COMPRAVENTA\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]" />
+            <path
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de ordenación]"
+              endId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de ordenación1]"
+              endId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano]"
+              endId="Package\STA_COMPRAVENTA\Columna derivada.Inputs[Entrada de columna derivada]"
+              name="Salida de origen de archivo plano"
+              startId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano]" />
+            <path
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano1]"
+              endId="Package\STA_COMPRAVENTA\Columna derivada 1.Inputs[Entrada de columna derivada]"
+              name="Salida de origen de archivo plano"
+              startId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{DF04ADE1-74E1-42F3-825E-FC61B5A8F3B5}"
+      DTS:From="Package\DELETE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\STA_COMPRAVENTA" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="122,42"
+          Id="Package\DELETE"
+          TopLeft="116,429" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\STA_COMPRAVENTA"
+          TopLeft="345,245" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="177,429">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="263.5,-142"
+              Start="0,0"
+              End="263.5,-134.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-67" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-67"
+                    Point2="0,-71"
+                    Point3="4,-71" />
+                  <mssgle:LineSegment
+                    End="259.5,-71" />
+                  <mssgle:CubicBezierSegment
+                    Point1="259.5,-71"
+                    Point2="263.5,-71"
+                    Point3="263.5,-75" />
+                  <mssgle:LineSegment
+                    End="263.5,-134.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\STA_COMPRAVENTA">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="291,42"
+          Id="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022"
+          TopLeft="314,27" />
+        <NodeLayout
+          Size="309,42"
+          Id="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022"
+          TopLeft="793,21" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\STA_COMPRAVENTA\Columna derivada 1"
+          TopLeft="771,152" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\STA_COMPRAVENTA\Columna derivada"
+          TopLeft="434,152" />
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano1]"
+          TopLeft="947.5,63">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-88,89"
+              Start="0,0"
+              End="-88,81.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40.5"
+                    Point2="0,44.5"
+                    Point3="-4,44.5" />
+                  <mssgle:LineSegment
+                    End="-84,44.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-84,44.5"
+                    Point2="-88,44.5"
+                    Point3="-88,48.5" />
+                  <mssgle:LineSegment
+                    End="-88,81.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano]"
+          TopLeft="459.5,69">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="58.5,83"
+              Start="0,0"
+              End="58.5,75.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.5"
+                    Point2="0,41.5"
+                    Point3="4,41.5" />
+                  <mssgle:LineSegment
+                    End="54.5,41.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="54.5,41.5"
+                    Point2="58.5,41.5"
+                    Point3="58.5,45.5" />
+                  <mssgle:LineSegment
+                    End="58.5,75.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="119,42"
+          Id="Package\STA_COMPRAVENTA\Ordenar"
+          TopLeft="453,245" />
+        <NodeLayout
+          Size="128,42"
+          Id="Package\STA_COMPRAVENTA\Ordenar 1"
+          TopLeft="791,245" />
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada]"
+          TopLeft="515.25,194">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada1]"
+          TopLeft="857.25,194">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="196,42"
+          Id="Package\STA_COMPRAVENTA\Combinación de mezcla"
+          TopLeft="588,368" />
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de ordenación]"
+          TopLeft="855,287">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-137.666666666667,81"
+              Start="0,0"
+              End="-137.666666666667,73.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.2064777327935" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44.2064777327935"
+                    Point2="0,48.2064777327935"
+                    Point3="-4,48.2064777327935" />
+                  <mssgle:LineSegment
+                    End="-133.666666666667,48.2064777327935" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-133.666666666667,48.2064777327935"
+                    Point2="-137.666666666667,48.2064777327935"
+                    Point3="-137.666666666667,52.2064777327935" />
+                  <mssgle:LineSegment
+                    End="-137.666666666667,73.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de ordenación1]"
+          TopLeft="512.5,287">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="142.166666666667,81"
+              Start="0,0"
+              End="142.166666666667,73.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.2064777327935" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44.2064777327935"
+                    Point2="0,48.2064777327935"
+                    Point3="4,48.2064777327935" />
+                  <mssgle:LineSegment
+                    End="138.166666666667,48.2064777327935" />
+                  <mssgle:CubicBezierSegment
+                    Point1="138.166666666667,48.2064777327935"
+                    Point2="142.166666666667,48.2064777327935"
+                    Point3="142.166666666667,52.2064777327935" />
+                  <mssgle:LineSegment
+                    End="142.166666666667,73.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="169,42"
+          Id="Package\STA_COMPRAVENTA\add ID_VIVIENDA"
+          TopLeft="601,446" />
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de combinación de mezcla]"
+          TopLeft="685.75,410">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="234,42"
+          Id="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE"
+          TopLeft="563,518" />
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada2]"
+          TopLeft="682.75,488">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30"
+              Start="0,0"
+              End="0,22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="129,42"
+          Id="Package\STA_COMPRAVENTA\Búsqueda"
+          TopLeft="613,606" />
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada3]"
+          TopLeft="678.75,560">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="185,42"
+          Id="Package\STA_COMPRAVENTA\Comando de OLE DB"
+          TopLeft="319,706" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\STA_COMPRAVENTA\Destino de OLE DB"
+          TopLeft="849,699" />
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de entradas no coincidentes de búsqueda]"
+          TopLeft="677.5,648">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="259,51"
+              Start="0,0"
+              End="259,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.5"
+                    Point2="0,25.5"
+                    Point3="4,25.5" />
+                  <mssgle:LineSegment
+                    End="255,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="255,25.5"
+                    Point2="259,25.5"
+                    Point3="259,29.5" />
+                  <mssgle:LineSegment
+                    End="259,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="22.6109765625,30.5,213.778046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="657.333333333333,648">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-245.833333333333,58"
+              Start="0,0"
+              End="-245.833333333333,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.6263399693721" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.6263399693721"
+                    Point2="0,23.6263399693721"
+                    Point3="-4,23.6263399693721" />
+                  <mssgle:LineSegment
+                    End="-241.833333333333,23.6263399693721" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-241.833333333333,23.6263399693721"
+                    Point2="-245.833333333333,23.6263399693721"
+                    Point3="-245.833333333333,27.6263399693721" />
+                  <mssgle:LineSegment
+                    End="-245.833333333333,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-222.735690104167,28.6263399693721,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="UPDATE STA_VIVIENDA&#xD;&#xA;SET Any= ?,&#xD;&#xA;Trimestre= ?,&#xD;&#xA;Codi_Districte= ?,&#xD;&#xA;Nom_Districtet= ?,&#xD;&#xA;Codi_Barri= ?,&#xD;&#xA;Nom_Barri= ?,&#xD;&#xA;Preu_mitja_habitatge= ?,&#xD;&#xA;Valor= ?,&#xD;&#xA;superficie= ?,&#xD;&#xA;Nombre= ?,&#xD;&#xA;INSERT_DATE= ?&#xD;&#xA;WHERE  ID_VIVIENDA= ?;"
+          ParentId="Package\STA_COMPRAVENTA"
+          FontInfo="{assembly:Null}"
+          Size="163,231"
+          Id="05ac2ff7-8161-4b68-839c-d6a7c47c75f5"
+          TopLeft="239,401" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\STA_COMPRAVENTA\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STA_COMPRAVENTA\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
