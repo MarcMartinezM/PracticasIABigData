@@ -1,0 +1,877 @@
+﻿Any;Trimestre;Codi_Districte;Nom_Districte;Codi_Barri;Nom_Barri;Superfície_mitjana_(m2_construïts);Nombre
+2022;1;1;Ciutat Vella;1;el Raval;Total;67.4
+2022;1;1;Ciutat Vella;2;el Barri Gòtic;Total;91.0
+2022;1;1;Ciutat Vella;3;la Barceloneta;Total;49.7
+2022;1;1;Ciutat Vella;4;Sant Pere, Santa Caterina i la Ribera;Total;74.5
+2022;1;2;Eixample;5;el Fort Pienc;Total;81.8
+2022;1;2;Eixample;6;la Sagrada Família;Total;75.7
+2022;1;2;Eixample;7;la Dreta de l'Eixample;Total;117.6
+2022;1;2;Eixample;8;l'Antiga Esquerra de l'Eixample;Total;94.2
+2022;1;2;Eixample;9;la Nova Esquerra de l'Eixample;Total;79.8
+2022;1;2;Eixample;10;Sant Antoni;Total;83.8
+2022;1;3;Sants-Montjuïc;11;el Poble Sec;Total;64.8
+2022;1;3;Sants-Montjuïc;12;la Marina del Prat Vermell;Total;78.0
+2022;1;3;Sants-Montjuïc;13;la Marina de Port;Total;68.9
+2022;1;3;Sants-Montjuïc;14;la Font de la Guatlla;Total;75.2
+2022;1;3;Sants-Montjuïc;15;Hostafrancs;Total;68.2
+2022;1;3;Sants-Montjuïc;16;la Bordeta;Total;67.7
+2022;1;3;Sants-Montjuïc;17;Sants - Badal;Total;70.4
+2022;1;3;Sants-Montjuïc;18;Sants;Total;68.7
+2022;1;4;Les Corts;19;les Corts;Total;89.6
+2022;1;4;Les Corts;20;la Maternitat i Sant Ramon;Total;81.9
+2022;1;4;Les Corts;21;Pedralbes;Total;135.6
+2022;1;5;Sarrià-Sant Gervasi;22;Vallvidrera, el Tibidabo i les Planes;Total;137.7
+2022;1;5;Sarrià-Sant Gervasi;23;Sarrià;Total;113.4
+2022;1;5;Sarrià-Sant Gervasi;24;les Tres Torres;Total;153.5
+2022;1;5;Sarrià-Sant Gervasi;25;Sant Gervasi - la Bonanova;Total;117.3
+2022;1;5;Sarrià-Sant Gervasi;26;Sant Gervasi - Galvany;Total;126.0
+2022;1;5;Sarrià-Sant Gervasi;27;el Putxet i el Farró;Total;95.2
+2022;1;6;Gràcia;28;Vallcarca i els Penitents;Total;74.4
+2022;1;6;Gràcia;29;el Coll;Total;79.2
+2022;1;6;Gràcia;30;la Salut;Total;92.1
+2022;1;6;Gràcia;31;la Vila de Gràcia;Total;80.7
+2022;1;6;Gràcia;32;el Camp d'en Grassot i Gràcia Nova;Total;78.9
+2022;1;7;Horta-Guinardó;33;el Baix Guinardó;Total;73.7
+2022;1;7;Horta-Guinardó;34;Can Baró;Total;71.1
+2022;1;7;Horta-Guinardó;35;el Guinardó;Total;78.3
+2022;1;7;Horta-Guinardó;36;la Font d'en Fargues;Total;82.4
+2022;1;7;Horta-Guinardó;37;el Carmel;Total;58.5
+2022;1;7;Horta-Guinardó;38;la Teixonera;Total;66.8
+2022;1;7;Horta-Guinardó;39;Sant Genís dels Agudells;Total;64.6
+2022;1;7;Horta-Guinardó;40;Montbau;Total;61.3
+2022;1;7;Horta-Guinardó;41;la Vall d'Hebron;Total;62.0
+2022;1;7;Horta-Guinardó;42;la Clota;Total;--
+2022;1;7;Horta-Guinardó;43;Horta;Total;67.3
+2022;1;8;Nou Barris;44;Vilapicina i la Torre Llobeta;Total;72.7
+2022;1;8;Nou Barris;45;Porta;Total;64.6
+2022;1;8;Nou Barris;46;el Turó de la Peira;Total;61.7
+2022;1;8;Nou Barris;47;Can Peguera;Total;46.0
+2022;1;8;Nou Barris;48;la Guineueta;Total;76.3
+2022;1;8;Nou Barris;49;Canyelles;Total;70.3
+2022;1;8;Nou Barris;50;les Roquetes;Total;55.9
+2022;1;8;Nou Barris;51;Verdun;Total;56.4
+2022;1;8;Nou Barris;52;la Prosperitat;Total;58.0
+2022;1;8;Nou Barris;53;la Trinitat Nova;Total;54.9
+2022;1;8;Nou Barris;54;Torre Baró;Total;76.5
+2022;1;8;Nou Barris;55;Ciutat Meridiana;Total;61.0
+2022;1;8;Nou Barris;56;Vallbona;Total;--
+2022;1;9;Sant Andreu;57;la Trinitat Vella;Total;62.1
+2022;1;9;Sant Andreu;58;Baró de Viver;Total;69.3
+2022;1;9;Sant Andreu;59;el Bon Pastor;Total;70.3
+2022;1;9;Sant Andreu;60;Sant Andreu;Total;77.5
+2022;1;9;Sant Andreu;61;la Sagrera;Total;67.2
+2022;1;9;Sant Andreu;62;el Congrés i els Indians;Total;70.3
+2022;1;9;Sant Andreu;63;Navas;Total;75.7
+2022;1;10;Sant Martí;64;el Camp de l'Arpa del Clot;Total;67.1
+2022;1;10;Sant Martí;65;el Clot;Total;79.9
+2022;1;10;Sant Martí;66;el Parc i la Llacuna del Poblenou;Total;96.2
+2022;1;10;Sant Martí;67;la Vila Olímpica del Poblenou;Total;104.6
+2022;1;10;Sant Martí;68;el Poblenou;Total;76.1
+2022;1;10;Sant Martí;69;Diagonal Mar i el Front Marítim del Poblenou;Total;101.7
+2022;1;10;Sant Martí;70;el Besòs i el Maresme;Total;68.7
+2022;1;10;Sant Martí;71;Provençals del Poblenou;Total;70.3
+2022;1;10;Sant Martí;72;Sant Martí de Provençals;Total;71.4
+2022;1;10;Sant Martí;73;la Verneda i la Pau;Total;73.8
+2022;1;1;Ciutat Vella;1;el Raval;Habitatge nou lliure;--
+2022;1;1;Ciutat Vella;2;el Barri Gòtic;Habitatge nou lliure;121.0
+2022;1;1;Ciutat Vella;3;la Barceloneta;Habitatge nou lliure;33.5
+2022;1;1;Ciutat Vella;4;Sant Pere, Santa Caterina i la Ribera;Habitatge nou lliure;67.2
+2022;1;2;Eixample;5;el Fort Pienc;Habitatge nou lliure;89.0
+2022;1;2;Eixample;6;la Sagrada Família;Habitatge nou lliure;63.0
+2022;1;2;Eixample;7;la Dreta de l'Eixample;Habitatge nou lliure;111.7
+2022;1;2;Eixample;8;l'Antiga Esquerra de l'Eixample;Habitatge nou lliure;100.5
+2022;1;2;Eixample;9;la Nova Esquerra de l'Eixample;Habitatge nou lliure;74.8
+2022;1;2;Eixample;10;Sant Antoni;Habitatge nou lliure;156.4
+2022;1;3;Sants-Montjuïc;11;el Poble Sec;Habitatge nou lliure;74.0
+2022;1;3;Sants-Montjuïc;12;la Marina del Prat Vermell;Habitatge nou lliure;--
+2022;1;3;Sants-Montjuïc;13;la Marina de Port;Habitatge nou lliure;67.5
+2022;1;3;Sants-Montjuïc;14;la Font de la Guatlla;Habitatge nou lliure;84.4
+2022;1;3;Sants-Montjuïc;15;Hostafrancs;Habitatge nou lliure;64.3
+2022;1;3;Sants-Montjuïc;16;la Bordeta;Habitatge nou lliure;67.0
+2022;1;3;Sants-Montjuïc;17;Sants - Badal;Habitatge nou lliure;59.8
+2022;1;3;Sants-Montjuïc;18;Sants;Habitatge nou lliure;50.0
+2022;1;4;Les Corts;19;les Corts;Habitatge nou lliure;85.0
+2022;1;4;Les Corts;20;la Maternitat i Sant Ramon;Habitatge nou lliure;78.5
+2022;1;4;Les Corts;21;Pedralbes;Habitatge nou lliure;95.3
+2022;1;5;Sarrià-Sant Gervasi;22;Vallvidrera, el Tibidabo i les Planes;Habitatge nou lliure;--
+2022;1;5;Sarrià-Sant Gervasi;23;Sarrià;Habitatge nou lliure;149.0
+2022;1;5;Sarrià-Sant Gervasi;24;les Tres Torres;Habitatge nou lliure;227.0
+2022;1;5;Sarrià-Sant Gervasi;25;Sant Gervasi - la Bonanova;Habitatge nou lliure;82.3
+2022;1;5;Sarrià-Sant Gervasi;26;Sant Gervasi - Galvany;Habitatge nou lliure;117.7
+2022;1;5;Sarrià-Sant Gervasi;27;el Putxet i el Farró;Habitatge nou lliure;71.8
+2022;1;6;Gràcia;28;Vallcarca i els Penitents;Habitatge nou lliure;67.5
+2022;1;6;Gràcia;29;el Coll;Habitatge nou lliure;93.6
+2022;1;6;Gràcia;30;la Salut;Habitatge nou lliure;62.0
+2022;1;6;Gràcia;31;la Vila de Gràcia;Habitatge nou lliure;97.0
+2022;1;6;Gràcia;32;el Camp d'en Grassot i Gràcia Nova;Habitatge nou lliure;--
+2022;1;7;Horta-Guinardó;33;el Baix Guinardó;Habitatge nou lliure;--
+2022;1;7;Horta-Guinardó;34;Can Baró;Habitatge nou lliure;--
+2022;1;7;Horta-Guinardó;35;el Guinardó;Habitatge nou lliure;101.2
+2022;1;7;Horta-Guinardó;36;la Font d'en Fargues;Habitatge nou lliure;84.4
+2022;1;7;Horta-Guinardó;37;el Carmel;Habitatge nou lliure;55.3
+2022;1;7;Horta-Guinardó;38;la Teixonera;Habitatge nou lliure;63.0
+2022;1;7;Horta-Guinardó;39;Sant Genís dels Agudells;Habitatge nou lliure;85.0
+2022;1;7;Horta-Guinardó;40;Montbau;Habitatge nou lliure;56.0
+2022;1;7;Horta-Guinardó;41;la Vall d'Hebron;Habitatge nou lliure;49.0
+2022;1;7;Horta-Guinardó;42;la Clota;Habitatge nou lliure;--
+2022;1;7;Horta-Guinardó;43;Horta;Habitatge nou lliure;63.7
+2022;1;8;Nou Barris;44;Vilapicina i la Torre Llobeta;Habitatge nou lliure;86.0
+2022;1;8;Nou Barris;45;Porta;Habitatge nou lliure;--
+2022;1;8;Nou Barris;46;el Turó de la Peira;Habitatge nou lliure;--
+2022;1;8;Nou Barris;47;Can Peguera;Habitatge nou lliure;--
+2022;1;8;Nou Barris;48;la Guineueta;Habitatge nou lliure;--
+2022;1;8;Nou Barris;49;Canyelles;Habitatge nou lliure;--
+2022;1;8;Nou Barris;50;les Roquetes;Habitatge nou lliure;--
+2022;1;8;Nou Barris;51;Verdun;Habitatge nou lliure;--
+2022;1;8;Nou Barris;52;la Prosperitat;Habitatge nou lliure;--
+2022;1;8;Nou Barris;53;la Trinitat Nova;Habitatge nou lliure;--
+2022;1;8;Nou Barris;54;Torre Baró;Habitatge nou lliure;--
+2022;1;8;Nou Barris;55;Ciutat Meridiana;Habitatge nou lliure;--
+2022;1;8;Nou Barris;56;Vallbona;Habitatge nou lliure;--
+2022;1;9;Sant Andreu;57;la Trinitat Vella;Habitatge nou lliure;--
+2022;1;9;Sant Andreu;58;Baró de Viver;Habitatge nou lliure;--
+2022;1;9;Sant Andreu;59;el Bon Pastor;Habitatge nou lliure;--
+2022;1;9;Sant Andreu;60;Sant Andreu;Habitatge nou lliure;100.0
+2022;1;9;Sant Andreu;61;la Sagrera;Habitatge nou lliure;--
+2022;1;9;Sant Andreu;62;el Congrés i els Indians;Habitatge nou lliure;67.4
+2022;1;9;Sant Andreu;63;Navas;Habitatge nou lliure;--
+2022;1;10;Sant Martí;64;el Camp de l'Arpa del Clot;Habitatge nou lliure;--
+2022;1;10;Sant Martí;65;el Clot;Habitatge nou lliure;81.0
+2022;1;10;Sant Martí;66;el Parc i la Llacuna del Poblenou;Habitatge nou lliure;102.8
+2022;1;10;Sant Martí;67;la Vila Olímpica del Poblenou;Habitatge nou lliure;110.0
+2022;1;10;Sant Martí;68;el Poblenou;Habitatge nou lliure;79.4
+2022;1;10;Sant Martí;69;Diagonal Mar i el Front Marítim del Poblenou;Habitatge nou lliure;--
+2022;1;10;Sant Martí;70;el Besòs i el Maresme;Habitatge nou lliure;80.3
+2022;1;10;Sant Martí;71;Provençals del Poblenou;Habitatge nou lliure;67.1
+2022;1;10;Sant Martí;72;Sant Martí de Provençals;Habitatge nou lliure;--
+2022;1;10;Sant Martí;73;la Verneda i la Pau;Habitatge nou lliure;--
+2022;1;1;Ciutat Vella;1;el Raval;Habitatge nou protegit;--
+2022;1;1;Ciutat Vella;2;el Barri Gòtic;Habitatge nou protegit;--
+2022;1;1;Ciutat Vella;3;la Barceloneta;Habitatge nou protegit;--
+2022;1;1;Ciutat Vella;4;Sant Pere, Santa Caterina i la Ribera;Habitatge nou protegit;--
+2022;1;2;Eixample;5;el Fort Pienc;Habitatge nou protegit;--
+2022;1;2;Eixample;6;la Sagrada Família;Habitatge nou protegit;--
+2022;1;2;Eixample;7;la Dreta de l'Eixample;Habitatge nou protegit;--
+2022;1;2;Eixample;8;l'Antiga Esquerra de l'Eixample;Habitatge nou protegit;--
+2022;1;2;Eixample;9;la Nova Esquerra de l'Eixample;Habitatge nou protegit;87.5
+2022;1;2;Eixample;10;Sant Antoni;Habitatge nou protegit;--
+2022;1;3;Sants-Montjuïc;11;el Poble Sec;Habitatge nou protegit;--
+2022;1;3;Sants-Montjuïc;12;la Marina del Prat Vermell;Habitatge nou protegit;--
+2022;1;3;Sants-Montjuïc;13;la Marina de Port;Habitatge nou protegit;68.7
+2022;1;3;Sants-Montjuïc;14;la Font de la Guatlla;Habitatge nou protegit;--
+2022;1;3;Sants-Montjuïc;15;Hostafrancs;Habitatge nou protegit;111.0
+2022;1;3;Sants-Montjuïc;16;la Bordeta;Habitatge nou protegit;--
+2022;1;3;Sants-Montjuïc;17;Sants - Badal;Habitatge nou protegit;--
+2022;1;3;Sants-Montjuïc;18;Sants;Habitatge nou protegit;--
+2022;1;4;Les Corts;19;les Corts;Habitatge nou protegit;74.0
+2022;1;4;Les Corts;20;la Maternitat i Sant Ramon;Habitatge nou protegit;--
+2022;1;4;Les Corts;21;Pedralbes;Habitatge nou protegit;59.0
+2022;1;5;Sarrià-Sant Gervasi;22;Vallvidrera, el Tibidabo i les Planes;Habitatge nou protegit;--
+2022;1;5;Sarrià-Sant Gervasi;23;Sarrià;Habitatge nou protegit;--
+2022;1;5;Sarrià-Sant Gervasi;24;les Tres Torres;Habitatge nou protegit;--
+2022;1;5;Sarrià-Sant Gervasi;25;Sant Gervasi - la Bonanova;Habitatge nou protegit;--
+2022;1;5;Sarrià-Sant Gervasi;26;Sant Gervasi - Galvany;Habitatge nou protegit;--
+2022;1;5;Sarrià-Sant Gervasi;27;el Putxet i el Farró;Habitatge nou protegit;--
+2022;1;6;Gràcia;28;Vallcarca i els Penitents;Habitatge nou protegit;--
+2022;1;6;Gràcia;29;el Coll;Habitatge nou protegit;--
+2022;1;6;Gràcia;30;la Salut;Habitatge nou protegit;--
+2022;1;6;Gràcia;31;la Vila de Gràcia;Habitatge nou protegit;--
+2022;1;6;Gràcia;32;el Camp d'en Grassot i Gràcia Nova;Habitatge nou protegit;--
+2022;1;7;Horta-Guinardó;33;el Baix Guinardó;Habitatge nou protegit;--
+2022;1;7;Horta-Guinardó;34;Can Baró;Habitatge nou protegit;--
+2022;1;7;Horta-Guinardó;35;el Guinardó;Habitatge nou protegit;--
+2022;1;7;Horta-Guinardó;36;la Font d'en Fargues;Habitatge nou protegit;--
+2022;1;7;Horta-Guinardó;37;el Carmel;Habitatge nou protegit;--
+2022;1;7;Horta-Guinardó;38;la Teixonera;Habitatge nou protegit;--
+2022;1;7;Horta-Guinardó;39;Sant Genís dels Agudells;Habitatge nou protegit;--
+2022;1;7;Horta-Guinardó;40;Montbau;Habitatge nou protegit;--
+2022;1;7;Horta-Guinardó;41;la Vall d'Hebron;Habitatge nou protegit;--
+2022;1;7;Horta-Guinardó;42;la Clota;Habitatge nou protegit;--
+2022;1;7;Horta-Guinardó;43;Horta;Habitatge nou protegit;--
+2022;1;8;Nou Barris;44;Vilapicina i la Torre Llobeta;Habitatge nou protegit;--
+2022;1;8;Nou Barris;45;Porta;Habitatge nou protegit;--
+2022;1;8;Nou Barris;46;el Turó de la Peira;Habitatge nou protegit;--
+2022;1;8;Nou Barris;47;Can Peguera;Habitatge nou protegit;--
+2022;1;8;Nou Barris;48;la Guineueta;Habitatge nou protegit;--
+2022;1;8;Nou Barris;49;Canyelles;Habitatge nou protegit;--
+2022;1;8;Nou Barris;50;les Roquetes;Habitatge nou protegit;--
+2022;1;8;Nou Barris;51;Verdun;Habitatge nou protegit;--
+2022;1;8;Nou Barris;52;la Prosperitat;Habitatge nou protegit;--
+2022;1;8;Nou Barris;53;la Trinitat Nova;Habitatge nou protegit;--
+2022;1;8;Nou Barris;54;Torre Baró;Habitatge nou protegit;--
+2022;1;8;Nou Barris;55;Ciutat Meridiana;Habitatge nou protegit;--
+2022;1;8;Nou Barris;56;Vallbona;Habitatge nou protegit;--
+2022;1;9;Sant Andreu;57;la Trinitat Vella;Habitatge nou protegit;--
+2022;1;9;Sant Andreu;58;Baró de Viver;Habitatge nou protegit;--
+2022;1;9;Sant Andreu;59;el Bon Pastor;Habitatge nou protegit;--
+2022;1;9;Sant Andreu;60;Sant Andreu;Habitatge nou protegit;--
+2022;1;9;Sant Andreu;61;la Sagrera;Habitatge nou protegit;--
+2022;1;9;Sant Andreu;62;el Congrés i els Indians;Habitatge nou protegit;--
+2022;1;9;Sant Andreu;63;Navas;Habitatge nou protegit;--
+2022;1;10;Sant Martí;64;el Camp de l'Arpa del Clot;Habitatge nou protegit;--
+2022;1;10;Sant Martí;65;el Clot;Habitatge nou protegit;--
+2022;1;10;Sant Martí;66;el Parc i la Llacuna del Poblenou;Habitatge nou protegit;60.0
+2022;1;10;Sant Martí;67;la Vila Olímpica del Poblenou;Habitatge nou protegit;--
+2022;1;10;Sant Martí;68;el Poblenou;Habitatge nou protegit;38.0
+2022;1;10;Sant Martí;69;Diagonal Mar i el Front Marítim del Poblenou;Habitatge nou protegit;68.0
+2022;1;10;Sant Martí;70;el Besòs i el Maresme;Habitatge nou protegit;--
+2022;1;10;Sant Martí;71;Provençals del Poblenou;Habitatge nou protegit;55.0
+2022;1;10;Sant Martí;72;Sant Martí de Provençals;Habitatge nou protegit;--
+2022;1;10;Sant Martí;73;la Verneda i la Pau;Habitatge nou protegit;--
+2022;1;1;Ciutat Vella;1;el Raval;Habitatge usat;67.4
+2022;1;1;Ciutat Vella;2;el Barri Gòtic;Habitatge usat;89.1
+2022;1;1;Ciutat Vella;3;la Barceloneta;Habitatge usat;51.5
+2022;1;1;Ciutat Vella;4;Sant Pere, Santa Caterina i la Ribera;Habitatge usat;75.3
+2022;1;2;Eixample;5;el Fort Pienc;Habitatge usat;81.3
+2022;1;2;Eixample;6;la Sagrada Família;Habitatge usat;75.9
+2022;1;2;Eixample;7;la Dreta de l'Eixample;Habitatge usat;119.7
+2022;1;2;Eixample;8;l'Antiga Esquerra de l'Eixample;Habitatge usat;93.3
+2022;1;2;Eixample;9;la Nova Esquerra de l'Eixample;Habitatge usat;80.6
+2022;1;2;Eixample;10;Sant Antoni;Habitatge usat;79.3
+2022;1;3;Sants-Montjuïc;11;el Poble Sec;Habitatge usat;64.7
+2022;1;3;Sants-Montjuïc;12;la Marina del Prat Vermell;Habitatge usat;78.0
+2022;1;3;Sants-Montjuïc;13;la Marina de Port;Habitatge usat;68.9
+2022;1;3;Sants-Montjuïc;14;la Font de la Guatlla;Habitatge usat;73.6
+2022;1;3;Sants-Montjuïc;15;Hostafrancs;Habitatge usat;68.8
+2022;1;3;Sants-Montjuïc;16;la Bordeta;Habitatge usat;67.8
+2022;1;3;Sants-Montjuïc;17;Sants - Badal;Habitatge usat;71.6
+2022;1;3;Sants-Montjuïc;18;Sants;Habitatge usat;69.4
+2022;1;4;Les Corts;19;les Corts;Habitatge usat;90.4
+2022;1;4;Les Corts;20;la Maternitat i Sant Ramon;Habitatge usat;82.1
+2022;1;4;Les Corts;21;Pedralbes;Habitatge usat;172.7
+2022;1;5;Sarrià-Sant Gervasi;22;Vallvidrera, el Tibidabo i les Planes;Habitatge usat;137.7
+2022;1;5;Sarrià-Sant Gervasi;23;Sarrià;Habitatge usat;111.9
+2022;1;5;Sarrià-Sant Gervasi;24;les Tres Torres;Habitatge usat;151.1
+2022;1;5;Sarrià-Sant Gervasi;25;Sant Gervasi - la Bonanova;Habitatge usat;125.2
+2022;1;5;Sarrià-Sant Gervasi;26;Sant Gervasi - Galvany;Habitatge usat;129.7
+2022;1;5;Sarrià-Sant Gervasi;27;el Putxet i el Farró;Habitatge usat;97.3
+2022;1;6;Gràcia;28;Vallcarca i els Penitents;Habitatge usat;75.6
+2022;1;6;Gràcia;29;el Coll;Habitatge usat;70.1
+2022;1;6;Gràcia;30;la Salut;Habitatge usat;94.2
+2022;1;6;Gràcia;31;la Vila de Gràcia;Habitatge usat;80.5
+2022;1;6;Gràcia;32;el Camp d'en Grassot i Gràcia Nova;Habitatge usat;78.9
+2022;1;7;Horta-Guinardó;33;el Baix Guinardó;Habitatge usat;73.7
+2022;1;7;Horta-Guinardó;34;Can Baró;Habitatge usat;71.1
+2022;1;7;Horta-Guinardó;35;el Guinardó;Habitatge usat;76.0
+2022;1;7;Horta-Guinardó;36;la Font d'en Fargues;Habitatge usat;80.9
+2022;1;7;Horta-Guinardó;37;el Carmel;Habitatge usat;59.1
+2022;1;7;Horta-Guinardó;38;la Teixonera;Habitatge usat;68.8
+2022;1;7;Horta-Guinardó;39;Sant Genís dels Agudells;Habitatge usat;61.2
+2022;1;7;Horta-Guinardó;40;Montbau;Habitatge usat;61.8
+2022;1;7;Horta-Guinardó;41;la Vall d'Hebron;Habitatge usat;68.5
+2022;1;7;Horta-Guinardó;42;la Clota;Habitatge usat;--
+2022;1;7;Horta-Guinardó;43;Horta;Habitatge usat;67.9
+2022;1;8;Nou Barris;44;Vilapicina i la Torre Llobeta;Habitatge usat;72.3
+2022;1;8;Nou Barris;45;Porta;Habitatge usat;64.6
+2022;1;8;Nou Barris;46;el Turó de la Peira;Habitatge usat;61.7
+2022;1;8;Nou Barris;47;Can Peguera;Habitatge usat;46.0
+2022;1;8;Nou Barris;48;la Guineueta;Habitatge usat;76.3
+2022;1;8;Nou Barris;49;Canyelles;Habitatge usat;70.3
+2022;1;8;Nou Barris;50;les Roquetes;Habitatge usat;55.9
+2022;1;8;Nou Barris;51;Verdun;Habitatge usat;56.4
+2022;1;8;Nou Barris;52;la Prosperitat;Habitatge usat;58.0
+2022;1;8;Nou Barris;53;la Trinitat Nova;Habitatge usat;54.9
+2022;1;8;Nou Barris;54;Torre Baró;Habitatge usat;76.5
+2022;1;8;Nou Barris;55;Ciutat Meridiana;Habitatge usat;61.0
+2022;1;8;Nou Barris;56;Vallbona;Habitatge usat;--
+2022;1;9;Sant Andreu;57;la Trinitat Vella;Habitatge usat;62.1
+2022;1;9;Sant Andreu;58;Baró de Viver;Habitatge usat;69.3
+2022;1;9;Sant Andreu;59;el Bon Pastor;Habitatge usat;70.3
+2022;1;9;Sant Andreu;60;Sant Andreu;Habitatge usat;76.2
+2022;1;9;Sant Andreu;61;la Sagrera;Habitatge usat;67.2
+2022;1;9;Sant Andreu;62;el Congrés i els Indians;Habitatge usat;70.7
+2022;1;9;Sant Andreu;63;Navas;Habitatge usat;75.7
+2022;1;10;Sant Martí;64;el Camp de l'Arpa del Clot;Habitatge usat;67.1
+2022;1;10;Sant Martí;65;el Clot;Habitatge usat;79.9
+2022;1;10;Sant Martí;66;el Parc i la Llacuna del Poblenou;Habitatge usat;78.6
+2022;1;10;Sant Martí;67;la Vila Olímpica del Poblenou;Habitatge usat;104.3
+2022;1;10;Sant Martí;68;el Poblenou;Habitatge usat;74.0
+2022;1;10;Sant Martí;69;Diagonal Mar i el Front Marítim del Poblenou;Habitatge usat;103.2
+2022;1;10;Sant Martí;70;el Besòs i el Maresme;Habitatge usat;64.4
+2022;1;10;Sant Martí;71;Provençals del Poblenou;Habitatge usat;71.7
+2022;1;10;Sant Martí;72;Sant Martí de Provençals;Habitatge usat;71.4
+2022;1;10;Sant Martí;73;la Verneda i la Pau;Habitatge usat;73.8
+2022;2;1;Ciutat Vella;1;el Raval;Total;67.0
+2022;2;1;Ciutat Vella;2;el Barri Gòtic;Total;86.1
+2022;2;1;Ciutat Vella;3;la Barceloneta;Total;44.5
+2022;2;1;Ciutat Vella;4;Sant Pere, Santa Caterina i la Ribera;Total;66.6
+2022;2;2;Eixample;5;el Fort Pienc;Total;90.5
+2022;2;2;Eixample;6;la Sagrada Família;Total;75.7
+2022;2;2;Eixample;7;la Dreta de l'Eixample;Total;103.7
+2022;2;2;Eixample;8;l'Antiga Esquerra de l'Eixample;Total;94.1
+2022;2;2;Eixample;9;la Nova Esquerra de l'Eixample;Total;79.4
+2022;2;2;Eixample;10;Sant Antoni;Total;79.4
+2022;2;3;Sants-Montjuïc;11;el Poble Sec;Total;65.2
+2022;2;3;Sants-Montjuïc;12;la Marina del Prat Vermell;Total;72.3
+2022;2;3;Sants-Montjuïc;13;la Marina de Port;Total;70.7
+2022;2;3;Sants-Montjuïc;14;la Font de la Guatlla;Total;80.7
+2022;2;3;Sants-Montjuïc;15;Hostafrancs;Total;63.4
+2022;2;3;Sants-Montjuïc;16;la Bordeta;Total;74.1
+2022;2;3;Sants-Montjuïc;17;Sants - Badal;Total;68.3
+2022;2;3;Sants-Montjuïc;18;Sants;Total;70.0
+2022;2;4;Les Corts;19;les Corts;Total;84.6
+2022;2;4;Les Corts;20;la Maternitat i Sant Ramon;Total;83.2
+2022;2;4;Les Corts;21;Pedralbes;Total;136.0
+2022;2;5;Sarrià-Sant Gervasi;22;Vallvidrera, el Tibidabo i les Planes;Total;141.4
+2022;2;5;Sarrià-Sant Gervasi;23;Sarrià;Total;135.9
+2022;2;5;Sarrià-Sant Gervasi;24;les Tres Torres;Total;146.8
+2022;2;5;Sarrià-Sant Gervasi;25;Sant Gervasi - la Bonanova;Total;135.1
+2022;2;5;Sarrià-Sant Gervasi;26;Sant Gervasi - Galvany;Total;139.8
+2022;2;5;Sarrià-Sant Gervasi;27;el Putxet i el Farró;Total;95.2
+2022;2;6;Gràcia;28;Vallcarca i els Penitents;Total;97.5
+2022;2;6;Gràcia;29;el Coll;Total;62.1
+2022;2;6;Gràcia;30;la Salut;Total;81.3
+2022;2;6;Gràcia;31;la Vila de Gràcia;Total;74.1
+2022;2;6;Gràcia;32;el Camp d'en Grassot i Gràcia Nova;Total;74.3
+2022;2;7;Horta-Guinardó;33;el Baix Guinardó;Total;70.7
+2022;2;7;Horta-Guinardó;34;Can Baró;Total;65.9
+2022;2;7;Horta-Guinardó;35;el Guinardó;Total;72.9
+2022;2;7;Horta-Guinardó;36;la Font d'en Fargues;Total;87.6
+2022;2;7;Horta-Guinardó;37;el Carmel;Total;60.4
+2022;2;7;Horta-Guinardó;38;la Teixonera;Total;71.7
+2022;2;7;Horta-Guinardó;39;Sant Genís dels Agudells;Total;64.0
+2022;2;7;Horta-Guinardó;40;Montbau;Total;65.9
+2022;2;7;Horta-Guinardó;41;la Vall d'Hebron;Total;78.7
+2022;2;7;Horta-Guinardó;42;la Clota;Total;--
+2022;2;7;Horta-Guinardó;43;Horta;Total;61.4
+2022;2;8;Nou Barris;44;Vilapicina i la Torre Llobeta;Total;70.8
+2022;2;8;Nou Barris;45;Porta;Total;60.4
+2022;2;8;Nou Barris;46;el Turó de la Peira;Total;60.9
+2022;2;8;Nou Barris;47;Can Peguera;Total;57.3
+2022;2;8;Nou Barris;48;la Guineueta;Total;76.4
+2022;2;8;Nou Barris;49;Canyelles;Total;72.3
+2022;2;8;Nou Barris;50;les Roquetes;Total;56.1
+2022;2;8;Nou Barris;51;Verdun;Total;62.5
+2022;2;8;Nou Barris;52;la Prosperitat;Total;58.9
+2022;2;8;Nou Barris;53;la Trinitat Nova;Total;59.8
+2022;2;8;Nou Barris;54;Torre Baró;Total;66.5
+2022;2;8;Nou Barris;55;Ciutat Meridiana;Total;58.3
+2022;2;8;Nou Barris;56;Vallbona;Total;90.0
+2022;2;9;Sant Andreu;57;la Trinitat Vella;Total;55.2
+2022;2;9;Sant Andreu;58;Baró de Viver;Total;69.5
+2022;2;9;Sant Andreu;59;el Bon Pastor;Total;67.5
+2022;2;9;Sant Andreu;60;Sant Andreu;Total;80.2
+2022;2;9;Sant Andreu;61;la Sagrera;Total;69.9
+2022;2;9;Sant Andreu;62;el Congrés i els Indians;Total;78.7
+2022;2;9;Sant Andreu;63;Navas;Total;74.4
+2022;2;10;Sant Martí;64;el Camp de l'Arpa del Clot;Total;69.3
+2022;2;10;Sant Martí;65;el Clot;Total;95.5
+2022;2;10;Sant Martí;66;el Parc i la Llacuna del Poblenou;Total;93.0
+2022;2;10;Sant Martí;67;la Vila Olímpica del Poblenou;Total;110.9
+2022;2;10;Sant Martí;68;el Poblenou;Total;68.6
+2022;2;10;Sant Martí;69;Diagonal Mar i el Front Marítim del Poblenou;Total;91.1
+2022;2;10;Sant Martí;70;el Besòs i el Maresme;Total;66.7
+2022;2;10;Sant Martí;71;Provençals del Poblenou;Total;73.9
+2022;2;10;Sant Martí;72;Sant Martí de Provençals;Total;70.8
+2022;2;10;Sant Martí;73;la Verneda i la Pau;Total;72.1
+2022;2;1;Ciutat Vella;1;el Raval;Habitatge nou lliure;66.0
+2022;2;1;Ciutat Vella;2;el Barri Gòtic;Habitatge nou lliure;88.0
+2022;2;1;Ciutat Vella;3;la Barceloneta;Habitatge nou lliure;--
+2022;2;1;Ciutat Vella;4;Sant Pere, Santa Caterina i la Ribera;Habitatge nou lliure;61.3
+2022;2;2;Eixample;5;el Fort Pienc;Habitatge nou lliure;92.0
+2022;2;2;Eixample;6;la Sagrada Família;Habitatge nou lliure;--
+2022;2;2;Eixample;7;la Dreta de l'Eixample;Habitatge nou lliure;88.4
+2022;2;2;Eixample;8;l'Antiga Esquerra de l'Eixample;Habitatge nou lliure;99.1
+2022;2;2;Eixample;9;la Nova Esquerra de l'Eixample;Habitatge nou lliure;73.7
+2022;2;2;Eixample;10;Sant Antoni;Habitatge nou lliure;73.8
+2022;2;3;Sants-Montjuïc;11;el Poble Sec;Habitatge nou lliure;70.5
+2022;2;3;Sants-Montjuïc;12;la Marina del Prat Vermell;Habitatge nou lliure;--
+2022;2;3;Sants-Montjuïc;13;la Marina de Port;Habitatge nou lliure;51.5
+2022;2;3;Sants-Montjuïc;14;la Font de la Guatlla;Habitatge nou lliure;81.5
+2022;2;3;Sants-Montjuïc;15;Hostafrancs;Habitatge nou lliure;62.4
+2022;2;3;Sants-Montjuïc;16;la Bordeta;Habitatge nou lliure;110.0
+2022;2;3;Sants-Montjuïc;17;Sants - Badal;Habitatge nou lliure;77.9
+2022;2;3;Sants-Montjuïc;18;Sants;Habitatge nou lliure;125.5
+2022;2;4;Les Corts;19;les Corts;Habitatge nou lliure;75.5
+2022;2;4;Les Corts;20;la Maternitat i Sant Ramon;Habitatge nou lliure;--
+2022;2;4;Les Corts;21;Pedralbes;Habitatge nou lliure;102.0
+2022;2;5;Sarrià-Sant Gervasi;22;Vallvidrera, el Tibidabo i les Planes;Habitatge nou lliure;--
+2022;2;5;Sarrià-Sant Gervasi;23;Sarrià;Habitatge nou lliure;453.4
+2022;2;5;Sarrià-Sant Gervasi;24;les Tres Torres;Habitatge nou lliure;171.5
+2022;2;5;Sarrià-Sant Gervasi;25;Sant Gervasi - la Bonanova;Habitatge nou lliure;161.5
+2022;2;5;Sarrià-Sant Gervasi;26;Sant Gervasi - Galvany;Habitatge nou lliure;137.7
+2022;2;5;Sarrià-Sant Gervasi;27;el Putxet i el Farró;Habitatge nou lliure;72.8
+2022;2;6;Gràcia;28;Vallcarca i els Penitents;Habitatge nou lliure;122.7
+2022;2;6;Gràcia;29;el Coll;Habitatge nou lliure;71.0
+2022;2;6;Gràcia;30;la Salut;Habitatge nou lliure;97.3
+2022;2;6;Gràcia;31;la Vila de Gràcia;Habitatge nou lliure;101.5
+2022;2;6;Gràcia;32;el Camp d'en Grassot i Gràcia Nova;Habitatge nou lliure;--
+2022;2;7;Horta-Guinardó;33;el Baix Guinardó;Habitatge nou lliure;66.8
+2022;2;7;Horta-Guinardó;34;Can Baró;Habitatge nou lliure;95.0
+2022;2;7;Horta-Guinardó;35;el Guinardó;Habitatge nou lliure;61.0
+2022;2;7;Horta-Guinardó;36;la Font d'en Fargues;Habitatge nou lliure;96.0
+2022;2;7;Horta-Guinardó;37;el Carmel;Habitatge nou lliure;54.1
+2022;2;7;Horta-Guinardó;38;la Teixonera;Habitatge nou lliure;77.3
+2022;2;7;Horta-Guinardó;39;Sant Genís dels Agudells;Habitatge nou lliure;65.5
+2022;2;7;Horta-Guinardó;40;Montbau;Habitatge nou lliure;--
+2022;2;7;Horta-Guinardó;41;la Vall d'Hebron;Habitatge nou lliure;--
+2022;2;7;Horta-Guinardó;42;la Clota;Habitatge nou lliure;--
+2022;2;7;Horta-Guinardó;43;Horta;Habitatge nou lliure;54.6
+2022;2;8;Nou Barris;44;Vilapicina i la Torre Llobeta;Habitatge nou lliure;78.8
+2022;2;8;Nou Barris;45;Porta;Habitatge nou lliure;66.7
+2022;2;8;Nou Barris;46;el Turó de la Peira;Habitatge nou lliure;--
+2022;2;8;Nou Barris;47;Can Peguera;Habitatge nou lliure;--
+2022;2;8;Nou Barris;48;la Guineueta;Habitatge nou lliure;--
+2022;2;8;Nou Barris;49;Canyelles;Habitatge nou lliure;--
+2022;2;8;Nou Barris;50;les Roquetes;Habitatge nou lliure;--
+2022;2;8;Nou Barris;51;Verdun;Habitatge nou lliure;64.0
+2022;2;8;Nou Barris;52;la Prosperitat;Habitatge nou lliure;--
+2022;2;8;Nou Barris;53;la Trinitat Nova;Habitatge nou lliure;--
+2022;2;8;Nou Barris;54;Torre Baró;Habitatge nou lliure;--
+2022;2;8;Nou Barris;55;Ciutat Meridiana;Habitatge nou lliure;--
+2022;2;8;Nou Barris;56;Vallbona;Habitatge nou lliure;--
+2022;2;9;Sant Andreu;57;la Trinitat Vella;Habitatge nou lliure;--
+2022;2;9;Sant Andreu;58;Baró de Viver;Habitatge nou lliure;--
+2022;2;9;Sant Andreu;59;el Bon Pastor;Habitatge nou lliure;--
+2022;2;9;Sant Andreu;60;Sant Andreu;Habitatge nou lliure;113.0
+2022;2;9;Sant Andreu;61;la Sagrera;Habitatge nou lliure;--
+2022;2;9;Sant Andreu;62;el Congrés i els Indians;Habitatge nou lliure;--
+2022;2;9;Sant Andreu;63;Navas;Habitatge nou lliure;--
+2022;2;10;Sant Martí;64;el Camp de l'Arpa del Clot;Habitatge nou lliure;--
+2022;2;10;Sant Martí;65;el Clot;Habitatge nou lliure;125.7
+2022;2;10;Sant Martí;66;el Parc i la Llacuna del Poblenou;Habitatge nou lliure;103.2
+2022;2;10;Sant Martí;67;la Vila Olímpica del Poblenou;Habitatge nou lliure;110.0
+2022;2;10;Sant Martí;68;el Poblenou;Habitatge nou lliure;75.0
+2022;2;10;Sant Martí;69;Diagonal Mar i el Front Marítim del Poblenou;Habitatge nou lliure;69.0
+2022;2;10;Sant Martí;70;el Besòs i el Maresme;Habitatge nou lliure;71.2
+2022;2;10;Sant Martí;71;Provençals del Poblenou;Habitatge nou lliure;78.2
+2022;2;10;Sant Martí;72;Sant Martí de Provençals;Habitatge nou lliure;--
+2022;2;10;Sant Martí;73;la Verneda i la Pau;Habitatge nou lliure;50.0
+2022;2;1;Ciutat Vella;1;el Raval;Habitatge nou protegit;--
+2022;2;1;Ciutat Vella;2;el Barri Gòtic;Habitatge nou protegit;--
+2022;2;1;Ciutat Vella;3;la Barceloneta;Habitatge nou protegit;--
+2022;2;1;Ciutat Vella;4;Sant Pere, Santa Caterina i la Ribera;Habitatge nou protegit;--
+2022;2;2;Eixample;5;el Fort Pienc;Habitatge nou protegit;--
+2022;2;2;Eixample;6;la Sagrada Família;Habitatge nou protegit;--
+2022;2;2;Eixample;7;la Dreta de l'Eixample;Habitatge nou protegit;--
+2022;2;2;Eixample;8;l'Antiga Esquerra de l'Eixample;Habitatge nou protegit;93.0
+2022;2;2;Eixample;9;la Nova Esquerra de l'Eixample;Habitatge nou protegit;94.0
+2022;2;2;Eixample;10;Sant Antoni;Habitatge nou protegit;--
+2022;2;3;Sants-Montjuïc;11;el Poble Sec;Habitatge nou protegit;--
+2022;2;3;Sants-Montjuïc;12;la Marina del Prat Vermell;Habitatge nou protegit;--
+2022;2;3;Sants-Montjuïc;13;la Marina de Port;Habitatge nou protegit;61.0
+2022;2;3;Sants-Montjuïc;14;la Font de la Guatlla;Habitatge nou protegit;--
+2022;2;3;Sants-Montjuïc;15;Hostafrancs;Habitatge nou protegit;--
+2022;2;3;Sants-Montjuïc;16;la Bordeta;Habitatge nou protegit;--
+2022;2;3;Sants-Montjuïc;17;Sants - Badal;Habitatge nou protegit;--
+2022;2;3;Sants-Montjuïc;18;Sants;Habitatge nou protegit;--
+2022;2;4;Les Corts;19;les Corts;Habitatge nou protegit;--
+2022;2;4;Les Corts;20;la Maternitat i Sant Ramon;Habitatge nou protegit;--
+2022;2;4;Les Corts;21;Pedralbes;Habitatge nou protegit;--
+2022;2;5;Sarrià-Sant Gervasi;22;Vallvidrera, el Tibidabo i les Planes;Habitatge nou protegit;--
+2022;2;5;Sarrià-Sant Gervasi;23;Sarrià;Habitatge nou protegit;--
+2022;2;5;Sarrià-Sant Gervasi;24;les Tres Torres;Habitatge nou protegit;--
+2022;2;5;Sarrià-Sant Gervasi;25;Sant Gervasi - la Bonanova;Habitatge nou protegit;--
+2022;2;5;Sarrià-Sant Gervasi;26;Sant Gervasi - Galvany;Habitatge nou protegit;--
+2022;2;5;Sarrià-Sant Gervasi;27;el Putxet i el Farró;Habitatge nou protegit;--
+2022;2;6;Gràcia;28;Vallcarca i els Penitents;Habitatge nou protegit;74.0
+2022;2;6;Gràcia;29;el Coll;Habitatge nou protegit;--
+2022;2;6;Gràcia;30;la Salut;Habitatge nou protegit;--
+2022;2;6;Gràcia;31;la Vila de Gràcia;Habitatge nou protegit;--
+2022;2;6;Gràcia;32;el Camp d'en Grassot i Gràcia Nova;Habitatge nou protegit;--
+2022;2;7;Horta-Guinardó;33;el Baix Guinardó;Habitatge nou protegit;--
+2022;2;7;Horta-Guinardó;34;Can Baró;Habitatge nou protegit;--
+2022;2;7;Horta-Guinardó;35;el Guinardó;Habitatge nou protegit;--
+2022;2;7;Horta-Guinardó;36;la Font d'en Fargues;Habitatge nou protegit;--
+2022;2;7;Horta-Guinardó;37;el Carmel;Habitatge nou protegit;--
+2022;2;7;Horta-Guinardó;38;la Teixonera;Habitatge nou protegit;--
+2022;2;7;Horta-Guinardó;39;Sant Genís dels Agudells;Habitatge nou protegit;--
+2022;2;7;Horta-Guinardó;40;Montbau;Habitatge nou protegit;--
+2022;2;7;Horta-Guinardó;41;la Vall d'Hebron;Habitatge nou protegit;--
+2022;2;7;Horta-Guinardó;42;la Clota;Habitatge nou protegit;--
+2022;2;7;Horta-Guinardó;43;Horta;Habitatge nou protegit;--
+2022;2;8;Nou Barris;44;Vilapicina i la Torre Llobeta;Habitatge nou protegit;--
+2022;2;8;Nou Barris;45;Porta;Habitatge nou protegit;--
+2022;2;8;Nou Barris;46;el Turó de la Peira;Habitatge nou protegit;--
+2022;2;8;Nou Barris;47;Can Peguera;Habitatge nou protegit;--
+2022;2;8;Nou Barris;48;la Guineueta;Habitatge nou protegit;--
+2022;2;8;Nou Barris;49;Canyelles;Habitatge nou protegit;--
+2022;2;8;Nou Barris;50;les Roquetes;Habitatge nou protegit;--
+2022;2;8;Nou Barris;51;Verdun;Habitatge nou protegit;--
+2022;2;8;Nou Barris;52;la Prosperitat;Habitatge nou protegit;--
+2022;2;8;Nou Barris;53;la Trinitat Nova;Habitatge nou protegit;--
+2022;2;8;Nou Barris;54;Torre Baró;Habitatge nou protegit;--
+2022;2;8;Nou Barris;55;Ciutat Meridiana;Habitatge nou protegit;--
+2022;2;8;Nou Barris;56;Vallbona;Habitatge nou protegit;--
+2022;2;9;Sant Andreu;57;la Trinitat Vella;Habitatge nou protegit;--
+2022;2;9;Sant Andreu;58;Baró de Viver;Habitatge nou protegit;--
+2022;2;9;Sant Andreu;59;el Bon Pastor;Habitatge nou protegit;--
+2022;2;9;Sant Andreu;60;Sant Andreu;Habitatge nou protegit;--
+2022;2;9;Sant Andreu;61;la Sagrera;Habitatge nou protegit;--
+2022;2;9;Sant Andreu;62;el Congrés i els Indians;Habitatge nou protegit;--
+2022;2;9;Sant Andreu;63;Navas;Habitatge nou protegit;--
+2022;2;10;Sant Martí;64;el Camp de l'Arpa del Clot;Habitatge nou protegit;--
+2022;2;10;Sant Martí;65;el Clot;Habitatge nou protegit;--
+2022;2;10;Sant Martí;66;el Parc i la Llacuna del Poblenou;Habitatge nou protegit;58.7
+2022;2;10;Sant Martí;67;la Vila Olímpica del Poblenou;Habitatge nou protegit;--
+2022;2;10;Sant Martí;68;el Poblenou;Habitatge nou protegit;--
+2022;2;10;Sant Martí;69;Diagonal Mar i el Front Marítim del Poblenou;Habitatge nou protegit;67.0
+2022;2;10;Sant Martí;70;el Besòs i el Maresme;Habitatge nou protegit;--
+2022;2;10;Sant Martí;71;Provençals del Poblenou;Habitatge nou protegit;69.5
+2022;2;10;Sant Martí;72;Sant Martí de Provençals;Habitatge nou protegit;--
+2022;2;10;Sant Martí;73;la Verneda i la Pau;Habitatge nou protegit;--
+2022;2;1;Ciutat Vella;1;el Raval;Habitatge usat;67.0
+2022;2;1;Ciutat Vella;2;el Barri Gòtic;Habitatge usat;85.9
+2022;2;1;Ciutat Vella;3;la Barceloneta;Habitatge usat;44.5
+2022;2;1;Ciutat Vella;4;Sant Pere, Santa Caterina i la Ribera;Habitatge usat;66.9
+2022;2;2;Eixample;5;el Fort Pienc;Habitatge usat;90.5
+2022;2;2;Eixample;6;la Sagrada Família;Habitatge usat;75.7
+2022;2;2;Eixample;7;la Dreta de l'Eixample;Habitatge usat;105.3
+2022;2;2;Eixample;8;l'Antiga Esquerra de l'Eixample;Habitatge usat;93.8
+2022;2;2;Eixample;9;la Nova Esquerra de l'Eixample;Habitatge usat;80.4
+2022;2;2;Eixample;10;Sant Antoni;Habitatge usat;79.7
+2022;2;3;Sants-Montjuïc;11;el Poble Sec;Habitatge usat;65.1
+2022;2;3;Sants-Montjuïc;12;la Marina del Prat Vermell;Habitatge usat;72.3
+2022;2;3;Sants-Montjuïc;13;la Marina de Port;Habitatge usat;71.5
+2022;2;3;Sants-Montjuïc;14;la Font de la Guatlla;Habitatge usat;80.4
+2022;2;3;Sants-Montjuïc;15;Hostafrancs;Habitatge usat;63.7
+2022;2;3;Sants-Montjuïc;16;la Bordeta;Habitatge usat;72.7
+2022;2;3;Sants-Montjuïc;17;Sants - Badal;Habitatge usat;66.2
+2022;2;3;Sants-Montjuïc;18;Sants;Habitatge usat;68.7
+2022;2;4;Les Corts;19;les Corts;Habitatge usat;84.8
+2022;2;4;Les Corts;20;la Maternitat i Sant Ramon;Habitatge usat;83.2
+2022;2;4;Les Corts;21;Pedralbes;Habitatge usat;144.8
+2022;2;5;Sarrià-Sant Gervasi;22;Vallvidrera, el Tibidabo i les Planes;Habitatge usat;141.4
+2022;2;5;Sarrià-Sant Gervasi;23;Sarrià;Habitatge usat;102.9
+2022;2;5;Sarrià-Sant Gervasi;24;les Tres Torres;Habitatge usat;145.6
+2022;2;5;Sarrià-Sant Gervasi;25;Sant Gervasi - la Bonanova;Habitatge usat;127.9
+2022;2;5;Sarrià-Sant Gervasi;26;Sant Gervasi - Galvany;Habitatge usat;140.2
+2022;2;5;Sarrià-Sant Gervasi;27;el Putxet i el Farró;Habitatge usat;96.8
+2022;2;6;Gràcia;28;Vallcarca i els Penitents;Habitatge usat;92.6
+2022;2;6;Gràcia;29;el Coll;Habitatge usat;58.3
+2022;2;6;Gràcia;30;la Salut;Habitatge usat;79.6
+2022;2;6;Gràcia;31;la Vila de Gràcia;Habitatge usat;73.1
+2022;2;6;Gràcia;32;el Camp d'en Grassot i Gràcia Nova;Habitatge usat;74.3
+2022;2;7;Horta-Guinardó;33;el Baix Guinardó;Habitatge usat;71.5
+2022;2;7;Horta-Guinardó;34;Can Baró;Habitatge usat;64.4
+2022;2;7;Horta-Guinardó;35;el Guinardó;Habitatge usat;73.1
+2022;2;7;Horta-Guinardó;36;la Font d'en Fargues;Habitatge usat;80.1
+2022;2;7;Horta-Guinardó;37;el Carmel;Habitatge usat;62.6
+2022;2;7;Horta-Guinardó;38;la Teixonera;Habitatge usat;68.8
+2022;2;7;Horta-Guinardó;39;Sant Genís dels Agudells;Habitatge usat;63.7
+2022;2;7;Horta-Guinardó;40;Montbau;Habitatge usat;65.9
+2022;2;7;Horta-Guinardó;41;la Vall d'Hebron;Habitatge usat;78.7
+2022;2;7;Horta-Guinardó;42;la Clota;Habitatge usat;--
+2022;2;7;Horta-Guinardó;43;Horta;Habitatge usat;62.8
+2022;2;8;Nou Barris;44;Vilapicina i la Torre Llobeta;Habitatge usat;70.1
+2022;2;8;Nou Barris;45;Porta;Habitatge usat;59.7
+2022;2;8;Nou Barris;46;el Turó de la Peira;Habitatge usat;60.9
+2022;2;8;Nou Barris;47;Can Peguera;Habitatge usat;57.3
+2022;2;8;Nou Barris;48;la Guineueta;Habitatge usat;76.4
+2022;2;8;Nou Barris;49;Canyelles;Habitatge usat;72.3
+2022;2;8;Nou Barris;50;les Roquetes;Habitatge usat;56.1
+2022;2;8;Nou Barris;51;Verdun;Habitatge usat;62.4
+2022;2;8;Nou Barris;52;la Prosperitat;Habitatge usat;58.9
+2022;2;8;Nou Barris;53;la Trinitat Nova;Habitatge usat;59.8
+2022;2;8;Nou Barris;54;Torre Baró;Habitatge usat;66.5
+2022;2;8;Nou Barris;55;Ciutat Meridiana;Habitatge usat;58.3
+2022;2;8;Nou Barris;56;Vallbona;Habitatge usat;90.0
+2022;2;9;Sant Andreu;57;la Trinitat Vella;Habitatge usat;55.2
+2022;2;9;Sant Andreu;58;Baró de Viver;Habitatge usat;69.5
+2022;2;9;Sant Andreu;59;el Bon Pastor;Habitatge usat;67.5
+2022;2;9;Sant Andreu;60;Sant Andreu;Habitatge usat;78.6
+2022;2;9;Sant Andreu;61;la Sagrera;Habitatge usat;69.9
+2022;2;9;Sant Andreu;62;el Congrés i els Indians;Habitatge usat;78.7
+2022;2;9;Sant Andreu;63;Navas;Habitatge usat;74.4
+2022;2;10;Sant Martí;64;el Camp de l'Arpa del Clot;Habitatge usat;69.3
+2022;2;10;Sant Martí;65;el Clot;Habitatge usat;93.4
+2022;2;10;Sant Martí;66;el Parc i la Llacuna del Poblenou;Habitatge usat;78.6
+2022;2;10;Sant Martí;67;la Vila Olímpica del Poblenou;Habitatge usat;111.1
+2022;2;10;Sant Martí;68;el Poblenou;Habitatge usat;67.2
+2022;2;10;Sant Martí;69;Diagonal Mar i el Front Marítim del Poblenou;Habitatge usat;95.3
+2022;2;10;Sant Martí;70;el Besòs i el Maresme;Habitatge usat;66.3
+2022;2;10;Sant Martí;71;Provençals del Poblenou;Habitatge usat;72.8
+2022;2;10;Sant Martí;72;Sant Martí de Provençals;Habitatge usat;70.8
+2022;2;10;Sant Martí;73;la Verneda i la Pau;Habitatge usat;72.5
+2022;3;1;Ciutat Vella;1;el Raval;Total;64.4
+2022;3;1;Ciutat Vella;2;el Barri Gòtic;Total;95.0
+2022;3;1;Ciutat Vella;3;la Barceloneta;Total;48.1
+2022;3;1;Ciutat Vella;4;Sant Pere, Santa Caterina i la Ribera;Total;66.5
+2022;3;2;Eixample;5;el Fort Pienc;Total;83.6
+2022;3;2;Eixample;6;la Sagrada Família;Total;76.7
+2022;3;2;Eixample;7;la Dreta de l'Eixample;Total;110.7
+2022;3;2;Eixample;8;l'Antiga Esquerra de l'Eixample;Total;106.1
+2022;3;2;Eixample;9;la Nova Esquerra de l'Eixample;Total;83.1
+2022;3;2;Eixample;10;Sant Antoni;Total;79.7
+2022;3;3;Sants-Montjuïc;11;el Poble Sec;Total;59.8
+2022;3;3;Sants-Montjuïc;12;la Marina del Prat Vermell;Total;81.0
+2022;3;3;Sants-Montjuïc;13;la Marina de Port;Total;69.5
+2022;3;3;Sants-Montjuïc;14;la Font de la Guatlla;Total;81.0
+2022;3;3;Sants-Montjuïc;15;Hostafrancs;Total;69.9
+2022;3;3;Sants-Montjuïc;16;la Bordeta;Total;66.5
+2022;3;3;Sants-Montjuïc;17;Sants - Badal;Total;65.3
+2022;3;3;Sants-Montjuïc;18;Sants;Total;66.1
+2022;3;4;Les Corts;19;les Corts;Total;87.1
+2022;3;4;Les Corts;20;la Maternitat i Sant Ramon;Total;78.6
+2022;3;4;Les Corts;21;Pedralbes;Total;170.8
+2022;3;5;Sarrià-Sant Gervasi;22;Vallvidrera, el Tibidabo i les Planes;Total;140.6
+2022;3;5;Sarrià-Sant Gervasi;23;Sarrià;Total;114.9
+2022;3;5;Sarrià-Sant Gervasi;24;les Tres Torres;Total;156.3
+2022;3;5;Sarrià-Sant Gervasi;25;Sant Gervasi - la Bonanova;Total;113.8
+2022;3;5;Sarrià-Sant Gervasi;26;Sant Gervasi - Galvany;Total;134.0
+2022;3;5;Sarrià-Sant Gervasi;27;el Putxet i el Farró;Total;96.3
+2022;3;6;Gràcia;28;Vallcarca i els Penitents;Total;77.2
+2022;3;6;Gràcia;29;el Coll;Total;68.3
+2022;3;6;Gràcia;30;la Salut;Total;76.8
+2022;3;6;Gràcia;31;la Vila de Gràcia;Total;77.2
+2022;3;6;Gràcia;32;el Camp d'en Grassot i Gràcia Nova;Total;77.1
+2022;3;7;Horta-Guinardó;33;el Baix Guinardó;Total;70.3
+2022;3;7;Horta-Guinardó;34;Can Baró;Total;75.3
+2022;3;7;Horta-Guinardó;35;el Guinardó;Total;75.8
+2022;3;7;Horta-Guinardó;36;la Font d'en Fargues;Total;104.2
+2022;3;7;Horta-Guinardó;37;el Carmel;Total;69.0
+2022;3;7;Horta-Guinardó;38;la Teixonera;Total;63.5
+2022;3;7;Horta-Guinardó;39;Sant Genís dels Agudells;Total;64.7
+2022;3;7;Horta-Guinardó;40;Montbau;Total;64.2
+2022;3;7;Horta-Guinardó;41;la Vall d'Hebron;Total;56.9
+2022;3;7;Horta-Guinardó;42;la Clota;Total;83.7
+2022;3;7;Horta-Guinardó;43;Horta;Total;71.1
+2022;3;8;Nou Barris;44;Vilapicina i la Torre Llobeta;Total;74.6
+2022;3;8;Nou Barris;45;Porta;Total;64.0
+2022;3;8;Nou Barris;46;el Turó de la Peira;Total;60.8
+2022;3;8;Nou Barris;47;Can Peguera;Total;74.0
+2022;3;8;Nou Barris;48;la Guineueta;Total;78.6
+2022;3;8;Nou Barris;49;Canyelles;Total;75.5
+2022;3;8;Nou Barris;50;les Roquetes;Total;55.3
+2022;3;8;Nou Barris;51;Verdun;Total;57.3
+2022;3;8;Nou Barris;52;la Prosperitat;Total;60.4
+2022;3;8;Nou Barris;53;la Trinitat Nova;Total;62.3
+2022;3;8;Nou Barris;54;Torre Baró;Total;61.0
+2022;3;8;Nou Barris;55;Ciutat Meridiana;Total;59.6
+2022;3;8;Nou Barris;56;Vallbona;Total;77.0
+2022;3;9;Sant Andreu;57;la Trinitat Vella;Total;61.2
+2022;3;9;Sant Andreu;58;Baró de Viver;Total;--
+2022;3;9;Sant Andreu;59;el Bon Pastor;Total;68.9
+2022;3;9;Sant Andreu;60;Sant Andreu;Total;82.1
+2022;3;9;Sant Andreu;61;la Sagrera;Total;67.3
+2022;3;9;Sant Andreu;62;el Congrés i els Indians;Total;--
+2022;3;9;Sant Andreu;63;Navas;Total;79.4
+2022;3;10;Sant Martí;64;el Camp de l'Arpa del Clot;Total;76.8
+2022;3;10;Sant Martí;65;el Clot;Total;72.8
+2022;3;10;Sant Martí;66;el Parc i la Llacuna del Poblenou;Total;83.6
+2022;3;10;Sant Martí;67;la Vila Olímpica del Poblenou;Total;111.3
+2022;3;10;Sant Martí;68;el Poblenou;Total;71.2
+2022;3;10;Sant Martí;69;Diagonal Mar i el Front Marítim del Poblenou;Total;86.1
+2022;3;10;Sant Martí;70;el Besòs i el Maresme;Total;73.4
+2022;3;10;Sant Martí;71;Provençals del Poblenou;Total;74.8
+2022;3;10;Sant Martí;72;Sant Martí de Provençals;Total;71.5
+2022;3;10;Sant Martí;73;la Verneda i la Pau;Total;72.6
+2022;3;1;Ciutat Vella;1;el Raval;Habitatge nou lliure;--
+2022;3;1;Ciutat Vella;2;el Barri Gòtic;Habitatge nou lliure;85.4
+2022;3;1;Ciutat Vella;3;la Barceloneta;Habitatge nou lliure;34.0
+2022;3;1;Ciutat Vella;4;Sant Pere, Santa Caterina i la Ribera;Habitatge nou lliure;24.0
+2022;3;2;Eixample;5;el Fort Pienc;Habitatge nou lliure;--
+2022;3;2;Eixample;6;la Sagrada Família;Habitatge nou lliure;63.0
+2022;3;2;Eixample;7;la Dreta de l'Eixample;Habitatge nou lliure;116.7
+2022;3;2;Eixample;8;l'Antiga Esquerra de l'Eixample;Habitatge nou lliure;135.0
+2022;3;2;Eixample;9;la Nova Esquerra de l'Eixample;Habitatge nou lliure;95.5
+2022;3;2;Eixample;10;Sant Antoni;Habitatge nou lliure;45.0
+2022;3;3;Sants-Montjuïc;11;el Poble Sec;Habitatge nou lliure;--
+2022;3;3;Sants-Montjuïc;12;la Marina del Prat Vermell;Habitatge nou lliure;--
+2022;3;3;Sants-Montjuïc;13;la Marina de Port;Habitatge nou lliure;63.3
+2022;3;3;Sants-Montjuïc;14;la Font de la Guatlla;Habitatge nou lliure;82.4
+2022;3;3;Sants-Montjuïc;15;Hostafrancs;Habitatge nou lliure;73.7
+2022;3;3;Sants-Montjuïc;16;la Bordeta;Habitatge nou lliure;--
+2022;3;3;Sants-Montjuïc;17;Sants - Badal;Habitatge nou lliure;--
+2022;3;3;Sants-Montjuïc;18;Sants;Habitatge nou lliure;47.0
+2022;3;4;Les Corts;19;les Corts;Habitatge nou lliure;95.8
+2022;3;4;Les Corts;20;la Maternitat i Sant Ramon;Habitatge nou lliure;--
+2022;3;4;Les Corts;21;Pedralbes;Habitatge nou lliure;83.0
+2022;3;5;Sarrià-Sant Gervasi;22;Vallvidrera, el Tibidabo i les Planes;Habitatge nou lliure;409.0
+2022;3;5;Sarrià-Sant Gervasi;23;Sarrià;Habitatge nou lliure;109.8
+2022;3;5;Sarrià-Sant Gervasi;24;les Tres Torres;Habitatge nou lliure;66.7
+2022;3;5;Sarrià-Sant Gervasi;25;Sant Gervasi - la Bonanova;Habitatge nou lliure;102.1
+2022;3;5;Sarrià-Sant Gervasi;26;Sant Gervasi - Galvany;Habitatge nou lliure;130.3
+2022;3;5;Sarrià-Sant Gervasi;27;el Putxet i el Farró;Habitatge nou lliure;71.7
+2022;3;6;Gràcia;28;Vallcarca i els Penitents;Habitatge nou lliure;79.3
+2022;3;6;Gràcia;29;el Coll;Habitatge nou lliure;64.8
+2022;3;6;Gràcia;30;la Salut;Habitatge nou lliure;72.0
+2022;3;6;Gràcia;31;la Vila de Gràcia;Habitatge nou lliure;85.7
+2022;3;6;Gràcia;32;el Camp d'en Grassot i Gràcia Nova;Habitatge nou lliure;--
+2022;3;7;Horta-Guinardó;33;el Baix Guinardó;Habitatge nou lliure;62.3
+2022;3;7;Horta-Guinardó;34;Can Baró;Habitatge nou lliure;--
+2022;3;7;Horta-Guinardó;35;el Guinardó;Habitatge nou lliure;94.0
+2022;3;7;Horta-Guinardó;36;la Font d'en Fargues;Habitatge nou lliure;75.5
+2022;3;7;Horta-Guinardó;37;el Carmel;Habitatge nou lliure;75.2
+2022;3;7;Horta-Guinardó;38;la Teixonera;Habitatge nou lliure;73.4
+2022;3;7;Horta-Guinardó;39;Sant Genís dels Agudells;Habitatge nou lliure;65.0
+2022;3;7;Horta-Guinardó;40;Montbau;Habitatge nou lliure;45.0
+2022;3;7;Horta-Guinardó;41;la Vall d'Hebron;Habitatge nou lliure;62.0
+2022;3;7;Horta-Guinardó;42;la Clota;Habitatge nou lliure;--
+2022;3;7;Horta-Guinardó;43;Horta;Habitatge nou lliure;79.9
+2022;3;8;Nou Barris;44;Vilapicina i la Torre Llobeta;Habitatge nou lliure;91.0
+2022;3;8;Nou Barris;45;Porta;Habitatge nou lliure;90.5
+2022;3;8;Nou Barris;46;el Turó de la Peira;Habitatge nou lliure;47.0
+2022;3;8;Nou Barris;47;Can Peguera;Habitatge nou lliure;--
+2022;3;8;Nou Barris;48;la Guineueta;Habitatge nou lliure;--
+2022;3;8;Nou Barris;49;Canyelles;Habitatge nou lliure;--
+2022;3;8;Nou Barris;50;les Roquetes;Habitatge nou lliure;--
+2022;3;8;Nou Barris;51;Verdun;Habitatge nou lliure;--
+2022;3;8;Nou Barris;52;la Prosperitat;Habitatge nou lliure;--
+2022;3;8;Nou Barris;53;la Trinitat Nova;Habitatge nou lliure;--
+2022;3;8;Nou Barris;54;Torre Baró;Habitatge nou lliure;--
+2022;3;8;Nou Barris;55;Ciutat Meridiana;Habitatge nou lliure;--
+2022;3;8;Nou Barris;56;Vallbona;Habitatge nou lliure;--
+2022;3;9;Sant Andreu;57;la Trinitat Vella;Habitatge nou lliure;--
+2022;3;9;Sant Andreu;58;Baró de Viver;Habitatge nou lliure;--
+2022;3;9;Sant Andreu;59;el Bon Pastor;Habitatge nou lliure;--
+2022;3;9;Sant Andreu;60;Sant Andreu;Habitatge nou lliure;96.0
+2022;3;9;Sant Andreu;61;la Sagrera;Habitatge nou lliure;--
+2022;3;9;Sant Andreu;62;el Congrés i els Indians;Habitatge nou lliure;--
+2022;3;9;Sant Andreu;63;Navas;Habitatge nou lliure;--
+2022;3;10;Sant Martí;64;el Camp de l'Arpa del Clot;Habitatge nou lliure;101.0
+2022;3;10;Sant Martí;65;el Clot;Habitatge nou lliure;--
+2022;3;10;Sant Martí;66;el Parc i la Llacuna del Poblenou;Habitatge nou lliure;88.4
+2022;3;10;Sant Martí;67;la Vila Olímpica del Poblenou;Habitatge nou lliure;110.0
+2022;3;10;Sant Martí;68;el Poblenou;Habitatge nou lliure;69.6
+2022;3;10;Sant Martí;69;Diagonal Mar i el Front Marítim del Poblenou;Habitatge nou lliure;67.7
+2022;3;10;Sant Martí;70;el Besòs i el Maresme;Habitatge nou lliure;78.8
+2022;3;10;Sant Martí;71;Provençals del Poblenou;Habitatge nou lliure;71.2
+2022;3;10;Sant Martí;72;Sant Martí de Provençals;Habitatge nou lliure;--
+2022;3;10;Sant Martí;73;la Verneda i la Pau;Habitatge nou lliure;--
+2022;3;1;Ciutat Vella;1;el Raval;Habitatge nou protegit;--
+2022;3;1;Ciutat Vella;2;el Barri Gòtic;Habitatge nou protegit;--
+2022;3;1;Ciutat Vella;3;la Barceloneta;Habitatge nou protegit;--
+2022;3;1;Ciutat Vella;4;Sant Pere, Santa Caterina i la Ribera;Habitatge nou protegit;--
+2022;3;2;Eixample;5;el Fort Pienc;Habitatge nou protegit;--
+2022;3;2;Eixample;6;la Sagrada Família;Habitatge nou protegit;--
+2022;3;2;Eixample;7;la Dreta de l'Eixample;Habitatge nou protegit;--
+2022;3;2;Eixample;8;l'Antiga Esquerra de l'Eixample;Habitatge nou protegit;--
+2022;3;2;Eixample;9;la Nova Esquerra de l'Eixample;Habitatge nou protegit;87.5
+2022;3;2;Eixample;10;Sant Antoni;Habitatge nou protegit;--
+2022;3;3;Sants-Montjuïc;11;el Poble Sec;Habitatge nou protegit;--
+2022;3;3;Sants-Montjuïc;12;la Marina del Prat Vermell;Habitatge nou protegit;--
+2022;3;3;Sants-Montjuïc;13;la Marina de Port;Habitatge nou protegit;--
+2022;3;3;Sants-Montjuïc;14;la Font de la Guatlla;Habitatge nou protegit;--
+2022;3;3;Sants-Montjuïc;15;Hostafrancs;Habitatge nou protegit;--
+2022;3;3;Sants-Montjuïc;16;la Bordeta;Habitatge nou protegit;--
+2022;3;3;Sants-Montjuïc;17;Sants - Badal;Habitatge nou protegit;--
+2022;3;3;Sants-Montjuïc;18;Sants;Habitatge nou protegit;--
+2022;3;4;Les Corts;19;les Corts;Habitatge nou protegit;--
+2022;3;4;Les Corts;20;la Maternitat i Sant Ramon;Habitatge nou protegit;--
+2022;3;4;Les Corts;21;Pedralbes;Habitatge nou protegit;--
+2022;3;5;Sarrià-Sant Gervasi;22;Vallvidrera, el Tibidabo i les Planes;Habitatge nou protegit;--
+2022;3;5;Sarrià-Sant Gervasi;23;Sarrià;Habitatge nou protegit;--
+2022;3;5;Sarrià-Sant Gervasi;24;les Tres Torres;Habitatge nou protegit;--
+2022;3;5;Sarrià-Sant Gervasi;25;Sant Gervasi - la Bonanova;Habitatge nou protegit;--
+2022;3;5;Sarrià-Sant Gervasi;26;Sant Gervasi - Galvany;Habitatge nou protegit;--
+2022;3;5;Sarrià-Sant Gervasi;27;el Putxet i el Farró;Habitatge nou protegit;72.0
+2022;3;6;Gràcia;28;Vallcarca i els Penitents;Habitatge nou protegit;--
+2022;3;6;Gràcia;29;el Coll;Habitatge nou protegit;--
+2022;3;6;Gràcia;30;la Salut;Habitatge nou protegit;--
+2022;3;6;Gràcia;31;la Vila de Gràcia;Habitatge nou protegit;--
+2022;3;6;Gràcia;32;el Camp d'en Grassot i Gràcia Nova;Habitatge nou protegit;--
+2022;3;7;Horta-Guinardó;33;el Baix Guinardó;Habitatge nou protegit;--
+2022;3;7;Horta-Guinardó;34;Can Baró;Habitatge nou protegit;--
+2022;3;7;Horta-Guinardó;35;el Guinardó;Habitatge nou protegit;--
+2022;3;7;Horta-Guinardó;36;la Font d'en Fargues;Habitatge nou protegit;--
+2022;3;7;Horta-Guinardó;37;el Carmel;Habitatge nou protegit;--
+2022;3;7;Horta-Guinardó;38;la Teixonera;Habitatge nou protegit;--
+2022;3;7;Horta-Guinardó;39;Sant Genís dels Agudells;Habitatge nou protegit;--
+2022;3;7;Horta-Guinardó;40;Montbau;Habitatge nou protegit;--
+2022;3;7;Horta-Guinardó;41;la Vall d'Hebron;Habitatge nou protegit;73.0
+2022;3;7;Horta-Guinardó;42;la Clota;Habitatge nou protegit;57.0
+2022;3;7;Horta-Guinardó;43;Horta;Habitatge nou protegit;60.0
+2022;3;8;Nou Barris;44;Vilapicina i la Torre Llobeta;Habitatge nou protegit;--
+2022;3;8;Nou Barris;45;Porta;Habitatge nou protegit;--
+2022;3;8;Nou Barris;46;el Turó de la Peira;Habitatge nou protegit;--
+2022;3;8;Nou Barris;47;Can Peguera;Habitatge nou protegit;--
+2022;3;8;Nou Barris;48;la Guineueta;Habitatge nou protegit;--
+2022;3;8;Nou Barris;49;Canyelles;Habitatge nou protegit;--
+2022;3;8;Nou Barris;50;les Roquetes;Habitatge nou protegit;--
+2022;3;8;Nou Barris;51;Verdun;Habitatge nou protegit;--
+2022;3;8;Nou Barris;52;la Prosperitat;Habitatge nou protegit;--
+2022;3;8;Nou Barris;53;la Trinitat Nova;Habitatge nou protegit;--
+2022;3;8;Nou Barris;54;Torre Baró;Habitatge nou protegit;--
+2022;3;8;Nou Barris;55;Ciutat Meridiana;Habitatge nou protegit;--
+2022;3;8;Nou Barris;56;Vallbona;Habitatge nou protegit;--
+2022;3;9;Sant Andreu;57;la Trinitat Vella;Habitatge nou protegit;--
+2022;3;9;Sant Andreu;58;Baró de Viver;Habitatge nou protegit;--
+2022;3;9;Sant Andreu;59;el Bon Pastor;Habitatge nou protegit;--
+2022;3;9;Sant Andreu;60;Sant Andreu;Habitatge nou protegit;--
+2022;3;9;Sant Andreu;61;la Sagrera;Habitatge nou protegit;--
+2022;3;9;Sant Andreu;62;el Congrés i els Indians;Habitatge nou protegit;--
+2022;3;9;Sant Andreu;63;Navas;Habitatge nou protegit;--
+2022;3;10;Sant Martí;64;el Camp de l'Arpa del Clot;Habitatge nou protegit;--
+2022;3;10;Sant Martí;65;el Clot;Habitatge nou protegit;--
+2022;3;10;Sant Martí;66;el Parc i la Llacuna del Poblenou;Habitatge nou protegit;68.0
+2022;3;10;Sant Martí;67;la Vila Olímpica del Poblenou;Habitatge nou protegit;--
+2022;3;10;Sant Martí;68;el Poblenou;Habitatge nou protegit;--
+2022;3;10;Sant Martí;69;Diagonal Mar i el Front Marítim del Poblenou;Habitatge nou protegit;80.0
+2022;3;10;Sant Martí;70;el Besòs i el Maresme;Habitatge nou protegit;73.0
+2022;3;10;Sant Martí;71;Provençals del Poblenou;Habitatge nou protegit;76.0
+2022;3;10;Sant Martí;72;Sant Martí de Provençals;Habitatge nou protegit;--
+2022;3;10;Sant Martí;73;la Verneda i la Pau;Habitatge nou protegit;--
+2022;3;1;Ciutat Vella;1;el Raval;Habitatge usat;64.4
+2022;3;1;Ciutat Vella;2;el Barri Gòtic;Habitatge usat;98.7
+2022;3;1;Ciutat Vella;3;la Barceloneta;Habitatge usat;48.6
+2022;3;1;Ciutat Vella;4;Sant Pere, Santa Caterina i la Ribera;Habitatge usat;67.1
+2022;3;2;Eixample;5;el Fort Pienc;Habitatge usat;83.6
+2022;3;2;Eixample;6;la Sagrada Família;Habitatge usat;76.8
+2022;3;2;Eixample;7;la Dreta de l'Eixample;Habitatge usat;109.0
+2022;3;2;Eixample;8;l'Antiga Esquerra de l'Eixample;Habitatge usat;103.5
+2022;3;2;Eixample;9;la Nova Esquerra de l'Eixample;Habitatge usat;81.6
+2022;3;2;Eixample;10;Sant Antoni;Habitatge usat;80.2
+2022;3;3;Sants-Montjuïc;11;el Poble Sec;Habitatge usat;59.8
+2022;3;3;Sants-Montjuïc;12;la Marina del Prat Vermell;Habitatge usat;81.0
+2022;3;3;Sants-Montjuïc;13;la Marina de Port;Habitatge usat;69.8
+2022;3;3;Sants-Montjuïc;14;la Font de la Guatlla;Habitatge usat;79.9
+2022;3;3;Sants-Montjuïc;15;Hostafrancs;Habitatge usat;68.9
+2022;3;3;Sants-Montjuïc;16;la Bordeta;Habitatge usat;66.5
+2022;3;3;Sants-Montjuïc;17;Sants - Badal;Habitatge usat;65.3
+2022;3;3;Sants-Montjuïc;18;Sants;Habitatge usat;66.4
+2022;3;4;Les Corts;19;les Corts;Habitatge usat;86.5
+2022;3;4;Les Corts;20;la Maternitat i Sant Ramon;Habitatge usat;78.6
+2022;3;4;Les Corts;21;Pedralbes;Habitatge usat;183.4
+2022;3;5;Sarrià-Sant Gervasi;22;Vallvidrera, el Tibidabo i les Planes;Habitatge usat;110.8
+2022;3;5;Sarrià-Sant Gervasi;23;Sarrià;Habitatge usat;115.4
+2022;3;5;Sarrià-Sant Gervasi;24;les Tres Torres;Habitatge usat;164.5
+2022;3;5;Sarrià-Sant Gervasi;25;Sant Gervasi - la Bonanova;Habitatge usat;116.3
+2022;3;5;Sarrià-Sant Gervasi;26;Sant Gervasi - Galvany;Habitatge usat;134.7
+2022;3;5;Sarrià-Sant Gervasi;27;el Putxet i el Farró;Habitatge usat;97.8
+2022;3;6;Gràcia;28;Vallcarca i els Penitents;Habitatge usat;76.9
+2022;3;6;Gràcia;29;el Coll;Habitatge usat;69.4
+2022;3;6;Gràcia;30;la Salut;Habitatge usat;76.9
+2022;3;6;Gràcia;31;la Vila de Gràcia;Habitatge usat;75.7
+2022;3;6;Gràcia;32;el Camp d'en Grassot i Gràcia Nova;Habitatge usat;77.1
+2022;3;7;Horta-Guinardó;33;el Baix Guinardó;Habitatge usat;71.2
+2022;3;7;Horta-Guinardó;34;Can Baró;Habitatge usat;75.3
+2022;3;7;Horta-Guinardó;35;el Guinardó;Habitatge usat;74.9
+2022;3;7;Horta-Guinardó;36;la Font d'en Fargues;Habitatge usat;107.2
+2022;3;7;Horta-Guinardó;37;el Carmel;Habitatge usat;66.9
+2022;3;7;Horta-Guinardó;38;la Teixonera;Habitatge usat;59.6
+2022;3;7;Horta-Guinardó;39;Sant Genís dels Agudells;Habitatge usat;64.7
+2022;3;7;Horta-Guinardó;40;Montbau;Habitatge usat;68.0
+2022;3;7;Horta-Guinardó;41;la Vall d'Hebron;Habitatge usat;52.6
+2022;3;7;Horta-Guinardó;42;la Clota;Habitatge usat;97.0
+2022;3;7;Horta-Guinardó;43;Horta;Habitatge usat;67.3
+2022;3;8;Nou Barris;44;Vilapicina i la Torre Llobeta;Habitatge usat;74.1
+2022;3;8;Nou Barris;45;Porta;Habitatge usat;61.6
+2022;3;8;Nou Barris;46;el Turó de la Peira;Habitatge usat;61.2
+2022;3;8;Nou Barris;47;Can Peguera;Habitatge usat;74.0
+2022;3;8;Nou Barris;48;la Guineueta;Habitatge usat;78.6
+2022;3;8;Nou Barris;49;Canyelles;Habitatge usat;75.5
+2022;3;8;Nou Barris;50;les Roquetes;Habitatge usat;55.3
+2022;3;8;Nou Barris;51;Verdun;Habitatge usat;57.3
+2022;3;8;Nou Barris;52;la Prosperitat;Habitatge usat;60.4
+2022;3;8;Nou Barris;53;la Trinitat Nova;Habitatge usat;62.3
+2022;3;8;Nou Barris;54;Torre Baró;Habitatge usat;61.0
+2022;3;8;Nou Barris;55;Ciutat Meridiana;Habitatge usat;59.6
+2022;3;8;Nou Barris;56;Vallbona;Habitatge usat;77.0
+2022;3;9;Sant Andreu;57;la Trinitat Vella;Habitatge usat;61.2
+2022;3;9;Sant Andreu;58;Baró de Viver;Habitatge usat;--
+2022;3;9;Sant Andreu;59;el Bon Pastor;Habitatge usat;68.9
+2022;3;9;Sant Andreu;60;Sant Andreu;Habitatge usat;81.9
+2022;3;9;Sant Andreu;61;la Sagrera;Habitatge usat;67.3
+2022;3;9;Sant Andreu;62;el Congrés i els Indians;Habitatge usat;--
+2022;3;9;Sant Andreu;63;Navas;Habitatge usat;79.4
+2022;3;10;Sant Martí;64;el Camp de l'Arpa del Clot;Habitatge usat;76.5
+2022;3;10;Sant Martí;65;el Clot;Habitatge usat;72.8
+2022;3;10;Sant Martí;66;el Parc i la Llacuna del Poblenou;Habitatge usat;74.4
+2022;3;10;Sant Martí;67;la Vila Olímpica del Poblenou;Habitatge usat;111.4
+2022;3;10;Sant Martí;68;el Poblenou;Habitatge usat;71.6
+2022;3;10;Sant Martí;69;Diagonal Mar i el Front Marítim del Poblenou;Habitatge usat;88.1
+2022;3;10;Sant Martí;70;el Besòs i el Maresme;Habitatge usat;72.4
+2022;3;10;Sant Martí;71;Provençals del Poblenou;Habitatge usat;75.3
+2022;3;10;Sant Martí;72;Sant Martí de Provençals;Habitatge usat;71.5
+2022;3;10;Sant Martí;73;la Verneda i la Pau;Habitatge usat;72.6
