@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="5/6/2023 8:35:21 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{03EE4CD8-D01C-428A-8833-E94CF829D2A5}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{FA0D0C98-ABE0-4533-8C55-B9B76BD63F5F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -603,7 +603,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="insert_date">
       <DTS:VariableValue
-        DTS:DataType="7">5/9/2023 9:00:30 PM</DTS:VariableValue>
+        DTS:DataType="7">5/9/2023 8:59:24 PM</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -5139,7 +5139,7 @@
               name="Salida de columna derivada"
               startId="Package\STA_COMPRAVENTA\Columna derivada.Outputs[Salida de columna derivada]" />
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada3]"
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada1]"
               endId="Package\STA_COMPRAVENTA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
               name="Salida de columna derivada"
               startId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Outputs[Salida de columna derivada]" />
@@ -5149,7 +5149,7 @@
               name="Salida de columna derivada"
               startId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Outputs[Salida de columna derivada]" />
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada1]"
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada3]"
               endId="Package\STA_COMPRAVENTA\Ordenar 1.Inputs[Entrada de ordenación]"
               name="Salida de columna derivada"
               startId="Package\STA_COMPRAVENTA\Columna derivada 1.Outputs[Salida de columna derivada]" />
@@ -5159,15 +5159,15 @@
               name="Salida de combinación de mezcla"
               startId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla]" />
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de ordenación]"
-              endId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación]" />
-            <path
               refId="Package\STA_COMPRAVENTA.Paths[Salida de ordenación1]"
               endId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de ordenación]"
+              endId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación]" />
             <path
               refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano]"
               endId="Package\STA_COMPRAVENTA\Unión de todo 1.Inputs[Entrada de Unión de todo 4]"
@@ -5189,12 +5189,12 @@
               name="Salida de origen de archivo plano"
               startId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano]" />
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano5]"
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano4]"
               endId="Package\STA_COMPRAVENTA\Unión de todo.Inputs[Entrada de Unión de todo 3]"
               name="Salida de origen de archivo plano"
               startId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2020.Outputs[Salida de origen de archivo plano]" />
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano4]"
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano5]"
               endId="Package\STA_COMPRAVENTA\Unión de todo.Inputs[Entrada de Unión de todo 2]"
               name="Salida de origen de archivo plano"
               startId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2021.Outputs[Salida de origen de archivo plano]" />
@@ -5486,7 +5486,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada1]"
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada3]"
           TopLeft="1333.8,444.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5504,7 +5504,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,13.95,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5526,7 +5528,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,25.6166667420003,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5564,7 +5568,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano4]"
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano5]"
           TopLeft="417.6,55.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5598,7 +5602,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano5]"
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano4]"
           TopLeft="671.6,105.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5848,7 +5852,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada3]"
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada1]"
           TopLeft="883.7,837.5166665838">
           <EdgeLayout.Curve>
             <mssgle:Curve
