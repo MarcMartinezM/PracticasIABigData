@@ -1,0 +1,2779 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/11/2023 5:47:56 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="PH01-03"
+  DTS:CreatorName="PH01-03\Marc Martinez"
+  DTS:DTSID="{EA54DF62-BD57-49D8-8CAC-F4F6AE720226}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5035.3"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{767E0AA1-918F-4374-8BD0-31851F693C58}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{DC367BE3-BB04-43A3-9962-E4763F07237D}"
+      DTS:ObjectName="PH01-03\IABDSQLSERVER.COMPRAVENTA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=PH01-03\IABDSQLSERVER;Initial Catalog=COMPRAVENTA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{DC367BE3-BB04-43A3-9962-E4763F07237D}PH01-03\IABDSQLSERVER.COMPRAVENTA;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\STG_BARRI"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{0F41144D-AE57-4873-BA93-19BCB97C07C4}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="STG_BARRI"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\STG_BARRI\Agregado"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Agregado;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;3"
+              description="Agrega datos mediante funciones como Average, Sum, Count, Max y Min. Por ejemplo, se agrupan datos para calcular la suma de las ventas por producto o el promedio de visitas por día."
+              name="Agregado"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número aproximado de valores distintos de una columna que cuenta la agregación de forma distintiva. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 valores de clave. No especificado indica que no se usa ningún valor de CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el número exacto de valores distintos de una columna que cuenta la agregación de forma distintiva. Si se especifica un valor de CountDistinctScale, el valor de CountDistinctKeys tiene prioridad."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje en el que puede ampliarse la memoria durante la agregación. Los valores válidos están comprendidos entre 1 y 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\STG_BARRI\Agregado.Inputs[Entrada de agregado 1]"
+                  name="Entrada de agregado 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_BARRI\Agregado.Inputs[Entrada de agregado 1].Columns[Codi_Barri]"
+                      cachedDataType="i4"
+                      cachedName="Codi_Barri"
+                      lineageId="Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Barri]" />
+                    <inputColumn
+                      refId="Package\STG_BARRI\Agregado.Inputs[Entrada de agregado 1].Columns[Nom_Barri]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nom_Barri"
+                      lineageId="Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Nom_Barri]" />
+                    <inputColumn
+                      refId="Package\STG_BARRI\Agregado.Inputs[Entrada de agregado 1].Columns[INSERT_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="INSERT_DATE"
+                      lineageId="Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[INSERT_DATE]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_BARRI\Agregado.Outputs[Salida de agregado 1]"
+                  name="Salida de agregado 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_BARRI\Agregado.Outputs[Salida de agregado 1].Columns[Codi_Barri]"
+                      dataType="i4"
+                      lineageId="Package\STG_BARRI\Agregado.Outputs[Salida de agregado 1].Columns[Codi_Barri]"
+                      name="Codi_Barri">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Barri]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_BARRI\Agregado.Outputs[Salida de agregado 1].Columns[Nom_Barri]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_BARRI\Agregado.Outputs[Salida de agregado 1].Columns[Nom_Barri]"
+                      name="Nom_Barri">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Nom_Barri]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_BARRI\Agregado.Outputs[Salida de agregado 1].Columns[INSERT_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\STG_BARRI\Agregado.Outputs[Salida de agregado 1].Columns[INSERT_DATE]"
+                      name="INSERT_DATE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[INSERT_DATE]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_BARRI\Búsqueda"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="Búsqueda"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [STG_BARRI]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [STG_BARRI]) [refTable]
+where [refTable].[Codi_Barri] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Codi_Barri" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Nom_Barri" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="INSERT_DATE" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\STG_BARRI\Agregado.Outputs[Salida de agregado 1].Columns[Codi_Barri]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_BARRI\Búsqueda.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\STG_BARRI\Búsqueda.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_BARRI\Búsqueda.Inputs[Entrada de búsqueda].Columns[Codi_Barri]"
+                      cachedDataType="i4"
+                      cachedName="Codi_Barri"
+                      lineageId="Package\STG_BARRI\Agregado.Outputs[Salida de agregado 1].Columns[Codi_Barri]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">Codi_Barri</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_BARRI\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
+                  exclusionGroup="1"
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\STG_BARRI\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_BARRI\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[LK_Codi_Barri]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar columna"
+                      lineageId="Package\STG_BARRI\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[LK_Codi_Barri]"
+                      name="LK_Codi_Barri"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">Codi_Barri</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STG_BARRI\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en 'Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes'."
+                  exclusionGroup="1"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\STG_BARRI\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STG_BARRI\Búsqueda.Outputs[Salida de error de búsqueda]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\STG_BARRI\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_BARRI\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_BARRI\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_BARRI\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_BARRI\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_BARRI\Comando de OLE DB"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="Comando de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Ejecuta una instrucción SQL para cada fila de un flujo de datos. Por ejemplo, se usa para llamar al procedimiento almacenado de configuración de nuevo empleado para cada fila de la tabla de nuevos empleados. Nota: la ejecución de una instrucción SQL para cada fila de un flujo de datos de gran tamaño puede tardar mucho tiempo."
+              name="Comando de OLE DB"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE STG_BARRI
+SET Nom_Barri = ? ,
+INSERT_DATE = ? 
+where Codi_Barri = ? </property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_BARRI\Comando de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\STG_BARRI\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]"
+                  errorOrTruncationOperation="Ejecución de comando"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de comando de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_BARRI\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Codi_Barri]"
+                      cachedDataType="i4"
+                      cachedName="Codi_Barri"
+                      externalMetadataColumnId="Package\STG_BARRI\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
+                      lineageId="Package\STG_BARRI\Agregado.Outputs[Salida de agregado 1].Columns[Codi_Barri]" />
+                    <inputColumn
+                      refId="Package\STG_BARRI\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Nom_Barri]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nom_Barri"
+                      externalMetadataColumnId="Package\STG_BARRI\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
+                      lineageId="Package\STG_BARRI\Agregado.Outputs[Salida de agregado 1].Columns[Nom_Barri]" />
+                    <inputColumn
+                      refId="Package\STG_BARRI\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[INSERT_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="INSERT_DATE"
+                      externalMetadataColumnId="Package\STG_BARRI\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
+                      lineageId="Package\STG_BARRI\Agregado.Outputs[Salida de agregado 1].Columns[INSERT_DATE]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
+                      dataType="dbTimeStamp"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_BARRI\Comando de OLE DB.Outputs[Salida de comando de OLE DB]"
+                  exclusionGroup="1"
+                  name="Salida de comando de OLE DB"
+                  synchronousInputId="Package\STG_BARRI\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STG_BARRI\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de comando de OLE DB"
+                  synchronousInputId="Package\STG_BARRI\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_BARRI\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_BARRI\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_BARRI\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_BARRI\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_BARRI\Destino de OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Destino de OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[STG_BARRI]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_BARRI\Destino de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\STG_BARRI\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_BARRI\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Codi_Barri]"
+                      cachedDataType="i4"
+                      cachedName="Codi_Barri"
+                      externalMetadataColumnId="Package\STG_BARRI\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Codi_Barri]"
+                      lineageId="Package\STG_BARRI\Agregado.Outputs[Salida de agregado 1].Columns[Codi_Barri]" />
+                    <inputColumn
+                      refId="Package\STG_BARRI\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Nom_Barri]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nom_Barri"
+                      externalMetadataColumnId="Package\STG_BARRI\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Barri]"
+                      lineageId="Package\STG_BARRI\Agregado.Outputs[Salida de agregado 1].Columns[Nom_Barri]" />
+                    <inputColumn
+                      refId="Package\STG_BARRI\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[INSERT_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="INSERT_DATE"
+                      externalMetadataColumnId="Package\STG_BARRI\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[INSERT_DATE]"
+                      lineageId="Package\STG_BARRI\Agregado.Outputs[Salida de agregado 1].Columns[INSERT_DATE]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Codi_Barri]"
+                      dataType="i4"
+                      name="Codi_Barri" />
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Barri]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Nom_Barri" />
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[INSERT_DATE]"
+                      dataType="dbTimeStamp"
+                      name="INSERT_DATE" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_BARRI\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\STG_BARRI\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_BARRI\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_BARRI\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_BARRI\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_BARRI\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_BARRI\Origen de OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Origen de OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[STA_VIVIENDA]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_BARRI\Origen de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Codi_Barri]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Codi_Barri]"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Codi_Barri]"
+                      name="Codi_Barri"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Nom_Barri]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Barri]"
+                      length="50"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Nom_Barri]"
+                      name="Nom_Barri"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[INSERT_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[INSERT_DATE]"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[INSERT_DATE]"
+                      name="INSERT_DATE"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_VIVIENDA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      name="ID_VIVIENDA" />
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Any]"
+                      dataType="i4"
+                      name="Any" />
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Trimestre]"
+                      dataType="i4"
+                      name="Trimestre" />
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Codi_Districte]"
+                      dataType="i4"
+                      name="Codi_Districte" />
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Districte]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Nom_Districte" />
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Codi_Barri]"
+                      dataType="i4"
+                      name="Codi_Barri" />
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Barri]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Nom_Barri" />
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Preu_mitja_habitatge]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Preu_mitja_habitatge" />
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Preu_Valor]"
+                      dataType="numeric"
+                      name="Preu_Valor"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[superficie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="superficie" />
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[superficie_Nombre]"
+                      dataType="numeric"
+                      name="superficie_Nombre"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[INSERT_DATE]"
+                      dataType="dbTimeStamp"
+                      name="INSERT_DATE" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Codi_Barri]"
+                      dataType="i4"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Codi_Barri]"
+                      name="Codi_Barri" />
+                    <outputColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Barri]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Barri]"
+                      name="Nom_Barri" />
+                    <outputColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[INSERT_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[INSERT_DATE]"
+                      name="INSERT_DATE" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_BARRI\Origen de OLE DB 1"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Origen de OLE DB 1"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">Select 0 as Codi_Barri, 'No identificado' as Nom_Barri;</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_BARRI\Origen de OLE DB 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Codi_Barri]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].ExternalColumns[Codi_Barri]"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Codi_Barri]"
+                      name="Codi_Barri"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Nom_Barri]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Barri]"
+                      length="15"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Nom_Barri]"
+                      name="Nom_Barri"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].ExternalColumns[Codi_Barri]"
+                      dataType="i4"
+                      name="Codi_Barri" />
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Barri]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="Nom_Barri" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[Codi_Barri]"
+                      dataType="i4"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[Codi_Barri]"
+                      name="Codi_Barri" />
+                    <outputColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Barri]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Barri]"
+                      name="Nom_Barri" />
+                    <outputColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_BARRI\Unión de todo"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Unión de todo;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Combina las filas de varios flujos de datos sin ordenarlos. Por ejemplo, devuelve filas a un flujo de datos después de corregir los errores. Si el orden es importante, se recomienda usar la transformación Mezclar."
+              name="Unión de todo"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\STG_BARRI\Unión de todo.Inputs[Entrada de Unión de todo 1]"
+                  name="Entrada de Unión de todo 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_BARRI\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[Codi_Barri]"
+                      cachedDataType="i4"
+                      cachedName="Codi_Barri"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Codi_Barri]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Barri]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_BARRI\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[Nom_Barri]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nom_Barri"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Nom_Barri]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Nom_Barri]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_BARRI\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[INSERT_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="INSERT_DATE"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[INSERT_DATE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[INSERT_DATE]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\STG_BARRI\Unión de todo.Inputs[Entrada de Unión de todo 2]"
+                  hasSideEffects="true"
+                  name="Entrada de Unión de todo 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_BARRI\Unión de todo.Inputs[Entrada de Unión de todo 2].Columns[Codi_Barri]"
+                      cachedDataType="i4"
+                      cachedName="Codi_Barri"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Codi_Barri]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Barri]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_BARRI\Unión de todo.Inputs[Entrada de Unión de todo 2].Columns[Nom_Barri]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="Nom_Barri"
+                      lineageId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB].Columns[Nom_Barri]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Nom_Barri]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\STG_BARRI\Unión de todo.Inputs[Entrada de Unión de todo 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Entrada de Unión de todo 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1]"
+                  name="Salida de Unión de todo 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Barri]"
+                      dataType="i4"
+                      lineageId="Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Barri]"
+                      name="Codi_Barri" />
+                    <outputColumn
+                      refId="Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Nom_Barri]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Nom_Barri]"
+                      name="Nom_Barri" />
+                    <outputColumn
+                      refId="Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[INSERT_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[INSERT_DATE]"
+                      name="INSERT_DATE" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\STG_BARRI.Paths[Salida de agregado 1]"
+              endId="Package\STG_BARRI\Búsqueda.Inputs[Entrada de búsqueda]"
+              name="Salida de agregado 1"
+              startId="Package\STG_BARRI\Agregado.Outputs[Salida de agregado 1]" />
+            <path
+              refId="Package\STG_BARRI.Paths[Salida de entradas coincidentes de búsqueda]"
+              endId="Package\STG_BARRI\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\STG_BARRI\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\STG_BARRI.Paths[Salida de entradas no coincidentes de búsqueda]"
+              endId="Package\STG_BARRI\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de entradas no coincidentes de búsqueda"
+              startId="Package\STG_BARRI\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]" />
+            <path
+              refId="Package\STG_BARRI.Paths[Salida de origen de OLE DB]"
+              endId="Package\STG_BARRI\Unión de todo.Inputs[Entrada de Unión de todo 1]"
+              name="Salida de origen de OLE DB"
+              startId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_BARRI.Paths[Salida de origen de OLE DB1]"
+              endId="Package\STG_BARRI\Unión de todo.Inputs[Entrada de Unión de todo 2]"
+              name="Salida de origen de OLE DB"
+              startId="Package\STG_BARRI\Origen de OLE DB 1.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_BARRI.Paths[Salida de Unión de todo 1]"
+              endId="Package\STG_BARRI\Agregado.Inputs[Entrada de agregado 1]"
+              name="Salida de Unión de todo 1"
+              startId="Package\STG_BARRI\Unión de todo.Outputs[Salida de Unión de todo 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\STG_DISTRICTE"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{E0664273-AA94-40D4-8D7B-1800AC2A7995}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="STG_DISTRICTE"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\STG_DISTRICTE\Agregado"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Agregado;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;3"
+              description="Agrega datos mediante funciones como Average, Sum, Count, Max y Min. Por ejemplo, se agrupan datos para calcular la suma de las ventas por producto o el promedio de visitas por día."
+              name="Agregado"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número aproximado de valores distintos de una columna que cuenta la agregación de forma distintiva. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 valores de clave. No especificado indica que no se usa ningún valor de CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el número exacto de valores distintos de una columna que cuenta la agregación de forma distintiva. Si se especifica un valor de CountDistinctScale, el valor de CountDistinctKeys tiene prioridad."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje en el que puede ampliarse la memoria durante la agregación. Los valores válidos están comprendidos entre 1 y 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\STG_DISTRICTE\Agregado.Inputs[Entrada de agregado 1]"
+                  name="Entrada de agregado 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_DISTRICTE\Agregado.Inputs[Entrada de agregado 1].Columns[Codi_Districte]"
+                      cachedDataType="i4"
+                      cachedName="Codi_Districte"
+                      lineageId="Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Districte]" />
+                    <inputColumn
+                      refId="Package\STG_DISTRICTE\Agregado.Inputs[Entrada de agregado 1].Columns[Nom_Districte]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nom_Districte"
+                      lineageId="Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Nom_Districte]" />
+                    <inputColumn
+                      refId="Package\STG_DISTRICTE\Agregado.Inputs[Entrada de agregado 1].Columns[INSERT_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="INSERT_DATE"
+                      lineageId="Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[INSERT_DATE]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_DISTRICTE\Agregado.Outputs[Salida de agregado 1]"
+                  name="Salida de agregado 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\Agregado.Outputs[Salida de agregado 1].Columns[Codi_Districte]"
+                      dataType="i4"
+                      lineageId="Package\STG_DISTRICTE\Agregado.Outputs[Salida de agregado 1].Columns[Codi_Districte]"
+                      name="Codi_Districte">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Districte]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\Agregado.Outputs[Salida de agregado 1].Columns[Nom_Districte]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_DISTRICTE\Agregado.Outputs[Salida de agregado 1].Columns[Nom_Districte]"
+                      name="Nom_Districte">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Nom_Districte]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\Agregado.Outputs[Salida de agregado 1].Columns[INSERT_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\STG_DISTRICTE\Agregado.Outputs[Salida de agregado 1].Columns[INSERT_DATE]"
+                      name="INSERT_DATE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[INSERT_DATE]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_DISTRICTE\Búsqueda"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="Búsqueda"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [STG_DISTRICTE]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [STG_DISTRICTE]) [refTable]
+where [refTable].[Codi_Districte] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Codi_Districte" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Nom_Districte" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="INSERT_DATE" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\STG_DISTRICTE\Agregado.Outputs[Salida de agregado 1].Columns[Codi_Districte]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_DISTRICTE\Búsqueda.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\STG_DISTRICTE\Búsqueda.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_DISTRICTE\Búsqueda.Inputs[Entrada de búsqueda].Columns[Codi_Districte]"
+                      cachedDataType="i4"
+                      cachedName="Codi_Districte"
+                      lineageId="Package\STG_DISTRICTE\Agregado.Outputs[Salida de agregado 1].Columns[Codi_Districte]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">Codi_Districte</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_DISTRICTE\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
+                  exclusionGroup="1"
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\STG_DISTRICTE\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[LK_Codi_Districte]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar columna"
+                      lineageId="Package\STG_DISTRICTE\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[LK_Codi_Districte]"
+                      name="LK_Codi_Districte"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">Codi_Districte</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STG_DISTRICTE\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en 'Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes'."
+                  exclusionGroup="1"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\STG_DISTRICTE\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STG_DISTRICTE\Búsqueda.Outputs[Salida de error de búsqueda]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\STG_DISTRICTE\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_DISTRICTE\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_DISTRICTE\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_DISTRICTE\Comando de OLE DB"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="Comando de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Ejecuta una instrucción SQL para cada fila de un flujo de datos. Por ejemplo, se usa para llamar al procedimiento almacenado de configuración de nuevo empleado para cada fila de la tabla de nuevos empleados. Nota: la ejecución de una instrucción SQL para cada fila de un flujo de datos de gran tamaño puede tardar mucho tiempo."
+              name="Comando de OLE DB"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE STG_DISTRICTE
+SET Nom_Districte = ? ,
+INSERT_DATE = ? 
+where Codi_Districte = ? </property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_DISTRICTE\Comando de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\STG_DISTRICTE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]"
+                  errorOrTruncationOperation="Ejecución de comando"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de comando de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_DISTRICTE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Codi_Districte]"
+                      cachedDataType="i4"
+                      cachedName="Codi_Districte"
+                      externalMetadataColumnId="Package\STG_DISTRICTE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
+                      lineageId="Package\STG_DISTRICTE\Agregado.Outputs[Salida de agregado 1].Columns[Codi_Districte]" />
+                    <inputColumn
+                      refId="Package\STG_DISTRICTE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Nom_Districte]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nom_Districte"
+                      externalMetadataColumnId="Package\STG_DISTRICTE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
+                      lineageId="Package\STG_DISTRICTE\Agregado.Outputs[Salida de agregado 1].Columns[Nom_Districte]" />
+                    <inputColumn
+                      refId="Package\STG_DISTRICTE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[INSERT_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="INSERT_DATE"
+                      externalMetadataColumnId="Package\STG_DISTRICTE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
+                      lineageId="Package\STG_DISTRICTE\Agregado.Outputs[Salida de agregado 1].Columns[INSERT_DATE]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
+                      dataType="dbTimeStamp"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_DISTRICTE\Comando de OLE DB.Outputs[Salida de comando de OLE DB]"
+                  exclusionGroup="1"
+                  name="Salida de comando de OLE DB"
+                  synchronousInputId="Package\STG_DISTRICTE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\STG_DISTRICTE\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de comando de OLE DB"
+                  synchronousInputId="Package\STG_DISTRICTE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_DISTRICTE\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_DISTRICTE\Comando de OLE DB.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_DISTRICTE\no asignado"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="no asignado"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">Select 0 as Codi_Districte, 'No identificado' as Nom_Districte;</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_DISTRICTE\no asignado.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de origen de OLE DB].Columns[Codi_Districte]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de origen de OLE DB].ExternalColumns[Codi_Districte]"
+                      lineageId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de origen de OLE DB].Columns[Codi_Districte]"
+                      name="Codi_Districte"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de origen de OLE DB].Columns[Nom_Districte]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Districte]"
+                      length="15"
+                      lineageId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de origen de OLE DB].Columns[Nom_Districte]"
+                      name="Nom_Districte"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de origen de OLE DB].ExternalColumns[Codi_Districte]"
+                      dataType="i4"
+                      name="Codi_Districte" />
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Districte]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="Nom_Districte" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de error de origen de OLE DB].Columns[Codi_Districte]"
+                      dataType="i4"
+                      lineageId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de error de origen de OLE DB].Columns[Codi_Districte]"
+                      name="Codi_Districte" />
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Districte]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Districte]"
+                      name="Nom_Districte" />
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_DISTRICTE\STA_VIVIENDA"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="STA_VIVIENDA"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[STA_VIVIENDA]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_DISTRICTE\STA_VIVIENDA.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].Columns[Codi_Districte]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].ExternalColumns[Codi_Districte]"
+                      lineageId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].Columns[Codi_Districte]"
+                      name="Codi_Districte"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].Columns[Nom_Districte]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Districte]"
+                      length="50"
+                      lineageId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].Columns[Nom_Districte]"
+                      name="Nom_Districte"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].Columns[INSERT_DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].ExternalColumns[INSERT_DATE]"
+                      lineageId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].Columns[INSERT_DATE]"
+                      name="INSERT_DATE"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_VIVIENDA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      name="ID_VIVIENDA" />
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].ExternalColumns[Any]"
+                      dataType="i4"
+                      name="Any" />
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].ExternalColumns[Trimestre]"
+                      dataType="i4"
+                      name="Trimestre" />
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].ExternalColumns[Codi_Districte]"
+                      dataType="i4"
+                      name="Codi_Districte" />
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Districte]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Nom_Districte" />
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].ExternalColumns[Codi_Barri]"
+                      dataType="i4"
+                      name="Codi_Barri" />
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Barri]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Nom_Barri" />
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].ExternalColumns[Preu_mitja_habitatge]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Preu_mitja_habitatge" />
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].ExternalColumns[Preu_Valor]"
+                      dataType="numeric"
+                      name="Preu_Valor"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].ExternalColumns[superficie]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="superficie" />
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].ExternalColumns[superficie_Nombre]"
+                      dataType="numeric"
+                      name="superficie_Nombre"
+                      precision="28"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].ExternalColumns[INSERT_DATE]"
+                      dataType="dbTimeStamp"
+                      name="INSERT_DATE" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de error de origen de OLE DB].Columns[Codi_Districte]"
+                      dataType="i4"
+                      lineageId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de error de origen de OLE DB].Columns[Codi_Districte]"
+                      name="Codi_Districte" />
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Districte]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de error de origen de OLE DB].Columns[Nom_Districte]"
+                      name="Nom_Districte" />
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de error de origen de OLE DB].Columns[INSERT_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de error de origen de OLE DB].Columns[INSERT_DATE]"
+                      name="INSERT_DATE" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_DISTRICTE\STG_DISTRITO"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="STG_DISTRITO"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[STG_DISTRICTE]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG_DISTRICTE\STG_DISTRITO.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\STG_DISTRICTE\STG_DISTRITO.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_DISTRICTE\STG_DISTRITO.Inputs[Entrada de destino de OLE DB].Columns[Codi_Districte]"
+                      cachedDataType="i4"
+                      cachedName="Codi_Districte"
+                      externalMetadataColumnId="Package\STG_DISTRICTE\STG_DISTRITO.Inputs[Entrada de destino de OLE DB].ExternalColumns[Codi_Districte]"
+                      lineageId="Package\STG_DISTRICTE\Agregado.Outputs[Salida de agregado 1].Columns[Codi_Districte]" />
+                    <inputColumn
+                      refId="Package\STG_DISTRICTE\STG_DISTRITO.Inputs[Entrada de destino de OLE DB].Columns[Nom_Districte]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nom_Districte"
+                      externalMetadataColumnId="Package\STG_DISTRICTE\STG_DISTRITO.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Districte]"
+                      lineageId="Package\STG_DISTRICTE\Agregado.Outputs[Salida de agregado 1].Columns[Nom_Districte]" />
+                    <inputColumn
+                      refId="Package\STG_DISTRICTE\STG_DISTRITO.Inputs[Entrada de destino de OLE DB].Columns[INSERT_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="INSERT_DATE"
+                      externalMetadataColumnId="Package\STG_DISTRICTE\STG_DISTRITO.Inputs[Entrada de destino de OLE DB].ExternalColumns[INSERT_DATE]"
+                      lineageId="Package\STG_DISTRICTE\Agregado.Outputs[Salida de agregado 1].Columns[INSERT_DATE]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\STG_DISTRITO.Inputs[Entrada de destino de OLE DB].ExternalColumns[Codi_Districte]"
+                      dataType="i4"
+                      name="Codi_Districte" />
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\STG_DISTRITO.Inputs[Entrada de destino de OLE DB].ExternalColumns[Nom_Districte]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Nom_Districte" />
+                    <externalMetadataColumn
+                      refId="Package\STG_DISTRICTE\STG_DISTRITO.Inputs[Entrada de destino de OLE DB].ExternalColumns[INSERT_DATE]"
+                      dataType="dbTimeStamp"
+                      name="INSERT_DATE" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_DISTRICTE\STG_DISTRITO.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\STG_DISTRICTE\STG_DISTRITO.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\STG_DISTRITO.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG_DISTRICTE\STG_DISTRITO.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\STG_DISTRITO.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG_DISTRICTE\STG_DISTRITO.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG_DISTRICTE\Unión de todo"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Unión de todo;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Combina las filas de varios flujos de datos sin ordenarlos. Por ejemplo, devuelve filas a un flujo de datos después de corregir los errores. Si el orden es importante, se recomienda usar la transformación Mezclar."
+              name="Unión de todo"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\STG_DISTRICTE\Unión de todo.Inputs[Entrada de Unión de todo 1]"
+                  name="Entrada de Unión de todo 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_DISTRICTE\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[Codi_Districte]"
+                      cachedDataType="i4"
+                      cachedName="Codi_Districte"
+                      lineageId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].Columns[Codi_Districte]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Districte]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_DISTRICTE\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[Nom_Districte]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nom_Districte"
+                      lineageId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].Columns[Nom_Districte]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Nom_Districte]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_DISTRICTE\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[INSERT_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="INSERT_DATE"
+                      lineageId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB].Columns[INSERT_DATE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[INSERT_DATE]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\STG_DISTRICTE\Unión de todo.Inputs[Entrada de Unión de todo 2]"
+                  hasSideEffects="true"
+                  name="Entrada de Unión de todo 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_DISTRICTE\Unión de todo.Inputs[Entrada de Unión de todo 2].Columns[Codi_Districte]"
+                      cachedDataType="i4"
+                      cachedName="Codi_Districte"
+                      lineageId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de origen de OLE DB].Columns[Codi_Districte]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Districte]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\STG_DISTRICTE\Unión de todo.Inputs[Entrada de Unión de todo 2].Columns[Nom_Districte]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="Nom_Districte"
+                      lineageId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de origen de OLE DB].Columns[Nom_Districte]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Nom_Districte]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\STG_DISTRICTE\Unión de todo.Inputs[Entrada de Unión de todo 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Entrada de Unión de todo 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1]"
+                  name="Salida de Unión de todo 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Districte]"
+                      dataType="i4"
+                      lineageId="Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Districte]"
+                      name="Codi_Districte" />
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Nom_Districte]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Nom_Districte]"
+                      name="Nom_Districte" />
+                    <outputColumn
+                      refId="Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[INSERT_DATE]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[INSERT_DATE]"
+                      name="INSERT_DATE" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\STG_DISTRICTE.Paths[Salida de agregado 1]"
+              endId="Package\STG_DISTRICTE\Búsqueda.Inputs[Entrada de búsqueda]"
+              name="Salida de agregado 1"
+              startId="Package\STG_DISTRICTE\Agregado.Outputs[Salida de agregado 1]" />
+            <path
+              refId="Package\STG_DISTRICTE.Paths[Salida de entradas coincidentes de búsqueda]"
+              endId="Package\STG_DISTRICTE\Comando de OLE DB.Inputs[Entrada de comando de OLE DB]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\STG_DISTRICTE\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\STG_DISTRICTE.Paths[Salida de entradas no coincidentes de búsqueda]"
+              endId="Package\STG_DISTRICTE\STG_DISTRITO.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de entradas no coincidentes de búsqueda"
+              startId="Package\STG_DISTRICTE\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]" />
+            <path
+              refId="Package\STG_DISTRICTE.Paths[Salida de origen de OLE DB]"
+              endId="Package\STG_DISTRICTE\Unión de todo.Inputs[Entrada de Unión de todo 1]"
+              name="Salida de origen de OLE DB"
+              startId="Package\STG_DISTRICTE\STA_VIVIENDA.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_DISTRICTE.Paths[Salida de origen de OLE DB1]"
+              endId="Package\STG_DISTRICTE\Unión de todo.Inputs[Entrada de Unión de todo 2]"
+              name="Salida de origen de OLE DB"
+              startId="Package\STG_DISTRICTE\no asignado.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_DISTRICTE.Paths[Salida de Unión de todo 1]"
+              endId="Package\STG_DISTRICTE\Agregado.Inputs[Entrada de agregado 1]"
+              name="Salida de Unión de todo 1"
+              startId="Package\STG_DISTRICTE\Unión de todo.Outputs[Salida de Unión de todo 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{5F64089A-6AD7-4194-9669-1D9D1681BA0F}"
+      DTS:From="Package\STG_DISTRICTE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\STG_BARRI" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="160.8,41.6"
+          Id="Package\STG_DISTRICTE"
+          TopLeft="223.333321130939,58.0666662628783" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\STG_BARRI"
+          TopLeft="489.999973227582,59.7999995841583" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="384.133321130939,79.7333329235183">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="105.866652096643,0"
+              Start="0,0"
+              End="98.3666520966426,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="98.3666520966426,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\STG_DISTRICTE">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="135.2,41.6"
+          Id="Package\STG_DISTRICTE\no asignado"
+          TopLeft="124.999993170301,109.733332598077" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\STG_DISTRICTE\STG_DISTRITO"
+          TopLeft="573.333302007782,356.79999754111" />
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\STG_DISTRICTE\Comando de OLE DB"
+          TopLeft="164.999990984798,355.59999757727" />
+        <NodeLayout
+          Size="143.2,41.6"
+          Id="Package\STG_DISTRICTE\Unión de todo"
+          TopLeft="364.99998005728,117.533332543837" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\STG_DISTRICTE\STA_VIVIENDA"
+          TopLeft="361.666646906072,28.2666664979193" />
+        <EdgeLayout
+          Id="Package\STG_DISTRICTE.Paths[Salida de origen de OLE DB]"
+          TopLeft="437.333313481676,69.8666664979193">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.6666660459174"
+              Start="0,0"
+              End="0,40.1666660459174">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.1666660459174" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_DISTRICTE.Paths[Salida de origen de OLE DB1]"
+          TopLeft="260.199993170301,134.433332570957">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="104.799986886979,0"
+              Start="0,0"
+              End="97.2999868869789,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="97.2999868869789,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="123.2,41.6"
+          Id="Package\STG_DISTRICTE\Agregado"
+          TopLeft="376.666646086508,201.599998625914" />
+        <EdgeLayout
+          Id="Package\STG_DISTRICTE.Paths[Salida de Unión de todo 1]"
+          TopLeft="437.433313071894,159.133332543837">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.4666660820776"
+              Start="0,0"
+              End="0,34.9666660820776">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.9666660820776" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="125.6,41.6"
+          Id="Package\STG_DISTRICTE\Búsqueda"
+          TopLeft="379.999979237716,273.533331459032" />
+        <EdgeLayout
+          Id="Package\STG_DISTRICTE.Paths[Salida de agregado 1]"
+          TopLeft="440.533312662112,243.199998625914">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.3333328331179"
+              Start="0,0"
+              End="0,22.8333328331179">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.8333328331179" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_DISTRICTE.Paths[Salida de entradas no coincidentes de búsqueda]"
+          TopLeft="462.399979237716,315.133331459032">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="188.133322770066,41.6666660820775"
+              Start="0,0"
+              End="188.133322770066,34.1666660820775">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.9811318372241" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.9811318372241"
+                    Point2="0,16.9811318372241"
+                    Point3="4,16.9811318372241" />
+                  <mssgle:LineSegment
+                    End="184.133322770066,16.9811318372241" />
+                  <mssgle:CubicBezierSegment
+                    Point1="184.133322770066,16.9811318372241"
+                    Point2="188.133322770066,16.9811318372241"
+                    Point3="188.133322770066,20.9811318372241" />
+                  <mssgle:LineSegment
+                    End="188.133322770066,34.1666660820775" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-12.8223620524669,21.9811318372241,213.778046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_DISTRICTE.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="423.199979237716,315.133331459032">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-168.999988252918,40.4666661182376"
+              Start="0,0"
+              End="-168.999988252918,32.9666661182376">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.4920752481874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.4920752481874"
+                    Point2="0,16.4920752481874"
+                    Point3="-4,16.4920752481874" />
+                  <mssgle:LineSegment
+                    End="-164.999988252918,16.4920752481874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-164.999988252918,16.4920752481874"
+                    Point2="-168.999988252918,16.4920752481874"
+                    Point3="-168.999988252918,20.4920752481874" />
+                  <mssgle:LineSegment
+                    End="-168.999988252918,32.9666661182376" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-184.319017563959,21.4920752481874,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_DISTRICTE\no asignado">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_DISTRICTE\STG_DISTRITO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_DISTRICTE\STA_VIVIENDA">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_DISTRICTE\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\STG_BARRI">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="168.8,41.6"
+          Id="Package\STG_BARRI\Destino de OLE DB"
+          TopLeft="713.999989360571,373.999994426966" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\STG_BARRI\Origen de OLE DB"
+          TopLeft="503.999992489815,5.99999991059304" />
+        <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\STG_BARRI\Origen de OLE DB 1"
+          TopLeft="254.999996200204,103.999998450279" />
+        <NodeLayout
+          Size="123.2,41.6"
+          Id="Package\STG_BARRI\Agregado"
+          TopLeft="524.99999217689,208.999996885657" />
+        <NodeLayout
+          Size="125.6,41.6"
+          Id="Package\STG_BARRI\Búsqueda"
+          TopLeft="521.999992221594,287.999995708466" />
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\STG_BARRI\Comando de OLE DB"
+          TopLeft="293.999995619059,380.399994426966" />
+        <NodeLayout
+          Size="143.2,41.6"
+          Id="Package\STG_BARRI\Unión de todo"
+          TopLeft="512.999992355704,109.39999846518" />
+        <EdgeLayout
+          Id="Package\STG_BARRI.Paths[Salida de origen de OLE DB]"
+          TopLeft="585.49999242276,47.599999910593">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.7999985545874"
+              Start="0,0"
+              End="0,54.2999985545874">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.2999985545874" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_BARRI.Paths[Salida de origen de OLE DB1]"
+          TopLeft="428.599996200204,127.49999845773">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="84.3999961555005,0"
+              Start="0,0"
+              End="76.8999961555005,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="76.8999961555005,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_BARRI.Paths[Salida de Unión de todo 1]"
+          TopLeft="585.599992266297,150.99999846518">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.9999984204769"
+              Start="0,0"
+              End="0,50.4999984204769">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.4999984204769" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_BARRI.Paths[Salida de agregado 1]"
+          TopLeft="585.699992199242,250.599996885657">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.3999988228082"
+              Start="0,0"
+              End="0,29.8999988228082">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.8999988228082" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_BARRI.Paths[Salida de entradas no coincidentes de búsqueda]"
+          TopLeft="584.799992221594,329.599995708466">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="213.599997138977,44.3999987185003"
+              Start="0,0"
+              End="213.599997138977,36.8999987185003">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.1999993592501" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.1999993592501"
+                    Point2="0,22.1999993592501"
+                    Point3="4,22.1999993592501" />
+                  <mssgle:LineSegment
+                    End="209.599997138977,22.1999993592501" />
+                  <mssgle:CubicBezierSegment
+                    Point1="209.599997138977,22.1999993592501"
+                    Point2="213.599997138977,22.1999993592501"
+                    Point3="213.599997138977,26.1999993592501" />
+                  <mssgle:LineSegment
+                    End="213.599997138977,36.8999987185003" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-0.089024868011407,27.1999993592501,213.778046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_BARRI.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="565.199992221594,329.599995708466">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-181.999996602535,50.7999987185004"
+              Start="0,0"
+              End="-181.999996602535,43.2999987185004">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.7033957041436" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.7033957041436"
+                    Point2="0,20.7033957041436"
+                    Point3="-4,20.7033957041436" />
+                  <mssgle:LineSegment
+                    End="-177.999996602535,20.7033957041436" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-177.999996602535,20.7033957041436"
+                    Point2="-181.999996602535,20.7033957041436"
+                    Point3="-181.999996602535,24.7033957041436" />
+                  <mssgle:LineSegment
+                    End="-181.999996602535,43.2999987185004" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-190.819021738768,25.7033957041436,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_BARRI\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_BARRI\Origen de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_BARRI\Origen de OLE DB 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_BARRI\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[STG_BARRI]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

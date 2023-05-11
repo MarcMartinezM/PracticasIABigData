@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="79"
-  DTS:VersionGUID="{0EA68185-3D74-476F-9953-83ACA17C8B06}">
+  DTS:VersionBuild="80"
+  DTS:VersionGUID="{0677E8B3-0614-40D8-A250-35DEE33D25E2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -39,7 +39,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="Date">
       <DTS:VariableValue
-        DTS:DataType="7">4/13/2023 7:16:09 PM</DTS:VariableValue>
+        DTS:DataType="7">5/11/2023 7:57:27 PM</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -8599,49 +8599,49 @@ WHERE Date_sales = ? AND Order_number = ? AND ID_product = ? ;</property>
               startId="Package\STG_ALL_SALES\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]" />
             <path
               refId="Package\STG_ALL_SALES.Paths[Salida de ordenación5]"
-              endId="Package\STG_ALL_SALES\Combinación de mezcla 1.Inputs[Entrada derecha de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STG_ALL_SALES\Ordenar 3.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\STG_ALL_SALES.Paths[Salida de ordenación4]"
-              endId="Package\STG_ALL_SALES\Combinación de mezcla 2.Inputs[Entrada izquierda de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STG_ALL_SALES\Ordenar 4.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\STG_ALL_SALES.Paths[Salida de ordenación3]"
-              endId="Package\STG_ALL_SALES\Combinación de mezcla 2.Inputs[Entrada derecha de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STG_ALL_SALES\Ordenar 5.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\STG_ALL_SALES.Paths[Salida de ordenación1]"
-              endId="Package\STG_ALL_SALES\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STG_ALL_SALES\Ordenar 1.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\STG_ALL_SALES.Paths[Salida de ordenación]"
-              endId="Package\STG_ALL_SALES\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STG_ALL_SALES\Ordenar.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\STG_ALL_SALES.Paths[Salida de ordenación2]"
               endId="Package\STG_ALL_SALES\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\STG_ALL_SALES\Ordenar 2.Outputs[Salida de ordenación]" />
             <path
+              refId="Package\STG_ALL_SALES.Paths[Salida de ordenación4]"
+              endId="Package\STG_ALL_SALES\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STG_ALL_SALES\Ordenar.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STG_ALL_SALES.Paths[Salida de ordenación3]"
+              endId="Package\STG_ALL_SALES\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STG_ALL_SALES\Ordenar 1.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STG_ALL_SALES.Paths[Salida de ordenación1]"
+              endId="Package\STG_ALL_SALES\Combinación de mezcla 2.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STG_ALL_SALES\Ordenar 4.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STG_ALL_SALES.Paths[Salida de ordenación]"
+              endId="Package\STG_ALL_SALES\Combinación de mezcla 1.Inputs[Entrada derecha de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STG_ALL_SALES\Ordenar 3.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STG_ALL_SALES.Paths[Salida de ordenación2]"
+              endId="Package\STG_ALL_SALES\Combinación de mezcla 2.Inputs[Entrada derecha de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STG_ALL_SALES\Ordenar 5.Outputs[Salida de ordenación]" />
+            <path
               refId="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB2]"
+              endId="Package\STG_ALL_SALES\Ordenar 1.Inputs[Entrada de ordenación]"
+              name="Salida de origen de OLE DB"
+              startId="Package\STG_ALL_SALES\CUSTOMERS.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB]"
               endId="Package\STG_ALL_SALES\Ordenar 5.Inputs[Entrada de ordenación]"
               name="Salida de origen de OLE DB"
               startId="Package\STG_ALL_SALES\STG_PRODUCTS_FULL.Outputs[Salida de origen de OLE DB]" />
             <path
-              refId="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB]"
+              refId="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB1]"
               endId="Package\STG_ALL_SALES\Ordenar 2.Inputs[Entrada de ordenación]"
               name="Salida de origen de OLE DB"
               startId="Package\STG_ALL_SALES\STG_SALES_REP.Outputs[Salida de origen de OLE DB]" />
-            <path
-              refId="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB1]"
-              endId="Package\STG_ALL_SALES\Ordenar 1.Inputs[Entrada de ordenación]"
-              name="Salida de origen de OLE DB"
-              startId="Package\STG_ALL_SALES\CUSTOMERS.Outputs[Salida de origen de OLE DB]" />
             <path
               refId="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB3]"
               endId="Package\STG_ALL_SALES\Ordenar.Inputs[Entrada de ordenación]"
@@ -14626,59 +14626,59 @@ WHERE ID_product  = ?</property>
               startId="Package\STG_PRODUCTS_FULL\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]" />
             <path
               refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación5]"
-              endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STG_PRODUCTS_FULL\Ordenar.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación4]"
-              endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STG_PRODUCTS_FULL\Ordenar 2.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación3]"
-              endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla 1.Inputs[Entrada derecha de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STG_PRODUCTS_FULL\Ordenar 3.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación1]"
-              endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla 2.Inputs[Entrada izquierda de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STG_PRODUCTS_FULL\Ordenar 5.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación]"
-              endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla 2.Inputs[Entrada derecha de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STG_PRODUCTS_FULL\Ordenar 4.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación2]"
               endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\STG_PRODUCTS_FULL\Ordenar 1.Outputs[Salida de ordenación]" />
             <path
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación4]"
+              endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla 2.Inputs[Entrada derecha de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STG_PRODUCTS_FULL\Ordenar 4.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación3]"
+              endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla 2.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STG_PRODUCTS_FULL\Ordenar 5.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación1]"
+              endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STG_PRODUCTS_FULL\Ordenar 2.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación]"
+              endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STG_PRODUCTS_FULL\Ordenar.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación2]"
+              endId="Package\STG_PRODUCTS_FULL\Combinación de mezcla 1.Inputs[Entrada derecha de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STG_PRODUCTS_FULL\Ordenar 3.Outputs[Salida de ordenación]" />
+            <path
               refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB4]"
+              endId="Package\STG_PRODUCTS_FULL\Currency.Inputs[Entrada de columna derivada]"
+              name="Salida de origen de OLE DB"
+              startId="Package\STG_PRODUCTS_FULL\STA_PRODUCTS_FULL.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB]"
               endId="Package\STG_PRODUCTS_FULL\Ordenar 1.Inputs[Entrada de ordenación]"
               name="Salida de origen de OLE DB"
               startId="Package\STG_PRODUCTS_FULL\STG_PRODUCTS_FAMILY.Outputs[Salida de origen de OLE DB]" />
             <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB]"
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB1]"
               endId="Package\STG_PRODUCTS_FULL\Unión de todo.Inputs[Entrada de Unión de todo 2]"
               name="Salida de origen de OLE DB"
               startId="Package\STG_PRODUCTS_FULL\NO asignado.Outputs[Salida de origen de OLE DB]" />
             <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB1]"
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB2]"
               endId="Package\STG_PRODUCTS_FULL\Ordenar 3.Inputs[Entrada de ordenación]"
               name="Salida de origen de OLE DB"
               startId="Package\STG_PRODUCTS_FULL\STA_PRODUCT_CLASS.Outputs[Salida de origen de OLE DB]" />
             <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB2]"
+              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB3]"
               endId="Package\STG_PRODUCTS_FULL\Ordenar 4.Inputs[Entrada de ordenación]"
               name="Salida de origen de OLE DB"
               startId="Package\STG_PRODUCTS_FULL\STA_PRODUCT_LINE.Outputs[Salida de origen de OLE DB]" />
-            <path
-              refId="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB3]"
-              endId="Package\STG_PRODUCTS_FULL\Currency.Inputs[Entrada de columna derivada]"
-              name="Salida de origen de OLE DB"
-              startId="Package\STG_PRODUCTS_FULL\STA_PRODUCTS_FULL.Outputs[Salida de origen de OLE DB]" />
             <path
               refId="Package\STG_PRODUCTS_FULL.Paths[Salida de Unión de todo 1]"
               endId="Package\STG_PRODUCTS_FULL\Búsqueda.Inputs[Entrada de búsqueda]"
@@ -23113,17 +23113,13 @@ where [refTable].[Name_Customer_Type] = ?</property>
           Id="Package\STA_CUSTOMERS\Currency"
           TopLeft="245,87" />
         <NodeLayout
-          Size="176.8,41.6"
-          Id="Package\STA_CUSTOMERS\STA_CUSTOMERS"
-          TopLeft="220,21" />
-        <NodeLayout
-          Size="128,41.6"
-          Id="Package\STA_CUSTOMERS\Ordenar 3"
-          TopLeft="354,362" />
-        <NodeLayout
           Size="128,41.6"
           Id="Package\STA_CUSTOMERS\Ordenar 1"
           TopLeft="437,144" />
+        <NodeLayout
+          Size="143.2,41.6"
+          Id="Package\STA_CUSTOMERS\NO asignado"
+          TopLeft="287.321428571429,564.107142857143" />
         <NodeLayout
           Size="204.8,41.6"
           Id="Package\STA_CUSTOMERS\Combinación de mezcla 1"
@@ -23133,21 +23129,25 @@ where [refTable].[Name_Customer_Type] = ?</property>
           Id="Package\STA_CUSTOMERS\Columna derivada"
           TopLeft="510.714285714286,537.857142857143" />
         <NodeLayout
-          Size="196,41.6"
-          Id="Package\STA_CUSTOMERS\Combinación de mezcla"
-          TopLeft="313,216" />
-        <NodeLayout
           Size="128,41.6"
           Id="Package\STA_CUSTOMERS\Ordenar 2"
           TopLeft="633.5,370.25" />
         <NodeLayout
+          Size="196,41.6"
+          Id="Package\STA_CUSTOMERS\Combinación de mezcla"
+          TopLeft="313,216" />
+        <NodeLayout
           Size="184.8,41.6"
           Id="Package\STA_CUSTOMERS\Comando de OLE DB"
-          TopLeft="341.321428571429,886.607142857143" />
+          TopLeft="300.321429182377,868.607143125364" />
         <NodeLayout
           Size="119.2,41.6"
           Id="Package\STA_CUSTOMERS\Ordenar"
           TopLeft="247,155" />
+        <NodeLayout
+          Size="147.2,41.6"
+          Id="Package\STA_CUSTOMERS\Unión de todo"
+          TopLeft="501.25,647.321428571429" />
         <NodeLayout
           Size="144,41.6"
           Id="Package\STA_CUSTOMERS\COUNTRIES"
@@ -23157,25 +23157,47 @@ where [refTable].[Name_Customer_Type] = ?</property>
           Id="Package\STA_CUSTOMERS\CUSTOMER_TYPE"
           TopLeft="608,301" />
         <NodeLayout
-          Size="147.2,41.6"
-          Id="Package\STA_CUSTOMERS\Unión de todo"
-          TopLeft="501.25,647.321428571429" />
+          Size="177.6,41.6"
+          Id="Package\STA_CUSTOMERS\STG_CUSTOMERS"
+          TopLeft="677.321426932301,858.607143378684" />
         <NodeLayout
           Size="176.8,41.6"
           Id="Package\STA_CUSTOMERS\Columna derivada 1"
           TopLeft="327,281" />
         <NodeLayout
-          Size="177.6,41.6"
-          Id="Package\STA_CUSTOMERS\STG_CUSTOMERS"
-          TopLeft="567.321428571429,893.607142857143" />
-        <NodeLayout
           Size="128.8,41.6"
           Id="Package\STA_CUSTOMERS\Búsqueda"
           TopLeft="502.321428571429,739.607142857143" />
         <NodeLayout
-          Size="143.2,41.6"
-          Id="Package\STA_CUSTOMERS\NO asignado"
-          TopLeft="287.321428571429,564.107142857143" />
+          Size="176.8,41.6"
+          Id="Package\STA_CUSTOMERS\STA_CUSTOMERS"
+          TopLeft="220,21" />
+        <NodeLayout
+          Size="128,41.6"
+          Id="Package\STA_CUSTOMERS\Ordenar 3"
+          TopLeft="354,362" />
+        <EdgeLayout
+          Id="Package\STA_CUSTOMERS.Paths[Salida de origen de OLE DB]"
+          TopLeft="307.75,63">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24"
+              Start="0,0"
+              End="0,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\STA_CUSTOMERS.Paths[Salida de ordenación3]"
           TopLeft="697.5,412.25">
@@ -23308,73 +23330,73 @@ where [refTable].[Name_Customer_Type] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STA_CUSTOMERS.Paths[Salida de entradas no coincidentes de búsqueda]"
-          TopLeft="586.988095238095,781.607142857143">
+          TopLeft="586.854761904762,781.207142857143">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="69.3333333333334,112"
+              EndConnector="179.266665027539,77.4000005215406"
               Start="0,0"
-              End="69.3333333333334,104.5">
+              End="179.266665027539,69.9000005215406">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.6232771822358" />
+                    End="0,27.5298161633761" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,41.6232771822358"
-                    Point2="0,45.6232771822358"
-                    Point3="4,45.6232771822358" />
+                    Point1="0,27.5298161633761"
+                    Point2="0,31.5298161633761"
+                    Point3="4,31.5298161633761" />
                   <mssgle:LineSegment
-                    End="65.3333333333334,45.6232771822358" />
+                    End="175.266665027539,31.5298161633761" />
                   <mssgle:CubicBezierSegment
-                    Point1="65.3333333333334,45.6232771822358"
-                    Point2="69.3333333333334,45.6232771822358"
-                    Point3="69.3333333333334,49.6232771822358" />
+                    Point1="175.266665027539,31.5298161633761"
+                    Point2="179.266665027539,31.5298161633761"
+                    Point3="179.266665027539,35.5298161633761" />
                   <mssgle:LineSegment
-                    End="69.3333333333334,104.5" />
+                    End="179.266665027539,69.9000005215406" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-72.2223567708333,50.6232771822358,213.778046875,12.1953125"
+              BoundingBox="-17.2556909237305,36.5298161633761,213.778046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STA_CUSTOMERS.Paths[Salida de entradas coincidentes de búsqueda]"
-          TopLeft="546.654761904762,781.607142857143">
+          TopLeft="546.588095238096,781.207142857143">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-112.833333333333,105"
+              EndConnector="-153.866666055719,87.400000268221"
               Start="0,0"
-              End="-112.833333333333,97.5">
+              End="-153.866666055719,79.900000268221">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.7718223583461" />
+                    End="0,31.6034356920851" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,38.7718223583461"
-                    Point2="0,42.7718223583461"
-                    Point3="-4,42.7718223583461" />
+                    Point1="0,31.6034356920851"
+                    Point2="0,35.6034356920851"
+                    Point3="-4,35.6034356920851" />
                   <mssgle:LineSegment
-                    End="-108.833333333333,42.7718223583461" />
+                    End="-149.866666055719,35.6034356920851" />
                   <mssgle:CubicBezierSegment
-                    Point1="-108.833333333333,42.7718223583461"
-                    Point2="-112.833333333333,42.7718223583461"
-                    Point3="-112.833333333333,46.7718223583461" />
+                    Point1="-149.866666055719,35.6034356920851"
+                    Point2="-153.866666055719,35.6034356920851"
+                    Point3="-153.866666055719,39.6034356920851" />
                   <mssgle:LineSegment
-                    End="-112.833333333333,97.5" />
+                    End="-153.866666055719,79.900000268221" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-156.235690104167,47.7718223583461,199.638046875,12.1953125"
+              BoundingBox="-176.75235646536,40.6034356920851,199.638046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -23511,6 +23533,40 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\STA_CUSTOMERS.Paths[Salida de origen de OLE DB3]"
+          TopLeft="358.921428571429,605.707142857143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="192.728571428571,41.614285714286"
+              Start="0,0"
+              End="192.728571428571,34.114285714286">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.7000921658988" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.7000921658988"
+                    Point2="0,24.7000921658988"
+                    Point3="4,24.7000921658988" />
+                  <mssgle:LineSegment
+                    End="188.728571428571,24.7000921658988" />
+                  <mssgle:CubicBezierSegment
+                    Point1="188.728571428571,24.7000921658988"
+                    Point2="192.728571428571,24.7000921658988"
+                    Point3="192.728571428571,28.7000921658988" />
+                  <mssgle:LineSegment
+                    End="192.728571428571,34.114285714286" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\STA_CUSTOMERS.Paths[Salida de origen de OLE DB2]"
           TopLeft="697,343">
           <EdgeLayout.Curve>
@@ -23554,67 +23610,11 @@ where [refTable].[Name_Customer_Type] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STA_CUSTOMERS.Paths[Salida de origen de OLE DB]"
-          TopLeft="307.75,63">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,24"
-              Start="0,0"
-              End="0,16.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STA_CUSTOMERS.Paths[Salida de origen de OLE DB3]"
-          TopLeft="358.921428571429,605.707142857143">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="192.728571428571,41.614285714286"
-              Start="0,0"
-              End="192.728571428571,34.114285714286">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.7000921658988" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.7000921658988"
-                    Point2="0,24.7000921658988"
-                    Point3="4,24.7000921658988" />
-                  <mssgle:LineSegment
-                    End="188.728571428571,24.7000921658988" />
-                  <mssgle:CubicBezierSegment
-                    Point1="188.728571428571,24.7000921658988"
-                    Point2="192.728571428571,24.7000921658988"
-                    Point3="192.728571428571,28.7000921658988" />
-                  <mssgle:LineSegment
-                    End="192.728571428571,34.114285714286" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\STA_CUSTOMERS\STA_CUSTOMERS">
+    design-time-name="Package\STA_CUSTOMERS\NO asignado">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -23671,7 +23671,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -23681,7 +23681,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -23689,7 +23689,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\STA_CUSTOMERS\NO asignado">
+    design-time-name="Package\STA_CUSTOMERS\STA_CUSTOMERS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -23801,7 +23801,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB2]"
+          Id="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB]"
           TopLeft="147.5,565">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23823,7 +23823,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB1]"
+          Id="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB2]"
           TopLeft="315.25,178">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23845,7 +23845,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB]"
+          Id="Package\STG_ALL_SALES.Paths[Salida de origen de OLE DB1]"
           TopLeft="198.5,394">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23867,7 +23867,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación5]"
+          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación]"
           TopLeft="409.166666666667,481">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23889,7 +23889,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación4]"
+          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación1]"
           TopLeft="380.25,637">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23911,7 +23911,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación3]"
+          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación2]"
           TopLeft="147,635">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23945,7 +23945,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación2]"
+          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación5]"
           TopLeft="200,473">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -23979,7 +23979,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación1]"
+          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación3]"
           TopLeft="319,245">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24013,7 +24013,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación]"
+          Id="Package\STG_ALL_SALES.Paths[Salida de ordenación4]"
           TopLeft="514.5,181">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -24257,7 +24257,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\STG_ALL_SALES\STG_ALL_SALES">
+    design-time-name="Package\STG_ALL_SALES\STG_PRODUCTS_FULL">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -24270,7 +24270,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\STG_ALL_SALES\STG_PRODUCTS_FULL">
+    design-time-name="Package\STG_ALL_SALES\STG_ALL_SALES">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -24314,7 +24314,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -24324,7 +24324,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -24585,7 +24585,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -24595,7 +24595,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -24614,7 +24614,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
         <NodeLayout
           Size="140.8,41.6"
           Id="Package\STG_PRODUCT_FAMILY\No asignado"
-          TopLeft="70,31" />
+          TopLeft="68.0000000298023,89.9999991208315" />
         <NodeLayout
           Size="184.8,41.6"
           Id="Package\STG_PRODUCT_FAMILY\Comando de OLE DB"
@@ -24630,33 +24630,33 @@ where [refTable].[Name_Customer_Type] = ?</property>
         <NodeLayout
           Size="147.2,41.6"
           Id="Package\STG_PRODUCT_FAMILY\Unión de todo"
-          TopLeft="257,73" />
+          TopLeft="254.000000044704,121.999999269843" />
         <EdgeLayout
           Id="Package\STG_PRODUCT_FAMILY.Paths[Salida de origen de OLE DB1]"
-          TopLeft="211,52">
+          TopLeft="208.800000029802,110.799999120832">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="46,42"
+              EndConnector="45.2000000149012,32.0000001490116"
               Start="0,0"
-              End="38.5,42">
+              End="37.7000000149012,32.0000001490116">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="19,0" />
+                    End="18.6000000074506,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="19,0"
-                    Point2="23,0"
-                    Point3="23,4" />
+                    Point1="18.6000000074506,0"
+                    Point2="22.6000000074506,0"
+                    Point3="22.6000000074506,4" />
                   <mssgle:LineSegment
-                    End="23,38" />
+                    End="22.6000000074506,28.0000001490116" />
                   <mssgle:CubicBezierSegment
-                    Point1="23,38"
-                    Point2="23,42"
-                    Point3="27,42" />
+                    Point1="22.6000000074506,28.0000001490116"
+                    Point2="22.6000000074506,32.0000001490116"
+                    Point3="26.6000000074506,32.0000001490116" />
                   <mssgle:LineSegment
-                    End="38.5,42" />
+                    End="37.7000000149012,32.0000001490116" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -24667,18 +24667,30 @@ where [refTable].[Name_Customer_Type] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_PRODUCT_FAMILY.Paths[Salida de origen de OLE DB]"
-          TopLeft="334,42">
+          TopLeft="337.6,41.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,31"
+              EndConnector="-9.99999995529652,80.3999992698431"
               Start="0,0"
-              End="0,23.5">
+              End="-9.99999995529652,72.8999992698431">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.5" />
+                    End="0,36.1999996349216" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.1999996349216"
+                    Point2="0,40.1999996349216"
+                    Point3="-4,40.1999996349216" />
+                  <mssgle:LineSegment
+                    End="-5.99999995529652,40.1999996349216" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.99999995529652,40.1999996349216"
+                    Point2="-9.99999995529652,40.1999996349216"
+                    Point3="-9.99999995529652,44.1999996349216" />
+                  <mssgle:LineSegment
+                    End="-9.99999995529652,72.8999992698431" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -24761,18 +24773,18 @@ where [refTable].[Name_Customer_Type] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_PRODUCT_FAMILY.Paths[Salida de Unión de todo 1]"
-          TopLeft="332,115">
+          TopLeft="330.500000022352,163.599999269843">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,101"
+              EndConnector="0,52.4000007301569"
               Start="0,0"
-              End="0,93.5">
+              End="0,44.9000007301569">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,93.5" />
+                    End="0,44.9000007301569" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -24824,7 +24836,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -24834,7 +24846,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -25063,7 +25075,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -25073,7 +25085,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -25230,7 +25242,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB4]"
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB]"
           TopLeft="619.75,284">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25252,7 +25264,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB3]"
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB4]"
           TopLeft="189.5,48">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25286,7 +25298,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB2]"
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB3]"
           TopLeft="194.75,610">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25308,7 +25320,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB1]"
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB2]"
           TopLeft="305.75,425">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25330,7 +25342,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB]"
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de origen de OLE DB1]"
           TopLeft="293,898">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25364,7 +25376,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación5]"
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación]"
           TopLeft="382.5,346">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25398,7 +25410,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación4]"
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación1]"
           TopLeft="538,502">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25432,7 +25444,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación3]"
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación2]"
           TopLeft="303,498">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25466,7 +25478,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación2]"
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación5]"
           TopLeft="620,352">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25500,7 +25512,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación1]"
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación3]"
           TopLeft="426,686">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25534,7 +25546,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación]"
+          Id="Package\STG_PRODUCTS_FULL.Paths[Salida de ordenación4]"
           TopLeft="194,682">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -25889,7 +25901,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -25899,7 +25911,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -26344,29 +26356,6 @@ where [refTable].[Name_Customer_Type] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\STG_SALES_REP\Búsqueda">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[STG_SALES_REP]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\STG_SALES_REP\STA_TEAM_MANAGER">
     <Properties>
       <Property>
@@ -26406,6 +26395,29 @@ where [refTable].[Name_Customer_Type] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\STG_SALES_REP\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[STG_SALES_REP]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\STG_SALES_REP\0 NO ASIGNADO">
     <Properties>
       <Property>
@@ -26419,10 +26431,6 @@ where [refTable].[Name_Customer_Type] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="145.6,41.6"
-          Id="Package\STG_STORE\STG_STORE"
-          TopLeft="514,689" />
-        <NodeLayout
           Size="176.8,41.6"
           Id="Package\STG_STORE\Columna derivada 1"
           TopLeft="481,176" />
@@ -26434,6 +26442,10 @@ where [refTable].[Name_Customer_Type] = ?</property>
           Size="147.2,41.6"
           Id="Package\STG_STORE\Unión de todo"
           TopLeft="272,233" />
+        <NodeLayout
+          Size="145.6,41.6"
+          Id="Package\STG_STORE\STG_STORE"
+          TopLeft="514,689" />
         <NodeLayout
           Size="156,41.6"
           Id="Package\STG_STORE\Unión de todo 1"
@@ -26631,6 +26643,42 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\STG_STORE.Paths[Salida de entradas coincidentes de búsqueda1]"
+          TopLeft="320.2,125.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="25.4,107.4"
+              Start="0,0"
+              End="25.4,99.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.7006896551724" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.7006896551724"
+                    Point2="0,43.7006896551724"
+                    Point3="4,43.7006896551724" />
+                  <mssgle:LineSegment
+                    End="21.4,43.7006896551724" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21.4,43.7006896551724"
+                    Point2="25.4,43.7006896551724"
+                    Point3="25.4,47.7006896551724" />
+                  <mssgle:LineSegment
+                    End="25.4,99.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-87.1190234375,48.7006896551724,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\STG_STORE.Paths[Salida de entradas coincidentes de búsqueda]"
           TopLeft="313.333333333333,605">
           <EdgeLayout.Curve>
@@ -26732,42 +26780,6 @@ where [refTable].[Name_Customer_Type] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_STORE.Paths[Salida de entradas coincidentes de búsqueda1]"
-          TopLeft="320.2,125.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="25.4,107.4"
-              Start="0,0"
-              End="25.4,99.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.7006896551724" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,39.7006896551724"
-                    Point2="0,43.7006896551724"
-                    Point3="4,43.7006896551724" />
-                  <mssgle:LineSegment
-                    End="21.4,43.7006896551724" />
-                  <mssgle:CubicBezierSegment
-                    Point1="21.4,43.7006896551724"
-                    Point2="25.4,43.7006896551724"
-                    Point3="25.4,47.7006896551724" />
-                  <mssgle:LineSegment
-                    End="25.4,99.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-87.1190234375,48.7006896551724,199.638046875,12.1953125"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -26964,7 +26976,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -26974,7 +26986,7 @@ where [refTable].[Name_Customer_Type] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
