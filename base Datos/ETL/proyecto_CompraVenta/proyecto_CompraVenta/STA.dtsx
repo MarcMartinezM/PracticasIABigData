@@ -7,12 +7,12 @@
   DTS:CreatorName="DESKTOP-9CCRN90\Marc"
   DTS:DTSID="{5947B50D-6DDF-4DB7-9C20-B3CD9382FE77}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5035.3"
+  DTS:LastModifiedProductVersion="16.0.5131.0"
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="43"
-  DTS:VersionGUID="{74E62CFA-CF7E-4BED-B3B1-FAD09CF98D30}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{E5EB4852-3FCA-4CA6-ACF0-EFD68282DC7A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -42,7 +42,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\Usuaris\Marc Martinez\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2022_preu.csv">
+          DTS:ConnectionString="C:\Users\Marc\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2022_preu.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -50,7 +50,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Any"
-              DTS:DTSID="{0C2B876B-1298-4A86-AF5F-726E7F2B9D23}"
+              DTS:DTSID="{8238530B-59F8-45A0-8A07-3303D40E0EDA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -58,7 +58,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Trimestre"
-              DTS:DTSID="{EEC3EE2D-AB1F-42C9-9E70-A6980D4AA1B4}"
+              DTS:DTSID="{5EBFF1B6-25D7-4F0E-87BF-A8A001344874}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Districte"
-              DTS:DTSID="{5371E982-F77F-447E-B973-565551B1059E}"
+              DTS:DTSID="{908F1CDF-9A4D-4B14-825D-3174FA4C3FCF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Districte"
-              DTS:DTSID="{5213885A-D224-4128-BABF-0345E44F2EAC}"
+              DTS:DTSID="{B67596BE-08D1-4941-8A0D-82553EFDE4D8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -83,7 +83,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Barri"
-              DTS:DTSID="{7CF82198-F043-4AE6-8890-89AE6BE80EB2}"
+              DTS:DTSID="{32A4AF23-0287-44D1-A70F-892F7AEFFD7C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -92,7 +92,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Barri"
-              DTS:DTSID="{E5A28ABB-A7C1-4EF6-8761-C848C7B0DF73}"
+              DTS:DTSID="{9FF35935-416C-4F5B-B9A5-07ED004661BA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -101,7 +101,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Preu_mitja_habitatge"
-              DTS:DTSID="{325BBC10-6149-4066-A97E-ABED35ECC3AB}"
+              DTS:DTSID="{6E1EF01F-C267-4F24-8A14-9AED3345972C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -110,7 +110,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Valor"
-              DTS:DTSID="{F94192AC-A679-44CB-89D6-C211484A8B01}"
+              DTS:DTSID="{0883518D-C60B-4510-8E17-FDB82F2999EA}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -130,7 +130,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\Usuaris\Marc Martinez\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2022_supp.csv">
+          DTS:ConnectionString="C:\Users\Marc\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2022_supp.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +138,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Any"
-              DTS:DTSID="{9321B264-C6FF-4007-A921-ADD8517BEFF5}"
+              DTS:DTSID="{C2AE011A-C136-4FBC-8B7F-168A33A31DCA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -146,7 +146,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Trimestre"
-              DTS:DTSID="{3D0DD52E-8158-4677-A561-E52A140F9169}"
+              DTS:DTSID="{12353486-B229-40E1-A6D8-E297B56E7FA3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -154,7 +154,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Districte"
-              DTS:DTSID="{24AAD152-4858-4316-952E-58BEC489E233}"
+              DTS:DTSID="{68359FF5-28E1-4586-8665-B966ED32569B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -163,7 +163,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Districte"
-              DTS:DTSID="{4319C5D8-F8FB-424B-AEB6-8AFFA99565BC}"
+              DTS:DTSID="{0EE443BC-8E46-40BB-AF16-0A0A702CBABF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -171,7 +171,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Barri"
-              DTS:DTSID="{7A8DD3A6-53BD-4EE0-9C94-0D0B70E15062}"
+              DTS:DTSID="{7637D659-A7FD-4686-8327-67258F9EF4EF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -180,7 +180,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Barri"
-              DTS:DTSID="{A7B35163-8F03-43AC-8A09-BA46BA3C9632}"
+              DTS:DTSID="{25B22C19-AF67-4B92-94AF-4D3ABF28E447}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -189,7 +189,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="superficie"
-              DTS:DTSID="{D05BF99D-85BC-4E92-8519-1144014D55D1}"
+              DTS:DTSID="{035C42EC-68CC-4F5A-9D07-D43B44CF209D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -198,7 +198,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nombre"
-              DTS:DTSID="{B80A3EF6-0593-4BC8-88E4-53AAB574A968}"
+              DTS:DTSID="{26E7AC84-B5CF-4C0C-83D2-2BD7AFABC3BD}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -230,7 +230,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\Usuaris\Marc Martinez\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2020_preu.csv">
+          DTS:ConnectionString="C:\Users\Marc\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2020_preu.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -238,7 +238,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Any"
-              DTS:DTSID="{ABA75DFE-6D4A-4594-B091-E89C629F67F2}"
+              DTS:DTSID="{6CA592A0-11C2-4294-8E12-4F561C5F177F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -246,7 +246,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Trimestre"
-              DTS:DTSID="{FFA6EFDC-52BA-426B-8B90-D26C12E4C713}"
+              DTS:DTSID="{420D9E2D-8BF8-46B0-BA54-776B1C32BDB4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -254,7 +254,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Districte"
-              DTS:DTSID="{6235BA06-9F19-4A10-9FC5-1C851FF59CED}"
+              DTS:DTSID="{D234B3FB-1202-4856-96F8-F3A71566B833}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -263,7 +263,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Districte"
-              DTS:DTSID="{DC128DCA-E642-4C49-B230-8101F2679BC4}"
+              DTS:DTSID="{75251F08-E07B-4BBD-8E7D-1421252379C2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -271,7 +271,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Barri"
-              DTS:DTSID="{B5B07396-42C0-4B62-8485-6D86C70E66AA}"
+              DTS:DTSID="{DAB5AE19-F427-4BF0-A6FB-E1E3091080DA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -280,7 +280,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Barri"
-              DTS:DTSID="{CD2A11A8-E288-4D91-8619-6ABC11B99E5F}"
+              DTS:DTSID="{0B9C99F0-C326-40D1-B5EA-29513E15B208}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -289,7 +289,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Preu_mitja_habitatge"
-              DTS:DTSID="{C4CBCC37-810B-4135-81D7-F14CA4ED2D14}"
+              DTS:DTSID="{FC34AC99-792F-4913-AD1F-B3EEB66A4545}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -298,7 +298,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Valor"
-              DTS:DTSID="{42C4D19E-16C2-4937-8CD2-9D87703277A2}"
+              DTS:DTSID="{B9FED63B-24FC-496F-B228-191A8E5E9DCA}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -318,7 +318,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\Usuaris\Marc Martinez\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2021_preu.csv">
+          DTS:ConnectionString="C:\Users\Marc\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2021_preu.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -326,7 +326,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Any"
-              DTS:DTSID="{18167A8A-9A7D-4740-9033-A663F243D211}"
+              DTS:DTSID="{47A69008-D14A-4218-BBE8-8398B45E941D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -334,7 +334,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Trimestre"
-              DTS:DTSID="{8C99AC83-966A-4AFB-93EB-8C90D489A55A}"
+              DTS:DTSID="{9F4207F1-6C4C-4DA9-BD24-50ED35A859DD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -342,7 +342,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Districte"
-              DTS:DTSID="{5BE23075-B9A7-44FF-8A6A-12AA73FEE008}"
+              DTS:DTSID="{B8BED4EA-1A54-40F3-AEF2-9FFF3EE6120F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -351,7 +351,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Districte"
-              DTS:DTSID="{CE938C9B-A1EE-4E99-BD98-04E96C3FB3EF}"
+              DTS:DTSID="{C7DB88B1-817F-4D9F-8BBD-A751F44ECA6E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -359,7 +359,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Barri"
-              DTS:DTSID="{1B022AA8-CFB2-4BE1-9D03-8607B0239B36}"
+              DTS:DTSID="{614922DB-FE4B-4EFE-8450-BB07BCDE3C31}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -368,7 +368,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Barri"
-              DTS:DTSID="{DC5BAF15-A376-4472-A8B2-C564FCEE5B8D}"
+              DTS:DTSID="{1EEB1142-8E8D-4549-A68B-2323CB71D82F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -377,7 +377,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Preu_mitja_habitatge"
-              DTS:DTSID="{F45C9C45-6747-4F0B-9412-8437DF361410}"
+              DTS:DTSID="{FAFC0CE6-B038-4AD2-A0D6-17673A198D8C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -386,7 +386,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Valor"
-              DTS:DTSID="{0DE79D9D-CB03-4911-901D-704EC39D4DA5}"
+              DTS:DTSID="{3322D518-59D2-4B32-8D02-2A2C6960E3F6}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -406,7 +406,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\Usuaris\Marc Martinez\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2020_supp.csv">
+          DTS:ConnectionString="C:\Users\Marc\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2020_supp.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -414,7 +414,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Any"
-              DTS:DTSID="{506261F0-1412-4E6B-B7E5-5210952F5758}"
+              DTS:DTSID="{20AA1AFB-C508-4F82-B3A6-7387D596C314}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -422,7 +422,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Trimestre"
-              DTS:DTSID="{A096AB25-1B06-4F47-AD6C-A46ED7953741}"
+              DTS:DTSID="{BE0D3C68-8C50-4E06-A638-7F4EC0775E42}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -430,7 +430,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Districte"
-              DTS:DTSID="{96094D01-13E0-413E-8AC1-AF54BFDCB9C3}"
+              DTS:DTSID="{BF3C8A79-A969-44B1-BC2D-E7A1992F0DEA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -439,7 +439,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Districte"
-              DTS:DTSID="{D76A3751-08FE-4497-AA28-A52835CF0C87}"
+              DTS:DTSID="{2D5A2677-BAF5-446A-A6FF-3CB76EF1791B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -447,7 +447,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Barri"
-              DTS:DTSID="{33C20BBD-3132-415A-BFC1-3389D42DA467}"
+              DTS:DTSID="{45E7550B-810D-4467-B763-34F734D825FE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -456,7 +456,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Barri"
-              DTS:DTSID="{FDCF28DC-1346-4044-8BD8-8B191820C8D6}"
+              DTS:DTSID="{606C423B-8CD0-4185-8B9B-51CE5FB62627}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -465,7 +465,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Superfície_mitjana_(m2_construïts)"
-              DTS:DTSID="{FEE2986C-6DDD-46E3-A311-95EEFDB9C983}"
+              DTS:DTSID="{016D60AF-0760-47D5-9D40-D6F4E72D251C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -474,7 +474,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nombre"
-              DTS:DTSID="{58FA2B46-4CA4-428D-A76A-F09FA90C81CE}"
+              DTS:DTSID="{2A0CBBBB-A141-416D-8593-8D46411ED48A}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -494,7 +494,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\Usuaris\Marc Martinez\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2021_supp.csv">
+          DTS:ConnectionString="C:\Users\Marc\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2021_supp.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -502,7 +502,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Any"
-              DTS:DTSID="{BBFCA527-495A-4EA1-A6D1-67C7B5DC32A6}"
+              DTS:DTSID="{B24479BE-EB56-4DC4-BAF4-9C3125541380}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -510,7 +510,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Trimestre"
-              DTS:DTSID="{FB28CF99-85F3-453F-A0FA-6EEA123334AB}"
+              DTS:DTSID="{E7740B02-1AD2-4CAF-9A6B-C85472E5BAD7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -518,7 +518,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Districte"
-              DTS:DTSID="{E38DDFD6-C902-45D8-835E-24CD19037BF7}"
+              DTS:DTSID="{1A1F8360-F447-42FA-B3AA-AED643506006}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -527,7 +527,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Districte"
-              DTS:DTSID="{CE9076B9-5D9A-4317-9796-8C06409C93CF}"
+              DTS:DTSID="{BA25BA0C-2D01-4DC7-891B-C265BCD395B8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -535,7 +535,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Barri"
-              DTS:DTSID="{ED3D2C81-E38C-4B7A-91EE-8E25FE601E8E}"
+              DTS:DTSID="{61DE7CE2-4269-4E4E-B217-17CD478FE91B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -544,7 +544,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Barri"
-              DTS:DTSID="{3BC6898E-8246-4640-850B-03BB739D9483}"
+              DTS:DTSID="{1E416B0C-C31F-4144-B2C6-BB00FDF76423}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -553,7 +553,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Superfície_mitjana_(m2_construïts)"
-              DTS:DTSID="{9349CDED-3A63-48E7-BB8A-74E2C9F81983}"
+              DTS:DTSID="{6BD887E9-42A2-4732-9895-312CC1210BFB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -562,7 +562,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nombre"
-              DTS:DTSID="{98C6EDBC-97B1-4286-8D5F-4D9CFFC68E6F}"
+              DTS:DTSID="{96E324B0-A564-45E9-A41C-83755D5082AA}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -579,7 +579,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="insert_date">
       <DTS:VariableValue
-        DTS:DataType="7">5/11/2023 7:38:37 PM</DTS:VariableValue>
+        DTS:DataType="7">5/12/2023 9:31:04 AM</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -2953,8 +2953,8 @@
               <connections>
                 <connection
                   refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -5077,12 +5077,12 @@
           </components>
           <paths>
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Case 11]"
+              refId="Package\STA_COMPRAVENTA.Paths[Case 1]"
               endId="Package\STA_COMPRAVENTA\Columna derivada 1.Inputs[Entrada de columna derivada]"
               name="Case 1"
               startId="Package\STA_COMPRAVENTA\División condicional 1.Outputs[Case 1]" />
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Case 1]"
+              refId="Package\STA_COMPRAVENTA.Paths[Case 11]"
               endId="Package\STA_COMPRAVENTA\Columna derivada.Inputs[Entrada de columna derivada]"
               name="Case 1"
               startId="Package\STA_COMPRAVENTA\División condicional.Outputs[Case 1]" />
@@ -5092,12 +5092,12 @@
               name="Salida de columna derivada"
               startId="Package\STA_COMPRAVENTA\Columna derivada.Outputs[Salida de columna derivada]" />
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada2]"
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada1]"
               endId="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE.Inputs[Entrada de columna derivada]"
               name="Salida de columna derivada"
               startId="Package\STA_COMPRAVENTA\add ID_VIVIENDA.Outputs[Salida de columna derivada]" />
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada1]"
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada2]"
               endId="Package\STA_COMPRAVENTA\Ordenar 1.Inputs[Entrada de ordenación]"
               name="Salida de columna derivada"
               startId="Package\STA_COMPRAVENTA\Columna derivada 1.Outputs[Salida de columna derivada]" />
@@ -5117,52 +5117,52 @@
               name="Salida de combinación de mezcla"
               startId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla]" />
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de ordenación]"
-              endId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación]" />
-            <path
               refId="Package\STA_COMPRAVENTA.Paths[Salida de ordenación1]"
               endId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación]" />
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano5]"
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de ordenación]"
+              endId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano]"
               endId="Package\STA_COMPRAVENTA\Unión de todo 1.Inputs[Entrada de Unión de todo 3]"
               name="Salida de origen de archivo plano"
               startId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2020.Outputs[Salida de origen de archivo plano]" />
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano4]"
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano1]"
               endId="Package\STA_COMPRAVENTA\Unión de todo 1.Inputs[Entrada de Unión de todo 2]"
               name="Salida de origen de archivo plano"
               startId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2021.Outputs[Salida de origen de archivo plano]" />
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano3]"
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano2]"
               endId="Package\STA_COMPRAVENTA\Unión de todo 1.Inputs[Entrada de Unión de todo 1]"
               name="Salida de origen de archivo plano"
               startId="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022.Outputs[Salida de origen de archivo plano]" />
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano2]"
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano3]"
               endId="Package\STA_COMPRAVENTA\Unión de todo.Inputs[Entrada de Unión de todo 3]"
               name="Salida de origen de archivo plano"
               startId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2020.Outputs[Salida de origen de archivo plano]" />
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano1]"
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano4]"
               endId="Package\STA_COMPRAVENTA\Unión de todo.Inputs[Entrada de Unión de todo 2]"
               name="Salida de origen de archivo plano"
               startId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2021.Outputs[Salida de origen de archivo plano]" />
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano]"
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano5]"
               endId="Package\STA_COMPRAVENTA\Unión de todo.Inputs[Entrada de Unión de todo 1]"
               name="Salida de origen de archivo plano"
               startId="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022.Outputs[Salida de origen de archivo plano]" />
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de Unión de todo 11]"
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de Unión de todo 1]"
               endId="Package\STA_COMPRAVENTA\División condicional 1.Inputs[Entrada de división condicional]"
               name="Salida de Unión de todo 1"
               startId="Package\STA_COMPRAVENTA\Unión de todo 1.Outputs[Salida de Unión de todo 1]" />
             <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de Unión de todo 1]"
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de Unión de todo 11]"
               endId="Package\STA_COMPRAVENTA\División condicional.Inputs[Entrada de división condicional]"
               name="Salida de Unión de todo 1"
               startId="Package\STA_COMPRAVENTA\Unión de todo.Outputs[Salida de Unión de todo 1]" />
@@ -5194,11 +5194,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="121.6,41.6"
+          Size="122,42"
           Id="Package\DELETE"
           TopLeft="377,66" />
         <NodeLayout
-          Size="191.2,41.6"
+          Size="191,42"
           Id="Package\STA_COMPRAVENTA"
           TopLeft="344,241" />
         <EdgeLayout
@@ -5232,113 +5232,83 @@
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="233.6,41.6"
+          Size="234,42"
           Id="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE"
           TopLeft="768,795.9166665838" />
         <NodeLayout
-          Size="196,41.6"
+          Size="151,42"
+          Id="Package\STA_COMPRAVENTA\Unión de todo 1"
+          TopLeft="1314.52376548851,196.857141488223" />
+        <NodeLayout
+          Size="196,42"
           Id="Package\STA_COMPRAVENTA\Combinación de mezcla"
           TopLeft="795,622" />
         <NodeLayout
-          Size="169.6,41.6"
-          Id="Package\STA_COMPRAVENTA\División condicional"
-          TopLeft="602.083300436952,320.916665679796" />
-        <NodeLayout
-          Size="128,41.6"
-          Id="Package\STA_COMPRAVENTA\Ordenar 1"
-          TopLeft="1269,496" />
-        <NodeLayout
-          Size="175.2,41.6"
-          Id="Package\STA_COMPRAVENTA\Destino de OLE DB"
-          TopLeft="795,914" />
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\STA_COMPRAVENTA\Columna derivada 1"
-          TopLeft="1249,403" />
-        <NodeLayout
-          Size="308.8,41.6"
-          Id="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022"
-          TopLeft="957,62" />
-        <NodeLayout
-          Size="119.2,41.6"
+          Size="119,42"
           Id="Package\STA_COMPRAVENTA\Ordenar"
           TopLeft="363.749998975545,480.7500000226" />
         <NodeLayout
-          Size="308.8,41.6"
-          Id="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2021"
-          TopLeft="1204,12" />
+          Size="143,42"
+          Id="Package\STA_COMPRAVENTA\Unión de todo"
+          TopLeft="342.857124124255,186.952379652337" />
         <NodeLayout
-          Size="168,41.6"
-          Id="Package\STA_COMPRAVENTA\Columna derivada"
-          TopLeft="339.083333219505,364.416666538599" />
-        <NodeLayout
-          Size="308.8,41.6"
-          Id="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2020"
-          TopLeft="1464,64" />
-        <NodeLayout
-          Size="279.2,41.6"
-          Id="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022"
-          TopLeft="8,66" />
-        <NodeLayout
-          Size="291.2,41.6"
-          Id="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2021"
-          TopLeft="272,14" />
-        <NodeLayout
-          Size="168.8,41.6"
-          Id="Package\STA_COMPRAVENTA\add ID_VIVIENDA"
-          TopLeft="806,712" />
-        <NodeLayout
-          Size="291.2,41.6"
-          Id="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2020"
-          TopLeft="526,64" />
-        <NodeLayout
-          Size="178.4,41.6"
-          Id="Package\STA_COMPRAVENTA\División condicional 1"
-          TopLeft="1024.66661111845,244.266672030423" />
-        <NodeLayout
-          Size="184.8,41.6"
+          Size="185,42"
           Id="Package\STA_COMPRAVENTA\decimal esplazar coma"
           TopLeft="1051.19996503194,857.533331314392" />
         <NodeLayout
-          Size="143.2,41.6"
-          Id="Package\STA_COMPRAVENTA\Unión de todo"
-          TopLeft="342.857124124255,186.952379652337" />
+          Size="171,42"
+          Id="Package\STA_COMPRAVENTA\Columna derivada 1"
+          TopLeft="1249,403" />
+        <NodeLayout
+          Size="309,42"
+          Id="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022"
+          TopLeft="957,62" />
+        <NodeLayout
+          Size="128,42"
+          Id="Package\STA_COMPRAVENTA\Ordenar 1"
+          TopLeft="1269,496" />
+        <NodeLayout
+          Size="309,42"
+          Id="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2021"
+          TopLeft="1204,12" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\STA_COMPRAVENTA\Columna derivada"
+          TopLeft="339.083333219505,364.416666538599" />
+        <NodeLayout
+          Size="309,42"
+          Id="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2020"
+          TopLeft="1464,64" />
+        <NodeLayout
+          Size="279,42"
+          Id="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022"
+          TopLeft="8,66" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\STA_COMPRAVENTA\División condicional 1"
+          TopLeft="1024.66661111845,244.266672030423" />
+        <NodeLayout
+          Size="291,42"
+          Id="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2021"
+          TopLeft="272,14" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\STA_COMPRAVENTA\División condicional"
+          TopLeft="602.083300436952,320.916665679796" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\STA_COMPRAVENTA\add ID_VIVIENDA"
+          TopLeft="806,712" />
+        <NodeLayout
+          Size="291,42"
+          Id="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2020"
+          TopLeft="526,64" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\STA_COMPRAVENTA\Destino de OLE DB"
+          TopLeft="795,914" />
         <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano]"
-          TopLeft="147.6,107.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="266.857124124255,79.3523796523374"
-              Start="0,0"
-              End="266.857124124255,71.8523796523374">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.6761898261687" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35.6761898261687"
-                    Point2="0,39.6761898261687"
-                    Point3="4,39.6761898261687" />
-                  <mssgle:LineSegment
-                    End="262.857124124255,39.6761898261687" />
-                  <mssgle:CubicBezierSegment
-                    Point1="262.857124124255,39.6761898261687"
-                    Point2="266.857124124255,39.6761898261687"
-                    Point3="266.857124124255,43.6761898261687" />
-                  <mssgle:LineSegment
-                    End="266.857124124255,71.8523796523374" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano1]"
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano4]"
           TopLeft="417.6,55.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5372,7 +5342,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano2]"
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano3]"
           TopLeft="671.6,105.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5405,12 +5375,8 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="151.2,41.6"
-          Id="Package\STA_COMPRAVENTA\Unión de todo 1"
-          TopLeft="1314.52376548851,196.857141488223" />
         <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano3]"
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano2]"
           TopLeft="1111.4,103.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5444,7 +5410,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano4]"
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano1]"
           TopLeft="1358.4,53.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5478,7 +5444,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano5]"
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano]"
           TopLeft="1618.4,105.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5503,233 +5469,6 @@
                     Point3="-192.476234511485,63.7837079420248" />
                   <mssgle:LineSegment
                     End="-192.476234511485,83.7571414882229" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <AnnotationLayout
-          Text="CREATE TABLE STA_VIVIENDA (&#xD;&#xA;    [ID_VIVIENDA] varchar(11) PRIMARY KEY,&#xD;&#xA;    [Any] int,&#xD;&#xA;    [Trimestre] int,&#xD;&#xA;    [Codi_Districte] int,&#xD;&#xA;    [Nom_Districte] varchar(50),&#xD;&#xA;    [Codi_Barri] int,&#xD;&#xA;    [Nom_Barri] varchar(50),&#xD;&#xA;    [Preu_mitja_habitatge] varchar(50),&#xD;&#xA;    [Preu_Valor] decimal(28,2),&#xD;&#xA;    [superficie] varchar(50),&#xD;&#xA;    [superficie_Nombre]decimal(28,2),&#xD;&#xA;    [INSERT_DATE] datetime&#xD;&#xA;)"
-          ParentId="Package\STA_COMPRAVENTA"
-          FontInfo="{assembly:Null}"
-          Size="258.4,247.2"
-          Id="849dfe6b-38b1-4484-814a-9e8f90f6fb62"
-          TopLeft="321.809519776749,758.095235994506" />
-        <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de Unión de todo 1]"
-          TopLeft="414.457124124255,228.552379652337">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="272.426176312697,92.3642860274586"
-              Start="0,0"
-              End="272.426176312697,84.8642860274586">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.1821430137293" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,42.1821430137293"
-                    Point2="0,46.1821430137293"
-                    Point3="4,46.1821430137293" />
-                  <mssgle:LineSegment
-                    End="268.426176312697,46.1821430137293" />
-                  <mssgle:CubicBezierSegment
-                    Point1="268.426176312697,46.1821430137293"
-                    Point2="272.426176312697,46.1821430137293"
-                    Point3="272.426176312697,50.1821430137293" />
-                  <mssgle:LineSegment
-                    End="272.426176312697,84.8642860274586" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Case 1]"
-          TopLeft="602.083300436952,341.716665679796">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-94.999967217447,43.500000858803"
-              Start="0,0"
-              End="-87.499967217447,43.500000858803">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-43.4999836087235,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-43.4999836087235,0"
-                    Point2="-47.4999836087235,0"
-                    Point3="-47.4999836087235,4" />
-                  <mssgle:LineSegment
-                    End="-47.4999836087235,39.500000858803" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-47.4999836087235,39.500000858803"
-                    Point2="-47.4999836087235,43.500000858803"
-                    Point3="-51.4999836087235,43.500000858803" />
-                  <mssgle:LineSegment
-                    End="-87.499967217447,43.500000858803" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-62.7180695462235,-15.5537109375,30.436171875,9.5537109375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada]"
-          TopLeft="423.216666097525,406.016666538599">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,74.733333484001"
-              Start="0,0"
-              End="0,67.233333484001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,67.233333484001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de ordenación]"
-          TopLeft="423.349998975545,522.3500000226">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="469.650001024455,99.6499999774001"
-              Start="0,0"
-              End="469.650001024455,92.1499999774001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.8249999887" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,45.8249999887"
-                    Point2="0,49.8249999887"
-                    Point3="4,49.8249999887" />
-                  <mssgle:LineSegment
-                    End="465.650001024455,49.8249999887" />
-                  <mssgle:CubicBezierSegment
-                    Point1="465.650001024455,49.8249999887"
-                    Point2="469.650001024455,49.8249999887"
-                    Point3="469.650001024455,53.8249999887" />
-                  <mssgle:LineSegment
-                    End="469.650001024455,92.1499999774001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de Unión de todo 11]"
-          TopLeft="1314.52376548851,217.657141488223">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-111.457154370065,47.4095305422001"
-              Start="0,0"
-              End="-103.957154370065,47.4095305422001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-51.7285771850325,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-51.7285771850325,0"
-                    Point2="-55.7285771850325,0"
-                    Point3="-55.7285771850325,4" />
-                  <mssgle:LineSegment
-                    End="-55.7285771850325,43.4095305422001" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-55.7285771850325,43.4095305422001"
-                    Point2="-55.7285771850325,47.4095305422001"
-                    Point3="-59.7285771850325,47.4095305422001" />
-                  <mssgle:LineSegment
-                    End="-103.957154370065,47.4095305422001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-63.7285771850325,-22,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Case 11]"
-          TopLeft="1113.86661111845,285.866672030423">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="220.73338888155,117.133327969577"
-              Start="0,0"
-              End="220.73338888155,109.633327969577">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,54.5666639847885" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,54.5666639847885"
-                    Point2="0,58.5666639847885"
-                    Point3="4,58.5666639847885" />
-                  <mssgle:LineSegment
-                    End="216.73338888155,58.5666639847885" />
-                  <mssgle:CubicBezierSegment
-                    Point1="216.73338888155,58.5666639847885"
-                    Point2="220.73338888155,58.5666639847885"
-                    Point3="220.73338888155,62.5666639847885" />
-                  <mssgle:LineSegment
-                    End="220.73338888155,109.633327969577" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="95.148608503275,63.5666639847885,30.436171875,9.5537109375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada1]"
-          TopLeft="1333.8,444.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,51.3999999999999"
-              Start="0,0"
-              End="0,43.8999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.8999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5773,6 +5512,40 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de ordenación]"
+          TopLeft="423.349998975545,522.3500000226">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="469.650001024455,99.6499999774001"
+              Start="0,0"
+              End="469.650001024455,92.1499999774001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.8249999887" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.8249999887"
+                    Point2="0,49.8249999887"
+                    Point3="4,49.8249999887" />
+                  <mssgle:LineSegment
+                    End="465.650001024455,49.8249999887" />
+                  <mssgle:CubicBezierSegment
+                    Point1="465.650001024455,49.8249999887"
+                    Point2="469.650001024455,49.8249999887"
+                    Point3="469.650001024455,53.8249999887" />
+                  <mssgle:LineSegment
+                    End="469.650001024455,92.1499999774001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\STA_COMPRAVENTA.Paths[Salida de combinación de mezcla]"
           TopLeft="891.7,663.6">
           <EdgeLayout.Curve>
@@ -5795,19 +5568,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada2]"
-          TopLeft="887.6,753.6">
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada4]"
+          TopLeft="1051.19996503194,883.933331314392">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,42.3166665837999"
+              EndConnector="-80.9999650319432,50.8666686856084"
               Start="0,0"
-              End="0,34.8166665837999">
+              End="-73.4999650319432,50.8666686856084">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.8166665837999" />
+                    End="-30.1999852357093,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-30.1999852357093,0"
+                    Point2="-34.1999852357093,0"
+                    Point3="-34.1999852357093,4" />
+                  <mssgle:LineSegment
+                    End="-34.1999852357093,46.8666686856084" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-34.1999852357093,46.8666686856084"
+                    Point2="-34.1999852357093,50.8666686856084"
+                    Point3="-38.1999852357093,50.8666686856084" />
+                  <mssgle:LineSegment
+                    End="-73.4999650319432,50.8666686856084" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5851,31 +5636,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada4]"
-          TopLeft="1051.19996503194,883.933331314392">
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada2]"
+          TopLeft="1333.8,444.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-80.9999650319432,50.8666686856084"
+              EndConnector="0,51.3999999999999"
               Start="0,0"
-              End="-73.4999650319432,50.8666686856084">
+              End="0,43.8999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-30.1999852357093,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-30.1999852357093,0"
-                    Point2="-34.1999852357093,0"
-                    Point3="-34.1999852357093,4" />
-                  <mssgle:LineSegment
-                    End="-34.1999852357093,46.8666686856084" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-34.1999852357093,46.8666686856084"
-                    Point2="-34.1999852357093,50.8666686856084"
-                    Point3="-38.1999852357093,50.8666686856084" />
-                  <mssgle:LineSegment
-                    End="-73.4999650319432,50.8666686856084" />
+                    End="0,43.8999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5884,6 +5657,233 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada1]"
+          TopLeft="887.6,753.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.3166665837999"
+              Start="0,0"
+              End="0,34.8166665837999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.8166665837999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de columna derivada]"
+          TopLeft="423.216666097525,406.016666538599">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74.733333484001"
+              Start="0,0"
+              End="0,67.233333484001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.233333484001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Case 11]"
+          TopLeft="602.083300436952,341.716665679796">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-94.999967217447,43.500000858803"
+              Start="0,0"
+              End="-87.499967217447,43.500000858803">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-43.4999836087235,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-43.4999836087235,0"
+                    Point2="-47.4999836087235,0"
+                    Point3="-47.4999836087235,4" />
+                  <mssgle:LineSegment
+                    End="-47.4999836087235,39.500000858803" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-47.4999836087235,39.500000858803"
+                    Point2="-47.4999836087235,43.500000858803"
+                    Point3="-51.4999836087235,43.500000858803" />
+                  <mssgle:LineSegment
+                    End="-87.499967217447,43.500000858803" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-62.7180695462235,-15.5537109375,30.436171875,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Case 1]"
+          TopLeft="1113.86661111845,285.866672030423">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="220.73338888155,117.133327969577"
+              Start="0,0"
+              End="220.73338888155,109.633327969577">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.5666639847885" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,54.5666639847885"
+                    Point2="0,58.5666639847885"
+                    Point3="4,58.5666639847885" />
+                  <mssgle:LineSegment
+                    End="216.73338888155,58.5666639847885" />
+                  <mssgle:CubicBezierSegment
+                    Point1="216.73338888155,58.5666639847885"
+                    Point2="220.73338888155,58.5666639847885"
+                    Point3="220.73338888155,62.5666639847885" />
+                  <mssgle:LineSegment
+                    End="220.73338888155,109.633327969577" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="95.148608503275,63.5666639847885,30.436171875,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de Unión de todo 11]"
+          TopLeft="414.457124124255,228.552379652337">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="272.426176312697,92.3642860274586"
+              Start="0,0"
+              End="272.426176312697,84.8642860274586">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.1821430137293" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.1821430137293"
+                    Point2="0,46.1821430137293"
+                    Point3="4,46.1821430137293" />
+                  <mssgle:LineSegment
+                    End="268.426176312697,46.1821430137293" />
+                  <mssgle:CubicBezierSegment
+                    Point1="268.426176312697,46.1821430137293"
+                    Point2="272.426176312697,46.1821430137293"
+                    Point3="272.426176312697,50.1821430137293" />
+                  <mssgle:LineSegment
+                    End="272.426176312697,84.8642860274586" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de Unión de todo 1]"
+          TopLeft="1314.52376548851,217.657141488223">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-111.457154370065,47.4095305422001"
+              Start="0,0"
+              End="-103.957154370065,47.4095305422001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-51.7285771850325,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-51.7285771850325,0"
+                    Point2="-55.7285771850325,0"
+                    Point3="-55.7285771850325,4" />
+                  <mssgle:LineSegment
+                    End="-55.7285771850325,43.4095305422001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-55.7285771850325,43.4095305422001"
+                    Point2="-55.7285771850325,47.4095305422001"
+                    Point3="-59.7285771850325,47.4095305422001" />
+                  <mssgle:LineSegment
+                    End="-103.957154370065,47.4095305422001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-63.7285771850325,-22,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano5]"
+          TopLeft="147.6,107.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="266.857124124255,79.3523796523374"
+              Start="0,0"
+              End="266.857124124255,71.8523796523374">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.6761898261687" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.6761898261687"
+                    Point2="0,39.6761898261687"
+                    Point3="4,39.6761898261687" />
+                  <mssgle:LineSegment
+                    End="262.857124124255,39.6761898261687" />
+                  <mssgle:CubicBezierSegment
+                    Point1="262.857124124255,39.6761898261687"
+                    Point2="266.857124124255,39.6761898261687"
+                    Point3="266.857124124255,43.6761898261687" />
+                  <mssgle:LineSegment
+                    End="266.857124124255,71.8523796523374" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="CREATE TABLE STA_VIVIENDA (&#xA;    [ID_VIVIENDA] varchar(11) PRIMARY KEY,&#xA;    [Any] int,&#xA;    [Trimestre] int,&#xA;    [Codi_Districte] int,&#xA;    [Nom_Districte] varchar(50),&#xA;    [Codi_Barri] int,&#xA;    [Nom_Barri] varchar(50),&#xA;    [Preu_mitja_habitatge] varchar(50),&#xA;    [Preu_Valor] decimal(28,2),&#xA;    [superficie] varchar(50),&#xA;    [superficie_Nombre]decimal(28,2),&#xA;    [INSERT_DATE] datetime&#xA;)"
+          ParentId="Package\STA_COMPRAVENTA"
+          FontInfo="{assembly:Null}"
+          Size="258,247"
+          Id="849dfe6b-38b1-4484-814a-9e8f90f6fb62"
+          TopLeft="307.809519776749,704.095235994506" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
