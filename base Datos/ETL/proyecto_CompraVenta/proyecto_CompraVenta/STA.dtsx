@@ -7,12 +7,12 @@
   DTS:CreatorName="DESKTOP-9CCRN90\Marc"
   DTS:DTSID="{5947B50D-6DDF-4DB7-9C20-B3CD9382FE77}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5131.0"
+  DTS:LastModifiedProductVersion="16.0.5035.3"
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="46"
-  DTS:VersionGUID="{E5EB4852-3FCA-4CA6-ACF0-EFD68282DC7A}">
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{8B8FFEF2-562A-4D17-87E1-EB1E9BC45CB8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -579,7 +579,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="insert_date">
       <DTS:VariableValue
-        DTS:DataType="7">5/12/2023 9:31:04 AM</DTS:VariableValue>
+        DTS:DataType="7">5/15/2023 5:55:59 PM</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -5118,14 +5118,14 @@
               startId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla]" />
             <path
               refId="Package\STA_COMPRAVENTA.Paths[Salida de ordenación1]"
-              endId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de ordenación]"
               endId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de ordenación]"
+              endId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación]" />
             <path
               refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano]"
               endId="Package\STA_COMPRAVENTA\Unión de todo 1.Inputs[Entrada de Unión de todo 3]"
@@ -5194,11 +5194,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="122,42"
+          Size="121.6,41.6"
           Id="Package\DELETE"
           TopLeft="377,66" />
         <NodeLayout
-          Size="191,42"
+          Size="191.2,41.6"
           Id="Package\STA_COMPRAVENTA"
           TopLeft="344,241" />
         <EdgeLayout
@@ -5232,79 +5232,79 @@
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="234,42"
+          Size="233.6,41.6"
           Id="Package\STA_COMPRAVENTA\STRING ID and INSERT_DATE"
           TopLeft="768,795.9166665838" />
         <NodeLayout
-          Size="151,42"
+          Size="151.2,41.6"
           Id="Package\STA_COMPRAVENTA\Unión de todo 1"
           TopLeft="1314.52376548851,196.857141488223" />
         <NodeLayout
-          Size="196,42"
+          Size="196,41.6"
           Id="Package\STA_COMPRAVENTA\Combinación de mezcla"
           TopLeft="795,622" />
         <NodeLayout
-          Size="119,42"
+          Size="119.2,41.6"
           Id="Package\STA_COMPRAVENTA\Ordenar"
           TopLeft="363.749998975545,480.7500000226" />
         <NodeLayout
-          Size="143,42"
+          Size="143.2,41.6"
           Id="Package\STA_COMPRAVENTA\Unión de todo"
           TopLeft="342.857124124255,186.952379652337" />
         <NodeLayout
-          Size="185,42"
+          Size="184.8,41.6"
           Id="Package\STA_COMPRAVENTA\decimal esplazar coma"
           TopLeft="1051.19996503194,857.533331314392" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\STA_COMPRAVENTA\Columna derivada 1"
           TopLeft="1249,403" />
         <NodeLayout
-          Size="309,42"
+          Size="308.8,41.6"
           Id="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2022"
           TopLeft="957,62" />
         <NodeLayout
-          Size="128,42"
+          Size="128,41.6"
           Id="Package\STA_COMPRAVENTA\Ordenar 1"
           TopLeft="1269,496" />
         <NodeLayout
-          Size="309,42"
+          Size="308.8,41.6"
           Id="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2021"
           TopLeft="1204,12" />
         <NodeLayout
-          Size="168,42"
+          Size="168,41.6"
           Id="Package\STA_COMPRAVENTA\Columna derivada"
           TopLeft="339.083333219505,364.416666538599" />
         <NodeLayout
-          Size="309,42"
+          Size="308.8,41.6"
           Id="Package\STA_COMPRAVENTA\COMPRAVENTA SUPERFI TRIMENTRE 2020"
           TopLeft="1464,64" />
         <NodeLayout
-          Size="279,42"
+          Size="279.2,41.6"
           Id="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2022"
           TopLeft="8,66" />
         <NodeLayout
-          Size="178,42"
+          Size="177.6,41.6"
           Id="Package\STA_COMPRAVENTA\División condicional 1"
           TopLeft="1024.66661111845,244.266672030423" />
         <NodeLayout
-          Size="291,42"
+          Size="291.2,41.6"
           Id="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2021"
           TopLeft="272,14" />
         <NodeLayout
-          Size="170,42"
+          Size="169.6,41.6"
           Id="Package\STA_COMPRAVENTA\División condicional"
           TopLeft="602.083300436952,320.916665679796" />
         <NodeLayout
-          Size="169,42"
+          Size="168.8,41.6"
           Id="Package\STA_COMPRAVENTA\add ID_VIVIENDA"
           TopLeft="806,712" />
         <NodeLayout
-          Size="291,42"
+          Size="291.2,41.6"
           Id="Package\STA_COMPRAVENTA\COMPRAVENTA PREU TRIMESTRE 2020"
           TopLeft="526,64" />
         <NodeLayout
-          Size="175,42"
+          Size="175.2,41.6"
           Id="Package\STA_COMPRAVENTA\Destino de OLE DB"
           TopLeft="795,914" />
         <EdgeLayout
@@ -5479,40 +5479,6 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STA_COMPRAVENTA.Paths[Salida de ordenación1]"
-          TopLeft="1333,537.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-408.666666666667,84.4000000000001"
-              Start="0,0"
-              End="-408.666666666667,76.9000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.2299595141701" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,46.2299595141701"
-                    Point2="0,50.2299595141701"
-                    Point3="-4,50.2299595141701" />
-                  <mssgle:LineSegment
-                    End="-404.666666666667,50.2299595141701" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-404.666666666667,50.2299595141701"
-                    Point2="-408.666666666667,50.2299595141701"
-                    Point3="-408.666666666667,54.2299595141701" />
-                  <mssgle:LineSegment
-                    End="-408.666666666667,76.9000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de ordenación]"
           TopLeft="423.349998975545,522.3500000226">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5537,6 +5503,40 @@
                     Point3="469.650001024455,53.8249999887" />
                   <mssgle:LineSegment
                     End="469.650001024455,92.1499999774001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de ordenación]"
+          TopLeft="1333,537.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-408.666666666667,84.4000000000001"
+              Start="0,0"
+              End="-408.666666666667,76.9000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.2299595141701" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.2299595141701"
+                    Point2="0,50.2299595141701"
+                    Point3="-4,50.2299595141701" />
+                  <mssgle:LineSegment
+                    End="-404.666666666667,50.2299595141701" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-404.666666666667,50.2299595141701"
+                    Point2="-408.666666666667,50.2299595141701"
+                    Point3="-408.666666666667,54.2299595141701" />
+                  <mssgle:LineSegment
+                    End="-408.666666666667,76.9000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5881,7 +5881,7 @@
           Text="CREATE TABLE STA_VIVIENDA (&#xA;    [ID_VIVIENDA] varchar(11) PRIMARY KEY,&#xA;    [Any] int,&#xA;    [Trimestre] int,&#xA;    [Codi_Districte] int,&#xA;    [Nom_Districte] varchar(50),&#xA;    [Codi_Barri] int,&#xA;    [Nom_Barri] varchar(50),&#xA;    [Preu_mitja_habitatge] varchar(50),&#xA;    [Preu_Valor] decimal(28,2),&#xA;    [superficie] varchar(50),&#xA;    [superficie_Nombre]decimal(28,2),&#xA;    [INSERT_DATE] datetime&#xA;)"
           ParentId="Package\STA_COMPRAVENTA"
           FontInfo="{assembly:Null}"
-          Size="258,247"
+          Size="257.6,247.2"
           Id="849dfe6b-38b1-4484-814a-9e8f90f6fb62"
           TopLeft="307.809519776749,704.095235994506" />
       </GraphLayout>

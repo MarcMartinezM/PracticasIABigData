@@ -7,12 +7,12 @@
   DTS:CreatorName="PH01-03\Marc Martinez"
   DTS:DTSID="{EA54DF62-BD57-49D8-8CAC-F4F6AE720226}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5131.0"
+  DTS:LastModifiedProductVersion="16.0.5035.3"
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{50F2D7FB-C71D-4B57-BBAC-65573D8D3319}">
+  DTS:VersionBuild="37"
+  DTS:VersionGUID="{D351CEA3-F035-4880-8A2A-F81092CDC45B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -285,8 +285,8 @@ where [refTable].[Codi_Barri] = ?</property>
               <connections>
                 <connection
                   refId="Package\STG_BARRI\Búsqueda.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
                   description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
                   name="OleDbConnection" />
               </connections>
@@ -402,8 +402,8 @@ where Codi_Barri = ? </property>
               <connections>
                 <connection
                   refId="Package\STG_BARRI\Comando de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -524,7 +524,7 @@ where Codi_Barri = ? </property>
                 <property
                   dataType="System.String"
                   description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">[STG_BARRI]</property>
+                  name="OpenRowset">[dbo].[STG_BARRI]</property>
                 <property
                   dataType="System.String"
                   description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
@@ -567,8 +567,8 @@ where Codi_Barri = ? </property>
               <connections>
                 <connection
                   refId="Package\STG_BARRI\Destino de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -696,8 +696,8 @@ where Codi_Barri = ? </property>
               <connections>
                 <connection
                   refId="Package\STG_BARRI\Origen de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -739,6 +739,20 @@ where Codi_Barri = ? </property>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Codi_Barri]"
+                      dataType="i4"
+                      name="Codi_Barri" />
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Barri]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Nom_Barri" />
+                    <externalMetadataColumn
+                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[INSERT_DATE]"
+                      dataType="dbTimeStamp"
+                      name="INSERT_DATE" />
+                    <externalMetadataColumn
                       refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_VIVIENDA]"
                       codePage="1252"
                       dataType="str"
@@ -763,16 +777,6 @@ where Codi_Barri = ? </property>
                       length="50"
                       name="Nom_Districte" />
                     <externalMetadataColumn
-                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Codi_Barri]"
-                      dataType="i4"
-                      name="Codi_Barri" />
-                    <externalMetadataColumn
-                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_Barri]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Nom_Barri" />
-                    <externalMetadataColumn
                       refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Preu_mitja_habitatge]"
                       codePage="1252"
                       dataType="str"
@@ -796,10 +800,6 @@ where Codi_Barri = ? </property>
                       name="superficie_Nombre"
                       precision="28"
                       scale="2" />
-                    <externalMetadataColumn
-                      refId="Package\STG_BARRI\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[INSERT_DATE]"
-                      dataType="dbTimeStamp"
-                      name="INSERT_DATE" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -892,8 +892,8 @@ where Codi_Barri = ? </property>
               <connections>
                 <connection
                   refId="Package\STG_BARRI\Origen de OLE DB 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -1376,8 +1376,8 @@ where [refTable].[Codi_Districte] = ?</property>
               <connections>
                 <connection
                   refId="Package\STG_DISTRICTE\Búsqueda.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
                   description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
                   name="OleDbConnection" />
               </connections>
@@ -1493,8 +1493,8 @@ where Codi_Districte = ? </property>
               <connections>
                 <connection
                   refId="Package\STG_DISTRICTE\Comando de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -1650,8 +1650,8 @@ where Codi_Districte = ? </property>
               <connections>
                 <connection
                   refId="Package\STG_DISTRICTE\no asignado.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -1780,8 +1780,8 @@ where Codi_Districte = ? </property>
               <connections>
                 <connection
                   refId="Package\STG_DISTRICTE\STA_VIVIENDA.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -1941,7 +1941,7 @@ where Codi_Districte = ? </property>
                 <property
                   dataType="System.String"
                   description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">[STG_DISTRICTE]</property>
+                  name="OpenRowset">[dbo].[STG_DISTRICTE]</property>
                 <property
                   dataType="System.String"
                   description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
@@ -1984,8 +1984,8 @@ where Codi_Districte = ? </property>
               <connections>
                 <connection
                   refId="Package\STG_DISTRICTE\STG_DISTRITO.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -2296,7 +2296,7 @@ where [refTable].[ID_VIVIENDA] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[ID_VIVIENDA]};</property>
+                  name="ParameterMap">#{Package\STG_VIVIENDA\466:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -2309,8 +2309,8 @@ where [refTable].[ID_VIVIENDA] = ?</property>
               <connections>
                 <connection
                   refId="Package\STG_VIVIENDA\Búsqueda.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
                   description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
                   name="OleDbConnection" />
               </connections>
@@ -2325,7 +2325,7 @@ where [refTable].[ID_VIVIENDA] = ?</property>
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="ID_VIVIENDA"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[ID_VIVIENDA]">
+                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[ID_VIVIENDA]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2573,12 +2573,12 @@ where [refTable].[ID_VIVIENDA] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\STG_VIVIENDA\Columna derivada 1.Outputs[Salida de columna derivada].Columns[Derived Column 1]"
+                      refId="Package\STG_VIVIENDA\Columna derivada 1.Outputs[Salida de columna derivada].Columns[number_notnull]"
                       dataType="numeric"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\STG_VIVIENDA\Columna derivada 1.Outputs[Salida de columna derivada].Columns[Derived Column 1]"
-                      name="Derived Column 1"
+                      lineageId="Package\STG_VIVIENDA\Columna derivada 1.Outputs[Salida de columna derivada].Columns[number_notnull]"
+                      name="number_notnull"
                       precision="28"
                       scale="2"
                       truncationRowDisposition="FailComponent">
@@ -2625,88 +2625,6 @@ where [refTable].[ID_VIVIENDA] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\STG_VIVIENDA\Columna derivada 2"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
-              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
-              name="Columna derivada 2"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\STG_VIVIENDA\Columna derivada 2.Inputs[Entrada de columna derivada]"
-                  description="Entrada en la transformación Columna derivada"
-                  name="Entrada de columna derivada">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\STG_VIVIENDA\Columna derivada 2.Inputs[Entrada de columna derivada].Columns[ID_VIVIENDA]"
-                      cachedDataType="i4"
-                      cachedName="ID_VIVIENDA"
-                      lineageId="Package\STG_VIVIENDA\no identificado.Outputs[Salida de origen de OLE DB].Columns[ID_VIVIENDA]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\STG_VIVIENDA\Columna derivada 2.Outputs[Salida de columna derivada]"
-                  description="Salida predeterminada de la transformación Columna derivada"
-                  exclusionGroup="1"
-                  name="Salida de columna derivada"
-                  synchronousInputId="Package\STG_VIVIENDA\Columna derivada 2.Inputs[Entrada de columna derivada]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\Columna derivada 2.Outputs[Salida de columna derivada].Columns[Derived Column 1]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Cálculo"
-                      errorRowDisposition="FailComponent"
-                      length="11"
-                      lineageId="Package\STG_VIVIENDA\Columna derivada 2.Outputs[Salida de columna derivada].Columns[Derived Column 1]"
-                      name="Derived Column 1"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expresión de columna derivada"
-                          name="Expression">(DT_STR,11,1252)#{Package\STG_VIVIENDA\no identificado.Outputs[Salida de origen de OLE DB].Columns[ID_VIVIENDA]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Expresión descriptiva de columna derivada"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,11,1252)ID_VIVIENDA</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\STG_VIVIENDA\Columna derivada 2.Outputs[Salida de error de columna derivada]"
-                  description="Salida de error de la transformación Columna derivada"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Salida de error de columna derivada"
-                  synchronousInputId="Package\STG_VIVIENDA\Columna derivada 2.Inputs[Entrada de columna derivada]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\Columna derivada 2.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\STG_VIVIENDA\Columna derivada 2.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\Columna derivada 2.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\STG_VIVIENDA\Columna derivada 2.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\STG_VIVIENDA\Columna derivada 3"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
@@ -2720,17 +2638,19 @@ where [refTable].[ID_VIVIENDA] = ?</property>
                   name="Entrada de columna derivada">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\STG_VIVIENDA\Columna derivada 3.Inputs[Entrada de columna derivada].Columns[barri_notnull]"
-                      cachedDataType="i4"
-                      cachedName="barri_notnull"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[barri_notnull]" />
-                    <inputColumn
                       refId="Package\STG_VIVIENDA\Columna derivada 3.Inputs[Entrada de columna derivada].Columns[preu_notnull]"
                       cachedDataType="numeric"
                       cachedName="preu_notnull"
                       cachedPrecision="28"
                       cachedScale="2"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[preu_notnull]" />
+                      lineageId="Package\STG_VIVIENDA\Columna derivada 1.Outputs[Salida de columna derivada].Columns[preu_notnull]" />
+                    <inputColumn
+                      refId="Package\STG_VIVIENDA\Columna derivada 3.Inputs[Entrada de columna derivada].Columns[number_notnull]"
+                      cachedDataType="numeric"
+                      cachedName="number_notnull"
+                      cachedPrecision="28"
+                      cachedScale="2"
+                      lineageId="Package\STG_VIVIENDA\Columna derivada 1.Outputs[Salida de columna derivada].Columns[number_notnull]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -2757,13 +2677,13 @@ where [refTable].[ID_VIVIENDA] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">(DT_DECIMAL,2)#{Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[barri_notnull]}</property>
+                          name="Expression">(DT_DECIMAL,2)#{Package\STG_VIVIENDA\Columna derivada 1.Outputs[Salida de columna derivada].Columns[preu_notnull]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DECIMAL,2)barri_notnull</property>
+                          name="FriendlyExpression">(DT_DECIMAL,2)preu_notnull</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -2780,13 +2700,13 @@ where [refTable].[ID_VIVIENDA] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">(DT_DECIMAL,2)#{Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[preu_notnull]}</property>
+                          name="Expression">(DT_DECIMAL,2)#{Package\STG_VIVIENDA\Columna derivada 1.Outputs[Salida de columna derivada].Columns[number_notnull]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DECIMAL,2)preu_notnull</property>
+                          name="FriendlyExpression">(DT_DECIMAL,2)number_notnull</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2837,7 +2757,7 @@ where [refTable].[ID_VIVIENDA] = ?</property>
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE STG_VIVIENDA 
 SET
-Any = ? ,
+[Any] = ? ,
 Trimestre = ? ,
 Preu_Valor = ? ,
 superficie_Nombre = ? ,
@@ -2853,8 +2773,8 @@ Codi_Barri = ?;</property>
               <connections>
                 <connection
                   refId="Package\STG_VIVIENDA\Comando de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -2865,8 +2785,157 @@ Codi_Barri = ?;</property>
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de comando de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Any]"
+                      cachedDataType="i4"
+                      cachedName="Any"
+                      externalMetadataColumnId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
+                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[Any]" />
+                    <inputColumn
+                      refId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[Trimestre]"
+                      cachedDataType="i4"
+                      cachedName="Trimestre"
+                      externalMetadataColumnId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
+                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[Trimestre]" />
+                    <inputColumn
+                      refId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[decimal_preu]"
+                      cachedDataType="decimal"
+                      cachedName="decimal_preu"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
+                      lineageId="Package\STG_VIVIENDA\Columna derivada 3.Outputs[Salida de columna derivada].Columns[decimal_preu]" />
+                    <inputColumn
+                      refId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[decimal_nombre]"
+                      cachedDataType="decimal"
+                      cachedName="decimal_nombre"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_3]"
+                      lineageId="Package\STG_VIVIENDA\Columna derivada 3.Outputs[Salida de columna derivada].Columns[decimal_nombre]" />
+                    <inputColumn
+                      refId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[INSERT_DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="INSERT_DATE"
+                      externalMetadataColumnId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_4]"
+                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[INSERT_DATE]" />
+                    <inputColumn
+                      refId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[ID_VIVIENDA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="ID_VIVIENDA"
+                      externalMetadataColumnId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_5]"
+                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[ID_VIVIENDA]" />
+                    <inputColumn
+                      refId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[DISTRICTE_NOTNULL]"
+                      cachedDataType="i4"
+                      cachedName="DISTRICTE_NOTNULL"
+                      externalMetadataColumnId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_6]"
+                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[DISTRICTE_NOTNULL]" />
+                    <inputColumn
+                      refId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].Columns[barri_notnull]"
+                      cachedDataType="i4"
+                      cachedName="barri_notnull"
+                      externalMetadataColumnId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_7]"
+                      lineageId="Package\STG_VIVIENDA\Columna derivada 1.Outputs[Salida de columna derivada].Columns[barri_notnull]" />
+                  </inputColumns>
                   <externalMetadataColumns
-                    isUsed="True" />
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_2]"
+                      dataType="numeric"
+                      name="Param_2"
+                      precision="28"
+                      scale="2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_3]"
+                      dataType="numeric"
+                      name="Param_3"
+                      precision="28"
+                      scale="2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_4]"
+                      dataType="dbTimeStamp"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_5]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_6]"
+                      dataType="i4"
+                      name="Param_6">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\STG_VIVIENDA\Comando de OLE DB.Inputs[Entrada de comando de OLE DB].ExternalColumns[Param_7]"
+                      dataType="i4"
+                      name="Param_7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
@@ -3373,7 +3442,7 @@ Codi_Barri = ?;</property>
                 <property
                   dataType="System.String"
                   description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">[STG_VIVIENDA]</property>
+                  name="OpenRowset">[dbo].[STG_VIVIENDA]</property>
                 <property
                   dataType="System.String"
                   description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
@@ -3416,8 +3485,8 @@ Codi_Barri = ?;</property>
               <connections>
                 <connection
                   refId="Package\STG_VIVIENDA\Destino de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -3436,37 +3505,37 @@ Codi_Barri = ?;</property>
                       cachedLength="11"
                       cachedName="ID_VIVIENDA"
                       externalMetadataColumnId="Package\STG_VIVIENDA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ID_VIVIENDA]"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[ID_VIVIENDA]" />
+                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[ID_VIVIENDA]" />
                     <inputColumn
                       refId="Package\STG_VIVIENDA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Any]"
                       cachedDataType="i4"
                       cachedName="Any"
                       externalMetadataColumnId="Package\STG_VIVIENDA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Any]"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Any]" />
+                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[Any]" />
                     <inputColumn
                       refId="Package\STG_VIVIENDA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Trimestre]"
                       cachedDataType="i4"
                       cachedName="Trimestre"
                       externalMetadataColumnId="Package\STG_VIVIENDA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Trimestre]"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Trimestre]" />
+                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[Trimestre]" />
                     <inputColumn
                       refId="Package\STG_VIVIENDA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[INSERT_DATE]"
                       cachedDataType="dbTimeStamp"
                       cachedName="INSERT_DATE"
                       externalMetadataColumnId="Package\STG_VIVIENDA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[INSERT_DATE]"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[INSERT_DATE]" />
+                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[INSERT_DATE]" />
                     <inputColumn
                       refId="Package\STG_VIVIENDA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[DISTRICTE_NOTNULL]"
                       cachedDataType="i4"
                       cachedName="DISTRICTE_NOTNULL"
                       externalMetadataColumnId="Package\STG_VIVIENDA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Codi_Districte]"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[DISTRICTE_NOTNULL]" />
+                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[DISTRICTE_NOTNULL]" />
                     <inputColumn
                       refId="Package\STG_VIVIENDA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[barri_notnull]"
                       cachedDataType="i4"
                       cachedName="barri_notnull"
                       externalMetadataColumnId="Package\STG_VIVIENDA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Codi_Barri]"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[barri_notnull]" />
+                      lineageId="Package\STG_VIVIENDA\Columna derivada 1.Outputs[Salida de columna derivada].Columns[barri_notnull]" />
                     <inputColumn
                       refId="Package\STG_VIVIENDA\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[decimal_nombre]"
                       cachedDataType="decimal"
@@ -3543,116 +3612,6 @@ Codi_Barri = ?;</property>
                       refId="Package\STG_VIVIENDA\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\STG_VIVIENDA\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\STG_VIVIENDA\no identificado"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
-              description="Origen de OLE DB"
-              name="no identificado"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset"></property>
-                <property
-                  dataType="System.String"
-                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="Comando SQL para ejecutar."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select '00000000000' as ID_VIVIENDA;</property>
-                <property
-                  dataType="System.String"
-                  description="Variable que contiene el comando SQL para ejecutar."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
-                  name="AccessMode"
-                  typeConverter="AccessMode">2</property>
-                <property
-                  dataType="System.String"
-                  description="Asignaciones entre los parámetros del comando SQL y las variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\STG_VIVIENDA\no identificado.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
-                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\STG_VIVIENDA\no identificado.Outputs[Salida de origen de OLE DB]"
-                  name="Salida de origen de OLE DB">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\no identificado.Outputs[Salida de origen de OLE DB].Columns[ID_VIVIENDA]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\STG_VIVIENDA\no identificado.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_VIVIENDA]"
-                      lineageId="Package\STG_VIVIENDA\no identificado.Outputs[Salida de origen de OLE DB].Columns[ID_VIVIENDA]"
-                      name="ID_VIVIENDA"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\STG_VIVIENDA\no identificado.Outputs[Salida de origen de OLE DB].ExternalColumns[ID_VIVIENDA]"
-                      codePage="1252"
-                      dataType="str"
-                      length="11"
-                      name="ID_VIVIENDA" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\STG_VIVIENDA\no identificado.Outputs[Salida de error de origen de OLE DB]"
-                  isErrorOut="true"
-                  name="Salida de error de origen de OLE DB">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\no identificado.Outputs[Salida de error de origen de OLE DB].Columns[ID_VIVIENDA]"
-                      codePage="1252"
-                      dataType="str"
-                      length="11"
-                      lineageId="Package\STG_VIVIENDA\no identificado.Outputs[Salida de error de origen de OLE DB].Columns[ID_VIVIENDA]"
-                      name="ID_VIVIENDA" />
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\no identificado.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\STG_VIVIENDA\no identificado.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\no identificado.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\STG_VIVIENDA\no identificado.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -4567,8 +4526,8 @@ Codi_Barri = ?;</property>
               <connections>
                 <connection
                   refId="Package\STG_VIVIENDA\STG_BARRI.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -4715,8 +4674,8 @@ Codi_Barri = ?;</property>
               <connections>
                 <connection
                   refId="Package\STG_VIVIENDA\STG_DISTRICTE.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -4863,8 +4822,8 @@ Codi_Barri = ?;</property>
               <connections>
                 <connection
                   refId="Package\STG_VIVIENDA\STG_VIVIENDA.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -5086,299 +5045,6 @@ Codi_Barri = ?;</property>
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\STG_VIVIENDA\Unión de todo"
-              componentClassID="Microsoft.UnionAll"
-              contactInfo="Unión de todo;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
-              description="Combina las filas de varios flujos de datos sin ordenarlos. Por ejemplo, devuelve filas a un flujo de datos después de corregir los errores. Si el orden es importante, se recomienda usar la transformación Mezclar."
-              name="Unión de todo"
-              version="1">
-              <inputs>
-                <input
-                  refId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 1]"
-                  name="Entrada de Unión de todo 1">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[ID_VIVIENDA]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="11"
-                      cachedName="ID_VIVIENDA"
-                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[ID_VIVIENDA]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Id. de linaje de columna de salida"
-                          name="OutputColumnLineageID">#{Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[ID_VIVIENDA]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[Any]"
-                      cachedDataType="i4"
-                      cachedName="Any"
-                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[Any]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Id. de linaje de columna de salida"
-                          name="OutputColumnLineageID">#{Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Any]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[Trimestre]"
-                      cachedDataType="i4"
-                      cachedName="Trimestre"
-                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[Trimestre]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Id. de linaje de columna de salida"
-                          name="OutputColumnLineageID">#{Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Trimestre]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[Codi_Districte]"
-                      cachedDataType="i4"
-                      cachedName="Codi_Districte"
-                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[Codi_Districte]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Id. de linaje de columna de salida"
-                          name="OutputColumnLineageID">#{Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Districte]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[Codi_Barri]"
-                      cachedDataType="i4"
-                      cachedName="Codi_Barri"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[Codi_Barri]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Id. de linaje de columna de salida"
-                          name="OutputColumnLineageID">#{Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Barri]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[Preu_Valor]"
-                      cachedDataType="numeric"
-                      cachedName="Preu_Valor"
-                      cachedPrecision="28"
-                      cachedScale="2"
-                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[Preu_Valor]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Id. de linaje de columna de salida"
-                          name="OutputColumnLineageID">#{Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Preu_Valor]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[superficie_Nombre]"
-                      cachedDataType="numeric"
-                      cachedName="superficie_Nombre"
-                      cachedPrecision="28"
-                      cachedScale="2"
-                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[superficie_Nombre]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Id. de linaje de columna de salida"
-                          name="OutputColumnLineageID">#{Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[superficie_Nombre]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[INSERT_DATE]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="INSERT_DATE"
-                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[INSERT_DATE]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Id. de linaje de columna de salida"
-                          name="OutputColumnLineageID">#{Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[INSERT_DATE]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[DISTRICTE_NOTNULL]"
-                      cachedDataType="i4"
-                      cachedName="DISTRICTE_NOTNULL"
-                      lineageId="Package\STG_VIVIENDA\Combinación de mezcla 1.Outputs[Salida de combinación de mezcla].Columns[DISTRICTE_NOTNULL]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Id. de linaje de columna de salida"
-                          name="OutputColumnLineageID">#{Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[DISTRICTE_NOTNULL]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[barri_notnull]"
-                      cachedDataType="i4"
-                      cachedName="barri_notnull"
-                      lineageId="Package\STG_VIVIENDA\Columna derivada 1.Outputs[Salida de columna derivada].Columns[barri_notnull]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Id. de linaje de columna de salida"
-                          name="OutputColumnLineageID">#{Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[barri_notnull]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[preu_notnull]"
-                      cachedDataType="numeric"
-                      cachedName="preu_notnull"
-                      cachedPrecision="28"
-                      cachedScale="2"
-                      lineageId="Package\STG_VIVIENDA\Columna derivada 1.Outputs[Salida de columna derivada].Columns[preu_notnull]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Id. de linaje de columna de salida"
-                          name="OutputColumnLineageID">#{Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[preu_notnull]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 1].Columns[Derived Column 1]"
-                      cachedDataType="numeric"
-                      cachedName="Derived Column 1"
-                      cachedPrecision="28"
-                      cachedScale="2"
-                      lineageId="Package\STG_VIVIENDA\Columna derivada 1.Outputs[Salida de columna derivada].Columns[Derived Column 1]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Id. de linaje de columna de salida"
-                          name="OutputColumnLineageID">#{Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Derived Column 1]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 2]"
-                  hasSideEffects="true"
-                  name="Entrada de Unión de todo 2">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 2].Columns[Derived Column 1]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="11"
-                      cachedName="Derived Column 1"
-                      lineageId="Package\STG_VIVIENDA\Columna derivada 2.Outputs[Salida de columna derivada].Columns[Derived Column 1]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Id. de linaje de columna de salida"
-                          name="OutputColumnLineageID">#{Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[ID_VIVIENDA]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 3]"
-                  dangling="true"
-                  hasSideEffects="true"
-                  name="Entrada de Unión de todo 3">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1]"
-                  name="Salida de Unión de todo 1">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[ID_VIVIENDA]"
-                      codePage="1252"
-                      dataType="str"
-                      length="11"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[ID_VIVIENDA]"
-                      name="ID_VIVIENDA" />
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Any]"
-                      dataType="i4"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Any]"
-                      name="Any" />
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Trimestre]"
-                      dataType="i4"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Trimestre]"
-                      name="Trimestre" />
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Districte]"
-                      dataType="i4"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Districte]"
-                      name="Codi_Districte" />
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Barri]"
-                      dataType="i4"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Codi_Barri]"
-                      name="Codi_Barri" />
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Preu_Valor]"
-                      dataType="numeric"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Preu_Valor]"
-                      name="Preu_Valor"
-                      precision="28"
-                      scale="2" />
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[superficie_Nombre]"
-                      dataType="numeric"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[superficie_Nombre]"
-                      name="superficie_Nombre"
-                      precision="28"
-                      scale="2" />
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[INSERT_DATE]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[INSERT_DATE]"
-                      name="INSERT_DATE" />
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[DISTRICTE_NOTNULL]"
-                      dataType="i4"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[DISTRICTE_NOTNULL]"
-                      name="DISTRICTE_NOTNULL" />
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[barri_notnull]"
-                      dataType="i4"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[barri_notnull]"
-                      name="barri_notnull" />
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[preu_notnull]"
-                      dataType="numeric"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[preu_notnull]"
-                      name="preu_notnull"
-                      precision="28"
-                      scale="2" />
-                    <outputColumn
-                      refId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Derived Column 1]"
-                      dataType="numeric"
-                      lineageId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Derived Column 1]"
-                      name="Derived Column 1"
-                      precision="28"
-                      scale="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
@@ -5388,19 +5054,14 @@ Codi_Barri = ?;</property>
               startId="Package\STG_VIVIENDA\Columna derivada 3.Outputs[Salida de columna derivada]" />
             <path
               refId="Package\STG_VIVIENDA.Paths[Salida de columna derivada1]"
-              endId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 2]"
-              name="Salida de columna derivada"
-              startId="Package\STG_VIVIENDA\Columna derivada 2.Outputs[Salida de columna derivada]" />
-            <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de columna derivada2]"
-              endId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 1]"
-              name="Salida de columna derivada"
-              startId="Package\STG_VIVIENDA\Columna derivada 1.Outputs[Salida de columna derivada]" />
-            <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de columna derivada3]"
               endId="Package\STG_VIVIENDA\Ordenar 2.Inputs[Entrada de ordenación]"
               name="Salida de columna derivada"
               startId="Package\STG_VIVIENDA\Columna derivada.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\STG_VIVIENDA.Paths[Salida de columna derivada2]"
+              endId="Package\STG_VIVIENDA\Columna derivada 3.Inputs[Entrada de columna derivada]"
+              name="Salida de columna derivada"
+              startId="Package\STG_VIVIENDA\Columna derivada 1.Outputs[Salida de columna derivada]" />
             <path
               refId="Package\STG_VIVIENDA.Paths[Salida de combinación de mezcla]"
               endId="Package\STG_VIVIENDA\Columna derivada.Inputs[Entrada de columna derivada]"
@@ -5422,35 +5083,30 @@ Codi_Barri = ?;</property>
               name="Salida de entradas no coincidentes de búsqueda"
               startId="Package\STG_VIVIENDA\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]" />
             <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de ordenación3]"
+              refId="Package\STG_VIVIENDA.Paths[Salida de ordenación]"
               endId="Package\STG_VIVIENDA\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\STG_VIVIENDA\Ordenar 2.Outputs[Salida de ordenación]" />
             <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de ordenación2]"
+              refId="Package\STG_VIVIENDA.Paths[Salida de ordenación1]"
               endId="Package\STG_VIVIENDA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\STG_VIVIENDA\Ordenar.Outputs[Salida de ordenación]" />
             <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de ordenación]"
+              refId="Package\STG_VIVIENDA.Paths[Salida de ordenación2]"
               endId="Package\STG_VIVIENDA\Combinación de mezcla 1.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\STG_VIVIENDA\Ordenar 3.Outputs[Salida de ordenación]" />
             <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de ordenación1]"
+              refId="Package\STG_VIVIENDA.Paths[Salida de ordenación3]"
               endId="Package\STG_VIVIENDA\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\STG_VIVIENDA\Ordenar 1.Outputs[Salida de ordenación]" />
             <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB3]"
+              refId="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB]"
               endId="Package\STG_VIVIENDA\Ordenar.Inputs[Entrada de ordenación]"
               name="Salida de origen de OLE DB"
               startId="Package\STG_VIVIENDA\STG_VIVIENDA.Outputs[Salida de origen de OLE DB]" />
-            <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB]"
-              endId="Package\STG_VIVIENDA\Columna derivada 2.Inputs[Entrada de columna derivada]"
-              name="Salida de origen de OLE DB"
-              startId="Package\STG_VIVIENDA\no identificado.Outputs[Salida de origen de OLE DB]" />
             <path
               refId="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB1]"
               endId="Package\STG_VIVIENDA\Ordenar 3.Inputs[Entrada de ordenación]"
@@ -5461,11 +5117,6 @@ Codi_Barri = ?;</property>
               endId="Package\STG_VIVIENDA\Ordenar 1.Inputs[Entrada de ordenación]"
               name="Salida de origen de OLE DB"
               startId="Package\STG_VIVIENDA\STG_DISTRICTE.Outputs[Salida de origen de OLE DB]" />
-            <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de Unión de todo 1]"
-              endId="Package\STG_VIVIENDA\Columna derivada 3.Inputs[Entrada de columna derivada]"
-              name="Salida de Unión de todo 1"
-              startId="Package\STG_VIVIENDA\Unión de todo.Outputs[Salida de Unión de todo 1]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -5502,15 +5153,15 @@ Codi_Barri = ?;</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="152,42"
+          Size="152,41.6"
           Id="Package\STG_BARRI"
           TopLeft="320.999982515972,69.333332851198" />
         <NodeLayout
-          Size="183,42"
+          Size="183.2,41.6"
           Id="Package\STG_DISTRICTE"
           TopLeft="96.6666613850335,61.5333329054382" />
         <NodeLayout
-          Size="159,42"
+          Size="159.2,41.6"
           Id="Package\STG_VIVIENDA"
           TopLeft="554.999969676138,70.199999511838" />
         <EdgeLayout
@@ -5566,31 +5217,31 @@ Codi_Barri = ?;</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="143,42"
+          Size="143.2,41.6"
           Id="Package\STG_BARRI\Unión de todo"
           TopLeft="512.999992355704,109.39999846518" />
         <NodeLayout
-          Size="126,42"
+          Size="126.4,41.6"
           Id="Package\STG_BARRI\Búsqueda"
           TopLeft="521.999992221594,287.999995708466" />
         <NodeLayout
-          Size="165,42"
+          Size="164.8,41.6"
           Id="Package\STG_BARRI\Origen de OLE DB"
           TopLeft="503.999992489815,5.99999991059304" />
         <NodeLayout
-          Size="174,42"
+          Size="174.4,41.6"
           Id="Package\STG_BARRI\Origen de OLE DB 1"
           TopLeft="254.999996200204,103.999998450279" />
         <NodeLayout
-          Size="169,42"
+          Size="168.8,41.6"
           Id="Package\STG_BARRI\Destino de OLE DB"
           TopLeft="713.999989360571,373.999994426966" />
         <NodeLayout
-          Size="178,42"
+          Size="177.6,41.6"
           Id="Package\STG_BARRI\Comando de OLE DB"
           TopLeft="292.999995619059,378.399994426966" />
         <NodeLayout
-          Size="123,42"
+          Size="123.2,41.6"
           Id="Package\STG_BARRI\Agregado"
           TopLeft="524.99999217689,208.999996885657" />
         <EdgeLayout
@@ -5757,9 +5408,9 @@ Codi_Barri = ?;</property>
           Text="CREATE TABLE STG_BARRI (&#xA;    [Codi_Barri] int PRIMARY KEY,&#xA;    [Nom_Barri] varchar(50),&#xA;    [INSERT_DATE] datetime&#xA;)"
           ParentId="Package\STG_BARRI"
           FontInfo="{assembly:Null}"
-          Size="198,104"
+          Size="197.6,104"
           Id="c398a132-3fe6-48bc-ada9-c7ad5a283a66"
-          TopLeft="946,366" />
+          TopLeft="797.000002220273,111.000003799796" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -5769,17 +5420,17 @@ Codi_Barri = ?;</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string"></Value>
+          type="q3:string">[STG_BARRI]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5826,31 +5477,31 @@ Codi_Barri = ?;</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="143,42"
+          Size="143.2,41.6"
           Id="Package\STG_DISTRICTE\Unión de todo"
           TopLeft="364.99998005728,117.533332543837" />
         <NodeLayout
-          Size="126,42"
+          Size="126.4,41.6"
           Id="Package\STG_DISTRICTE\Búsqueda"
           TopLeft="379.999979237716,273.533331459032" />
         <NodeLayout
-          Size="153,42"
+          Size="152.8,41.6"
           Id="Package\STG_DISTRICTE\STA_VIVIENDA"
           TopLeft="361.666646906072,28.2666664979193" />
         <NodeLayout
-          Size="154,42"
+          Size="153.6,41.6"
           Id="Package\STG_DISTRICTE\STG_DISTRITO"
           TopLeft="573.333302007782,356.79999754111" />
         <NodeLayout
-          Size="135,42"
+          Size="135.2,41.6"
           Id="Package\STG_DISTRICTE\no asignado"
           TopLeft="124.999993170301,110.733332598077" />
         <NodeLayout
-          Size="178,42"
+          Size="177.6,41.6"
           Id="Package\STG_DISTRICTE\Comando de OLE DB"
           TopLeft="164.999990984798,366.59999757727" />
         <NodeLayout
-          Size="123,42"
+          Size="123.2,41.6"
           Id="Package\STG_DISTRICTE\Agregado"
           TopLeft="376.666646086508,201.599998625914" />
         <EdgeLayout
@@ -6014,12 +5665,12 @@ Codi_Barri = ?;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
-          Text="CREATE TABLE STG_DISTRICTE (&#xD;&#xA;    [Codi_Districte] int PRIMARY KEY,&#xD;&#xA;    [Nom_Districte] varchar(50),&#xD;&#xA;    [INSERT_DATE] datetime&#xD;&#xA;)"
+          Text="CREATE TABLE STG_DISTRICTE (&#xA;    [Codi_Districte] int PRIMARY KEY,&#xA;    [Nom_Districte] varchar(50),&#xA;    [INSERT_DATE] datetime&#xA;)"
           ParentId="Package\STG_DISTRICTE"
           FontInfo="{assembly:Null}"
-          Size="217,104"
+          Size="216.8,104"
           Id="6557ead0-d0d9-4b38-9dd4-f5a7196aeeca"
-          TopLeft="776,344" />
+          TopLeft="584.333343805538,165.733334550725" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -6029,7 +5680,7 @@ Codi_Barri = ?;</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6039,7 +5690,7 @@ Codi_Barri = ?;</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6084,150 +5735,70 @@ Codi_Barri = ?;</property>
     design-time-name="Package\STG_VIVIENDA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="166,42"
+          Size="166.4,41.6"
           Id="Package\STG_VIVIENDA\STG_DISTRICTE"
-          TopLeft="883,15" />
+          TopLeft="801.666667878628,11.6666667163372" />
         <NodeLayout
-          Size="128,42"
+          Size="128,41.6"
           Id="Package\STG_VIVIENDA\Ordenar 1"
-          TopLeft="898,114" />
+          TopLeft="863.333333849907,112.888888905446" />
         <NodeLayout
-          Size="128,42"
+          Size="128,41.6"
           Id="Package\STG_VIVIENDA\Ordenar 3"
-          TopLeft="1038,442" />
+          TopLeft="1003.33333384991,440.888888905446" />
         <NodeLayout
-          Size="177,42"
+          Size="176.8,41.6"
           Id="Package\STG_VIVIENDA\Columna derivada 3"
-          TopLeft="751,880" />
+          TopLeft="792.999999374151,880" />
         <NodeLayout
-          Size="168,42"
+          Size="168,41.6"
           Id="Package\STG_VIVIENDA\Columna derivada"
-          TopLeft="741,320" />
+          TopLeft="706.333333849907,318.888888905446" />
         <NodeLayout
-          Size="119,42"
+          Size="119.2,41.6"
           Id="Package\STG_VIVIENDA\Ordenar"
-          TopLeft="657,117" />
+          TopLeft="622.333333849907,115.888888905446" />
         <NodeLayout
-          Size="128,42"
+          Size="128,41.6"
           Id="Package\STG_VIVIENDA\Ordenar 2"
-          TopLeft="770,437" />
+          TopLeft="735.333333849907,435.888888905446" />
         <NodeLayout
-          Size="177,42"
-          Id="Package\STG_VIVIENDA\Columna derivada 2"
-          TopLeft="504.333333333333,666.666666666667" />
-        <NodeLayout
-          Size="141,42"
+          Size="140.8,41.6"
           Id="Package\STG_VIVIENDA\STG_BARRI"
-          TopLeft="1039,299" />
+          TopLeft="1004.33333384991,297.888888905446" />
         <NodeLayout
-          Size="196,42"
+          Size="196,41.6"
           Id="Package\STG_VIVIENDA\Combinación de mezcla"
-          TopLeft="743,205" />
+          TopLeft="708.333333849907,203.888888905446" />
         <NodeLayout
-          Size="159,42"
+          Size="159.2,41.6"
           Id="Package\STG_VIVIENDA\STG_VIVIENDA"
-          TopLeft="630,22" />
+          TopLeft="548.666667878628,18.6666667163372" />
         <NodeLayout
-          Size="205,42"
+          Size="204.8,41.6"
           Id="Package\STG_VIVIENDA\Combinación de mezcla 1"
-          TopLeft="841,556" />
+          TopLeft="758.555556784074,561.555555472771" />
         <NodeLayout
-          Size="175,42"
+          Size="175.2,41.6"
           Id="Package\STG_VIVIENDA\Destino de OLE DB"
-          TopLeft="944.333333333333,1098.33333333333" />
+          TopLeft="986.333332707484,1098.33333333333" />
         <NodeLayout
-          Size="147,42"
-          Id="Package\STG_VIVIENDA\Unión de todo"
-          TopLeft="769.333333333333,773.333333333333" />
-        <NodeLayout
-          Size="150,42"
-          Id="Package\STG_VIVIENDA\no identificado"
-          TopLeft="477,564.666666666667" />
-        <NodeLayout
-          Size="185,42"
+          Size="184.8,41.6"
           Id="Package\STG_VIVIENDA\Comando de OLE DB"
-          TopLeft="571,1104.66666666667" />
+          TopLeft="612.999999374151,1104.66666666667" />
         <NodeLayout
-          Size="129,42"
+          Size="128.8,41.6"
           Id="Package\STG_VIVIENDA\Búsqueda"
-          TopLeft="767.666666666667,1008.33333333333" />
+          TopLeft="809.666666040818,1008.33333333333" />
         <NodeLayout
-          Size="177,42"
+          Size="176.8,41.6"
           Id="Package\STG_VIVIENDA\Columna derivada 1"
-          TopLeft="866,660" />
-        <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de columna derivada2]"
-          TopLeft="954.5,702">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-88.5,71.3333333333334"
-              Start="0,0"
-              End="-88.5,63.8333333333334">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.3391655450875" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,38.3391655450875"
-                    Point2="0,42.3391655450875"
-                    Point3="-4,42.3391655450875" />
-                  <mssgle:LineSegment
-                    End="-84.5,42.3391655450875" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-84.5,42.3391655450875"
-                    Point2="-88.5,42.3391655450875"
-                    Point3="-88.5,46.3391655450875" />
-                  <mssgle:LineSegment
-                    End="-88.5,63.8333333333334" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de columna derivada1]"
-          TopLeft="592.833333333333,708.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="226.833333333333,64.6666666666667"
-              Start="0,0"
-              End="226.833333333333,57.1666666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.3822341857335" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.3822341857335"
-                    Point2="0,38.3822341857335"
-                    Point3="4,38.3822341857335" />
-                  <mssgle:LineSegment
-                    End="222.833333333333,38.3822341857335" />
-                  <mssgle:CubicBezierSegment
-                    Point1="222.833333333333,38.3822341857335"
-                    Point2="226.833333333333,38.3822341857335"
-                    Point3="226.833333333333,42.3822341857335" />
-                  <mssgle:LineSegment
-                    End="226.833333333333,57.1666666666667" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="750.222223947446,689.999999552965" />
         <EdgeLayout
           Id="Package\STG_VIVIENDA.Paths[Salida de columna derivada]"
-          TopLeft="835.833333333333,922">
+          TopLeft="877.833332707484,922">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6248,63 +5819,31 @@ Codi_Barri = ?;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de Unión de todo 1]"
-          TopLeft="841.166666666667,815.333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,64.6666666666666"
-              Start="0,0"
-              End="0,57.1666666666666">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,57.1666666666666" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB3]"
-          TopLeft="713,64">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,53"
-              Start="0,0"
-              End="0,45.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB2]"
-          TopLeft="964,57">
+          TopLeft="884.866667878628,53.2666667163372">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,57"
+              EndConnector="42.4666659712791,59.6222221891086"
               Start="0,0"
-              End="0,49.5">
+              End="42.4666659712791,52.1222221891086">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,49.5" />
+                    End="0,25.8111110945543" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.8111110945543"
+                    Point2="0,29.8111110945543"
+                    Point3="4,29.8111110945543" />
+                  <mssgle:LineSegment
+                    End="38.4666659712791,29.8111110945543" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38.4666659712791,29.8111110945543"
+                    Point2="42.4666659712791,29.8111110945543"
+                    Point3="42.4666659712791,33.8111110945543" />
+                  <mssgle:LineSegment
+                    End="42.4666659712791,52.1222221891086" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6315,7 +5854,7 @@ Codi_Barri = ?;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB1]"
-          TopLeft="1105.75,341">
+          TopLeft="1071.08333384991,339.888888905446">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6337,30 +5876,30 @@ Codi_Barri = ?;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB]"
-          TopLeft="552,606.666666666667">
+          TopLeft="628.266667878628,60.2666667163372">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="40.8333333333334,60"
+              EndConnector="53.6666659712791,55.6222221891086"
               Start="0,0"
-              End="40.8333333333334,52.5">
+              End="53.6666659712791,48.1222221891086">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26" />
+                    End="0,23.8111110945543" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="4,30" />
+                    Point1="0,23.8111110945543"
+                    Point2="0,27.8111110945543"
+                    Point3="4,27.8111110945543" />
                   <mssgle:LineSegment
-                    End="36.8333333333334,30" />
+                    End="49.6666659712791,27.8111110945543" />
                   <mssgle:CubicBezierSegment
-                    Point1="36.8333333333334,30"
-                    Point2="40.8333333333334,30"
-                    Point3="40.8333333333334,34" />
+                    Point1="49.6666659712791,27.8111110945543"
+                    Point2="53.6666659712791,27.8111110945543"
+                    Point3="53.6666659712791,31.8111110945543" />
                   <mssgle:LineSegment
-                    End="40.8333333333334,52.5" />
+                    End="53.6666659712791,48.1222221891086" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6371,75 +5910,7 @@ Codi_Barri = ?;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_VIVIENDA.Paths[Salida de ordenación3]"
-          TopLeft="834,479">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="109.5,77"
-              Start="0,0"
-              End="109.5,69.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.5"
-                    Point2="0,38.5"
-                    Point3="4,38.5" />
-                  <mssgle:LineSegment
-                    End="105.5,38.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="105.5,38.5"
-                    Point2="109.5,38.5"
-                    Point3="109.5,42.5" />
-                  <mssgle:LineSegment
-                    End="109.5,69.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de ordenación2]"
-          TopLeft="716.5,159">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="124.5,46"
-              Start="0,0"
-              End="124.5,38.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19"
-                    Point2="0,23"
-                    Point3="4,23" />
-                  <mssgle:LineSegment
-                    End="120.5,23" />
-                  <mssgle:CubicBezierSegment
-                    Point1="120.5,23"
-                    Point2="124.5,23"
-                    Point3="124.5,27" />
-                  <mssgle:LineSegment
-                    End="124.5,38.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de ordenación1]"
-          TopLeft="962,156">
+          TopLeft="927.333333849907,154.888888905446">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6472,31 +5943,99 @@ Codi_Barri = ?;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de ordenación]"
-          TopLeft="1102,484">
+          Id="Package\STG_VIVIENDA.Paths[Salida de ordenación2]"
+          TopLeft="1067.33333384991,482.488888905446">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-125.666666666667,72"
+              EndConnector="-173.577777065833,79.0666665673255"
               Start="0,0"
-              End="-125.666666666667,64.5">
+              End="-173.577777065833,71.5666665673255">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.865440464666" />
+                    End="0,43.0722480028729" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,38.865440464666"
-                    Point2="0,42.865440464666"
-                    Point3="-4,42.865440464666" />
+                    Point1="0,43.0722480028729"
+                    Point2="0,47.0722480028729"
+                    Point3="-4,47.0722480028729" />
                   <mssgle:LineSegment
-                    End="-121.666666666667,42.865440464666" />
+                    End="-169.577777065833,47.0722480028729" />
                   <mssgle:CubicBezierSegment
-                    Point1="-121.666666666667,42.865440464666"
-                    Point2="-125.666666666667,42.865440464666"
-                    Point3="-125.666666666667,46.865440464666" />
+                    Point1="-169.577777065833,47.0722480028729"
+                    Point2="-173.577777065833,47.0722480028729"
+                    Point3="-173.577777065833,51.0722480028729" />
                   <mssgle:LineSegment
-                    End="-125.666666666667,64.5" />
+                    End="-173.577777065833,71.5666665673255" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_VIVIENDA.Paths[Salida de ordenación1]"
+          TopLeft="681.833333849907,157.888888905446">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="124.5,46"
+              Start="0,0"
+              End="124.5,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19"
+                    Point2="0,23"
+                    Point3="4,23" />
+                  <mssgle:LineSegment
+                    End="120.5,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="120.5,23"
+                    Point2="124.5,23"
+                    Point3="124.5,27" />
+                  <mssgle:LineSegment
+                    End="124.5,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_VIVIENDA.Paths[Salida de ordenación]"
+          TopLeft="799.333333849907,477.488888905446">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="28.8222229341667,84.0666665673255"
+              Start="0,0"
+              End="28.8222229341667,76.5666665673255">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.0489921889194" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.0489921889194"
+                    Point2="0,50.0489921889194"
+                    Point3="4,50.0489921889194" />
+                  <mssgle:LineSegment
+                    End="24.8222229341667,50.0489921889194" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24.8222229341667,50.0489921889194"
+                    Point2="28.8222229341667,50.0489921889194"
+                    Point3="28.8222229341667,54.0489921889194" />
+                  <mssgle:LineSegment
+                    End="28.8222229341667,76.5666665673255" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6507,7 +6046,7 @@ Codi_Barri = ?;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_VIVIENDA.Paths[Salida de entradas no coincidentes de búsqueda]"
-          TopLeft="852.333333333333,1050.33333333333">
+          TopLeft="894.333332707484,1050.33333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6537,13 +6076,13 @@ Codi_Barri = ?;</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-17.1390234374999,24.5528330781011,213.778046875,12.1953125"
+              BoundingBox="-17.1390234375,24.5528330781011,213.778046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_VIVIENDA.Paths[Salida de entradas coincidentes de búsqueda]"
-          TopLeft="812,1050.33333333333">
+          TopLeft="853.999999374151,1050.33333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6579,30 +6118,30 @@ Codi_Barri = ?;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_VIVIENDA.Paths[Salida de combinación de mezcla1]"
-          TopLeft="943.5,598">
+          TopLeft="860.955556784074,603.155555472771">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="11,62.0000000000001"
+              EndConnector="-22.3333328366281,86.8444440801939"
               Start="0,0"
-              End="11,54.5000000000001">
+              End="-22.3333328366281,79.3444440801939">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.0000000000001" />
+                    End="0,39.4222220400969" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27.0000000000001"
-                    Point2="0,31.0000000000001"
-                    Point3="4,31.0000000000001" />
+                    Point1="0,39.4222220400969"
+                    Point2="0,43.4222220400969"
+                    Point3="-4,43.4222220400969" />
                   <mssgle:LineSegment
-                    End="7,31.0000000000001" />
+                    End="-18.3333328366281,43.4222220400969" />
                   <mssgle:CubicBezierSegment
-                    Point1="7,31.0000000000001"
-                    Point2="11,31.0000000000001"
-                    Point3="11,35.0000000000001" />
+                    Point1="-18.3333328366281,43.4222220400969"
+                    Point2="-22.3333328366281,43.4222220400969"
+                    Point3="-22.3333328366281,47.4222220400969" />
                   <mssgle:LineSegment
-                    End="11,54.5000000000001" />
+                    End="-22.3333328366281,79.3444440801939" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6613,7 +6152,7 @@ Codi_Barri = ?;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_VIVIENDA.Paths[Salida de combinación de mezcla]"
-          TopLeft="841,247">
+          TopLeft="806.333333849907,245.888888905446">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6646,8 +6185,8 @@ Codi_Barri = ?;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de columna derivada3]"
-          TopLeft="825,362">
+          Id="Package\STG_VIVIENDA.Paths[Salida de columna derivada1]"
+          TopLeft="790.333333849907,360.888888905446">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6680,19 +6219,53 @@ Codi_Barri = ?;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
-          Text="CREATE TABLE STG_VIVIENDA (&#xA;    [ID_VIVIENDA] varchar(11) PRIMARY KEY,&#xA;    [Any] int,&#xA;    [Trimestre] int,&#xA;    [Codi_Districte] int,&#xA;    [Codi_Barri] int,&#xA;    [Preu_Valor] decimal(28,2),&#xA;    [superficie_Nombre] decimal(28,2),&#xA;    [INSERT_DATE] datetime,&#xD;&#xA;    FOREIGN KEY (Codi_Districte) REFERENCES STG_DISTRICTE(Codi_Districte).&#xD;&#xA;    FOREIGN KEY (Codi_Barri) REFERENCES STG_BARRI(Codi_Barri)&#xA;)"
+          Text="CREATE TABLE STG_VIVIENDA (&#xA;    [ID_VIVIENDA] varchar(11) PRIMARY KEY,&#xA;    [Any] int,&#xA;    [Trimestre] int,&#xA;    [Codi_Districte] int,&#xA;    [Codi_Barri] int,&#xA;    [Preu_Valor] decimal(28,2),&#xA;    [superficie_Nombre] decimal(28,2),&#xA;    [INSERT_DATE] datetime,&#xA;    FOREIGN KEY (Codi_Districte) REFERENCES STG_DISTRICTE(Codi_Districte),    FOREIGN KEY (Codi_Barri) REFERENCES STG_BARRI(Codi_Barri)&#xA;)"
           ParentId="Package\STG_VIVIENDA"
           FontInfo="{assembly:Null}"
-          Size="433,216"
+          Size="774.4,199.2"
           Id="8b54c7b3-c460-4054-b399-63f720149639"
-          TopLeft="1019.33333333333,804.666666666667" />
+          TopLeft="1064.66666599114,794.666666815679" />
         <AnnotationLayout
-          Text="UPDATE STG_VIVIENDA&#xA;SET Any = ?,&#xA;Trimestre = ?,&#xA;Preu_Valor = ?,&#xA;superficie_Nombre = ?,&#xA;INSERT_DATE =? &#xA;where ID_VIVIENDA = ? AND Codi_Districte = ? AND Codi_Barri = ?;"
+          Text="UPDATE STG_VIVIENDA&#xA;SET [Any] = ?,&#xA;Trimestre = ?,&#xA;Preu_Valor = ?,&#xA;superficie_Nombre = ?,&#xA;INSERT_DATE =? &#xA;where ID_VIVIENDA = ? AND Codi_Districte = ? AND Codi_Barri = ?;"
           ParentId="Package\STG_VIVIENDA"
           FontInfo="{assembly:Null}"
-          Size="386,136"
+          Size="386.4,136"
           Id="53b7d188-71aa-4e48-af2b-d289f827c057"
-          TopLeft="140.666666666667,858.333333333333" />
+          TopLeft="266.666664789121,877.333333050211" />
+        <EdgeLayout
+          Id="Package\STG_VIVIENDA.Paths[Salida de columna derivada2]"
+          TopLeft="838.622223947445,731.599999552965">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="42.7777754267057,148.400000447035"
+              Start="0,0"
+              End="42.7777754267057,140.900000447035">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.2000002235174" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,70.2000002235174"
+                    Point2="0,74.2000002235174"
+                    Point3="4,74.2000002235174" />
+                  <mssgle:LineSegment
+                    End="38.7777754267057,74.2000002235174" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38.7777754267057,74.2000002235174"
+                    Point2="42.7777754267057,74.2000002235174"
+                    Point3="42.7777754267057,78.2000002235174" />
+                  <mssgle:LineSegment
+                    End="42.7777754267057,140.900000447035" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -6749,20 +6322,12 @@ Codi_Barri = ?;</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\STG_VIVIENDA\no identificado">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\STG_VIVIENDA\Búsqueda">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6772,7 +6337,7 @@ Codi_Barri = ?;</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
