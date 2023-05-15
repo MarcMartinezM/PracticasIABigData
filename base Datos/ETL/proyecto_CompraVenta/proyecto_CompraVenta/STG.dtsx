@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{334B5352-F466-40DB-BD33-2F5C3245CEAF}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{50F2D7FB-C71D-4B57-BBAC-65573D8D3319}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2835,7 +2835,16 @@ where [refTable].[ID_VIVIENDA] = ?</property>
                   description="Comando SQL para ejecutar."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE STG_VIVIENDA 
+SET
+Any = ? ,
+Trimestre = ? ,
+Preu_Valor = ? ,
+superficie_Nombre = ? ,
+INSERT_DATE =? 
+where ID_VIVIENDA = ? AND
+Codi_Districte = ? AND 
+Codi_Barri = ?;</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -2844,6 +2853,8 @@ where [refTable].[ID_VIVIENDA] = ?</property>
               <connections>
                 <connection
                   refId="Package\STG_VIVIENDA\Comando de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -3362,7 +3373,7 @@ where [refTable].[ID_VIVIENDA] = ?</property>
                 <property
                   dataType="System.String"
                   description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">[dbo].[STG_VIVIENDA]</property>
+                  name="OpenRowset">[STG_VIVIENDA]</property>
                 <property
                   dataType="System.String"
                   description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
@@ -5371,22 +5382,22 @@ where [refTable].[ID_VIVIENDA] = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de columna derivada3]"
+              refId="Package\STG_VIVIENDA.Paths[Salida de columna derivada]"
               endId="Package\STG_VIVIENDA\Búsqueda.Inputs[Entrada de búsqueda]"
               name="Salida de columna derivada"
               startId="Package\STG_VIVIENDA\Columna derivada 3.Outputs[Salida de columna derivada]" />
             <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de columna derivada2]"
+              refId="Package\STG_VIVIENDA.Paths[Salida de columna derivada1]"
               endId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 2]"
               name="Salida de columna derivada"
               startId="Package\STG_VIVIENDA\Columna derivada 2.Outputs[Salida de columna derivada]" />
             <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de columna derivada1]"
+              refId="Package\STG_VIVIENDA.Paths[Salida de columna derivada2]"
               endId="Package\STG_VIVIENDA\Unión de todo.Inputs[Entrada de Unión de todo 1]"
               name="Salida de columna derivada"
               startId="Package\STG_VIVIENDA\Columna derivada 1.Outputs[Salida de columna derivada]" />
             <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de columna derivada]"
+              refId="Package\STG_VIVIENDA.Paths[Salida de columna derivada3]"
               endId="Package\STG_VIVIENDA\Ordenar 2.Inputs[Entrada de ordenación]"
               name="Salida de columna derivada"
               startId="Package\STG_VIVIENDA\Columna derivada.Outputs[Salida de columna derivada]" />
@@ -5412,6 +5423,16 @@ where [refTable].[ID_VIVIENDA] = ?</property>
               startId="Package\STG_VIVIENDA\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]" />
             <path
               refId="Package\STG_VIVIENDA.Paths[Salida de ordenación3]"
+              endId="Package\STG_VIVIENDA\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STG_VIVIENDA\Ordenar 2.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STG_VIVIENDA.Paths[Salida de ordenación2]"
+              endId="Package\STG_VIVIENDA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STG_VIVIENDA\Ordenar.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STG_VIVIENDA.Paths[Salida de ordenación]"
               endId="Package\STG_VIVIENDA\Combinación de mezcla 1.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\STG_VIVIENDA\Ordenar 3.Outputs[Salida de ordenación]" />
@@ -5421,35 +5442,25 @@ where [refTable].[ID_VIVIENDA] = ?</property>
               name="Salida de ordenación"
               startId="Package\STG_VIVIENDA\Ordenar 1.Outputs[Salida de ordenación]" />
             <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de ordenación]"
-              endId="Package\STG_VIVIENDA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STG_VIVIENDA\Ordenar.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de ordenación2]"
-              endId="Package\STG_VIVIENDA\Combinación de mezcla 1.Inputs[Entrada izquierda de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STG_VIVIENDA\Ordenar 2.Outputs[Salida de ordenación]" />
-            <path
               refId="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB3]"
+              endId="Package\STG_VIVIENDA\Ordenar.Inputs[Entrada de ordenación]"
+              name="Salida de origen de OLE DB"
+              startId="Package\STG_VIVIENDA\STG_VIVIENDA.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB]"
               endId="Package\STG_VIVIENDA\Columna derivada 2.Inputs[Entrada de columna derivada]"
               name="Salida de origen de OLE DB"
               startId="Package\STG_VIVIENDA\no identificado.Outputs[Salida de origen de OLE DB]" />
             <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB2]"
+              refId="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB1]"
               endId="Package\STG_VIVIENDA\Ordenar 3.Inputs[Entrada de ordenación]"
               name="Salida de origen de OLE DB"
               startId="Package\STG_VIVIENDA\STG_BARRI.Outputs[Salida de origen de OLE DB]" />
             <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB1]"
+              refId="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB2]"
               endId="Package\STG_VIVIENDA\Ordenar 1.Inputs[Entrada de ordenación]"
               name="Salida de origen de OLE DB"
               startId="Package\STG_VIVIENDA\STG_DISTRICTE.Outputs[Salida de origen de OLE DB]" />
-            <path
-              refId="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB]"
-              endId="Package\STG_VIVIENDA\Ordenar.Inputs[Entrada de ordenación]"
-              name="Salida de origen de OLE DB"
-              startId="Package\STG_VIVIENDA\STG_VIVIENDA.Outputs[Salida de origen de OLE DB]" />
             <path
               refId="Package\STG_VIVIENDA.Paths[Salida de Unión de todo 1]"
               endId="Package\STG_VIVIENDA\Columna derivada 3.Inputs[Entrada de columna derivada]"
@@ -5491,11 +5502,11 @@ where [refTable].[ID_VIVIENDA] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="138,42"
+          Size="152,42"
           Id="Package\STG_BARRI"
-          TopLeft="319.999982515972,69.333332851198" />
+          TopLeft="320.999982515972,69.333332851198" />
         <NodeLayout
-          Size="161,42"
+          Size="183,42"
           Id="Package\STG_DISTRICTE"
           TopLeft="96.6666613850335,61.5333329054382" />
         <NodeLayout
@@ -5504,18 +5515,18 @@ where [refTable].[ID_VIVIENDA] = ?</property>
           TopLeft="554.999969676138,70.199999511838" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="257.466661385033,86.2333328783181">
+          TopLeft="279.666661385034,86.4333328783181">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="62.5333211309381,0"
+              EndConnector="41.3333211309385,0"
               Start="0,0"
-              End="55.0333211309381,0">
+              End="33.8333211309385,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="55.0333211309381,0" />
+                    End="33.8333211309385,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5526,18 +5537,18 @@ where [refTable].[ID_VIVIENDA] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="457.999982515972,90.766666181518">
+          TopLeft="472.999982515972,90.766666181518">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="96.999987160166,0"
+              EndConnector="81.999987160166,0"
               Start="0,0"
-              End="89.499987160166,0">
+              End="74.499987160166,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="89.499987160166,0" />
+                    End="74.499987160166,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5743,7 +5754,7 @@ where [refTable].[ID_VIVIENDA] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
-          Text="CREATE TABLE STG_BARRI (&#xD;&#xA;    [Codi_Barri] int PRIMARY KEY,&#xD;&#xA;    [Nom_Barri] varchar(50),&#xD;&#xA;    [INSERT_DATE] datetime&#xD;&#xA;)"
+          Text="CREATE TABLE STG_BARRI (&#xA;    [Codi_Barri] int PRIMARY KEY,&#xA;    [Nom_Barri] varchar(50),&#xA;    [INSERT_DATE] datetime&#xA;)"
           ParentId="Package\STG_BARRI"
           FontInfo="{assembly:Null}"
           Size="198,104"
@@ -5758,7 +5769,7 @@ where [refTable].[ID_VIVIENDA] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -5768,7 +5779,7 @@ where [refTable].[ID_VIVIENDA] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6018,7 +6029,7 @@ where [refTable].[ID_VIVIENDA] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6028,7 +6039,7 @@ where [refTable].[ID_VIVIENDA] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6075,36 +6086,192 @@ where [refTable].[ID_VIVIENDA] = ?</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="159,42"
-          Id="Package\STG_VIVIENDA\STG_VIVIENDA"
-          TopLeft="624,22" />
-        <NodeLayout
           Size="166,42"
           Id="Package\STG_VIVIENDA\STG_DISTRICTE"
-          TopLeft="877,15" />
+          TopLeft="883,15" />
         <NodeLayout
           Size="128,42"
           Id="Package\STG_VIVIENDA\Ordenar 1"
-          TopLeft="892,114" />
-        <NodeLayout
-          Size="141,42"
-          Id="Package\STG_VIVIENDA\STG_BARRI"
-          TopLeft="1033,299" />
+          TopLeft="898,114" />
         <NodeLayout
           Size="128,42"
           Id="Package\STG_VIVIENDA\Ordenar 3"
-          TopLeft="1032,442" />
+          TopLeft="1038,442" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\STG_VIVIENDA\Columna derivada 3"
+          TopLeft="751,880" />
         <NodeLayout
           Size="168,42"
           Id="Package\STG_VIVIENDA\Columna derivada"
-          TopLeft="735,320" />
+          TopLeft="741,320" />
         <NodeLayout
           Size="119,42"
           Id="Package\STG_VIVIENDA\Ordenar"
-          TopLeft="651,117" />
+          TopLeft="657,117" />
+        <NodeLayout
+          Size="128,42"
+          Id="Package\STG_VIVIENDA\Ordenar 2"
+          TopLeft="770,437" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\STG_VIVIENDA\Columna derivada 2"
+          TopLeft="504.333333333333,666.666666666667" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\STG_VIVIENDA\STG_BARRI"
+          TopLeft="1039,299" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\STG_VIVIENDA\Combinación de mezcla"
+          TopLeft="743,205" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\STG_VIVIENDA\STG_VIVIENDA"
+          TopLeft="630,22" />
+        <NodeLayout
+          Size="205,42"
+          Id="Package\STG_VIVIENDA\Combinación de mezcla 1"
+          TopLeft="841,556" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\STG_VIVIENDA\Destino de OLE DB"
+          TopLeft="944.333333333333,1098.33333333333" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\STG_VIVIENDA\Unión de todo"
+          TopLeft="769.333333333333,773.333333333333" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\STG_VIVIENDA\no identificado"
+          TopLeft="477,564.666666666667" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\STG_VIVIENDA\Comando de OLE DB"
+          TopLeft="571,1104.66666666667" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\STG_VIVIENDA\Búsqueda"
+          TopLeft="767.666666666667,1008.33333333333" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\STG_VIVIENDA\Columna derivada 1"
+          TopLeft="866,660" />
         <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB]"
-          TopLeft="707,64">
+          Id="Package\STG_VIVIENDA.Paths[Salida de columna derivada2]"
+          TopLeft="954.5,702">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-88.5,71.3333333333334"
+              Start="0,0"
+              End="-88.5,63.8333333333334">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.3391655450875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.3391655450875"
+                    Point2="0,42.3391655450875"
+                    Point3="-4,42.3391655450875" />
+                  <mssgle:LineSegment
+                    End="-84.5,42.3391655450875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-84.5,42.3391655450875"
+                    Point2="-88.5,42.3391655450875"
+                    Point3="-88.5,46.3391655450875" />
+                  <mssgle:LineSegment
+                    End="-88.5,63.8333333333334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_VIVIENDA.Paths[Salida de columna derivada1]"
+          TopLeft="592.833333333333,708.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="226.833333333333,64.6666666666667"
+              Start="0,0"
+              End="226.833333333333,57.1666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.3822341857335" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.3822341857335"
+                    Point2="0,38.3822341857335"
+                    Point3="4,38.3822341857335" />
+                  <mssgle:LineSegment
+                    End="222.833333333333,38.3822341857335" />
+                  <mssgle:CubicBezierSegment
+                    Point1="222.833333333333,38.3822341857335"
+                    Point2="226.833333333333,38.3822341857335"
+                    Point3="226.833333333333,42.3822341857335" />
+                  <mssgle:LineSegment
+                    End="226.833333333333,57.1666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_VIVIENDA.Paths[Salida de columna derivada]"
+          TopLeft="835.833333333333,922">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,86.3333333333331"
+              Start="0,0"
+              End="0,78.8333333333331">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,78.8333333333331" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_VIVIENDA.Paths[Salida de Unión de todo 1]"
+          TopLeft="841.166666666667,815.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64.6666666666666"
+              Start="0,0"
+              End="0,57.1666666666666">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.1666666666666" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB3]"
+          TopLeft="713,64">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6125,8 +6292,8 @@ where [refTable].[ID_VIVIENDA] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB1]"
-          TopLeft="958,57">
+          Id="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB2]"
+          TopLeft="964,57">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6146,13 +6313,99 @@ where [refTable].[ID_VIVIENDA] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="196,42"
-          Id="Package\STG_VIVIENDA\Combinación de mezcla"
-          TopLeft="737,205" />
         <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de ordenación]"
-          TopLeft="710.5,159">
+          Id="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB1]"
+          TopLeft="1105.75,341">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,101"
+              Start="0,0"
+              End="0,93.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,93.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB]"
+          TopLeft="552,606.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.8333333333334,60"
+              Start="0,0"
+              End="40.8333333333334,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="36.8333333333334,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.8333333333334,30"
+                    Point2="40.8333333333334,30"
+                    Point3="40.8333333333334,34" />
+                  <mssgle:LineSegment
+                    End="40.8333333333334,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_VIVIENDA.Paths[Salida de ordenación3]"
+          TopLeft="834,479">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="109.5,77"
+              Start="0,0"
+              End="109.5,69.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.5"
+                    Point2="0,38.5"
+                    Point3="4,38.5" />
+                  <mssgle:LineSegment
+                    End="105.5,38.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="105.5,38.5"
+                    Point2="109.5,38.5"
+                    Point3="109.5,42.5" />
+                  <mssgle:LineSegment
+                    End="109.5,69.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_VIVIENDA.Paths[Salida de ordenación2]"
+          TopLeft="716.5,159">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6186,7 +6439,7 @@ where [refTable].[ID_VIVIENDA] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STG_VIVIENDA.Paths[Salida de ordenación1]"
-          TopLeft="956,156">
+          TopLeft="962,156">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6219,140 +6472,8 @@ where [refTable].[ID_VIVIENDA] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de combinación de mezcla]"
-          TopLeft="835,247">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-16,73"
-              Start="0,0"
-              End="-16,65.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.5"
-                    Point2="0,36.5"
-                    Point3="-4,36.5" />
-                  <mssgle:LineSegment
-                    End="-12,36.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-12,36.5"
-                    Point2="-16,36.5"
-                    Point3="-16,40.5" />
-                  <mssgle:LineSegment
-                    End="-16,65.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB2]"
-          TopLeft="1099.75,341">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,101"
-              Start="0,0"
-              End="0,93.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,93.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="205,42"
-          Id="Package\STG_VIVIENDA\Combinación de mezcla 1"
-          TopLeft="835,556" />
-        <NodeLayout
-          Size="128,42"
-          Id="Package\STG_VIVIENDA\Ordenar 2"
-          TopLeft="764,437" />
-        <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de columna derivada]"
-          TopLeft="819,362">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="9,75"
-              Start="0,0"
-              End="9,67.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,33.5"
-                    Point2="0,37.5"
-                    Point3="4,37.5" />
-                  <mssgle:LineSegment
-                    End="5,37.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5,37.5"
-                    Point2="9,37.5"
-                    Point3="9,41.5" />
-                  <mssgle:LineSegment
-                    End="9,67.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de ordenación2]"
-          TopLeft="828,479">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="109.5,77"
-              Start="0,0"
-              End="109.5,69.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.5"
-                    Point2="0,38.5"
-                    Point3="4,38.5" />
-                  <mssgle:LineSegment
-                    End="105.5,38.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="105.5,38.5"
-                    Point2="109.5,38.5"
-                    Point3="109.5,42.5" />
-                  <mssgle:LineSegment
-                    End="109.5,69.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de ordenación3]"
-          TopLeft="1096,484">
+          Id="Package\STG_VIVIENDA.Paths[Salida de ordenación]"
+          TopLeft="1102,484">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6384,224 +6505,9 @@ where [refTable].[ID_VIVIENDA] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="150,42"
-          Id="Package\STG_VIVIENDA\no identificado"
-          TopLeft="471,564.666666666667" />
-        <NodeLayout
-          Size="177,42"
-          Id="Package\STG_VIVIENDA\Columna derivada 2"
-          TopLeft="498.333333333333,666.666666666667" />
-        <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de origen de OLE DB3]"
-          TopLeft="546,606.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="40.8333333333334,60"
-              Start="0,0"
-              End="40.8333333333334,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="4,30" />
-                  <mssgle:LineSegment
-                    End="36.8333333333334,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="36.8333333333334,30"
-                    Point2="40.8333333333334,30"
-                    Point3="40.8333333333334,34" />
-                  <mssgle:LineSegment
-                    End="40.8333333333334,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="177,42"
-          Id="Package\STG_VIVIENDA\Columna derivada 1"
-          TopLeft="860,660" />
-        <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de combinación de mezcla1]"
-          TopLeft="937.5,598">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="11,62.0000000000001"
-              Start="0,0"
-              End="11,54.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.0000000000001" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.0000000000001"
-                    Point2="0,31.0000000000001"
-                    Point3="4,31.0000000000001" />
-                  <mssgle:LineSegment
-                    End="7,31.0000000000001" />
-                  <mssgle:CubicBezierSegment
-                    Point1="7,31.0000000000001"
-                    Point2="11,31.0000000000001"
-                    Point3="11,35.0000000000001" />
-                  <mssgle:LineSegment
-                    End="11,54.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="147,42"
-          Id="Package\STG_VIVIENDA\Unión de todo"
-          TopLeft="763.333333333333,773.333333333333" />
-        <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de columna derivada1]"
-          TopLeft="948.5,702">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-88.5,71.3333333333334"
-              Start="0,0"
-              End="-88.5,63.8333333333334">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.3391655450875" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,38.3391655450875"
-                    Point2="0,42.3391655450875"
-                    Point3="-4,42.3391655450875" />
-                  <mssgle:LineSegment
-                    End="-84.5,42.3391655450875" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-84.5,42.3391655450875"
-                    Point2="-88.5,42.3391655450875"
-                    Point3="-88.5,46.3391655450875" />
-                  <mssgle:LineSegment
-                    End="-88.5,63.8333333333334" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de columna derivada2]"
-          TopLeft="586.833333333333,708.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="226.833333333333,64.6666666666667"
-              Start="0,0"
-              End="226.833333333333,57.1666666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.3822341857335" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.3822341857335"
-                    Point2="0,38.3822341857335"
-                    Point3="4,38.3822341857335" />
-                  <mssgle:LineSegment
-                    End="222.833333333333,38.3822341857335" />
-                  <mssgle:CubicBezierSegment
-                    Point1="222.833333333333,38.3822341857335"
-                    Point2="226.833333333333,38.3822341857335"
-                    Point3="226.833333333333,42.3822341857335" />
-                  <mssgle:LineSegment
-                    End="226.833333333333,57.1666666666667" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="177,42"
-          Id="Package\STG_VIVIENDA\Columna derivada 3"
-          TopLeft="745,880" />
-        <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de Unión de todo 1]"
-          TopLeft="835.166666666667,815.333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,64.6666666666666"
-              Start="0,0"
-              End="0,57.1666666666666">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,57.1666666666666" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="129,42"
-          Id="Package\STG_VIVIENDA\Búsqueda"
-          TopLeft="761.666666666667,1008.33333333333" />
-        <EdgeLayout
-          Id="Package\STG_VIVIENDA.Paths[Salida de columna derivada3]"
-          TopLeft="829.833333333333,922">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,86.3333333333331"
-              Start="0,0"
-              End="0,78.8333333333331">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,78.8333333333331" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <AnnotationLayout
-          Text="CREATE TABLE STG_VIVIENDA (&#xD;&#xA;    [ID_VIVIENDA] varchar(11) PRIMARY KEY,&#xD;&#xA;    [Any] int,&#xD;&#xA;    [Trimestre] int,&#xD;&#xA;    [Codi_Districte] int,&#xD;&#xA;    [Codi_Barri] int,&#xD;&#xA;    [Preu_Valor] decimal(28,2),&#xD;&#xA;    [superficie_Nombre] decimal(28,2),&#xD;&#xA;    [INSERT_DATE] datetime&#xD;&#xA;)"
-          ParentId="Package\STG_VIVIENDA"
-          FontInfo="{assembly:Null}"
-          Size="258,184"
-          Id="8b54c7b3-c460-4054-b399-63f720149639"
-          TopLeft="993.333333333333,821.666666666667" />
-        <NodeLayout
-          Size="175,42"
-          Id="Package\STG_VIVIENDA\Destino de OLE DB"
-          TopLeft="938.333333333333,1098.33333333333" />
         <EdgeLayout
           Id="Package\STG_VIVIENDA.Paths[Salida de entradas no coincidentes de búsqueda]"
-          TopLeft="846.333333333333,1050.33333333333">
+          TopLeft="852.333333333333,1050.33333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6635,69 +6541,161 @@ where [refTable].[ID_VIVIENDA] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="UPDATE STG_VIVIENDA&#xD;&#xA;SET Any = ?,&#xD;&#xA;Trimestre = ?,&#xD;&#xA;Preu_Valor = ?,&#xD;&#xA;superficie_Nombre = ?,&#xD;&#xA;INSERT_DATE =? &#xD;&#xA;where ID_VIVIENDA = ? AND Codi_Districte = ? AND Codi_Barri = ?;"
-          ParentId="Package\STG_VIVIENDA"
-          FontInfo="{assembly:Null}"
-          Size="386,136"
-          Id="53b7d188-71aa-4e48-af2b-d289f827c057"
-          TopLeft="186.666666666667,843.333333333333" />
-        <NodeLayout
-          Size="185,42"
-          Id="Package\STG_VIVIENDA\Comando de OLE DB"
-          TopLeft="600,1106.66666666667" />
         <EdgeLayout
           Id="Package\STG_VIVIENDA.Paths[Salida de entradas coincidentes de búsqueda]"
-          TopLeft="806,1050.33333333333">
+          TopLeft="812,1050.33333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-113.5,56.3333333333335"
+              EndConnector="-148.5,54.3333333333401"
               Start="0,0"
-              End="-113.5,48.8333333333335">
+              End="-148.5,46.8333333333401">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.9474221541604" />
+                    End="0,18.1327207759088" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,18.9474221541604"
-                    Point2="0,22.9474221541604"
-                    Point3="-4,22.9474221541604" />
+                    Point1="0,18.1327207759088"
+                    Point2="0,22.1327207759088"
+                    Point3="-4,22.1327207759088" />
                   <mssgle:LineSegment
-                    End="-109.5,22.9474221541604" />
+                    End="-144.5,22.1327207759088" />
                   <mssgle:CubicBezierSegment
-                    Point1="-109.5,22.9474221541604"
-                    Point2="-113.5,22.9474221541604"
-                    Point3="-113.5,26.9474221541604" />
+                    Point1="-144.5,22.1327207759088"
+                    Point2="-148.5,22.1327207759088"
+                    Point3="-148.5,26.1327207759088" />
                   <mssgle:LineSegment
-                    End="-113.5,48.8333333333335" />
+                    End="-148.5,46.8333333333401" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-156.5690234375,27.9474221541604,199.638046875,12.1953125"
+              BoundingBox="-174.0690234375,27.1327207759088,199.638046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_VIVIENDA.Paths[Salida de combinación de mezcla1]"
+          TopLeft="943.5,598">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11,62.0000000000001"
+              Start="0,0"
+              End="11,54.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.0000000000001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.0000000000001"
+                    Point2="0,31.0000000000001"
+                    Point3="4,31.0000000000001" />
+                  <mssgle:LineSegment
+                    End="7,31.0000000000001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7,31.0000000000001"
+                    Point2="11,31.0000000000001"
+                    Point3="11,35.0000000000001" />
+                  <mssgle:LineSegment
+                    End="11,54.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_VIVIENDA.Paths[Salida de combinación de mezcla]"
+          TopLeft="841,247">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-16,73"
+              Start="0,0"
+              End="-16,65.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.5"
+                    Point2="0,36.5"
+                    Point3="-4,36.5" />
+                  <mssgle:LineSegment
+                    End="-12,36.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12,36.5"
+                    Point2="-16,36.5"
+                    Point3="-16,40.5" />
+                  <mssgle:LineSegment
+                    End="-16,65.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG_VIVIENDA.Paths[Salida de columna derivada3]"
+          TopLeft="825,362">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9,75"
+              Start="0,0"
+              End="9,67.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.5"
+                    Point2="0,37.5"
+                    Point3="4,37.5" />
+                  <mssgle:LineSegment
+                    End="5,37.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5,37.5"
+                    Point2="9,37.5"
+                    Point3="9,41.5" />
+                  <mssgle:LineSegment
+                    End="9,67.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="CREATE TABLE STG_VIVIENDA (&#xA;    [ID_VIVIENDA] varchar(11) PRIMARY KEY,&#xA;    [Any] int,&#xA;    [Trimestre] int,&#xA;    [Codi_Districte] int,&#xA;    [Codi_Barri] int,&#xA;    [Preu_Valor] decimal(28,2),&#xA;    [superficie_Nombre] decimal(28,2),&#xA;    [INSERT_DATE] datetime,&#xD;&#xA;    FOREIGN KEY (Codi_Districte) REFERENCES STG_DISTRICTE(Codi_Districte).&#xD;&#xA;    FOREIGN KEY (Codi_Barri) REFERENCES STG_BARRI(Codi_Barri)&#xA;)"
+          ParentId="Package\STG_VIVIENDA"
+          FontInfo="{assembly:Null}"
+          Size="433,216"
+          Id="8b54c7b3-c460-4054-b399-63f720149639"
+          TopLeft="1019.33333333333,804.666666666667" />
+        <AnnotationLayout
+          Text="UPDATE STG_VIVIENDA&#xA;SET Any = ?,&#xA;Trimestre = ?,&#xA;Preu_Valor = ?,&#xA;superficie_Nombre = ?,&#xA;INSERT_DATE =? &#xA;where ID_VIVIENDA = ? AND Codi_Districte = ? AND Codi_Barri = ?;"
+          ParentId="Package\STG_VIVIENDA"
+          FontInfo="{assembly:Null}"
+          Size="386,136"
+          Id="53b7d188-71aa-4e48-af2b-d289f827c057"
+          TopLeft="140.666666666667,858.333333333333" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\STG_VIVIENDA\STG_VIVIENDA">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\STG_VIVIENDA\STG_DISTRICTE">
     <Properties>
@@ -6725,33 +6723,15 @@ where [refTable].[ID_VIVIENDA] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\STG_VIVIENDA\no identificado">
+    design-time-name="Package\STG_VIVIENDA\STG_VIVIENDA">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\STG_VIVIENDA\Búsqueda">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -6765,6 +6745,37 @@ where [refTable].[ID_VIVIENDA] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_VIVIENDA\no identificado">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG_VIVIENDA\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
