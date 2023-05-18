@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DWH"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{103BC58D-7A05-446D-BF11-2AF67B7112B0}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{3ACE79FB-A3EC-47C6-A8F3-EB15FBFE3A25}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2331,7 +2331,7 @@ where ID_VIVIENDA = ? AND Codi_Districte = ? AND Codi_Barri = ?;</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-14.9723567708333,35.95865237366,213.778046875,12.1953125"
+              BoundingBox="-14.9723567708335,35.95865237366,213.778046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2438,11 +2438,11 @@ where ID_VIVIENDA = ? AND Codi_Districte = ? AND Codi_Barri = ?;</property>
         <NodeLayout
           Size="184.8,41.6"
           Id="Package\DWH_DISTRICTE\Comando de OLE DB"
-          TopLeft="196,293" />
+          TopLeft="123.500003961225,293" />
         <NodeLayout
           Size="175.2,41.6"
           Id="Package\DWH_DISTRICTE\Destino de OLE DB"
-          TopLeft="579,286" />
+          TopLeft="582.333333151208,283.40000001808" />
         <NodeLayout
           Size="169.6,41.6"
           Id="Package\DWH_DISTRICTE\Origen de OLE DB"
@@ -2475,73 +2475,73 @@ where ID_VIVIENDA = ? AND Codi_Districte = ? AND Codi_Barri = ?;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DWH_DISTRICTE.Paths[Salida de entradas no coincidentes de búsqueda]"
-          TopLeft="499.5,215">
+          TopLeft="519.533333333333,214.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="167,71"
+              EndConnector="150.399999817875,68.8000000180801"
               Start="0,0"
-              End="167,63.5">
+              End="150.399999817875,61.3000000180801">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5" />
+                    End="0,24.0265030748498" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.5"
-                    Point2="0,35.5"
-                    Point3="4,35.5" />
+                    Point1="0,24.0265030748498"
+                    Point2="0,28.0265030748498"
+                    Point3="4,28.0265030748498" />
                   <mssgle:LineSegment
-                    End="163,35.5" />
+                    End="146.399999817875,28.0265030748498" />
                   <mssgle:CubicBezierSegment
-                    Point1="163,35.5"
-                    Point2="167,35.5"
-                    Point3="167,39.5" />
+                    Point1="146.399999817875,28.0265030748498"
+                    Point2="150.399999817875,28.0265030748498"
+                    Point3="150.399999817875,32.0265030748498" />
                   <mssgle:LineSegment
-                    End="167,63.5" />
+                    End="150.399999817875,61.3000000180801" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-23.3890234375,40.5,213.778046875,12.1953125"
+              BoundingBox="-31.6890235285626,33.0265030748498,213.778046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DWH_DISTRICTE.Paths[Salida de entradas coincidentes de búsqueda]"
-          TopLeft="479.333333333333,215">
+          TopLeft="479.266666666667,214.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-190.833333333333,78"
+              EndConnector="-263.366662705442,78.4"
               Start="0,0"
-              End="-190.833333333333,70.5">
+              End="-263.366662705442,70.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.7733537519142" />
+                    End="0,27.9371779141104" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27.7733537519142"
-                    Point2="0,31.7733537519142"
-                    Point3="-4,31.7733537519142" />
+                    Point1="0,27.9371779141104"
+                    Point2="0,31.9371779141104"
+                    Point3="-4,31.9371779141104" />
                   <mssgle:LineSegment
-                    End="-186.833333333333,31.7733537519142" />
+                    End="-259.366662705442,31.9371779141104" />
                   <mssgle:CubicBezierSegment
-                    Point1="-186.833333333333,31.7733537519142"
-                    Point2="-190.833333333333,31.7733537519142"
-                    Point3="-190.833333333333,35.7733537519142" />
+                    Point1="-259.366662705442,31.9371779141104"
+                    Point2="-263.366662705442,31.9371779141104"
+                    Point3="-263.366662705442,35.9371779141104" />
                   <mssgle:LineSegment
-                    End="-190.833333333333,70.5" />
+                    End="-263.366662705442,70.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-195.235690104167,36.7733537519142,199.638046875,12.1953125"
+              BoundingBox="-231.502354790221,36.9371779141104,199.638046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

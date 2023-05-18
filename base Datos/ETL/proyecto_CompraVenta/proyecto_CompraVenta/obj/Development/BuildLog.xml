@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>proyecto_CompraVenta</Name>
-    <LastWriteTime>2023-05-15T15:45:21.9495977Z</LastWriteTime>
+    <LastWriteTime>2023-05-18T16:09:06.4789167Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>STA.dtsx</Name>
-      <LastWriteTime>2023-05-15T16:06:12.7829914Z</LastWriteTime>
+      <LastWriteTime>2023-05-18T16:09:06.437917Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -18,7 +18,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DWH.dtsx</Name>
-      <LastWriteTime>2023-05-15T16:25:18.0343952Z</LastWriteTime>
+      <LastWriteTime>2023-05-15T16:28:01.4440277Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

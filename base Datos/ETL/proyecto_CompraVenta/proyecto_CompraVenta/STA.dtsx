@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="47"
-  DTS:VersionGUID="{8B8FFEF2-562A-4D17-87E1-EB1E9BC45CB8}">
+  DTS:VersionBuild="49"
+  DTS:VersionGUID="{88FE8899-5D95-452B-B60F-732C1B65CE21}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -42,7 +42,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\Marc\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2022_preu.csv">
+          DTS:ConnectionString="D:\Usuaris\Marc Martinez\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2022_preu.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -50,7 +50,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Any"
-              DTS:DTSID="{8238530B-59F8-45A0-8A07-3303D40E0EDA}"
+              DTS:DTSID="{F7E5A0E3-A8A3-43A2-80BD-72EAD183404B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -58,7 +58,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Trimestre"
-              DTS:DTSID="{5EBFF1B6-25D7-4F0E-87BF-A8A001344874}"
+              DTS:DTSID="{C86E6D45-351D-49A9-8F7A-95DEC965099B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Districte"
-              DTS:DTSID="{908F1CDF-9A4D-4B14-825D-3174FA4C3FCF}"
+              DTS:DTSID="{E0A5703E-5875-4E68-9F1D-BF30330ABC8C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Districte"
-              DTS:DTSID="{B67596BE-08D1-4941-8A0D-82553EFDE4D8}"
+              DTS:DTSID="{FE4944D9-65DF-4430-BE13-7FC96933AA4B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -83,7 +83,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Barri"
-              DTS:DTSID="{32A4AF23-0287-44D1-A70F-892F7AEFFD7C}"
+              DTS:DTSID="{713FE805-7D1D-43AE-9856-C4D787433310}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -92,7 +92,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Barri"
-              DTS:DTSID="{9FF35935-416C-4F5B-B9A5-07ED004661BA}"
+              DTS:DTSID="{84C62314-6D41-47AC-AE56-728DE8092ED0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -101,7 +101,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Preu_mitja_habitatge"
-              DTS:DTSID="{6E1EF01F-C267-4F24-8A14-9AED3345972C}"
+              DTS:DTSID="{F889851F-0DE7-4D7D-8682-FFDAE3FBF592}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -110,7 +110,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Valor"
-              DTS:DTSID="{0883518D-C60B-4510-8E17-FDB82F2999EA}"
+              DTS:DTSID="{0020484D-0FE6-4A25-807C-D5B730B1C522}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -130,7 +130,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\Marc\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2022_supp.csv">
+          DTS:ConnectionString="D:\Usuaris\Marc Martinez\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2022_supp.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +138,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Any"
-              DTS:DTSID="{C2AE011A-C136-4FBC-8B7F-168A33A31DCA}"
+              DTS:DTSID="{0B510418-73D9-465D-91D3-09A110AB0B91}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -146,7 +146,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Trimestre"
-              DTS:DTSID="{12353486-B229-40E1-A6D8-E297B56E7FA3}"
+              DTS:DTSID="{9FDF16C7-78EE-44AB-8153-15D1370559E1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -154,7 +154,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Districte"
-              DTS:DTSID="{68359FF5-28E1-4586-8665-B966ED32569B}"
+              DTS:DTSID="{80A789C3-6C34-47BE-98D3-C65BA028C2FE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -163,7 +163,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Districte"
-              DTS:DTSID="{0EE443BC-8E46-40BB-AF16-0A0A702CBABF}"
+              DTS:DTSID="{0007B354-0C6E-4989-B886-951E0E8D7C7E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -171,7 +171,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Barri"
-              DTS:DTSID="{7637D659-A7FD-4686-8327-67258F9EF4EF}"
+              DTS:DTSID="{376BC085-3814-485E-998C-1D4857CB3A01}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -180,7 +180,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Barri"
-              DTS:DTSID="{25B22C19-AF67-4B92-94AF-4D3ABF28E447}"
+              DTS:DTSID="{1B0C563A-67BA-46F8-8E57-9E29A6B5D77F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -189,7 +189,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="superficie"
-              DTS:DTSID="{035C42EC-68CC-4F5A-9D07-D43B44CF209D}"
+              DTS:DTSID="{4E30C995-0517-49EB-8B1B-385EFE4EA798}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -198,7 +198,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nombre"
-              DTS:DTSID="{26E7AC84-B5CF-4C0C-83D2-2BD7AFABC3BD}"
+              DTS:DTSID="{903493ED-BDFE-4658-B262-36585C2E04C8}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -230,7 +230,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\Marc\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2020_preu.csv">
+          DTS:ConnectionString="D:\Usuaris\Marc Martinez\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2020_preu.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -238,7 +238,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Any"
-              DTS:DTSID="{6CA592A0-11C2-4294-8E12-4F561C5F177F}"
+              DTS:DTSID="{8CD7060A-D13C-4A68-9A6E-381E129B52F7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -246,7 +246,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Trimestre"
-              DTS:DTSID="{420D9E2D-8BF8-46B0-BA54-776B1C32BDB4}"
+              DTS:DTSID="{4F8DF7C4-BA20-4769-BCA4-563663344B68}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -254,7 +254,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Districte"
-              DTS:DTSID="{D234B3FB-1202-4856-96F8-F3A71566B833}"
+              DTS:DTSID="{57FC0BE2-84E2-4D15-A53F-FA80FE8F265E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -263,7 +263,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Districte"
-              DTS:DTSID="{75251F08-E07B-4BBD-8E7D-1421252379C2}"
+              DTS:DTSID="{C0B88CFD-B5E4-47C6-8457-9A56C1C2DF4C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -271,7 +271,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Barri"
-              DTS:DTSID="{DAB5AE19-F427-4BF0-A6FB-E1E3091080DA}"
+              DTS:DTSID="{B3667837-325A-4CA5-9311-69C610607838}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -280,7 +280,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Barri"
-              DTS:DTSID="{0B9C99F0-C326-40D1-B5EA-29513E15B208}"
+              DTS:DTSID="{C456A2E9-236A-4E3E-8BF3-3471E908C1C0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -289,7 +289,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Preu_mitja_habitatge"
-              DTS:DTSID="{FC34AC99-792F-4913-AD1F-B3EEB66A4545}"
+              DTS:DTSID="{96362E87-13F5-4CAD-B4E4-8852AA79F5B4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -298,7 +298,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Valor"
-              DTS:DTSID="{B9FED63B-24FC-496F-B228-191A8E5E9DCA}"
+              DTS:DTSID="{4C3D432C-D051-4D08-B42B-2D4B2E4BE623}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -318,7 +318,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\Marc\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2021_preu.csv">
+          DTS:ConnectionString="D:\Usuaris\Marc Martinez\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2021_preu.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -326,7 +326,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Any"
-              DTS:DTSID="{47A69008-D14A-4218-BBE8-8398B45E941D}"
+              DTS:DTSID="{486EB217-E988-4014-9451-944E3F90E1DE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -334,7 +334,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Trimestre"
-              DTS:DTSID="{9F4207F1-6C4C-4DA9-BD24-50ED35A859DD}"
+              DTS:DTSID="{F619C71E-6CCB-4F49-B7C8-434A019EBC80}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -342,7 +342,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Districte"
-              DTS:DTSID="{B8BED4EA-1A54-40F3-AEF2-9FFF3EE6120F}"
+              DTS:DTSID="{B7392454-0F03-41DD-B0B6-F151287EFEA1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -351,7 +351,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Districte"
-              DTS:DTSID="{C7DB88B1-817F-4D9F-8BBD-A751F44ECA6E}"
+              DTS:DTSID="{958D75BA-D7F6-4175-8CD2-B399BCBE0AA9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -359,7 +359,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Barri"
-              DTS:DTSID="{614922DB-FE4B-4EFE-8450-BB07BCDE3C31}"
+              DTS:DTSID="{2A92062B-A32F-4E3B-9A74-D8484D0F92DD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -368,7 +368,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Barri"
-              DTS:DTSID="{1EEB1142-8E8D-4549-A68B-2323CB71D82F}"
+              DTS:DTSID="{DC261979-DC00-4C0D-BC41-CFCFA647F343}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -377,7 +377,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Preu_mitja_habitatge"
-              DTS:DTSID="{FAFC0CE6-B038-4AD2-A0D6-17673A198D8C}"
+              DTS:DTSID="{87FBFF85-08F1-4CAA-A597-3E9A90B38F95}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -386,7 +386,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Valor"
-              DTS:DTSID="{3322D518-59D2-4B32-8D02-2A2C6960E3F6}"
+              DTS:DTSID="{3C0BA8D9-E156-4864-9221-75C6FC9FBDD9}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -406,7 +406,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\Marc\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2020_supp.csv">
+          DTS:ConnectionString="D:\Usuaris\Marc Martinez\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2020_supp.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -414,7 +414,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Any"
-              DTS:DTSID="{20AA1AFB-C508-4F82-B3A6-7387D596C314}"
+              DTS:DTSID="{6CD29733-421E-48DF-A031-11293D1585E3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -422,7 +422,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Trimestre"
-              DTS:DTSID="{BE0D3C68-8C50-4E06-A638-7F4EC0775E42}"
+              DTS:DTSID="{19811F87-F343-477E-959D-8AFF4E64727A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -430,7 +430,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Districte"
-              DTS:DTSID="{BF3C8A79-A969-44B1-BC2D-E7A1992F0DEA}"
+              DTS:DTSID="{0A9DE40F-CD9B-497E-A289-4A626FA33F93}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -439,7 +439,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Districte"
-              DTS:DTSID="{2D5A2677-BAF5-446A-A6FF-3CB76EF1791B}"
+              DTS:DTSID="{889EC1CF-9702-4B50-BC18-0BF83DB22786}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -447,7 +447,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Barri"
-              DTS:DTSID="{45E7550B-810D-4467-B763-34F734D825FE}"
+              DTS:DTSID="{D9B61969-3802-454D-992D-5040349F96DA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -456,7 +456,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Barri"
-              DTS:DTSID="{606C423B-8CD0-4185-8B9B-51CE5FB62627}"
+              DTS:DTSID="{5B9AD541-0CFE-4404-B62B-F4A4501957FE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -465,7 +465,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Superfície_mitjana_(m2_construïts)"
-              DTS:DTSID="{016D60AF-0760-47D5-9D40-D6F4E72D251C}"
+              DTS:DTSID="{432BF444-95F1-4010-A53E-736EACE25898}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -474,7 +474,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nombre"
-              DTS:DTSID="{2A0CBBBB-A141-416D-8593-8D46411ED48A}"
+              DTS:DTSID="{C3C5CD70-86AC-4ADC-B397-EC82EB9695DB}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -494,7 +494,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\Marc\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2021_supp.csv">
+          DTS:ConnectionString="D:\Usuaris\Marc Martinez\Documents\GitHub\PracticasIABigData\base Datos\ETL\proyecto_CompraVenta\2021_supp.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -502,7 +502,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Any"
-              DTS:DTSID="{B24479BE-EB56-4DC4-BAF4-9C3125541380}"
+              DTS:DTSID="{5587F468-6437-4820-AE83-9494AA4D61E3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -510,7 +510,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Trimestre"
-              DTS:DTSID="{E7740B02-1AD2-4CAF-9A6B-C85472E5BAD7}"
+              DTS:DTSID="{6F27DF64-BCBB-426F-B04B-881431E12B09}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -518,7 +518,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Districte"
-              DTS:DTSID="{1A1F8360-F447-42FA-B3AA-AED643506006}"
+              DTS:DTSID="{F7707438-C18F-4F4F-A568-D7229A159366}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -527,7 +527,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Districte"
-              DTS:DTSID="{BA25BA0C-2D01-4DC7-891B-C265BCD395B8}"
+              DTS:DTSID="{4B339E73-E935-4ACE-B8FA-0E01F12672AC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -535,7 +535,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Codi_Barri"
-              DTS:DTSID="{61DE7CE2-4269-4E4E-B217-17CD478FE91B}"
+              DTS:DTSID="{CDE53893-B2F1-4A8C-946B-A3F1A7FE147F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -544,7 +544,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nom_Barri"
-              DTS:DTSID="{1E416B0C-C31F-4144-B2C6-BB00FDF76423}"
+              DTS:DTSID="{0CD1060E-295B-46E5-B6F5-0C26DF2201CE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -553,7 +553,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Superfície_mitjana_(m2_construïts)"
-              DTS:DTSID="{6BD887E9-42A2-4732-9895-312CC1210BFB}"
+              DTS:DTSID="{BFF84E98-EBB5-427A-8F95-A5413B3962AD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -562,7 +562,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nombre"
-              DTS:DTSID="{96E324B0-A564-45E9-A41C-83755D5082AA}"
+              DTS:DTSID="{D0BF3A44-AFE2-4581-AE69-75DBC91D1FC6}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -579,7 +579,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="insert_date">
       <DTS:VariableValue
-        DTS:DataType="7">5/15/2023 5:55:59 PM</DTS:VariableValue>
+        DTS:DataType="7">5/18/2023 6:09:06 PM</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -2910,7 +2910,7 @@
                 <property
                   dataType="System.String"
                   description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">[STA_VIVIENDA]</property>
+                  name="OpenRowset">[dbo].[STA_VIVIENDA]</property>
                 <property
                   dataType="System.String"
                   description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
@@ -2953,8 +2953,8 @@
               <connections>
                 <connection
                   refId="Package\STA_COMPRAVENTA\Destino de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[COMPRAVENTA]"
-                  connectionManagerRefId="Package.ConnectionManagers[COMPRAVENTA]"
+                  connectionManagerID="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
+                  connectionManagerRefId="Package.ConnectionManagers[PH01-03\IABDSQLSERVER.COMPRAVENTA]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -3161,11 +3161,6 @@
                   name="Entrada de división condicional">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\STA_COMPRAVENTA\División condicional.Inputs[Entrada de división condicional].Columns[Trimestre]"
-                      cachedDataType="i4"
-                      cachedName="Trimestre"
-                      lineageId="Package\STA_COMPRAVENTA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Trimestre]" />
-                    <inputColumn
                       refId="Package\STA_COMPRAVENTA\División condicional.Inputs[Entrada de división condicional].Columns[Preu_mitja_habitatge]"
                       cachedCodepage="65001"
                       cachedDataType="str"
@@ -3191,13 +3186,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Especifica la expresión. Esta versión de expresión usa identificadores de linaje en lugar de nombres de columna."
-                      name="Expression">#{Package\STA_COMPRAVENTA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Trimestre]} == 3 &amp;&amp; #{Package\STA_COMPRAVENTA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Preu_mitja_habitatge]} == "Total. Euros/m2 construït"</property>
+                      name="Expression">#{Package\STA_COMPRAVENTA\Unión de todo.Outputs[Salida de Unión de todo 1].Columns[Preu_mitja_habitatge]} == "Total. Euros/m2 construït"</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Especifica la versión descriptiva de la expresión. Esta versión de expresión usa nombres de columna."
                       expressionType="Notify"
-                      name="FriendlyExpression">Trimestre == 3 &amp;&amp; Preu_mitja_habitatge == "Total. Euros/m2 construït"</property>
+                      name="FriendlyExpression">Preu_mitja_habitatge == "Total. Euros/m2 construït"</property>
                     <property
                       dataType="System.Int32"
                       description="Especifica la posición de la condición en la lista de condiciones que evalúa la transformación. El orden de evaluación es del menor al mayor valor."
@@ -3257,11 +3252,6 @@
                   name="Entrada de división condicional">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\STA_COMPRAVENTA\División condicional 1.Inputs[Entrada de división condicional].Columns[Trimestre]"
-                      cachedDataType="i4"
-                      cachedName="Trimestre"
-                      lineageId="Package\STA_COMPRAVENTA\Unión de todo 1.Outputs[Salida de Unión de todo 1].Columns[Trimestre]" />
-                    <inputColumn
                       refId="Package\STA_COMPRAVENTA\División condicional 1.Inputs[Entrada de división condicional].Columns[superficie]"
                       cachedCodepage="65001"
                       cachedDataType="str"
@@ -3287,13 +3277,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Especifica la expresión. Esta versión de expresión usa identificadores de linaje en lugar de nombres de columna."
-                      name="Expression">#{Package\STA_COMPRAVENTA\Unión de todo 1.Outputs[Salida de Unión de todo 1].Columns[Trimestre]} == 3 &amp;&amp; #{Package\STA_COMPRAVENTA\Unión de todo 1.Outputs[Salida de Unión de todo 1].Columns[superficie]} == "Total"</property>
+                      name="Expression">#{Package\STA_COMPRAVENTA\Unión de todo 1.Outputs[Salida de Unión de todo 1].Columns[superficie]} == "Total"</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Especifica la versión descriptiva de la expresión. Esta versión de expresión usa nombres de columna."
                       expressionType="Notify"
-                      name="FriendlyExpression">Trimestre == 3 &amp;&amp; superficie == "Total"</property>
+                      name="FriendlyExpression">superficie == "Total"</property>
                     <property
                       dataType="System.Int32"
                       description="Especifica la posición de la condición en la lista de condiciones que evalúa la transformación. El orden de evaluación es del menor al mayor valor."
@@ -5118,14 +5108,14 @@
               startId="Package\STA_COMPRAVENTA\Combinación de mezcla.Outputs[Salida de combinación de mezcla]" />
             <path
               refId="Package\STA_COMPRAVENTA.Paths[Salida de ordenación1]"
-              endId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
-              name="Salida de ordenación"
-              startId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\STA_COMPRAVENTA.Paths[Salida de ordenación]"
               endId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de ordenación"
               startId="Package\STA_COMPRAVENTA\Ordenar 1.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\STA_COMPRAVENTA.Paths[Salida de ordenación]"
+              endId="Package\STA_COMPRAVENTA\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de ordenación"
+              startId="Package\STA_COMPRAVENTA\Ordenar.Outputs[Salida de ordenación]" />
             <path
               refId="Package\STA_COMPRAVENTA.Paths[Salida de origen de archivo plano]"
               endId="Package\STA_COMPRAVENTA\Unión de todo 1.Inputs[Entrada de Unión de todo 3]"
@@ -5479,40 +5469,6 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STA_COMPRAVENTA.Paths[Salida de ordenación1]"
-          TopLeft="423.349998975545,522.3500000226">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="469.650001024455,99.6499999774001"
-              Start="0,0"
-              End="469.650001024455,92.1499999774001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.8249999887" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,45.8249999887"
-                    Point2="0,49.8249999887"
-                    Point3="4,49.8249999887" />
-                  <mssgle:LineSegment
-                    End="465.650001024455,49.8249999887" />
-                  <mssgle:CubicBezierSegment
-                    Point1="465.650001024455,49.8249999887"
-                    Point2="469.650001024455,49.8249999887"
-                    Point3="469.650001024455,53.8249999887" />
-                  <mssgle:LineSegment
-                    End="469.650001024455,92.1499999774001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STA_COMPRAVENTA.Paths[Salida de ordenación]"
           TopLeft="1333,537.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5537,6 +5493,40 @@
                     Point3="-408.666666666667,54.2299595141701" />
                   <mssgle:LineSegment
                     End="-408.666666666667,76.9000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STA_COMPRAVENTA.Paths[Salida de ordenación]"
+          TopLeft="423.349998975545,522.3500000226">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="469.650001024455,99.6499999774001"
+              Start="0,0"
+              End="469.650001024455,92.1499999774001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.8249999887" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.8249999887"
+                    Point2="0,49.8249999887"
+                    Point3="4,49.8249999887" />
+                  <mssgle:LineSegment
+                    End="465.650001024455,49.8249999887" />
+                  <mssgle:CubicBezierSegment
+                    Point1="465.650001024455,49.8249999887"
+                    Point2="469.650001024455,49.8249999887"
+                    Point3="469.650001024455,53.8249999887" />
+                  <mssgle:LineSegment
+                    End="469.650001024455,92.1499999774001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
